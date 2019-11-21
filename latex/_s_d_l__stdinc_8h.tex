@@ -1,0 +1,570 @@
+\hypertarget{_s_d_l__stdinc_8h}{}\doxysection{S\+D\+L/include/\+S\+D\+L\+\_\+stdinc.h 파일 참조}
+\label{_s_d_l__stdinc_8h}\index{SDL/include/SDL\_stdinc.h@{SDL/include/SDL\_stdinc.h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\doxysubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_s_d_l__stdinc_8h_a56cfbf2e664506e5f4bb2e05997be8ae}{S\+D\+L\+\_\+arraysize}}(array)~(sizeof(array)/sizeof(array\mbox{[}0\mbox{]}))
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ac9d76e3a8ba6474d1714f13ca3c9d7e6}\label{_s_d_l__stdinc_8h_ac9d76e3a8ba6474d1714f13ca3c9d7e6}} 
+\#define {\bfseries S\+D\+L\+\_\+\+T\+A\+B\+L\+E\+S\+I\+ZE}(table)~\mbox{\hyperlink{_s_d_l__stdinc_8h_a56cfbf2e664506e5f4bb2e05997be8ae}{S\+D\+L\+\_\+arraysize}}(table)
+\item 
+\#define \mbox{\hyperlink{_s_d_l__stdinc_8h_a6450d7299f093c95c1bfa8186fa4c866}{S\+D\+L\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y\+\_\+\+A\+RG}}(arg)~\#arg
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Cast operators}\par
+{\em Use proper C++ casts when compiled as C++ to be compatible with the option -\/Wold-\/style-\/cast of G\+CC (and -\/Werror=old-\/style-\/cast in G\+CC 4.\+2 and above). }\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a9891f68858953b42cbc18e68a441e39d}\label{_s_d_l__stdinc_8h_a9891f68858953b42cbc18e68a441e39d}} 
+\#define {\bfseries S\+D\+L\+\_\+reinterpret\+\_\+cast}(type,  expression)~((type)(expression))
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a774ea048cf20bd5f86f31da56d2937ff}\label{_s_d_l__stdinc_8h_a774ea048cf20bd5f86f31da56d2937ff}} 
+\#define {\bfseries S\+D\+L\+\_\+static\+\_\+cast}(type,  expression)~((type)(expression))
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aa1364dba66887966247b36f48e19ac62}\label{_s_d_l__stdinc_8h_aa1364dba66887966247b36f48e19ac62}} 
+\#define {\bfseries S\+D\+L\+\_\+const\+\_\+cast}(type,  expression)~((type)(expression))
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+F\+O\+U\+R\+CC}(A,  B,  C,  D)
+\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Basic data types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a9be4e10b2b4e72a2cce3ad88e9726cb9}\label{_s_d_l__stdinc_8h_a9be4e10b2b4e72a2cce3ad88e9726cb9}} 
+\#define \mbox{\hyperlink{_s_d_l__stdinc_8h_a9be4e10b2b4e72a2cce3ad88e9726cb9}{S\+D\+L\+\_\+\+M\+A\+X\+\_\+\+S\+I\+N\+T8}}~((Sint8)0x7F)           /$\ast$ 127 $\ast$/
+\begin{DoxyCompactList}\small\item\em A signed 8-\/bit integer type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_abfd092b0fd20283ed658d3d8f3071a5f}\label{_s_d_l__stdinc_8h_abfd092b0fd20283ed658d3d8f3071a5f}} 
+\#define {\bfseries S\+D\+L\+\_\+\+M\+I\+N\+\_\+\+S\+I\+N\+T8}~((Sint8)($\sim$0x7F))        /$\ast$ -\/128 $\ast$/
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_af55b32a39296c1b24fce86273f390a47}\label{_s_d_l__stdinc_8h_af55b32a39296c1b24fce86273f390a47}} 
+\#define \mbox{\hyperlink{_s_d_l__stdinc_8h_af55b32a39296c1b24fce86273f390a47}{S\+D\+L\+\_\+\+M\+A\+X\+\_\+\+U\+I\+N\+T8}}~((Uint8)0x\+FF)           /$\ast$ 255 $\ast$/
+\begin{DoxyCompactList}\small\item\em An unsigned 8-\/bit integer type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ad65adf0e23d13d1c0506457266aed02c}\label{_s_d_l__stdinc_8h_ad65adf0e23d13d1c0506457266aed02c}} 
+\#define {\bfseries S\+D\+L\+\_\+\+M\+I\+N\+\_\+\+U\+I\+N\+T8}~((Uint8)0x00)           /$\ast$ 0 $\ast$/
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a3ff206679a193bde4af51987dd9cdbfb}\label{_s_d_l__stdinc_8h_a3ff206679a193bde4af51987dd9cdbfb}} 
+\#define \mbox{\hyperlink{_s_d_l__stdinc_8h_a3ff206679a193bde4af51987dd9cdbfb}{S\+D\+L\+\_\+\+M\+A\+X\+\_\+\+S\+I\+N\+T16}}~((Sint16)0x7\+F\+FF)        /$\ast$ 32767 $\ast$/
+\begin{DoxyCompactList}\small\item\em A signed 16-\/bit integer type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_abbfab63b77bb6390ca2746f854c56096}\label{_s_d_l__stdinc_8h_abbfab63b77bb6390ca2746f854c56096}} 
+\#define {\bfseries S\+D\+L\+\_\+\+M\+I\+N\+\_\+\+S\+I\+N\+T16}~((Sint16)($\sim$0x7\+F\+FF))     /$\ast$ -\/32768 $\ast$/
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a93b34777fdbdd6f60d50788cdd6e2a5b}\label{_s_d_l__stdinc_8h_a93b34777fdbdd6f60d50788cdd6e2a5b}} 
+\#define \mbox{\hyperlink{_s_d_l__stdinc_8h_a93b34777fdbdd6f60d50788cdd6e2a5b}{S\+D\+L\+\_\+\+M\+A\+X\+\_\+\+U\+I\+N\+T16}}~((Uint16)0x\+F\+F\+FF)        /$\ast$ 65535 $\ast$/
+\begin{DoxyCompactList}\small\item\em An unsigned 16-\/bit integer type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aeafdd0f5a8ec4a06405db952e7699028}\label{_s_d_l__stdinc_8h_aeafdd0f5a8ec4a06405db952e7699028}} 
+\#define {\bfseries S\+D\+L\+\_\+\+M\+I\+N\+\_\+\+U\+I\+N\+T16}~((Uint16)0x0000)        /$\ast$ 0 $\ast$/
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ace3c96991b704ef4ec9279dea218cf00}\label{_s_d_l__stdinc_8h_ace3c96991b704ef4ec9279dea218cf00}} 
+\#define \mbox{\hyperlink{_s_d_l__stdinc_8h_ace3c96991b704ef4ec9279dea218cf00}{S\+D\+L\+\_\+\+M\+A\+X\+\_\+\+S\+I\+N\+T32}}~((Sint32)0x7\+F\+F\+F\+F\+F\+FF)    /$\ast$ 2147483647 $\ast$/
+\begin{DoxyCompactList}\small\item\em A signed 32-\/bit integer type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a621ee889cabf822a72f7c288b3403fb5}\label{_s_d_l__stdinc_8h_a621ee889cabf822a72f7c288b3403fb5}} 
+\#define {\bfseries S\+D\+L\+\_\+\+M\+I\+N\+\_\+\+S\+I\+N\+T32}~((Sint32)($\sim$0x7\+F\+F\+F\+F\+F\+FF)) /$\ast$ -\/2147483648 $\ast$/
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a1851171ad859663d305344316a73bd22}\label{_s_d_l__stdinc_8h_a1851171ad859663d305344316a73bd22}} 
+\#define \mbox{\hyperlink{_s_d_l__stdinc_8h_a1851171ad859663d305344316a73bd22}{S\+D\+L\+\_\+\+M\+A\+X\+\_\+\+U\+I\+N\+T32}}~((Uint32)0x\+F\+F\+F\+F\+F\+F\+F\+Fu)   /$\ast$ 4294967295 $\ast$/
+\begin{DoxyCompactList}\small\item\em An unsigned 32-\/bit integer type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ae57f0b0003bf0776c608f65e1981a95d}\label{_s_d_l__stdinc_8h_ae57f0b0003bf0776c608f65e1981a95d}} 
+\#define {\bfseries S\+D\+L\+\_\+\+M\+I\+N\+\_\+\+U\+I\+N\+T32}~((Uint32)0x00000000)    /$\ast$ 0 $\ast$/
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a419073146b1419899f722f48690875b9}\label{_s_d_l__stdinc_8h_a419073146b1419899f722f48690875b9}} 
+\#define \mbox{\hyperlink{_s_d_l__stdinc_8h_a419073146b1419899f722f48690875b9}{S\+D\+L\+\_\+\+M\+A\+X\+\_\+\+S\+I\+N\+T64}}~((Sint64)0x7\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+Fll)      /$\ast$ 9223372036854775807 $\ast$/
+\begin{DoxyCompactList}\small\item\em A signed 64-\/bit integer type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_acfc724558552194368ad6abf50f0e84f}\label{_s_d_l__stdinc_8h_acfc724558552194368ad6abf50f0e84f}} 
+\#define {\bfseries S\+D\+L\+\_\+\+M\+I\+N\+\_\+\+S\+I\+N\+T64}~((Sint64)($\sim$0x7\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+Fll))   /$\ast$ -\/9223372036854775808 $\ast$/
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a794429d194ac2c07e8310fc7bad7d0ab}\label{_s_d_l__stdinc_8h_a794429d194ac2c07e8310fc7bad7d0ab}} 
+\#define \mbox{\hyperlink{_s_d_l__stdinc_8h_a794429d194ac2c07e8310fc7bad7d0ab}{S\+D\+L\+\_\+\+M\+A\+X\+\_\+\+U\+I\+N\+T64}}~((Uint64)0x\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+Full)     /$\ast$ 18446744073709551615 $\ast$/
+\begin{DoxyCompactList}\small\item\em An unsigned 64-\/bit integer type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a44fa158b8a6074155a050ff4ba5a8292}\label{_s_d_l__stdinc_8h_a44fa158b8a6074155a050ff4ba5a8292}} 
+\#define {\bfseries S\+D\+L\+\_\+\+M\+I\+N\+\_\+\+U\+I\+N\+T64}~((Uint64)(0x0000000000000000ull))   /$\ast$ 0 $\ast$/
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aae47902b4a68b35b6b5a5733af74e99e}\label{_s_d_l__stdinc_8h_aae47902b4a68b35b6b5a5733af74e99e}} 
+\#define {\bfseries S\+D\+L\+\_\+\+P\+R\+Is64}~\char`\"{}lld\char`\"{}
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a595c1590a52d953f5c34859ff23b0d5c}\label{_s_d_l__stdinc_8h_a595c1590a52d953f5c34859ff23b0d5c}} 
+\#define {\bfseries S\+D\+L\+\_\+\+P\+R\+Iu64}~\char`\"{}llu\char`\"{}
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ada61ee823d794777744d0b190e9cbb1f}\label{_s_d_l__stdinc_8h_ada61ee823d794777744d0b190e9cbb1f}} 
+\#define {\bfseries S\+D\+L\+\_\+\+P\+R\+Ix64}~\char`\"{}llx\char`\"{}
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a1d0d06015b59be929cbcd44a022ab69c}\label{_s_d_l__stdinc_8h_a1d0d06015b59be929cbcd44a022ab69c}} 
+\#define {\bfseries S\+D\+L\+\_\+\+P\+R\+I\+X64}~\char`\"{}llX\char`\"{}
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a4a03aca91467efc1051ddb85c02385a2}\label{_s_d_l__stdinc_8h_a4a03aca91467efc1051ddb85c02385a2}} 
+\#define {\bfseries S\+D\+L\+\_\+\+I\+N\+\_\+\+B\+Y\+T\+E\+C\+AP}(x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a7c8c45cf712b53863edc008aa96f24b6}\label{_s_d_l__stdinc_8h_a7c8c45cf712b53863edc008aa96f24b6}} 
+\#define {\bfseries S\+D\+L\+\_\+\+I\+N\+O\+U\+T\+\_\+\+Z\+\_\+\+C\+AP}(x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_af908e59c33d8212a2785d160ef322fb1}\label{_s_d_l__stdinc_8h_af908e59c33d8212a2785d160ef322fb1}} 
+\#define {\bfseries S\+D\+L\+\_\+\+O\+U\+T\+\_\+\+Z\+\_\+\+C\+AP}(x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a56add5577e642481fff247b14376b2de}\label{_s_d_l__stdinc_8h_a56add5577e642481fff247b14376b2de}} 
+\#define {\bfseries S\+D\+L\+\_\+\+O\+U\+T\+\_\+\+C\+AP}(x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a2f008605e9e07d875b5f037d470d4c2a}\label{_s_d_l__stdinc_8h_a2f008605e9e07d875b5f037d470d4c2a}} 
+\#define {\bfseries S\+D\+L\+\_\+\+O\+U\+T\+\_\+\+B\+Y\+T\+E\+C\+AP}(x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_acf3bc9681b799ba3d31c03e9a548496d}\label{_s_d_l__stdinc_8h_acf3bc9681b799ba3d31c03e9a548496d}} 
+\#define {\bfseries S\+D\+L\+\_\+\+O\+U\+T\+\_\+\+Z\+\_\+\+B\+Y\+T\+E\+C\+AP}(x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ab13a729d2e3e2d1e1b3b2dc0bfb858eb}\label{_s_d_l__stdinc_8h_ab13a729d2e3e2d1e1b3b2dc0bfb858eb}} 
+\#define {\bfseries S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+T\+R\+I\+NG}
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a724eb3fcc488692f106d393193501514}\label{_s_d_l__stdinc_8h_a724eb3fcc488692f106d393193501514}} 
+\#define {\bfseries S\+D\+L\+\_\+\+S\+C\+A\+N\+F\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+T\+R\+I\+NG}
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ab974676e45d9edeef6598d601d4fdd6a}\label{_s_d_l__stdinc_8h_ab974676e45d9edeef6598d601d4fdd6a}} 
+\#define {\bfseries S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+V\+A\+R\+A\+R\+G\+\_\+\+F\+U\+NC}(fmtargnumber)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_acd540fbbc717339e1267b0a884baa66d}\label{_s_d_l__stdinc_8h_acd540fbbc717339e1267b0a884baa66d}} 
+\#define {\bfseries S\+D\+L\+\_\+\+S\+C\+A\+N\+F\+\_\+\+V\+A\+R\+A\+R\+G\+\_\+\+F\+U\+NC}(fmtargnumber)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aba1f23ae531b67b0455a2e254bdad09b}\label{_s_d_l__stdinc_8h_aba1f23ae531b67b0455a2e254bdad09b}} 
+\#define {\bfseries S\+D\+L\+\_\+\+C\+O\+M\+P\+I\+L\+E\+\_\+\+T\+I\+M\+E\+\_\+\+A\+S\+S\+E\+RT}(name,  x)~typedef int S\+D\+L\+\_\+compile\+\_\+time\+\_\+assert\+\_\+ \#\# name\mbox{[}(x) $\ast$ 2 -\/ 1\mbox{]}
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a6c6778dd1ee11d2edce116271c822fbd}\label{_s_d_l__stdinc_8h_a6c6778dd1ee11d2edce116271c822fbd}} 
+\#define {\bfseries S\+D\+L\+\_\+stack\+\_\+alloc}(type,  count)~(type$\ast$)S\+D\+L\+\_\+malloc(sizeof(type)$\ast$(count))
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aca62cdb628b52c2f1f2a3004ddf721ce}\label{_s_d_l__stdinc_8h_aca62cdb628b52c2f1f2a3004ddf721ce}} 
+\#define {\bfseries S\+D\+L\+\_\+stack\+\_\+free}(data)~S\+D\+L\+\_\+free(data)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ad93f0b2393a3aa89f9ce24ac2642744e}\label{_s_d_l__stdinc_8h_ad93f0b2393a3aa89f9ce24ac2642744e}} 
+\#define {\bfseries S\+D\+L\+\_\+min}(x,  y)~(((x) $<$ (y)) ? (x) \+: (y))
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ae3ab6e7584a16c7217ca0a4622212b61}\label{_s_d_l__stdinc_8h_ae3ab6e7584a16c7217ca0a4622212b61}} 
+\#define {\bfseries S\+D\+L\+\_\+max}(x,  y)~(((x) $>$ (y)) ? (x) \+: (y))
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a16b9e31a9558e1cbc9e417b0f35a7b8a}\label{_s_d_l__stdinc_8h_a16b9e31a9558e1cbc9e417b0f35a7b8a}} 
+\#define {\bfseries S\+D\+L\+\_\+zero}(x)~S\+D\+L\+\_\+memset(\&(x), 0, sizeof((x)))
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a995406d407faf4cfa1ca9dd904672ab6}\label{_s_d_l__stdinc_8h_a995406d407faf4cfa1ca9dd904672ab6}} 
+\#define {\bfseries S\+D\+L\+\_\+zerop}(x)~S\+D\+L\+\_\+memset((x), 0, sizeof($\ast$(x)))
+\item 
+\#define \mbox{\hyperlink{_s_d_l__stdinc_8h_ae71449b1cc6e6250b91f539153a7a0d3}{M\+\_\+\+PI}}~3.\+14159265358979323846264338327950288
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ada422bea61b05ed228c4f42e4aea2144}\label{_s_d_l__stdinc_8h_ada422bea61b05ed228c4f42e4aea2144}} 
+\#define {\bfseries S\+D\+L\+\_\+\+I\+C\+O\+N\+V\+\_\+\+E\+R\+R\+OR}~(size\+\_\+t)-\/1
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a8147462b96bda427f0b41125e645b9ab}\label{_s_d_l__stdinc_8h_a8147462b96bda427f0b41125e645b9ab}} 
+\#define {\bfseries S\+D\+L\+\_\+\+I\+C\+O\+N\+V\+\_\+\+E2\+B\+IG}~(size\+\_\+t)-\/2
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_adc8b6997623c449e7ed53a605faa9eb0}\label{_s_d_l__stdinc_8h_adc8b6997623c449e7ed53a605faa9eb0}} 
+\#define {\bfseries S\+D\+L\+\_\+\+I\+C\+O\+N\+V\+\_\+\+E\+I\+L\+S\+EQ}~(size\+\_\+t)-\/3
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a03d30a2857731df69d31ffa802424a9e}\label{_s_d_l__stdinc_8h_a03d30a2857731df69d31ffa802424a9e}} 
+\#define {\bfseries S\+D\+L\+\_\+\+I\+C\+O\+N\+V\+\_\+\+E\+I\+N\+V\+AL}~(size\+\_\+t)-\/4
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a773e5f83e392495ad8abab8d71aa84c6}\label{_s_d_l__stdinc_8h_a773e5f83e392495ad8abab8d71aa84c6}} 
+\#define {\bfseries S\+D\+L\+\_\+iconv\+\_\+utf8\+\_\+locale}(S)~\mbox{\hyperlink{_s_d_l__stdinc_8h_a43f6bd27a2e52c2d9ca629cb1a150bfd}{S\+D\+L\+\_\+iconv\+\_\+string}}(\char`\"{}\char`\"{}, \char`\"{}U\+TF-\/8\char`\"{}, S, S\+D\+L\+\_\+strlen(S)+1)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a59cd43c02306558671fe05c23284ab3b}\label{_s_d_l__stdinc_8h_a59cd43c02306558671fe05c23284ab3b}} 
+\#define {\bfseries S\+D\+L\+\_\+iconv\+\_\+utf8\+\_\+ucs2}(S)~(Uint16 $\ast$)\mbox{\hyperlink{_s_d_l__stdinc_8h_a43f6bd27a2e52c2d9ca629cb1a150bfd}{S\+D\+L\+\_\+iconv\+\_\+string}}(\char`\"{}U\+CS-\/2-\/I\+N\+T\+E\+R\+N\+AL\char`\"{}, \char`\"{}U\+TF-\/8\char`\"{}, S, S\+D\+L\+\_\+strlen(S)+1)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_acdced7c8985d280d87e659f583a5479e}\label{_s_d_l__stdinc_8h_acdced7c8985d280d87e659f583a5479e}} 
+\#define {\bfseries S\+D\+L\+\_\+iconv\+\_\+utf8\+\_\+ucs4}(S)~(Uint32 $\ast$)\mbox{\hyperlink{_s_d_l__stdinc_8h_a43f6bd27a2e52c2d9ca629cb1a150bfd}{S\+D\+L\+\_\+iconv\+\_\+string}}(\char`\"{}U\+CS-\/4-\/I\+N\+T\+E\+R\+N\+AL\char`\"{}, \char`\"{}U\+TF-\/8\char`\"{}, S, S\+D\+L\+\_\+strlen(S)+1)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}\label{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}} 
+enum {\bfseries S\+D\+L\+\_\+bool} \{ {\bfseries S\+D\+L\+\_\+\+F\+A\+L\+SE} = 0, 
+{\bfseries S\+D\+L\+\_\+\+T\+R\+UE} = 1
+ \}
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a5fc98623306a32e69eaab63e89e1d138}\label{_s_d_l__stdinc_8h_a5fc98623306a32e69eaab63e89e1d138}} 
+typedef int8\+\_\+t {\bfseries Sint8}
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}\label{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}} 
+typedef uint8\+\_\+t {\bfseries Uint8}
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a9d0257032c0e146ab6121bf0122712f5}\label{_s_d_l__stdinc_8h_a9d0257032c0e146ab6121bf0122712f5}} 
+typedef int16\+\_\+t {\bfseries Sint16}
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}\label{_s_d_l__stdinc_8h_a31fcc0a076c9068668173ee26d33e42b}} 
+typedef uint16\+\_\+t {\bfseries Uint16}
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a7a90b941db9d4582e9ad7abb9940ff7e}\label{_s_d_l__stdinc_8h_a7a90b941db9d4582e9ad7abb9940ff7e}} 
+typedef int32\+\_\+t {\bfseries Sint32}
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}\label{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}} 
+typedef uint32\+\_\+t {\bfseries Uint32}
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a2c1a61d5c466bb74680be0a8cc1b455d}\label{_s_d_l__stdinc_8h_a2c1a61d5c466bb74680be0a8cc1b455d}} 
+typedef int64\+\_\+t {\bfseries Sint64}
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ac006cf2bd55a42a9cc8ae9f123aa7e13}\label{_s_d_l__stdinc_8h_ac006cf2bd55a42a9cc8ae9f123aa7e13}} 
+typedef uint64\+\_\+t {\bfseries Uint64}
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a9c080fa72a520c3fb9cc547277d131b2}\label{_s_d_l__stdinc_8h_a9c080fa72a520c3fb9cc547277d131b2}} 
+typedef void $\ast$(S\+D\+L\+C\+A\+LL $\ast$ {\bfseries S\+D\+L\+\_\+malloc\+\_\+func}) (size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a49ece773aefa50992c057d6bde28fece}\label{_s_d_l__stdinc_8h_a49ece773aefa50992c057d6bde28fece}} 
+typedef void $\ast$(S\+D\+L\+C\+A\+LL $\ast$ {\bfseries S\+D\+L\+\_\+calloc\+\_\+func}) (size\+\_\+t nmemb, size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a28010cd6bfed0bdeab394f864cfc05bc}\label{_s_d_l__stdinc_8h_a28010cd6bfed0bdeab394f864cfc05bc}} 
+typedef void $\ast$(S\+D\+L\+C\+A\+LL $\ast$ {\bfseries S\+D\+L\+\_\+realloc\+\_\+func}) (void $\ast$mem, size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a38b6aadadc8fa09f817ebbd0567b99fb}\label{_s_d_l__stdinc_8h_a38b6aadadc8fa09f817ebbd0567b99fb}} 
+typedef void(S\+D\+L\+C\+A\+LL $\ast$ {\bfseries S\+D\+L\+\_\+free\+\_\+func}) (void $\ast$mem)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a37ee875bea397030104764a92857ae79}\label{_s_d_l__stdinc_8h_a37ee875bea397030104764a92857ae79}} 
+typedef struct \+\_\+\+S\+D\+L\+\_\+iconv\+\_\+t $\ast$ {\bfseries S\+D\+L\+\_\+iconv\+\_\+t}
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aa0843b5fde7f958b8eea238304aa5b2d}\label{_s_d_l__stdinc_8h_aa0843b5fde7f958b8eea238304aa5b2d}} 
+D\+E\+C\+L\+S\+P\+EC void $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+malloc} (size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aee91cc8889e6d920b9bb6970b0274c96}\label{_s_d_l__stdinc_8h_aee91cc8889e6d920b9bb6970b0274c96}} 
+D\+E\+C\+L\+S\+P\+EC void $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+calloc} (size\+\_\+t nmemb, size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a5123a34a3c99b29c423893aac78b4454}\label{_s_d_l__stdinc_8h_a5123a34a3c99b29c423893aac78b4454}} 
+D\+E\+C\+L\+S\+P\+EC void $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+realloc} (void $\ast$mem, size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a0e4ade894d550ada1fa19dc2d46e88b8}\label{_s_d_l__stdinc_8h_a0e4ade894d550ada1fa19dc2d46e88b8}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+free} (void $\ast$mem)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a91cba8a23ba5cae032f1def42a2add99}\label{_s_d_l__stdinc_8h_a91cba8a23ba5cae032f1def42a2add99}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__stdinc_8h_a91cba8a23ba5cae032f1def42a2add99}{S\+D\+L\+\_\+\+Get\+Memory\+Functions}} (S\+D\+L\+\_\+malloc\+\_\+func $\ast$malloc\+\_\+func, S\+D\+L\+\_\+calloc\+\_\+func $\ast$calloc\+\_\+func, S\+D\+L\+\_\+realloc\+\_\+func $\ast$realloc\+\_\+func, S\+D\+L\+\_\+free\+\_\+func $\ast$free\+\_\+func)
+\begin{DoxyCompactList}\small\item\em Get the current set of S\+DL memory functions \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__stdinc_8h_ad846ee206051a2aebd439c66cd907f9a}{S\+D\+L\+\_\+\+Set\+Memory\+Functions}} (S\+D\+L\+\_\+malloc\+\_\+func malloc\+\_\+func, S\+D\+L\+\_\+calloc\+\_\+func calloc\+\_\+func, S\+D\+L\+\_\+realloc\+\_\+func realloc\+\_\+func, S\+D\+L\+\_\+free\+\_\+func free\+\_\+func)
+\begin{DoxyCompactList}\small\item\em Replace S\+DL\textquotesingle{}s memory allocation functions with a custom set \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a853b94eb0e35bf92556807e23d445bc0}\label{_s_d_l__stdinc_8h_a853b94eb0e35bf92556807e23d445bc0}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__stdinc_8h_a853b94eb0e35bf92556807e23d445bc0}{S\+D\+L\+\_\+\+Get\+Num\+Allocations}} (void)
+\begin{DoxyCompactList}\small\item\em Get the number of outstanding (unfreed) allocations \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a16ef7a64cf619b95d337ed87cf73cbaa}\label{_s_d_l__stdinc_8h_a16ef7a64cf619b95d337ed87cf73cbaa}} 
+D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+getenv} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a82561dde7eb250ecb6fcbd3e3786d8b9}\label{_s_d_l__stdinc_8h_a82561dde7eb250ecb6fcbd3e3786d8b9}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+setenv} (const char $\ast$name, const char $\ast$value, int overwrite)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ae4e475d53a51a90992745186a20d1f01}\label{_s_d_l__stdinc_8h_ae4e475d53a51a90992745186a20d1f01}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+qsort} (void $\ast$base, size\+\_\+t nmemb, size\+\_\+t size, int($\ast$compare)(const void $\ast$, const void $\ast$))
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_abc2986a4608bc9fd73df173d7619c096}\label{_s_d_l__stdinc_8h_abc2986a4608bc9fd73df173d7619c096}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+abs} (int x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a3e2b095edf06856900b16babe77809cf}\label{_s_d_l__stdinc_8h_a3e2b095edf06856900b16babe77809cf}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+isdigit} (int x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a345ef079d2b47f9cda08d383dde1ec65}\label{_s_d_l__stdinc_8h_a345ef079d2b47f9cda08d383dde1ec65}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+isspace} (int x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a91fcc07ab87653a6c92ae1288c20a606}\label{_s_d_l__stdinc_8h_a91fcc07ab87653a6c92ae1288c20a606}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+toupper} (int x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_af18a897c83986540d4caf4573775f199}\label{_s_d_l__stdinc_8h_af18a897c83986540d4caf4573775f199}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+tolower} (int x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aa71450ffd083274ca708b348e6faf770}\label{_s_d_l__stdinc_8h_aa71450ffd083274ca708b348e6faf770}} 
+D\+E\+C\+L\+S\+P\+EC void $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+memset} (S\+D\+L\+\_\+\+O\+U\+T\+\_\+\+B\+Y\+T\+E\+C\+AP(len) void $\ast$dst, int c, size\+\_\+t len)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a0f1cd3e844f8fac8e26ca1e2c2101956}\label{_s_d_l__stdinc_8h_a0f1cd3e844f8fac8e26ca1e2c2101956}} 
+S\+D\+L\+\_\+\+F\+O\+R\+C\+E\+\_\+\+I\+N\+L\+I\+NE void {\bfseries S\+D\+L\+\_\+memset4} (void $\ast$dst, Uint32 val, size\+\_\+t dwords)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a1b20f81edc207c5f77323d7b3e1b7ec3}\label{_s_d_l__stdinc_8h_a1b20f81edc207c5f77323d7b3e1b7ec3}} 
+D\+E\+C\+L\+S\+P\+EC void $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+memcpy} (S\+D\+L\+\_\+\+O\+U\+T\+\_\+\+B\+Y\+T\+E\+C\+AP(len) void $\ast$dst, S\+D\+L\+\_\+\+I\+N\+\_\+\+B\+Y\+T\+E\+C\+AP(len) const void $\ast$src, size\+\_\+t len)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a65dc90519d616379cef5211f94d8d582}\label{_s_d_l__stdinc_8h_a65dc90519d616379cef5211f94d8d582}} 
+D\+E\+C\+L\+S\+P\+EC void $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+memmove} (S\+D\+L\+\_\+\+O\+U\+T\+\_\+\+B\+Y\+T\+E\+C\+AP(len) void $\ast$dst, S\+D\+L\+\_\+\+I\+N\+\_\+\+B\+Y\+T\+E\+C\+AP(len) const void $\ast$src, size\+\_\+t len)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_af8e26df545c29284291714410fa7731e}\label{_s_d_l__stdinc_8h_af8e26df545c29284291714410fa7731e}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+memcmp} (const void $\ast$s1, const void $\ast$s2, size\+\_\+t len)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_afda64ff08e7a4ae3c3ee629e161197a5}\label{_s_d_l__stdinc_8h_afda64ff08e7a4ae3c3ee629e161197a5}} 
+D\+E\+C\+L\+S\+P\+EC wchar\+\_\+t $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+wcsdup} (const wchar\+\_\+t $\ast$wstr)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_afddee3f5be8611a2956f21ea899ea6f1}\label{_s_d_l__stdinc_8h_afddee3f5be8611a2956f21ea899ea6f1}} 
+D\+E\+C\+L\+S\+P\+EC size\+\_\+t S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+wcslen} (const wchar\+\_\+t $\ast$wstr)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a611742b034af091bbf678150ede27a0f}\label{_s_d_l__stdinc_8h_a611742b034af091bbf678150ede27a0f}} 
+D\+E\+C\+L\+S\+P\+EC size\+\_\+t S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+wcslcpy} (S\+D\+L\+\_\+\+O\+U\+T\+\_\+\+Z\+\_\+\+C\+AP(maxlen) wchar\+\_\+t $\ast$dst, const wchar\+\_\+t $\ast$src, size\+\_\+t maxlen)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a9f29935903b98e66f3d69b336f741712}\label{_s_d_l__stdinc_8h_a9f29935903b98e66f3d69b336f741712}} 
+D\+E\+C\+L\+S\+P\+EC size\+\_\+t S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+wcslcat} (S\+D\+L\+\_\+\+I\+N\+O\+U\+T\+\_\+\+Z\+\_\+\+C\+AP(maxlen) wchar\+\_\+t $\ast$dst, const wchar\+\_\+t $\ast$src, size\+\_\+t maxlen)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a42d3b826f86fc016f76c01dbdf96bce9}\label{_s_d_l__stdinc_8h_a42d3b826f86fc016f76c01dbdf96bce9}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+wcscmp} (const wchar\+\_\+t $\ast$str1, const wchar\+\_\+t $\ast$str2)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ac06c288c339beeecb6f32e5d2a9471c0}\label{_s_d_l__stdinc_8h_ac06c288c339beeecb6f32e5d2a9471c0}} 
+D\+E\+C\+L\+S\+P\+EC size\+\_\+t S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+strlen} (const char $\ast$str)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ac362d85898cfb51e06e33399a7d3fd03}\label{_s_d_l__stdinc_8h_ac362d85898cfb51e06e33399a7d3fd03}} 
+D\+E\+C\+L\+S\+P\+EC size\+\_\+t S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+strlcpy} (S\+D\+L\+\_\+\+O\+U\+T\+\_\+\+Z\+\_\+\+C\+AP(maxlen) char $\ast$dst, const char $\ast$src, size\+\_\+t maxlen)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a78f061725fa314e775a3978b916a5daa}\label{_s_d_l__stdinc_8h_a78f061725fa314e775a3978b916a5daa}} 
+D\+E\+C\+L\+S\+P\+EC size\+\_\+t S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+utf8strlcpy} (S\+D\+L\+\_\+\+O\+U\+T\+\_\+\+Z\+\_\+\+C\+AP(dst\+\_\+bytes) char $\ast$dst, const char $\ast$src, size\+\_\+t dst\+\_\+bytes)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a50d15493c8921df9a8c2c233703429c8}\label{_s_d_l__stdinc_8h_a50d15493c8921df9a8c2c233703429c8}} 
+D\+E\+C\+L\+S\+P\+EC size\+\_\+t S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+strlcat} (S\+D\+L\+\_\+\+I\+N\+O\+U\+T\+\_\+\+Z\+\_\+\+C\+AP(maxlen) char $\ast$dst, const char $\ast$src, size\+\_\+t maxlen)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aeb337dead7b2dc31849654621979292a}\label{_s_d_l__stdinc_8h_aeb337dead7b2dc31849654621979292a}} 
+D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+strdup} (const char $\ast$str)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a66ee8c0675dd1397909c4c7860d9471a}\label{_s_d_l__stdinc_8h_a66ee8c0675dd1397909c4c7860d9471a}} 
+D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+strrev} (char $\ast$str)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ac900d50174128e81e7e6f85013530fe7}\label{_s_d_l__stdinc_8h_ac900d50174128e81e7e6f85013530fe7}} 
+D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+strupr} (char $\ast$str)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aac4bb42a3f89248e7b93312ece293ff0}\label{_s_d_l__stdinc_8h_aac4bb42a3f89248e7b93312ece293ff0}} 
+D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+strlwr} (char $\ast$str)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a901b411bdc6d7431541f5271fa3d926b}\label{_s_d_l__stdinc_8h_a901b411bdc6d7431541f5271fa3d926b}} 
+D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+strchr} (const char $\ast$str, int c)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a071f3ed1587203953f62ca28b86dcfcb}\label{_s_d_l__stdinc_8h_a071f3ed1587203953f62ca28b86dcfcb}} 
+D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+strrchr} (const char $\ast$str, int c)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aa50eca29c8736f5be661e5b26b718cb1}\label{_s_d_l__stdinc_8h_aa50eca29c8736f5be661e5b26b718cb1}} 
+D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+strstr} (const char $\ast$haystack, const char $\ast$needle)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a8f0319c8cf55baa072e5caf1dc228286}\label{_s_d_l__stdinc_8h_a8f0319c8cf55baa072e5caf1dc228286}} 
+D\+E\+C\+L\+S\+P\+EC size\+\_\+t S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+utf8strlen} (const char $\ast$str)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a6c8b021577abfdc499332b956dc9fa20}\label{_s_d_l__stdinc_8h_a6c8b021577abfdc499332b956dc9fa20}} 
+D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+itoa} (int value, char $\ast$str, int radix)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a7a602ba1ed643263be5597e5566bc68d}\label{_s_d_l__stdinc_8h_a7a602ba1ed643263be5597e5566bc68d}} 
+D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+uitoa} (unsigned int value, char $\ast$str, int radix)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ac12a401d99ae1b59feaee53de3432299}\label{_s_d_l__stdinc_8h_ac12a401d99ae1b59feaee53de3432299}} 
+D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+ltoa} (long value, char $\ast$str, int radix)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ac9d64fc284b53cdc3f3df0a4638fce1e}\label{_s_d_l__stdinc_8h_ac9d64fc284b53cdc3f3df0a4638fce1e}} 
+D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+ultoa} (unsigned long value, char $\ast$str, int radix)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a5383a6cf354ac43586f44a692e76c9ad}\label{_s_d_l__stdinc_8h_a5383a6cf354ac43586f44a692e76c9ad}} 
+D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+lltoa} (Sint64 value, char $\ast$str, int radix)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aba1456131f3376e231027511dd60b157}\label{_s_d_l__stdinc_8h_aba1456131f3376e231027511dd60b157}} 
+D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+ulltoa} (Uint64 value, char $\ast$str, int radix)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a693141d8cd82c97ba5cb0f4bc42c96ae}\label{_s_d_l__stdinc_8h_a693141d8cd82c97ba5cb0f4bc42c96ae}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+atoi} (const char $\ast$str)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a7f36805f126b5712ab14d4b1da721a2b}\label{_s_d_l__stdinc_8h_a7f36805f126b5712ab14d4b1da721a2b}} 
+D\+E\+C\+L\+S\+P\+EC double S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+atof} (const char $\ast$str)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aa0674ed6bcaf8a0889dbbee89f4ac19c}\label{_s_d_l__stdinc_8h_aa0674ed6bcaf8a0889dbbee89f4ac19c}} 
+D\+E\+C\+L\+S\+P\+EC long S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+strtol} (const char $\ast$str, char $\ast$$\ast$endp, int base)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a2b92ab8170e4df3252013d903b9d4051}\label{_s_d_l__stdinc_8h_a2b92ab8170e4df3252013d903b9d4051}} 
+D\+E\+C\+L\+S\+P\+EC unsigned long S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+strtoul} (const char $\ast$str, char $\ast$$\ast$endp, int base)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a4ebd07268af4cf8efe05f1eb28d9ba98}\label{_s_d_l__stdinc_8h_a4ebd07268af4cf8efe05f1eb28d9ba98}} 
+D\+E\+C\+L\+S\+P\+EC Sint64 S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+strtoll} (const char $\ast$str, char $\ast$$\ast$endp, int base)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aa893ab27b0d874a0d1eea7025937c006}\label{_s_d_l__stdinc_8h_aa893ab27b0d874a0d1eea7025937c006}} 
+D\+E\+C\+L\+S\+P\+EC Uint64 S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+strtoull} (const char $\ast$str, char $\ast$$\ast$endp, int base)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aebf098dbc1451c320b48e1760d090db9}\label{_s_d_l__stdinc_8h_aebf098dbc1451c320b48e1760d090db9}} 
+D\+E\+C\+L\+S\+P\+EC double S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+strtod} (const char $\ast$str, char $\ast$$\ast$endp)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a37e18b9103f755d03cf4b0aedeb39fb8}\label{_s_d_l__stdinc_8h_a37e18b9103f755d03cf4b0aedeb39fb8}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+strcmp} (const char $\ast$str1, const char $\ast$str2)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a21287cfa7609bbc3d46ea10b20234389}\label{_s_d_l__stdinc_8h_a21287cfa7609bbc3d46ea10b20234389}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+strncmp} (const char $\ast$str1, const char $\ast$str2, size\+\_\+t maxlen)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a1de324579fee4225e390df0a7b485d17}\label{_s_d_l__stdinc_8h_a1de324579fee4225e390df0a7b485d17}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+strcasecmp} (const char $\ast$str1, const char $\ast$str2)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a51b84fa76ad53e7c3b17892d9982c526}\label{_s_d_l__stdinc_8h_a51b84fa76ad53e7c3b17892d9982c526}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+strncasecmp} (const char $\ast$str1, const char $\ast$str2, size\+\_\+t len)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a7b721b0e22698c8eb6efc5341003b582}\label{_s_d_l__stdinc_8h_a7b721b0e22698c8eb6efc5341003b582}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+sscanf} (const char $\ast$text, S\+D\+L\+\_\+\+S\+C\+A\+N\+F\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+T\+R\+I\+NG const char $\ast$fmt,...) S\+D\+L\+\_\+\+S\+C\+A\+N\+F\+\_\+\+V\+A\+R\+A\+R\+G\+\_\+\+F\+U\+NC(2)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aec25dc54f0de98ea8d970552f38d6365}\label{_s_d_l__stdinc_8h_aec25dc54f0de98ea8d970552f38d6365}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+vsscanf} (const char $\ast$text, const char $\ast$fmt, va\+\_\+list ap)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_adcf2cbf4b55834f5727664425f80e6b5}\label{_s_d_l__stdinc_8h_adcf2cbf4b55834f5727664425f80e6b5}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+snprintf} (S\+D\+L\+\_\+\+O\+U\+T\+\_\+\+Z\+\_\+\+C\+AP(maxlen) char $\ast$text, size\+\_\+t maxlen, S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+T\+R\+I\+NG const char $\ast$fmt,...) S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+V\+A\+R\+A\+R\+G\+\_\+\+F\+U\+NC(3)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ae9acdeeb54ccbab3bb53280052541bdd}\label{_s_d_l__stdinc_8h_ae9acdeeb54ccbab3bb53280052541bdd}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+vsnprintf} (S\+D\+L\+\_\+\+O\+U\+T\+\_\+\+Z\+\_\+\+C\+AP(maxlen) char $\ast$text, size\+\_\+t maxlen, const char $\ast$fmt, va\+\_\+list ap)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aad4335bccd2da5d4cbc56227a00c5e6a}\label{_s_d_l__stdinc_8h_aad4335bccd2da5d4cbc56227a00c5e6a}} 
+D\+E\+C\+L\+S\+P\+EC double S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+acos} (double x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a8df77f77cde849ce6507467289f9161e}\label{_s_d_l__stdinc_8h_a8df77f77cde849ce6507467289f9161e}} 
+D\+E\+C\+L\+S\+P\+EC float S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+acosf} (float x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a1d20f8c07517e3edff66a483df394a4e}\label{_s_d_l__stdinc_8h_a1d20f8c07517e3edff66a483df394a4e}} 
+D\+E\+C\+L\+S\+P\+EC double S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+asin} (double x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a3a8db8cf7e449bb3d7f055ba02f5dbc5}\label{_s_d_l__stdinc_8h_a3a8db8cf7e449bb3d7f055ba02f5dbc5}} 
+D\+E\+C\+L\+S\+P\+EC float S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+asinf} (float x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_af8123e938b403f372e38c9dcf0d532f1}\label{_s_d_l__stdinc_8h_af8123e938b403f372e38c9dcf0d532f1}} 
+D\+E\+C\+L\+S\+P\+EC double S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+atan} (double x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aacaab6901a2c37914157d5b000be9e4b}\label{_s_d_l__stdinc_8h_aacaab6901a2c37914157d5b000be9e4b}} 
+D\+E\+C\+L\+S\+P\+EC float S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+atanf} (float x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a98d519102f70e12856f8ecc2bde10c0d}\label{_s_d_l__stdinc_8h_a98d519102f70e12856f8ecc2bde10c0d}} 
+D\+E\+C\+L\+S\+P\+EC double S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+atan2} (double x, double y)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a4e37fa3dd9df882017a730e3dae24c8c}\label{_s_d_l__stdinc_8h_a4e37fa3dd9df882017a730e3dae24c8c}} 
+D\+E\+C\+L\+S\+P\+EC float S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+atan2f} (float x, float y)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a936588a2d12ce83c915d9a2441653370}\label{_s_d_l__stdinc_8h_a936588a2d12ce83c915d9a2441653370}} 
+D\+E\+C\+L\+S\+P\+EC double S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+ceil} (double x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ad6faeefa315255bc0df3ac8ca93691c1}\label{_s_d_l__stdinc_8h_ad6faeefa315255bc0df3ac8ca93691c1}} 
+D\+E\+C\+L\+S\+P\+EC float S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+ceilf} (float x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a4171a3b97ac5cde52618cedd490be481}\label{_s_d_l__stdinc_8h_a4171a3b97ac5cde52618cedd490be481}} 
+D\+E\+C\+L\+S\+P\+EC double S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+copysign} (double x, double y)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a0e4028f1feef8764524f99950bb2f75f}\label{_s_d_l__stdinc_8h_a0e4028f1feef8764524f99950bb2f75f}} 
+D\+E\+C\+L\+S\+P\+EC float S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+copysignf} (float x, float y)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a188dec0f0bc8eabb58181656eaf41fd7}\label{_s_d_l__stdinc_8h_a188dec0f0bc8eabb58181656eaf41fd7}} 
+D\+E\+C\+L\+S\+P\+EC double S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+cos} (double x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a531f6b784d47ec6719c71e578bccc88d}\label{_s_d_l__stdinc_8h_a531f6b784d47ec6719c71e578bccc88d}} 
+D\+E\+C\+L\+S\+P\+EC float S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+cosf} (float x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a79c55f7a1211b69d10dcfec65edfdb31}\label{_s_d_l__stdinc_8h_a79c55f7a1211b69d10dcfec65edfdb31}} 
+D\+E\+C\+L\+S\+P\+EC double S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+exp} (double x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a33e13d60f771d8bf8659bebc5b1150b3}\label{_s_d_l__stdinc_8h_a33e13d60f771d8bf8659bebc5b1150b3}} 
+D\+E\+C\+L\+S\+P\+EC float S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+expf} (float x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ab3c294fac683198ba196e072bb181f02}\label{_s_d_l__stdinc_8h_ab3c294fac683198ba196e072bb181f02}} 
+D\+E\+C\+L\+S\+P\+EC double S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+fabs} (double x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a88bc179b571e1b81ef939918b853e85b}\label{_s_d_l__stdinc_8h_a88bc179b571e1b81ef939918b853e85b}} 
+D\+E\+C\+L\+S\+P\+EC float S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+fabsf} (float x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aef4788340ec0d94db83efa78a985a633}\label{_s_d_l__stdinc_8h_aef4788340ec0d94db83efa78a985a633}} 
+D\+E\+C\+L\+S\+P\+EC double S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+floor} (double x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a7cf5c20a750cc7aefd9a33455bc2cc0e}\label{_s_d_l__stdinc_8h_a7cf5c20a750cc7aefd9a33455bc2cc0e}} 
+D\+E\+C\+L\+S\+P\+EC float S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+floorf} (float x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a6c56858af3e7a3acfc8d3d6099c2c3f6}\label{_s_d_l__stdinc_8h_a6c56858af3e7a3acfc8d3d6099c2c3f6}} 
+D\+E\+C\+L\+S\+P\+EC double S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+fmod} (double x, double y)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a24b8633bde27b05dae938f79ebbb3898}\label{_s_d_l__stdinc_8h_a24b8633bde27b05dae938f79ebbb3898}} 
+D\+E\+C\+L\+S\+P\+EC float S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+fmodf} (float x, float y)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a2b226b584a9922167301231d3c13bee2}\label{_s_d_l__stdinc_8h_a2b226b584a9922167301231d3c13bee2}} 
+D\+E\+C\+L\+S\+P\+EC double S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+log} (double x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a9548171a530aeb28aa02f22b0263c390}\label{_s_d_l__stdinc_8h_a9548171a530aeb28aa02f22b0263c390}} 
+D\+E\+C\+L\+S\+P\+EC float S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+logf} (float x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ae907373550fb1e22242aeb56fb5e86ec}\label{_s_d_l__stdinc_8h_ae907373550fb1e22242aeb56fb5e86ec}} 
+D\+E\+C\+L\+S\+P\+EC double S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+log10} (double x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a272cf573bc32004a674bdc78a7ce2104}\label{_s_d_l__stdinc_8h_a272cf573bc32004a674bdc78a7ce2104}} 
+D\+E\+C\+L\+S\+P\+EC float S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+log10f} (float x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a3d52f0185cf0e50a39d82d1c0d9033a0}\label{_s_d_l__stdinc_8h_a3d52f0185cf0e50a39d82d1c0d9033a0}} 
+D\+E\+C\+L\+S\+P\+EC double S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+pow} (double x, double y)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_adbd43da74ca37ced160f748a35a18e28}\label{_s_d_l__stdinc_8h_adbd43da74ca37ced160f748a35a18e28}} 
+D\+E\+C\+L\+S\+P\+EC float S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+powf} (float x, float y)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aadf9f772c77eaac69d873bdc894d8877}\label{_s_d_l__stdinc_8h_aadf9f772c77eaac69d873bdc894d8877}} 
+D\+E\+C\+L\+S\+P\+EC double S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+scalbn} (double x, int n)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ac2918cea7f1ad8c10c7ff7d0549f059b}\label{_s_d_l__stdinc_8h_ac2918cea7f1ad8c10c7ff7d0549f059b}} 
+D\+E\+C\+L\+S\+P\+EC float S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+scalbnf} (float x, int n)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aea6fa73c9125ce7781b16964a12678fd}\label{_s_d_l__stdinc_8h_aea6fa73c9125ce7781b16964a12678fd}} 
+D\+E\+C\+L\+S\+P\+EC double S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+sin} (double x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a833d0eb1ac38643cc5e8f71f9231d3eb}\label{_s_d_l__stdinc_8h_a833d0eb1ac38643cc5e8f71f9231d3eb}} 
+D\+E\+C\+L\+S\+P\+EC float S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+sinf} (float x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a89a212b3de74f13ce69fd5bea007df86}\label{_s_d_l__stdinc_8h_a89a212b3de74f13ce69fd5bea007df86}} 
+D\+E\+C\+L\+S\+P\+EC double S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+sqrt} (double x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aeaa64ed4e3d788ebcb7b7363eb66ff4f}\label{_s_d_l__stdinc_8h_aeaa64ed4e3d788ebcb7b7363eb66ff4f}} 
+D\+E\+C\+L\+S\+P\+EC float S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+sqrtf} (float x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a4d52b941eca596f2f716425c777cb3fc}\label{_s_d_l__stdinc_8h_a4d52b941eca596f2f716425c777cb3fc}} 
+D\+E\+C\+L\+S\+P\+EC double S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+tan} (double x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_afe3ee9cc3fc388193f23d3e5c98197ab}\label{_s_d_l__stdinc_8h_afe3ee9cc3fc388193f23d3e5c98197ab}} 
+D\+E\+C\+L\+S\+P\+EC float S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+tanf} (float x)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a0ba254663bb7d4b49eaa414d4533c6b5}\label{_s_d_l__stdinc_8h_a0ba254663bb7d4b49eaa414d4533c6b5}} 
+D\+E\+C\+L\+S\+P\+EC S\+D\+L\+\_\+iconv\+\_\+t S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+iconv\+\_\+open} (const char $\ast$tocode, const char $\ast$fromcode)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a92eeaa95348c308ebd882ca85eccd684}\label{_s_d_l__stdinc_8h_a92eeaa95348c308ebd882ca85eccd684}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+iconv\+\_\+close} (S\+D\+L\+\_\+iconv\+\_\+t cd)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_aeef39b9728425f231fc3e019ffa6c9ea}\label{_s_d_l__stdinc_8h_aeef39b9728425f231fc3e019ffa6c9ea}} 
+D\+E\+C\+L\+S\+P\+EC size\+\_\+t S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+iconv} (S\+D\+L\+\_\+iconv\+\_\+t cd, const char $\ast$$\ast$inbuf, size\+\_\+t $\ast$inbytesleft, char $\ast$$\ast$outbuf, size\+\_\+t $\ast$outbytesleft)
+\item 
+D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__stdinc_8h_a43f6bd27a2e52c2d9ca629cb1a150bfd}{S\+D\+L\+\_\+iconv\+\_\+string}} (const char $\ast$tocode, const char $\ast$fromcode, const char $\ast$inbuf, size\+\_\+t inbytesleft)
+\item 
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a067e1ad3a40d7f6741a105fdab0c63cf}\label{_s_d_l__stdinc_8h_a067e1ad3a40d7f6741a105fdab0c63cf}} 
+S\+D\+L\+\_\+\+F\+O\+R\+C\+E\+\_\+\+I\+N\+L\+I\+NE void $\ast$ {\bfseries S\+D\+L\+\_\+memcpy4} (S\+D\+L\+\_\+\+O\+U\+T\+\_\+\+B\+Y\+T\+E\+C\+AP(dwords $\ast$4) void $\ast$dst, S\+D\+L\+\_\+\+I\+N\+\_\+\+B\+Y\+T\+E\+C\+AP(dwords $\ast$4) const void $\ast$src, size\+\_\+t dwords)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+This is a general header that includes C language support. 
+
+\doxysubsection{매크로 문서화}
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_ae71449b1cc6e6250b91f539153a7a0d3}\label{_s_d_l__stdinc_8h_ae71449b1cc6e6250b91f539153a7a0d3}} 
+\index{SDL\_stdinc.h@{SDL\_stdinc.h}!M\_PI@{M\_PI}}
+\index{M\_PI@{M\_PI}!SDL\_stdinc.h@{SDL\_stdinc.h}}
+\doxysubsubsection{\texorpdfstring{M\_PI}{M\_PI}}
+{\footnotesize\ttfamily \#define M\+\_\+\+PI~3.\+14159265358979323846264338327950288}
+
+pi \mbox{\Hypertarget{_s_d_l__stdinc_8h_a56cfbf2e664506e5f4bb2e05997be8ae}\label{_s_d_l__stdinc_8h_a56cfbf2e664506e5f4bb2e05997be8ae}} 
+\index{SDL\_stdinc.h@{SDL\_stdinc.h}!SDL\_arraysize@{SDL\_arraysize}}
+\index{SDL\_arraysize@{SDL\_arraysize}!SDL\_stdinc.h@{SDL\_stdinc.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_arraysize}{SDL\_arraysize}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+arraysize(\begin{DoxyParamCaption}\item[{}]{array }\end{DoxyParamCaption})~(sizeof(array)/sizeof(array\mbox{[}0\mbox{]}))}
+
+The number of elements in an array. \mbox{\Hypertarget{_s_d_l__stdinc_8h_af482df3379ebfd4c3cfe44e6e0db7628}\label{_s_d_l__stdinc_8h_af482df3379ebfd4c3cfe44e6e0db7628}} 
+\index{SDL\_stdinc.h@{SDL\_stdinc.h}!SDL\_FOURCC@{SDL\_FOURCC}}
+\index{SDL\_FOURCC@{SDL\_FOURCC}!SDL\_stdinc.h@{SDL\_stdinc.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_FOURCC}{SDL\_FOURCC}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+F\+O\+U\+R\+CC(\begin{DoxyParamCaption}\item[{}]{A,  }\item[{}]{B,  }\item[{}]{C,  }\item[{}]{D }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{((SDL\_static\_cast(Uint32, SDL\_static\_cast(Uint8, (A))) << 0) | \(\backslash\)}
+\DoxyCodeLine{     (SDL\_static\_cast(Uint32, SDL\_static\_cast(Uint8, (B))) << 8) | \(\backslash\)}
+\DoxyCodeLine{     (SDL\_static\_cast(Uint32, SDL\_static\_cast(Uint8, (C))) << 16) | \(\backslash\)}
+\DoxyCodeLine{     (SDL\_static\_cast(Uint32, SDL\_static\_cast(Uint8, (D))) << 24))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a6450d7299f093c95c1bfa8186fa4c866}\label{_s_d_l__stdinc_8h_a6450d7299f093c95c1bfa8186fa4c866}} 
+\index{SDL\_stdinc.h@{SDL\_stdinc.h}!SDL\_STRINGIFY\_ARG@{SDL\_STRINGIFY\_ARG}}
+\index{SDL\_STRINGIFY\_ARG@{SDL\_STRINGIFY\_ARG}!SDL\_stdinc.h@{SDL\_stdinc.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_STRINGIFY\_ARG}{SDL\_STRINGIFY\_ARG}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y\+\_\+\+A\+RG(\begin{DoxyParamCaption}\item[{}]{arg }\end{DoxyParamCaption})~\#arg}
+
+Macro useful for building other macros with strings in them
+
+e.\+g. \#define L\+O\+G\+\_\+\+E\+R\+R\+O\+R(\+X) Output\+Debug\+String(S\+D\+L\+\_\+\+S\+T\+R\+I\+N\+G\+I\+F\+Y\+\_\+\+A\+RG({\bfseries{F\+U\+N\+C\+T\+I\+ON}}) \char`\"{}\+: \char`\"{} X \char`\"{}\textbackslash{}n\char`\"{}) 
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{_s_d_l__stdinc_8h_a43f6bd27a2e52c2d9ca629cb1a150bfd}\label{_s_d_l__stdinc_8h_a43f6bd27a2e52c2d9ca629cb1a150bfd}} 
+\index{SDL\_stdinc.h@{SDL\_stdinc.h}!SDL\_iconv\_string@{SDL\_iconv\_string}}
+\index{SDL\_iconv\_string@{SDL\_iconv\_string}!SDL\_stdinc.h@{SDL\_stdinc.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_iconv\_string()}{SDL\_iconv\_string()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC char$\ast$ S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+iconv\+\_\+string (\begin{DoxyParamCaption}\item[{const char $\ast$}]{tocode,  }\item[{const char $\ast$}]{fromcode,  }\item[{const char $\ast$}]{inbuf,  }\item[{size\+\_\+t}]{inbytesleft }\end{DoxyParamCaption})}
+
+This function converts a string between encodings in one pass, returning a string that must be freed with S\+D\+L\+\_\+free() or N\+U\+LL on error. \mbox{\Hypertarget{_s_d_l__stdinc_8h_ad846ee206051a2aebd439c66cd907f9a}\label{_s_d_l__stdinc_8h_ad846ee206051a2aebd439c66cd907f9a}} 
+\index{SDL\_stdinc.h@{SDL\_stdinc.h}!SDL\_SetMemoryFunctions@{SDL\_SetMemoryFunctions}}
+\index{SDL\_SetMemoryFunctions@{SDL\_SetMemoryFunctions}!SDL\_stdinc.h@{SDL\_stdinc.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetMemoryFunctions()}{SDL\_SetMemoryFunctions()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Memory\+Functions (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+malloc\+\_\+func}]{malloc\+\_\+func,  }\item[{S\+D\+L\+\_\+calloc\+\_\+func}]{calloc\+\_\+func,  }\item[{S\+D\+L\+\_\+realloc\+\_\+func}]{realloc\+\_\+func,  }\item[{S\+D\+L\+\_\+free\+\_\+func}]{free\+\_\+func }\end{DoxyParamCaption})}
+
+
+
+Replace S\+DL\textquotesingle{}s memory allocation functions with a custom set 
+
+\begin{DoxyNote}{주의}
+If you are replacing S\+DL\textquotesingle{}s memory functions, you should call \mbox{\hyperlink{_s_d_l__stdinc_8h_a853b94eb0e35bf92556807e23d445bc0}{S\+D\+L\+\_\+\+Get\+Num\+Allocations()}} and be very careful if it returns non-\/zero. That means that your free function will be called with memory allocated by the previous memory allocation functions. 
+\end{DoxyNote}

@@ -1,0 +1,154 @@
+\hypertarget{_s_d_l_8h}{}\doxysection{S\+D\+L/include/\+S\+DL.h 파일 참조}
+\label{_s_d_l_8h}\index{SDL/include/SDL.h@{SDL/include/SDL.h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+assert.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+atomic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+audio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+clipboard.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+cpuinfo.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+endian.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+events.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+filesystem.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+gamecontroller.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+haptic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+hints.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+joystick.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+loadso.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+log.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+messagebox.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+mutex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+power.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+render.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+rwops.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+sensor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+shape.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+system.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+thread.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+version.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\doxysubsection*{S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+$\ast$}
+\label{_amgrpa6fe3a8ae2ad7bed5edc588e6bb0b7fb}%
+These are the flags which may be passed to \mbox{\hyperlink{_s_d_l_8h_a8fc8d35348d7c74bad8392d776c937b8}{S\+D\+L\+\_\+\+Init()}}. You should specify the subsystems which you will be using in your application. \begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_d_l_8h_aadfaf3382d6e136b5944d1d5e7e50290}\label{_s_d_l_8h_aadfaf3382d6e136b5944d1d5e7e50290}} 
+\#define {\bfseries S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+T\+I\+M\+ER}~0x00000001u
+\item 
+\mbox{\Hypertarget{_s_d_l_8h_abeceb02c19508655cb05cc8e64206333}\label{_s_d_l_8h_abeceb02c19508655cb05cc8e64206333}} 
+\#define {\bfseries S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+A\+U\+D\+IO}~0x00000010u
+\item 
+\#define \mbox{\hyperlink{_s_d_l_8h_afc988e510ed522628ffeb7c76f80c233}{S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+V\+I\+D\+EO}}~0x00000020u
+\item 
+\#define \mbox{\hyperlink{_s_d_l_8h_ad6b47d785eaa00d9c48e6c1cff4aef4b}{S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+CK}}~0x00000200u
+\item 
+\mbox{\Hypertarget{_s_d_l_8h_adfd88189fec07574cae461b9dea75a85}\label{_s_d_l_8h_adfd88189fec07574cae461b9dea75a85}} 
+\#define {\bfseries S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+H\+A\+P\+T\+IC}~0x00001000u
+\item 
+\#define \mbox{\hyperlink{_s_d_l_8h_ac224a9aa4208de0e9b03948ff9b5fe0a}{S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+ER}}~0x00002000u
+\item 
+\mbox{\Hypertarget{_s_d_l_8h_addad89db9e13b46ebcd46a0db8ba0382}\label{_s_d_l_8h_addad89db9e13b46ebcd46a0db8ba0382}} 
+\#define {\bfseries S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+E\+V\+E\+N\+TS}~0x00004000u
+\item 
+\mbox{\Hypertarget{_s_d_l_8h_a25711177b046dd1ccd2fcc2f123f117b}\label{_s_d_l_8h_a25711177b046dd1ccd2fcc2f123f117b}} 
+\#define {\bfseries S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+S\+E\+N\+S\+OR}~0x00008000u
+\item 
+\#define \mbox{\hyperlink{_s_d_l_8h_ab848174dfbc69cb2cc7bbf06a6e5c584}{S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+N\+O\+P\+A\+R\+A\+C\+H\+U\+TE}}~0x00100000u
+\item 
+\#define {\bfseries S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+E\+V\+E\+R\+Y\+T\+H\+I\+NG}
+\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l_8h_a8fc8d35348d7c74bad8392d776c937b8}{S\+D\+L\+\_\+\+Init}} (Uint32 flags)
+\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l_8h_adfbfddc0ec609b5e5e5cb1c89298e4db}{S\+D\+L\+\_\+\+Init\+Sub\+System}} (Uint32 flags)
+\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l_8h_a14e9091982e09097985e10e3ca65debb}{S\+D\+L\+\_\+\+Quit\+Sub\+System}} (Uint32 flags)
+\item 
+D\+E\+C\+L\+S\+P\+EC Uint32 S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l_8h_a04dc570990c697eed95681216801710d}{S\+D\+L\+\_\+\+Was\+Init}} (Uint32 flags)
+\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l_8h_afdabaf714781099083592051f2d9ac11}{S\+D\+L\+\_\+\+Quit}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+Main include header for the S\+DL library 
+
+\doxysubsection{매크로 문서화}
+\mbox{\Hypertarget{_s_d_l_8h_a574afd93f30161d6e87449f675081fb5}\label{_s_d_l_8h_a574afd93f30161d6e87449f675081fb5}} 
+\index{SDL.h@{SDL.h}!SDL\_INIT\_EVERYTHING@{SDL\_INIT\_EVERYTHING}}
+\index{SDL\_INIT\_EVERYTHING@{SDL\_INIT\_EVERYTHING}!SDL.h@{SDL.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_INIT\_EVERYTHING}{SDL\_INIT\_EVERYTHING}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+E\+V\+E\+R\+Y\+T\+H\+I\+NG}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{( \(\backslash\)}
+\DoxyCodeLine{                SDL\_INIT\_TIMER | SDL\_INIT\_AUDIO | \mbox{\hyperlink{_s_d_l_8h_afc988e510ed522628ffeb7c76f80c233}{SDL\_INIT\_VIDEO}} | SDL\_INIT\_EVENTS | \(\backslash\)}
+\DoxyCodeLine{                SDL\_INIT\_JOYSTICK | SDL\_INIT\_HAPTIC | \mbox{\hyperlink{_s_d_l_8h_ac224a9aa4208de0e9b03948ff9b5fe0a}{SDL\_INIT\_GAMECONTROLLER}} | SDL\_INIT\_SENSOR \(\backslash\)}
+\DoxyCodeLine{            )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_s_d_l_8h_ac224a9aa4208de0e9b03948ff9b5fe0a}\label{_s_d_l_8h_ac224a9aa4208de0e9b03948ff9b5fe0a}} 
+\index{SDL.h@{SDL.h}!SDL\_INIT\_GAMECONTROLLER@{SDL\_INIT\_GAMECONTROLLER}}
+\index{SDL\_INIT\_GAMECONTROLLER@{SDL\_INIT\_GAMECONTROLLER}!SDL.h@{SDL.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_INIT\_GAMECONTROLLER}{SDL\_INIT\_GAMECONTROLLER}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+ER~0x00002000u}
+
+S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+G\+A\+M\+E\+C\+O\+N\+T\+R\+O\+L\+L\+ER implies S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+CK \mbox{\Hypertarget{_s_d_l_8h_ad6b47d785eaa00d9c48e6c1cff4aef4b}\label{_s_d_l_8h_ad6b47d785eaa00d9c48e6c1cff4aef4b}} 
+\index{SDL.h@{SDL.h}!SDL\_INIT\_JOYSTICK@{SDL\_INIT\_JOYSTICK}}
+\index{SDL\_INIT\_JOYSTICK@{SDL\_INIT\_JOYSTICK}!SDL.h@{SDL.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_INIT\_JOYSTICK}{SDL\_INIT\_JOYSTICK}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+CK~0x00000200u}
+
+S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+J\+O\+Y\+S\+T\+I\+CK implies S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+E\+V\+E\+N\+TS \mbox{\Hypertarget{_s_d_l_8h_ab848174dfbc69cb2cc7bbf06a6e5c584}\label{_s_d_l_8h_ab848174dfbc69cb2cc7bbf06a6e5c584}} 
+\index{SDL.h@{SDL.h}!SDL\_INIT\_NOPARACHUTE@{SDL\_INIT\_NOPARACHUTE}}
+\index{SDL\_INIT\_NOPARACHUTE@{SDL\_INIT\_NOPARACHUTE}!SDL.h@{SDL.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_INIT\_NOPARACHUTE}{SDL\_INIT\_NOPARACHUTE}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+N\+O\+P\+A\+R\+A\+C\+H\+U\+TE~0x00100000u}
+
+compatibility; this flag is ignored. \mbox{\Hypertarget{_s_d_l_8h_afc988e510ed522628ffeb7c76f80c233}\label{_s_d_l_8h_afc988e510ed522628ffeb7c76f80c233}} 
+\index{SDL.h@{SDL.h}!SDL\_INIT\_VIDEO@{SDL\_INIT\_VIDEO}}
+\index{SDL\_INIT\_VIDEO@{SDL\_INIT\_VIDEO}!SDL.h@{SDL.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_INIT\_VIDEO}{SDL\_INIT\_VIDEO}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+V\+I\+D\+EO~0x00000020u}
+
+S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+V\+I\+D\+EO implies S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+E\+V\+E\+N\+TS 
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{_s_d_l_8h_a8fc8d35348d7c74bad8392d776c937b8}\label{_s_d_l_8h_a8fc8d35348d7c74bad8392d776c937b8}} 
+\index{SDL.h@{SDL.h}!SDL\_Init@{SDL\_Init}}
+\index{SDL\_Init@{SDL\_Init}!SDL.h@{SDL.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_Init()}{SDL\_Init()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Init (\begin{DoxyParamCaption}\item[{Uint32}]{flags }\end{DoxyParamCaption})}
+
+This function initializes the subsystems specified by {\ttfamily flags} \mbox{\Hypertarget{_s_d_l_8h_adfbfddc0ec609b5e5e5cb1c89298e4db}\label{_s_d_l_8h_adfbfddc0ec609b5e5e5cb1c89298e4db}} 
+\index{SDL.h@{SDL.h}!SDL\_InitSubSystem@{SDL\_InitSubSystem}}
+\index{SDL\_InitSubSystem@{SDL\_InitSubSystem}!SDL.h@{SDL.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_InitSubSystem()}{SDL\_InitSubSystem()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Init\+Sub\+System (\begin{DoxyParamCaption}\item[{Uint32}]{flags }\end{DoxyParamCaption})}
+
+This function initializes specific S\+DL subsystems
+
+Subsystem initialization is ref-\/counted, you must call \mbox{\hyperlink{_s_d_l_8h_a14e9091982e09097985e10e3ca65debb}{S\+D\+L\+\_\+\+Quit\+Sub\+System()}} for each \mbox{\hyperlink{_s_d_l_8h_adfbfddc0ec609b5e5e5cb1c89298e4db}{S\+D\+L\+\_\+\+Init\+Sub\+System()}} to correctly shutdown a subsystem manually (or call \mbox{\hyperlink{_s_d_l_8h_afdabaf714781099083592051f2d9ac11}{S\+D\+L\+\_\+\+Quit()}} to force shutdown). If a subsystem is already loaded then this call will increase the ref-\/count and return. \mbox{\Hypertarget{_s_d_l_8h_afdabaf714781099083592051f2d9ac11}\label{_s_d_l_8h_afdabaf714781099083592051f2d9ac11}} 
+\index{SDL.h@{SDL.h}!SDL\_Quit@{SDL\_Quit}}
+\index{SDL\_Quit@{SDL\_Quit}!SDL.h@{SDL.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_Quit()}{SDL\_Quit()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Quit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function cleans up all initialized subsystems. You should call it upon all exit conditions. \mbox{\Hypertarget{_s_d_l_8h_a14e9091982e09097985e10e3ca65debb}\label{_s_d_l_8h_a14e9091982e09097985e10e3ca65debb}} 
+\index{SDL.h@{SDL.h}!SDL\_QuitSubSystem@{SDL\_QuitSubSystem}}
+\index{SDL\_QuitSubSystem@{SDL\_QuitSubSystem}!SDL.h@{SDL.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_QuitSubSystem()}{SDL\_QuitSubSystem()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Quit\+Sub\+System (\begin{DoxyParamCaption}\item[{Uint32}]{flags }\end{DoxyParamCaption})}
+
+This function cleans up specific S\+DL subsystems \mbox{\Hypertarget{_s_d_l_8h_a04dc570990c697eed95681216801710d}\label{_s_d_l_8h_a04dc570990c697eed95681216801710d}} 
+\index{SDL.h@{SDL.h}!SDL\_WasInit@{SDL\_WasInit}}
+\index{SDL\_WasInit@{SDL\_WasInit}!SDL.h@{SDL.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_WasInit()}{SDL\_WasInit()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC Uint32 S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Was\+Init (\begin{DoxyParamCaption}\item[{Uint32}]{flags }\end{DoxyParamCaption})}
+
+This function returns a mask of the specified subsystems which have previously been initialized.
+
+If {\ttfamily flags} is 0, it returns a mask of all initialized subsystems. 

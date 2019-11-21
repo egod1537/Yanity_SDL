@@ -1,0 +1,56 @@
+\hypertarget{class_graphic_core}{}\doxysection{Graphic\+Core 클래스 참조}
+\label{class_graphic_core}\index{GraphicCore@{GraphicCore}}
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graphic_core_afc75f94f3f1274585e176992c8c6f1e3}\label{class_graphic_core_afc75f94f3f1274585e176992c8c6f1e3}} 
+void {\bfseries Init} ()
+\item 
+\mbox{\Hypertarget{class_graphic_core_a96c7410cd40ee798ec97050a023ca53b}\label{class_graphic_core_a96c7410cd40ee798ec97050a023ca53b}} 
+void {\bfseries Render} ()
+\item 
+\mbox{\Hypertarget{class_graphic_core_a045fd0c82cccf227593bc174e45d3bc9}\label{class_graphic_core_a045fd0c82cccf227593bc174e45d3bc9}} 
+void {\bfseries Add\+Render} (int depth, std\+::function$<$ void()$>$ callback)
+\item 
+\mbox{\Hypertarget{class_graphic_core_a71085e36d14034d3c75e0288d73a727f}\label{class_graphic_core_a71085e36d14034d3c75e0288d73a727f}} 
+void {\bfseries Draw\+Texture} (S\+D\+L\+\_\+\+Texture $\ast$\+\_\+texture, \mbox{\hyperlink{class_vector2}{Vector2}} \+\_\+pos=\mbox{\hyperlink{class_vector2}{Vector2}}(0, 0), float \+\_\+angle=0, \mbox{\hyperlink{class_vector2}{Vector2}} \+\_\+scale=\mbox{\hyperlink{class_vector2}{Vector2}}(1, 1), \mbox{\hyperlink{class_vector2}{Vector2}} \+\_\+pivot=\mbox{\hyperlink{class_vector2}{Vector2}}(0.\+5, 0.\+5))
+\item 
+\mbox{\Hypertarget{class_graphic_core_ac70e51a7a07cdbd27b14142dc06ac9e8}\label{class_graphic_core_ac70e51a7a07cdbd27b14142dc06ac9e8}} 
+void {\bfseries Draw\+Texture} (S\+D\+L\+\_\+\+Texture $\ast$, \mbox{\hyperlink{struct_transform}{Transform}})
+\item 
+\mbox{\Hypertarget{class_graphic_core_ab107a14afe3dbdd3c73c8dc80beb8c3f}\label{class_graphic_core_ab107a14afe3dbdd3c73c8dc80beb8c3f}} 
+void {\bfseries Draw\+Square} (\mbox{\hyperlink{struct_s_d_l___color}{S\+D\+L\+\_\+\+Color}}, \mbox{\hyperlink{class_vector2}{Vector2}}, \mbox{\hyperlink{class_vector2}{Vector2}})
+\item 
+\mbox{\Hypertarget{class_graphic_core_a9e536dfeef1ee2dd5bae1d9e1c629cab}\label{class_graphic_core_a9e536dfeef1ee2dd5bae1d9e1c629cab}} 
+void {\bfseries Draw\+Fill\+Square} (\mbox{\hyperlink{struct_s_d_l___color}{S\+D\+L\+\_\+\+Color}}, \mbox{\hyperlink{class_vector2}{Vector2}}, \mbox{\hyperlink{class_vector2}{Vector2}})
+\item 
+\mbox{\Hypertarget{class_graphic_core_a2f09f46509760c465a6947f6770b179a}\label{class_graphic_core_a2f09f46509760c465a6947f6770b179a}} 
+S\+D\+L\+\_\+\+Texture $\ast$ {\bfseries Load\+Texture} (std\+::string)
+\end{DoxyCompactItemize}
+\doxysubsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graphic_core_a5026ab94fef11babf848dd1660df2d4a}\label{class_graphic_core_a5026ab94fef11babf848dd1660df2d4a}} 
+static \mbox{\hyperlink{class_graphic_core}{Graphic\+Core}} \& {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graphic_core_aa3f259396ac20e8e66f1feede7fec94a}\label{class_graphic_core_aa3f259396ac20e8e66f1feede7fec94a}} 
+\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries Resoultion} = \mbox{\hyperlink{class_vector2}{Vector2}}(960, 540)
+\item 
+\mbox{\Hypertarget{class_graphic_core_a938bb790e8d0c2edeb4f435b084d8bbd}\label{class_graphic_core_a938bb790e8d0c2edeb4f435b084d8bbd}} 
+\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$ {\bfseries window}
+\item 
+\mbox{\Hypertarget{class_graphic_core_a34673e117c329faacb826d799b14610a}\label{class_graphic_core_a34673e117c329faacb826d799b14610a}} 
+S\+D\+L\+\_\+\+Renderer $\ast$ {\bfseries renderer}
+\item 
+\mbox{\Hypertarget{class_graphic_core_a04eb3d815137053ac0c4c6f7db94ccbb}\label{class_graphic_core_a04eb3d815137053ac0c4c6f7db94ccbb}} 
+std\+::list$<$ \mbox{\hyperlink{struct_render_block}{Render\+Block}} $>$ {\bfseries Render\+Line}
+\end{DoxyCompactItemize}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+Yanity/Graphic\+Core.\+h\item 
+Yanity/Graphic\+Core.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,57 @@
+\hypertarget{struct_s_d_l___keysym}{}\doxysection{S\+D\+L\+\_\+\+Keysym 구조체 참조}
+\label{struct_s_d_l___keysym}\index{SDL\_Keysym@{SDL\_Keysym}}
+
+
+The S\+DL keysym structure, used in key events.  
+
+
+
+
+{\ttfamily \#include $<$S\+D\+L\+\_\+keyboard.\+h$>$}
+
+\doxysubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_s_d_l__scancode_8h_a82ab7cff701034fb40a47b5b3a02777b}{S\+D\+L\+\_\+\+Scancode}} \mbox{\hyperlink{struct_s_d_l___keysym_ad47e9120a511e2efc7ec0c6d8a5ec51e}{scancode}}
+\item 
+\mbox{\hyperlink{_s_d_l__keycode_8h_ae9265f064f13f0f74dfca26a67875171}{S\+D\+L\+\_\+\+Keycode}} \mbox{\hyperlink{struct_s_d_l___keysym_a082ff1fd787b79fa6c3a445deb225f08}{sym}}
+\item 
+Uint16 \mbox{\hyperlink{struct_s_d_l___keysym_ab519d1b8a9939d3d035f7103f3208291}{mod}}
+\item 
+\mbox{\Hypertarget{struct_s_d_l___keysym_ab1d0a50cc619966fb06b92e15cc46dd9}\label{struct_s_d_l___keysym_ab1d0a50cc619966fb06b92e15cc46dd9}} 
+Uint32 {\bfseries unused}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+The S\+DL keysym structure, used in key events. 
+
+\begin{DoxyNote}{주의}
+If you are looking for translated character input, see the \mbox{\hyperlink{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa4fa2570088f6b9cbd109ae91b511368f}{S\+D\+L\+\_\+\+T\+E\+X\+T\+I\+N\+P\+UT}} event. 
+\end{DoxyNote}
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{struct_s_d_l___keysym_ab519d1b8a9939d3d035f7103f3208291}\label{struct_s_d_l___keysym_ab519d1b8a9939d3d035f7103f3208291}} 
+\index{SDL\_Keysym@{SDL\_Keysym}!mod@{mod}}
+\index{mod@{mod}!SDL\_Keysym@{SDL\_Keysym}}
+\doxysubsubsection{\texorpdfstring{mod}{mod}}
+{\footnotesize\ttfamily Uint16 S\+D\+L\+\_\+\+Keysym\+::mod}
+
+current key modifiers \mbox{\Hypertarget{struct_s_d_l___keysym_ad47e9120a511e2efc7ec0c6d8a5ec51e}\label{struct_s_d_l___keysym_ad47e9120a511e2efc7ec0c6d8a5ec51e}} 
+\index{SDL\_Keysym@{SDL\_Keysym}!scancode@{scancode}}
+\index{scancode@{scancode}!SDL\_Keysym@{SDL\_Keysym}}
+\doxysubsubsection{\texorpdfstring{scancode}{scancode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__scancode_8h_a82ab7cff701034fb40a47b5b3a02777b}{S\+D\+L\+\_\+\+Scancode}} S\+D\+L\+\_\+\+Keysym\+::scancode}
+
+S\+DL physical key code -\/ see \mbox{\hyperlink{_s_d_l__scancode_8h_a82ab7cff701034fb40a47b5b3a02777b}{S\+D\+L\+\_\+\+Scancode}} for details \mbox{\Hypertarget{struct_s_d_l___keysym_a082ff1fd787b79fa6c3a445deb225f08}\label{struct_s_d_l___keysym_a082ff1fd787b79fa6c3a445deb225f08}} 
+\index{SDL\_Keysym@{SDL\_Keysym}!sym@{sym}}
+\index{sym@{sym}!SDL\_Keysym@{SDL\_Keysym}}
+\doxysubsubsection{\texorpdfstring{sym}{sym}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__keycode_8h_ae9265f064f13f0f74dfca26a67875171}{S\+D\+L\+\_\+\+Keycode}} S\+D\+L\+\_\+\+Keysym\+::sym}
+
+S\+DL virtual key code -\/ see \mbox{\hyperlink{_s_d_l__keycode_8h_ae9265f064f13f0f74dfca26a67875171}{S\+D\+L\+\_\+\+Keycode}} for details 
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+S\+D\+L/include/\mbox{\hyperlink{_s_d_l__keyboard_8h}{S\+D\+L\+\_\+keyboard.\+h}}\end{DoxyCompactItemize}

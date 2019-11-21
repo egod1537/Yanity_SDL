@@ -1,0 +1,71 @@
+\hypertarget{struct_s_d_l___message_box_data}{}\doxysection{S\+D\+L\+\_\+\+Message\+Box\+Data 구조체 참조}
+\label{struct_s_d_l___message_box_data}\index{SDL\_MessageBoxData@{SDL\_MessageBoxData}}
+
+
+Message\+Box structure containing title, text, window, etc.  
+
+
+
+
+{\ttfamily \#include $<$S\+D\+L\+\_\+messagebox.\+h$>$}
+
+\doxysubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+Uint32 \mbox{\hyperlink{struct_s_d_l___message_box_data_a113d016f760bf4e4156b0f376358d6a0}{flags}}
+\item 
+\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$ \mbox{\hyperlink{struct_s_d_l___message_box_data_a5c333bc93705c66068e140bc28daedcb}{window}}
+\item 
+const char $\ast$ \mbox{\hyperlink{struct_s_d_l___message_box_data_a93ceeafeed20b553ad4c86c9be37f117}{title}}
+\item 
+const char $\ast$ \mbox{\hyperlink{struct_s_d_l___message_box_data_ada6ae208a1f85adabbd7a7a08ca609c8}{message}}
+\item 
+\mbox{\Hypertarget{struct_s_d_l___message_box_data_a133f4fef549cc0cb14b799af35f3dc5a}\label{struct_s_d_l___message_box_data_a133f4fef549cc0cb14b799af35f3dc5a}} 
+int {\bfseries numbuttons}
+\item 
+\mbox{\Hypertarget{struct_s_d_l___message_box_data_a265e47aab749e384661ae91d3e11e0db}\label{struct_s_d_l___message_box_data_a265e47aab749e384661ae91d3e11e0db}} 
+const \mbox{\hyperlink{struct_s_d_l___message_box_button_data}{S\+D\+L\+\_\+\+Message\+Box\+Button\+Data}} $\ast$ {\bfseries buttons}
+\item 
+const \mbox{\hyperlink{struct_s_d_l___message_box_color_scheme}{S\+D\+L\+\_\+\+Message\+Box\+Color\+Scheme}} $\ast$ \mbox{\hyperlink{struct_s_d_l___message_box_data_a18744865a3e89e260db5f01aee579e35}{color\+Scheme}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+Message\+Box structure containing title, text, window, etc. 
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{struct_s_d_l___message_box_data_a18744865a3e89e260db5f01aee579e35}\label{struct_s_d_l___message_box_data_a18744865a3e89e260db5f01aee579e35}} 
+\index{SDL\_MessageBoxData@{SDL\_MessageBoxData}!colorScheme@{colorScheme}}
+\index{colorScheme@{colorScheme}!SDL\_MessageBoxData@{SDL\_MessageBoxData}}
+\doxysubsubsection{\texorpdfstring{colorScheme}{colorScheme}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_s_d_l___message_box_color_scheme}{S\+D\+L\+\_\+\+Message\+Box\+Color\+Scheme}}$\ast$ S\+D\+L\+\_\+\+Message\+Box\+Data\+::color\+Scheme}
+
+\mbox{\hyperlink{struct_s_d_l___message_box_color_scheme}{S\+D\+L\+\_\+\+Message\+Box\+Color\+Scheme}}, can be N\+U\+LL to use system settings \mbox{\Hypertarget{struct_s_d_l___message_box_data_a113d016f760bf4e4156b0f376358d6a0}\label{struct_s_d_l___message_box_data_a113d016f760bf4e4156b0f376358d6a0}} 
+\index{SDL\_MessageBoxData@{SDL\_MessageBoxData}!flags@{flags}}
+\index{flags@{flags}!SDL\_MessageBoxData@{SDL\_MessageBoxData}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily Uint32 S\+D\+L\+\_\+\+Message\+Box\+Data\+::flags}
+
+\+::\+S\+D\+L\+\_\+\+Message\+Box\+Flags \mbox{\Hypertarget{struct_s_d_l___message_box_data_ada6ae208a1f85adabbd7a7a08ca609c8}\label{struct_s_d_l___message_box_data_ada6ae208a1f85adabbd7a7a08ca609c8}} 
+\index{SDL\_MessageBoxData@{SDL\_MessageBoxData}!message@{message}}
+\index{message@{message}!SDL\_MessageBoxData@{SDL\_MessageBoxData}}
+\doxysubsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily const char$\ast$ S\+D\+L\+\_\+\+Message\+Box\+Data\+::message}
+
+U\+T\+F-\/8 message text \mbox{\Hypertarget{struct_s_d_l___message_box_data_a93ceeafeed20b553ad4c86c9be37f117}\label{struct_s_d_l___message_box_data_a93ceeafeed20b553ad4c86c9be37f117}} 
+\index{SDL\_MessageBoxData@{SDL\_MessageBoxData}!title@{title}}
+\index{title@{title}!SDL\_MessageBoxData@{SDL\_MessageBoxData}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily const char$\ast$ S\+D\+L\+\_\+\+Message\+Box\+Data\+::title}
+
+U\+T\+F-\/8 title \mbox{\Hypertarget{struct_s_d_l___message_box_data_a5c333bc93705c66068e140bc28daedcb}\label{struct_s_d_l___message_box_data_a5c333bc93705c66068e140bc28daedcb}} 
+\index{SDL\_MessageBoxData@{SDL\_MessageBoxData}!window@{window}}
+\index{window@{window}!SDL\_MessageBoxData@{SDL\_MessageBoxData}}
+\doxysubsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}}$\ast$ S\+D\+L\+\_\+\+Message\+Box\+Data\+::window}
+
+Parent window, can be N\+U\+LL 
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+S\+D\+L/include/S\+D\+L\+\_\+messagebox.\+h\end{DoxyCompactItemize}

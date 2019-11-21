@@ -1,0 +1,114 @@
+\hypertarget{_s_d_l__timer_8h}{}\doxysection{S\+D\+L/include/\+S\+D\+L\+\_\+timer.h 파일 참조}
+\label{_s_d_l__timer_8h}\index{SDL/include/SDL\_timer.h@{SDL/include/SDL\_timer.h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\doxysubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_s_d_l__timer_8h_a5cc109e24ba0c46f6becb28353cd8921}{S\+D\+L\+\_\+\+T\+I\+C\+K\+S\+\_\+\+P\+A\+S\+S\+ED}}(A,  B)~((Sint32)((B) -\/ (A)) $<$= 0)
+\begin{DoxyCompactList}\small\item\em Compare S\+DL ticks values, and return true if A has passed B \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+typedef Uint32(S\+D\+L\+C\+A\+LL $\ast$ \mbox{\hyperlink{_s_d_l__timer_8h_a3c5c867db975d245e4a82fcf0cd7de80}{S\+D\+L\+\_\+\+Timer\+Callback}}) (Uint32 interval, void $\ast$param)
+\item 
+typedef int \mbox{\hyperlink{_s_d_l__timer_8h_a412e8ff8a6c89615ba8f9486b292213a}{S\+D\+L\+\_\+\+Timer\+ID}}
+\end{DoxyCompactItemize}
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+D\+E\+C\+L\+S\+P\+EC Uint32 S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__timer_8h_a0b9bc71d6287e0ffafdc3419760fe2b3}{S\+D\+L\+\_\+\+Get\+Ticks}} (void)
+\begin{DoxyCompactList}\small\item\em Get the number of milliseconds since the S\+DL library initialization. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__timer_8h_a2dbeb63c4f0564811a4adf3938808977}\label{_s_d_l__timer_8h_a2dbeb63c4f0564811a4adf3938808977}} 
+D\+E\+C\+L\+S\+P\+EC Uint64 S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__timer_8h_a2dbeb63c4f0564811a4adf3938808977}{S\+D\+L\+\_\+\+Get\+Performance\+Counter}} (void)
+\begin{DoxyCompactList}\small\item\em Get the current value of the high resolution counter \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__timer_8h_a507ebea12e31dacc9f85f7d9febe0efb}\label{_s_d_l__timer_8h_a507ebea12e31dacc9f85f7d9febe0efb}} 
+D\+E\+C\+L\+S\+P\+EC Uint64 S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__timer_8h_a507ebea12e31dacc9f85f7d9febe0efb}{S\+D\+L\+\_\+\+Get\+Performance\+Frequency}} (void)
+\begin{DoxyCompactList}\small\item\em Get the count per second of the high resolution counter \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__timer_8h_ae8050b95373b95249064467592ab4e21}\label{_s_d_l__timer_8h_ae8050b95373b95249064467592ab4e21}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__timer_8h_ae8050b95373b95249064467592ab4e21}{S\+D\+L\+\_\+\+Delay}} (Uint32 ms)
+\begin{DoxyCompactList}\small\item\em Wait a specified number of milliseconds before returning. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{_s_d_l__timer_8h_a412e8ff8a6c89615ba8f9486b292213a}{S\+D\+L\+\_\+\+Timer\+ID}} S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__timer_8h_a56ceea49587e3fa5796b2e4bf85603b8}{S\+D\+L\+\_\+\+Add\+Timer}} (Uint32 interval, \mbox{\hyperlink{_s_d_l__timer_8h_a3c5c867db975d245e4a82fcf0cd7de80}{S\+D\+L\+\_\+\+Timer\+Callback}} callback, void $\ast$param)
+\begin{DoxyCompactList}\small\item\em Add a new timer to the pool of timers already running. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC S\+D\+L\+\_\+bool S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__timer_8h_afe8d418e59a24ae6ad820b92137ab9b2}{S\+D\+L\+\_\+\+Remove\+Timer}} (\mbox{\hyperlink{_s_d_l__timer_8h_a412e8ff8a6c89615ba8f9486b292213a}{S\+D\+L\+\_\+\+Timer\+ID}} id)
+\begin{DoxyCompactList}\small\item\em Remove a timer knowing its ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+Header for the S\+DL time management routines. 
+
+\doxysubsection{매크로 문서화}
+\mbox{\Hypertarget{_s_d_l__timer_8h_a5cc109e24ba0c46f6becb28353cd8921}\label{_s_d_l__timer_8h_a5cc109e24ba0c46f6becb28353cd8921}} 
+\index{SDL\_timer.h@{SDL\_timer.h}!SDL\_TICKS\_PASSED@{SDL\_TICKS\_PASSED}}
+\index{SDL\_TICKS\_PASSED@{SDL\_TICKS\_PASSED}!SDL\_timer.h@{SDL\_timer.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_TICKS\_PASSED}{SDL\_TICKS\_PASSED}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+T\+I\+C\+K\+S\+\_\+\+P\+A\+S\+S\+ED(\begin{DoxyParamCaption}\item[{}]{A,  }\item[{}]{B }\end{DoxyParamCaption})~((Sint32)((B) -\/ (A)) $<$= 0)}
+
+
+
+Compare S\+DL ticks values, and return true if A has passed B 
+
+e.\+g. if you want to wait 100 ms, you could do this\+: Uint32 timeout = \mbox{\hyperlink{_s_d_l__timer_8h_a0b9bc71d6287e0ffafdc3419760fe2b3}{S\+D\+L\+\_\+\+Get\+Ticks()}} + 100; while (!\+S\+D\+L\+\_\+\+T\+I\+C\+K\+S\+\_\+\+P\+A\+S\+S\+ED(\mbox{\hyperlink{_s_d_l__timer_8h_a0b9bc71d6287e0ffafdc3419760fe2b3}{S\+D\+L\+\_\+\+Get\+Ticks()}}, timeout)) \{ ... do work until timeout has elapsed \} 
+
+\doxysubsection{타입정의 문서화}
+\mbox{\Hypertarget{_s_d_l__timer_8h_a3c5c867db975d245e4a82fcf0cd7de80}\label{_s_d_l__timer_8h_a3c5c867db975d245e4a82fcf0cd7de80}} 
+\index{SDL\_timer.h@{SDL\_timer.h}!SDL\_TimerCallback@{SDL\_TimerCallback}}
+\index{SDL\_TimerCallback@{SDL\_TimerCallback}!SDL\_timer.h@{SDL\_timer.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_TimerCallback}{SDL\_TimerCallback}}
+{\footnotesize\ttfamily typedef Uint32(S\+D\+L\+C\+A\+LL $\ast$ S\+D\+L\+\_\+\+Timer\+Callback) (Uint32 interval, void $\ast$param)}
+
+Function prototype for the timer callback function.
+
+The callback function is passed the current timer interval and returns the next timer interval. If the returned value is the same as the one passed in, the periodic alarm continues, otherwise a new alarm is scheduled. If the callback returns 0, the periodic alarm is cancelled. \mbox{\Hypertarget{_s_d_l__timer_8h_a412e8ff8a6c89615ba8f9486b292213a}\label{_s_d_l__timer_8h_a412e8ff8a6c89615ba8f9486b292213a}} 
+\index{SDL\_timer.h@{SDL\_timer.h}!SDL\_TimerID@{SDL\_TimerID}}
+\index{SDL\_TimerID@{SDL\_TimerID}!SDL\_timer.h@{SDL\_timer.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_TimerID}{SDL\_TimerID}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{_s_d_l__timer_8h_a412e8ff8a6c89615ba8f9486b292213a}{S\+D\+L\+\_\+\+Timer\+ID}}}
+
+Definition of the timer ID type. 
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{_s_d_l__timer_8h_a56ceea49587e3fa5796b2e4bf85603b8}\label{_s_d_l__timer_8h_a56ceea49587e3fa5796b2e4bf85603b8}} 
+\index{SDL\_timer.h@{SDL\_timer.h}!SDL\_AddTimer@{SDL\_AddTimer}}
+\index{SDL\_AddTimer@{SDL\_AddTimer}!SDL\_timer.h@{SDL\_timer.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_AddTimer()}{SDL\_AddTimer()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{_s_d_l__timer_8h_a412e8ff8a6c89615ba8f9486b292213a}{S\+D\+L\+\_\+\+Timer\+ID}} S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Add\+Timer (\begin{DoxyParamCaption}\item[{Uint32}]{interval,  }\item[{\mbox{\hyperlink{_s_d_l__timer_8h_a3c5c867db975d245e4a82fcf0cd7de80}{S\+D\+L\+\_\+\+Timer\+Callback}}}]{callback,  }\item[{void $\ast$}]{param }\end{DoxyParamCaption})}
+
+
+
+Add a new timer to the pool of timers already running. 
+
+\begin{DoxyReturn}{반환값}
+A timer ID, or 0 when an error occurs. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__timer_8h_a0b9bc71d6287e0ffafdc3419760fe2b3}\label{_s_d_l__timer_8h_a0b9bc71d6287e0ffafdc3419760fe2b3}} 
+\index{SDL\_timer.h@{SDL\_timer.h}!SDL\_GetTicks@{SDL\_GetTicks}}
+\index{SDL\_GetTicks@{SDL\_GetTicks}!SDL\_timer.h@{SDL\_timer.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetTicks()}{SDL\_GetTicks()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC Uint32 S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Ticks (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the number of milliseconds since the S\+DL library initialization. 
+
+\begin{DoxyNote}{주의}
+This value wraps if the program runs for more than $\sim$49 days. 
+\end{DoxyNote}
+\mbox{\Hypertarget{_s_d_l__timer_8h_afe8d418e59a24ae6ad820b92137ab9b2}\label{_s_d_l__timer_8h_afe8d418e59a24ae6ad820b92137ab9b2}} 
+\index{SDL\_timer.h@{SDL\_timer.h}!SDL\_RemoveTimer@{SDL\_RemoveTimer}}
+\index{SDL\_RemoveTimer@{SDL\_RemoveTimer}!SDL\_timer.h@{SDL\_timer.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_RemoveTimer()}{SDL\_RemoveTimer()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC S\+D\+L\+\_\+bool S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Remove\+Timer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__timer_8h_a412e8ff8a6c89615ba8f9486b292213a}{S\+D\+L\+\_\+\+Timer\+ID}}}]{id }\end{DoxyParamCaption})}
+
+
+
+Remove a timer knowing its ID. 
+
+\begin{DoxyReturn}{반환값}
+A boolean value indicating success or failure.
+\end{DoxyReturn}
+\begin{DoxyWarning}{경고}
+It is not safe to remove a timer multiple times. 
+\end{DoxyWarning}

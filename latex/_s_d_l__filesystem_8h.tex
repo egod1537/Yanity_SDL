@@ -1,0 +1,104 @@
+\hypertarget{_s_d_l__filesystem_8h}{}\doxysection{S\+D\+L/include/\+S\+D\+L\+\_\+filesystem.h 파일 참조}
+\label{_s_d_l__filesystem_8h}\index{SDL/include/SDL\_filesystem.h@{SDL/include/SDL\_filesystem.h}}
+
+
+Include file for filesystem S\+DL A\+PI functions  
+
+
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__filesystem_8h_a752d42a2e7fbff1292b7e54593be37bc}{S\+D\+L\+\_\+\+Get\+Base\+Path}} (void)
+\begin{DoxyCompactList}\small\item\em Get the path where the application resides. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__filesystem_8h_ab11eaf74d913eefb472475f0c8e312ce}{S\+D\+L\+\_\+\+Get\+Pref\+Path}} (const char $\ast$org, const char $\ast$app)
+\begin{DoxyCompactList}\small\item\em Get the user-\/and-\/app-\/specific path where files can be written. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+Include file for filesystem S\+DL A\+PI functions 
+
+
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{_s_d_l__filesystem_8h_a752d42a2e7fbff1292b7e54593be37bc}\label{_s_d_l__filesystem_8h_a752d42a2e7fbff1292b7e54593be37bc}} 
+\index{SDL\_filesystem.h@{SDL\_filesystem.h}!SDL\_GetBasePath@{SDL\_GetBasePath}}
+\index{SDL\_GetBasePath@{SDL\_GetBasePath}!SDL\_filesystem.h@{SDL\_filesystem.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetBasePath()}{SDL\_GetBasePath()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC char$\ast$ S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Base\+Path (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the path where the application resides. 
+
+Get the \char`\"{}base path\char`\"{}. This is the directory where the application was run from, which is probably the installation directory, and may or may not be the process\textquotesingle{}s current working directory.
+
+This returns an absolute path in U\+T\+F-\/8 encoding, and is guaranteed to end with a path separator (\textquotesingle{}\textbackslash{}\textquotesingle{} on Windows, \textquotesingle{}/\textquotesingle{} most other places).
+
+The pointer returned by this function is owned by you. Please call S\+D\+L\+\_\+free() on the pointer when you are done with it, or it will be a memory leak. This is not necessarily a fast call, though, so you should call this once near startup and save the string if you need it.
+
+Some platforms can\textquotesingle{}t determine the application\textquotesingle{}s path, and on other platforms, this might be meaningless. In such cases, this function will return N\+U\+LL.
+
+\begin{DoxyReturn}{반환값}
+String of base dir in U\+T\+F-\/8 encoding, or N\+U\+LL on error.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__filesystem_8h_ab11eaf74d913eefb472475f0c8e312ce}{S\+D\+L\+\_\+\+Get\+Pref\+Path}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__filesystem_8h_ab11eaf74d913eefb472475f0c8e312ce}\label{_s_d_l__filesystem_8h_ab11eaf74d913eefb472475f0c8e312ce}} 
+\index{SDL\_filesystem.h@{SDL\_filesystem.h}!SDL\_GetPrefPath@{SDL\_GetPrefPath}}
+\index{SDL\_GetPrefPath@{SDL\_GetPrefPath}!SDL\_filesystem.h@{SDL\_filesystem.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetPrefPath()}{SDL\_GetPrefPath()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC char$\ast$ S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Pref\+Path (\begin{DoxyParamCaption}\item[{const char $\ast$}]{org,  }\item[{const char $\ast$}]{app }\end{DoxyParamCaption})}
+
+
+
+Get the user-\/and-\/app-\/specific path where files can be written. 
+
+Get the \char`\"{}pref dir\char`\"{}. This is meant to be where users can write personal files (preferences and save games, etc) that are specific to your application. This directory is unique per user, per application.
+
+This function will decide the appropriate location in the native filesystem, create the directory if necessary, and return a string of the absolute path to the directory in U\+T\+F-\/8 encoding.
+
+On Windows, the string might look like\+: \char`\"{}\+C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}bob\textbackslash{}\textbackslash{}\+App\+Data\textbackslash{}\textbackslash{}\+Roaming\textbackslash{}\textbackslash{}\+My Company\textbackslash{}\textbackslash{}\+My Program Name\textbackslash{}\textbackslash{}\char`\"{}
+
+On Linux, the string might look like\+: \char`\"{}/home/bob/.\+local/share/\+My Program Name/\char`\"{}
+
+On Mac OS X, the string might look like\+: \char`\"{}/\+Users/bob/\+Library/\+Application Support/\+My Program Name/\char`\"{}
+
+(etc.)
+
+You specify the name of your organization (if it\textquotesingle{}s not a real organization, your name or an Internet domain you own might do) and the name of your application. These should be untranslated proper names.
+
+Both the org and app strings may become part of a directory name, so please follow these rules\+:
+
+
+\begin{DoxyItemize}
+\item Try to use the same org string (including case-\/sensitivity) for all your applications that use this function.
+\item Always use a unique app string for each one, and make sure it never changes for an app once you\textquotesingle{}ve decided on it.
+\item Unicode characters are legal, as long as it\textquotesingle{}s U\+T\+F-\/8 encoded, but...
+\item ...only use letters, numbers, and spaces. Avoid punctuation like \char`\"{}\+Game Name 2\+: Bad Guy\textquotesingle{}s Revenge!\char`\"{} ... \char`\"{}\+Game Name 2\char`\"{} is sufficient.
+\end{DoxyItemize}
+
+This returns an absolute path in U\+T\+F-\/8 encoding, and is guaranteed to end with a path separator (\textquotesingle{}\textbackslash{}\textquotesingle{} on Windows, \textquotesingle{}/\textquotesingle{} most other places).
+
+The pointer returned by this function is owned by you. Please call S\+D\+L\+\_\+free() on the pointer when you are done with it, or it will be a memory leak. This is not necessarily a fast call, though, so you should call this once near startup and save the string if you need it.
+
+You should assume the path returned by this function is the only safe place to write files (and that \mbox{\hyperlink{_s_d_l__filesystem_8h_a752d42a2e7fbff1292b7e54593be37bc}{S\+D\+L\+\_\+\+Get\+Base\+Path()}}, while it might be writable, or even the parent of the returned path, aren\textquotesingle{}t where you should be writing things).
+
+Some platforms can\textquotesingle{}t determine the pref path, and on other platforms, this might be meaningless. In such cases, this function will return N\+U\+LL.
+
+
+\begin{DoxyParams}{매개변수}
+{\em org} & The name of your organization. \\
+\hline
+{\em app} & The name of your application. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+U\+T\+F-\/8 string of user dir in platform-\/dependent notation. N\+U\+LL if there\textquotesingle{}s a problem (creating directory failed, etc).
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__filesystem_8h_a752d42a2e7fbff1292b7e54593be37bc}{S\+D\+L\+\_\+\+Get\+Base\+Path}} 
+\end{DoxySeeAlso}

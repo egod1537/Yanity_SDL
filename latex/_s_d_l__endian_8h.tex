@@ -1,0 +1,62 @@
+\hypertarget{_s_d_l__endian_8h}{}\doxysection{S\+D\+L/include/\+S\+D\+L\+\_\+endian.h 파일 참조}
+\label{_s_d_l__endian_8h}\index{SDL/include/SDL\_endian.h@{SDL/include/SDL\_endian.h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\doxysubsection*{매크로}
+\begin{Indent}\textbf{ Swap to native}\par
+{\em Byteswap item from the specified endianness to the native endianness. }\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_d_l__endian_8h_ae650119b14f608de5d79e0d73a444c35}\label{_s_d_l__endian_8h_ae650119b14f608de5d79e0d73a444c35}} 
+\#define {\bfseries S\+D\+L\+\_\+\+Swap\+L\+E16}(X)~(X)
+\item 
+\mbox{\Hypertarget{_s_d_l__endian_8h_a14265c62e134bff318afba31ec1b0911}\label{_s_d_l__endian_8h_a14265c62e134bff318afba31ec1b0911}} 
+\#define {\bfseries S\+D\+L\+\_\+\+Swap\+L\+E32}(X)~(X)
+\item 
+\mbox{\Hypertarget{_s_d_l__endian_8h_ae1c6fb787318750e4e974345bd46ca4b}\label{_s_d_l__endian_8h_ae1c6fb787318750e4e974345bd46ca4b}} 
+\#define {\bfseries S\+D\+L\+\_\+\+Swap\+L\+E64}(X)~(X)
+\item 
+\mbox{\Hypertarget{_s_d_l__endian_8h_a2b64599423c3c710550238f2ee6fe3a8}\label{_s_d_l__endian_8h_a2b64599423c3c710550238f2ee6fe3a8}} 
+\#define {\bfseries S\+D\+L\+\_\+\+Swap\+Float\+LE}(X)~(X)
+\item 
+\mbox{\Hypertarget{_s_d_l__endian_8h_aba916646d6a5abd082d5a21b406d3823}\label{_s_d_l__endian_8h_aba916646d6a5abd082d5a21b406d3823}} 
+\#define {\bfseries S\+D\+L\+\_\+\+Swap\+B\+E16}(X)~S\+D\+L\+\_\+\+Swap16(X)
+\item 
+\mbox{\Hypertarget{_s_d_l__endian_8h_a2a2c8f38728448268d6d881f4a699d54}\label{_s_d_l__endian_8h_a2a2c8f38728448268d6d881f4a699d54}} 
+\#define {\bfseries S\+D\+L\+\_\+\+Swap\+B\+E32}(X)~S\+D\+L\+\_\+\+Swap32(X)
+\item 
+\mbox{\Hypertarget{_s_d_l__endian_8h_acc75cbc3e0bbf00dfd438e2186b91b03}\label{_s_d_l__endian_8h_acc75cbc3e0bbf00dfd438e2186b91b03}} 
+\#define {\bfseries S\+D\+L\+\_\+\+Swap\+B\+E64}(X)~S\+D\+L\+\_\+\+Swap64(X)
+\item 
+\mbox{\Hypertarget{_s_d_l__endian_8h_a12efebb66799de3703518e127361cfb7}\label{_s_d_l__endian_8h_a12efebb66799de3703518e127361cfb7}} 
+\#define {\bfseries S\+D\+L\+\_\+\+Swap\+Float\+BE}(X)~S\+D\+L\+\_\+\+Swap\+Float(X)
+\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{The two types of endianness}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_d_l__endian_8h_ad2b20e63545e73207b007b03bf08c2df}\label{_s_d_l__endian_8h_ad2b20e63545e73207b007b03bf08c2df}} 
+\#define {\bfseries S\+D\+L\+\_\+\+L\+I\+L\+\_\+\+E\+N\+D\+I\+AN}~1234
+\item 
+\mbox{\Hypertarget{_s_d_l__endian_8h_af22db189169b9aa7e356bf26b2a553f6}\label{_s_d_l__endian_8h_af22db189169b9aa7e356bf26b2a553f6}} 
+\#define {\bfseries S\+D\+L\+\_\+\+B\+I\+G\+\_\+\+E\+N\+D\+I\+AN}~4321
+\item 
+\mbox{\Hypertarget{_s_d_l__endian_8h_a0582882a281bd6c7580e454be3595703}\label{_s_d_l__endian_8h_a0582882a281bd6c7580e454be3595703}} 
+\#define {\bfseries S\+D\+L\+\_\+\+B\+Y\+T\+E\+O\+R\+D\+ER}~S\+D\+L\+\_\+\+L\+I\+L\+\_\+\+E\+N\+D\+I\+AN
+\item 
+\mbox{\Hypertarget{_s_d_l__endian_8h_a157cb22d3cc4b3f623822b15c3921e54}\label{_s_d_l__endian_8h_a157cb22d3cc4b3f623822b15c3921e54}} 
+S\+D\+L\+\_\+\+F\+O\+R\+C\+E\+\_\+\+I\+N\+L\+I\+NE Uint16 {\bfseries S\+D\+L\+\_\+\+Swap16} (Uint16 x)
+\item 
+\mbox{\Hypertarget{_s_d_l__endian_8h_a0f516a794e03b48778c9fcf41ddfe026}\label{_s_d_l__endian_8h_a0f516a794e03b48778c9fcf41ddfe026}} 
+S\+D\+L\+\_\+\+F\+O\+R\+C\+E\+\_\+\+I\+N\+L\+I\+NE Uint32 {\bfseries S\+D\+L\+\_\+\+Swap32} (Uint32 x)
+\item 
+\mbox{\Hypertarget{_s_d_l__endian_8h_a5ffaae586753b46ec5df4e601702324a}\label{_s_d_l__endian_8h_a5ffaae586753b46ec5df4e601702324a}} 
+S\+D\+L\+\_\+\+F\+O\+R\+C\+E\+\_\+\+I\+N\+L\+I\+NE Uint64 {\bfseries S\+D\+L\+\_\+\+Swap64} (Uint64 x)
+\item 
+\mbox{\Hypertarget{_s_d_l__endian_8h_a5f0f2d51e5ca5b27627ffc46ec892ce2}\label{_s_d_l__endian_8h_a5f0f2d51e5ca5b27627ffc46ec892ce2}} 
+S\+D\+L\+\_\+\+F\+O\+R\+C\+E\+\_\+\+I\+N\+L\+I\+NE float {\bfseries S\+D\+L\+\_\+\+Swap\+Float} (float x)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+Functions for reading and writing endian-\/specific values

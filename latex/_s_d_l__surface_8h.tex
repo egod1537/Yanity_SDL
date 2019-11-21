@@ -1,0 +1,713 @@
+\hypertarget{_s_d_l__surface_8h}{}\doxysection{S\+D\+L/include/\+S\+D\+L\+\_\+surface.h 파일 참조}
+\label{_s_d_l__surface_8h}\index{SDL/include/SDL\_surface.h@{SDL/include/SDL\_surface.h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+pixels.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+rect.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+blendmode.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+rwops.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\doxysubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}}
+\begin{DoxyCompactList}\small\item\em A collection of pixels used in software blitting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Surface flags}
+\label{_amgrpd2eeaf52e16b8c367d79016ab953cd2b}%
+These are the currently supported flags for the \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}}. \begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_s_d_l__surface_8h_a59c7111f96872f973d0f058362761776}{S\+D\+L\+\_\+\+S\+W\+S\+U\+R\+F\+A\+CE}}~0
+\item 
+\#define \mbox{\hyperlink{_s_d_l__surface_8h_a4a5f795a69ac626fba73c4bd0bfd9626}{S\+D\+L\+\_\+\+P\+R\+E\+A\+L\+L\+OC}}~0x00000001
+\item 
+\#define \mbox{\hyperlink{_s_d_l__surface_8h_a3b3d53ad7ba0b7294ca25251d88d40fb}{S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+EL}}~0x00000002
+\item 
+\#define \mbox{\hyperlink{_s_d_l__surface_8h_a2d3381f5c76aec3fea3f8b990c2e9f6d}{S\+D\+L\+\_\+\+D\+O\+N\+T\+F\+R\+EE}}~0x00000004
+\item 
+\#define \mbox{\hyperlink{_s_d_l__surface_8h_a48a8fb403cb1513b0f689b532dc75861}{S\+D\+L\+\_\+\+S\+I\+M\+D\+\_\+\+A\+L\+I\+G\+N\+ED}}~0x00000008
+\item 
+\#define \mbox{\hyperlink{_s_d_l__surface_8h_aba3239116c763175b6ea41ef78b72091}{S\+D\+L\+\_\+\+M\+U\+S\+T\+L\+O\+CK}}(S)~(((S)-\/$>$flags \& \mbox{\hyperlink{_s_d_l__surface_8h_a3b3d53ad7ba0b7294ca25251d88d40fb}{S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+EL}}) != 0)
+\item 
+\#define \mbox{\hyperlink{_s_d_l__surface_8h_ae63aa646481001be542220a8733c3ce0}{S\+D\+L\+\_\+\+Load\+B\+MP}}(file)~\mbox{\hyperlink{_s_d_l__surface_8h_aac1d1435b9fa8523d699c3a33264d559}{S\+D\+L\+\_\+\+Load\+B\+M\+P\+\_\+\+RW}}(S\+D\+L\+\_\+\+R\+W\+From\+File(file, \char`\"{}rb\char`\"{}), 1)
+\item 
+\#define \mbox{\hyperlink{_s_d_l__surface_8h_a425e7a69acbdf2bd9ba46d332d917320}{S\+D\+L\+\_\+\+Save\+B\+MP}}(surface,  file)~\mbox{\hyperlink{_s_d_l__surface_8h_aadc126a4edeafb5033d5e942cf32db6a}{S\+D\+L\+\_\+\+Save\+B\+M\+P\+\_\+\+RW}}(surface, S\+D\+L\+\_\+\+R\+W\+From\+File(file, \char`\"{}wb\char`\"{}), 1)
+\item 
+\#define \mbox{\hyperlink{_s_d_l__surface_8h_aad8d7ebe5e953593cb7d91373e73ba9a}{S\+D\+L\+\_\+\+Blit\+Surface}}~\mbox{\hyperlink{_s_d_l__surface_8h_ac418c4404813eeb32f4e1b24f9deae96}{S\+D\+L\+\_\+\+Upper\+Blit}}
+\item 
+\mbox{\Hypertarget{_s_d_l__surface_8h_a0be5f27c24e29a61096c2f59610ff1bf}\label{_s_d_l__surface_8h_a0be5f27c24e29a61096c2f59610ff1bf}} 
+\#define {\bfseries S\+D\+L\+\_\+\+Blit\+Scaled}~\mbox{\hyperlink{_s_d_l__surface_8h_a90ac01634e9ee33764fcf5ec7bc43c46}{S\+D\+L\+\_\+\+Upper\+Blit\+Scaled}}
+\item 
+enum \mbox{\hyperlink{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446}{S\+D\+L\+\_\+\+Y\+U\+V\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+O\+DE}} \{ \mbox{\hyperlink{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446a779237ffb78ee935518b83e8ab8a35dc}{S\+D\+L\+\_\+\+Y\+U\+V\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+J\+P\+EG}}, 
+\mbox{\hyperlink{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446a58058f0ed3146de73b031e256aa2aaaa}{S\+D\+L\+\_\+\+Y\+U\+V\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+B\+T601}}, 
+\mbox{\hyperlink{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446a806aeb86ff618a298206cbf921c0202a}{S\+D\+L\+\_\+\+Y\+U\+V\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+B\+T709}}, 
+\mbox{\hyperlink{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446acbf0cb1b718195c6c0960d4471a5ed0a}{S\+D\+L\+\_\+\+Y\+U\+V\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+A\+U\+T\+O\+M\+A\+T\+IC}}
+ \}
+\begin{DoxyCompactList}\small\item\em The formula used for converting between Y\+UV and R\+GB \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} \mbox{\hyperlink{_s_d_l__surface_8h_a32471ad028ae3d2a132302bc5efcb1ee}{S\+D\+L\+\_\+\+Surface}}
+\begin{DoxyCompactList}\small\item\em A collection of pixels used in software blitting. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__surface_8h_ab2d7366d99a08693d476b98760690947}\label{_s_d_l__surface_8h_ab2d7366d99a08693d476b98760690947}} 
+typedef int(S\+D\+L\+C\+A\+LL $\ast$ \mbox{\hyperlink{_s_d_l__surface_8h_ab2d7366d99a08693d476b98760690947}{S\+D\+L\+\_\+blit}}) (struct \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$src, \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$srcrect, struct \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$dst, \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$dstrect)
+\begin{DoxyCompactList}\small\item\em The type of function used for surface blitting functions. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_aac106bf796c828587cce76cb847d11ae}{S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface}} (Uint32 flags, int width, int height, int depth, Uint32 Rmask, Uint32 Gmask, Uint32 Bmask, Uint32 Amask)
+\item 
+\mbox{\Hypertarget{_s_d_l__surface_8h_a831ca475e37e6aa41afef1f3c657717d}\label{_s_d_l__surface_8h_a831ca475e37e6aa41afef1f3c657717d}} 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface\+With\+Format} (Uint32 flags, int width, int height, int depth, Uint32 format)
+\item 
+\mbox{\Hypertarget{_s_d_l__surface_8h_a25c74ddbc73538e9a4accb42e1c09971}\label{_s_d_l__surface_8h_a25c74ddbc73538e9a4accb42e1c09971}} 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface\+From} (void $\ast$pixels, int width, int height, int depth, int pitch, Uint32 Rmask, Uint32 Gmask, Uint32 Bmask, Uint32 Amask)
+\item 
+\mbox{\Hypertarget{_s_d_l__surface_8h_a0c5dee1a61ebc865b045a0f1165d55fb}\label{_s_d_l__surface_8h_a0c5dee1a61ebc865b045a0f1165d55fb}} 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface\+With\+Format\+From} (void $\ast$pixels, int width, int height, int depth, int pitch, Uint32 format)
+\item 
+\mbox{\Hypertarget{_s_d_l__surface_8h_a7b8d4f9cc058822501896a2eed81220e}\label{_s_d_l__surface_8h_a7b8d4f9cc058822501896a2eed81220e}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+\+Free\+Surface} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$surface)
+\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a72c780465293acb1f586995943422a17}{S\+D\+L\+\_\+\+Set\+Surface\+Palette}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$surface, \mbox{\hyperlink{struct_s_d_l___palette}{S\+D\+L\+\_\+\+Palette}} $\ast$palette)
+\begin{DoxyCompactList}\small\item\em Set the palette used by a surface. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a3d1da1c7ecdaa461fac51a10785f5077}{S\+D\+L\+\_\+\+Lock\+Surface}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$surface)
+\begin{DoxyCompactList}\small\item\em Sets up a surface for directly accessing the pixels. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a56b93f51358b55d7fc213a3ba9b02c24}{S\+D\+L\+\_\+\+Unlock\+Surface}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$surface)
+\item 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_aac1d1435b9fa8523d699c3a33264d559}{S\+D\+L\+\_\+\+Load\+B\+M\+P\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops}} $\ast$src, int freesrc)
+\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_aadc126a4edeafb5033d5e942cf32db6a}{S\+D\+L\+\_\+\+Save\+B\+M\+P\+\_\+\+RW}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$surface, \mbox{\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops}} $\ast$dst, int freedst)
+\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_ae2f6d70b8071e83e0c84241dbdcd3a3b}{S\+D\+L\+\_\+\+Set\+Surface\+R\+LE}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$surface, int flag)
+\begin{DoxyCompactList}\small\item\em Sets the R\+LE acceleration hint for a surface. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a4cbe831b210dc900cb93101352357b73}{S\+D\+L\+\_\+\+Set\+Color\+Key}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$surface, int flag, Uint32 key)
+\begin{DoxyCompactList}\small\item\em Sets the color key (transparent pixel) in a blittable surface. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC S\+D\+L\+\_\+bool S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a31ca900bd39b6805fc8586472be18c90}{S\+D\+L\+\_\+\+Has\+Color\+Key}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$surface)
+\begin{DoxyCompactList}\small\item\em Returns whether the surface has a color key \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a2ff80a244bad20f1c4fa85adf1e1deb9}{S\+D\+L\+\_\+\+Get\+Color\+Key}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$surface, Uint32 $\ast$key)
+\begin{DoxyCompactList}\small\item\em Gets the color key (transparent pixel) in a blittable surface. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a4edf978396e3f562d43c672630e0ca71}{S\+D\+L\+\_\+\+Set\+Surface\+Color\+Mod}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$surface, Uint8 r, Uint8 g, Uint8 b)
+\begin{DoxyCompactList}\small\item\em Set an additional color value used in blit operations. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a5db1ae32b7884b598d86424e205c3a86}{S\+D\+L\+\_\+\+Get\+Surface\+Color\+Mod}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$surface, Uint8 $\ast$r, Uint8 $\ast$g, Uint8 $\ast$b)
+\begin{DoxyCompactList}\small\item\em Get the additional color value used in blit operations. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a0035f0239f0588d16c57aff7672be174}{S\+D\+L\+\_\+\+Set\+Surface\+Alpha\+Mod}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$surface, Uint8 alpha)
+\begin{DoxyCompactList}\small\item\em Set an additional alpha value used in blit operations. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a09a99bb24420857e85071e39607678f6}{S\+D\+L\+\_\+\+Get\+Surface\+Alpha\+Mod}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$surface, Uint8 $\ast$alpha)
+\begin{DoxyCompactList}\small\item\em Get the additional alpha value used in blit operations. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a35f5b3b64c503c4a8da01566f62976a9}{S\+D\+L\+\_\+\+Set\+Surface\+Blend\+Mode}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$surface, \mbox{\hyperlink{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1e}{S\+D\+L\+\_\+\+Blend\+Mode}} blend\+Mode)
+\begin{DoxyCompactList}\small\item\em Set the blend mode used for blit operations. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a95570c617879f45bf7e2e4d330534f6b}{S\+D\+L\+\_\+\+Get\+Surface\+Blend\+Mode}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$surface, \mbox{\hyperlink{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1e}{S\+D\+L\+\_\+\+Blend\+Mode}} $\ast$blend\+Mode)
+\begin{DoxyCompactList}\small\item\em Get the blend mode used for blit operations. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC S\+D\+L\+\_\+bool S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a6cf2c30be55f51fe9e4faf97e3f8d08b}{S\+D\+L\+\_\+\+Set\+Clip\+Rect}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$surface, const \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$rect)
+\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a7d7f71b94748a1b0db3b5b769834ed27}{S\+D\+L\+\_\+\+Get\+Clip\+Rect}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$surface, \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$rect)
+\item 
+\mbox{\Hypertarget{_s_d_l__surface_8h_afbd136cb2ab3a50abb794677d703683e}\label{_s_d_l__surface_8h_afbd136cb2ab3a50abb794677d703683e}} 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+\+Duplicate\+Surface} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$surface)
+\item 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a65fb480a0ac01b69f6999f48a6fd985b}{S\+D\+L\+\_\+\+Convert\+Surface}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$src, const \mbox{\hyperlink{struct_s_d_l___pixel_format}{S\+D\+L\+\_\+\+Pixel\+Format}} $\ast$fmt, Uint32 flags)
+\item 
+\mbox{\Hypertarget{_s_d_l__surface_8h_aec0b84e7d50b9cc84bd9e785170ce2cd}\label{_s_d_l__surface_8h_aec0b84e7d50b9cc84bd9e785170ce2cd}} 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+\+Convert\+Surface\+Format} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$src, Uint32 pixel\+\_\+format, Uint32 flags)
+\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a339c5728a1181e2d6334ad07e1e84440}{S\+D\+L\+\_\+\+Convert\+Pixels}} (int width, int height, Uint32 src\+\_\+format, const void $\ast$src, int src\+\_\+pitch, Uint32 dst\+\_\+format, void $\ast$dst, int dst\+\_\+pitch)
+\begin{DoxyCompactList}\small\item\em Copy a block of pixels of one format to another format \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a98b3595458c6271303d6470cb2b2c721}{S\+D\+L\+\_\+\+Fill\+Rect}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$dst, const \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$rect, Uint32 color)
+\item 
+\mbox{\Hypertarget{_s_d_l__surface_8h_a7b893162f400b8193ff6ca628ec784b6}\label{_s_d_l__surface_8h_a7b893162f400b8193ff6ca628ec784b6}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+\+Fill\+Rects} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$dst, const \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$rects, int count, Uint32 color)
+\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_ac418c4404813eeb32f4e1b24f9deae96}{S\+D\+L\+\_\+\+Upper\+Blit}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$src, const \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$srcrect, \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$dst, \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$dstrect)
+\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a82bd1c0e0886d77e287207fe6351bf87}{S\+D\+L\+\_\+\+Lower\+Blit}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$src, \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$srcrect, \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$dst, \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$dstrect)
+\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_aee44fe7d5dba376a971793d70ffcf55c}{S\+D\+L\+\_\+\+Soft\+Stretch}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$src, const \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$srcrect, \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$dst, const \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$dstrect)
+\begin{DoxyCompactList}\small\item\em Perform a fast, low quality, stretch blit between two surfaces of the same pixel format. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a90ac01634e9ee33764fcf5ec7bc43c46}{S\+D\+L\+\_\+\+Upper\+Blit\+Scaled}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$src, const \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$srcrect, \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$dst, \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$dstrect)
+\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a5c6b2f06726600d41ff75ff259d4383b}{S\+D\+L\+\_\+\+Lower\+Blit\+Scaled}} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$src, \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$srcrect, \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$dst, \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$dstrect)
+\item 
+\mbox{\Hypertarget{_s_d_l__surface_8h_a35875bf88b2d78e0990f5f13ef1cd0e1}\label{_s_d_l__surface_8h_a35875bf88b2d78e0990f5f13ef1cd0e1}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a35875bf88b2d78e0990f5f13ef1cd0e1}{S\+D\+L\+\_\+\+Set\+Y\+U\+V\+Conversion\+Mode}} (\mbox{\hyperlink{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446}{S\+D\+L\+\_\+\+Y\+U\+V\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+O\+DE}} mode)
+\begin{DoxyCompactList}\small\item\em Set the Y\+UV conversion mode \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__surface_8h_a61d2c4412423e5d1a0e3426ee678d262}\label{_s_d_l__surface_8h_a61d2c4412423e5d1a0e3426ee678d262}} 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446}{S\+D\+L\+\_\+\+Y\+U\+V\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+O\+DE}} S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a61d2c4412423e5d1a0e3426ee678d262}{S\+D\+L\+\_\+\+Get\+Y\+U\+V\+Conversion\+Mode}} (void)
+\begin{DoxyCompactList}\small\item\em Get the Y\+UV conversion mode \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__surface_8h_a1cfad98219e074988d0c5731e304cda4}\label{_s_d_l__surface_8h_a1cfad98219e074988d0c5731e304cda4}} 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446}{S\+D\+L\+\_\+\+Y\+U\+V\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+O\+DE}} S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__surface_8h_a1cfad98219e074988d0c5731e304cda4}{S\+D\+L\+\_\+\+Get\+Y\+U\+V\+Conversion\+Mode\+For\+Resolution}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em Get the Y\+UV conversion mode, returning the correct mode for the resolution when the current conversion mode is S\+D\+L\+\_\+\+Y\+U\+V\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+A\+U\+T\+O\+M\+A\+T\+IC \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+Header file for \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} definition and management functions. 
+
+\doxysubsection{매크로 문서화}
+\mbox{\Hypertarget{_s_d_l__surface_8h_aad8d7ebe5e953593cb7d91373e73ba9a}\label{_s_d_l__surface_8h_aad8d7ebe5e953593cb7d91373e73ba9a}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_BlitSurface@{SDL\_BlitSurface}}
+\index{SDL\_BlitSurface@{SDL\_BlitSurface}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_BlitSurface}{SDL\_BlitSurface}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+Blit\+Surface~\mbox{\hyperlink{_s_d_l__surface_8h_ac418c4404813eeb32f4e1b24f9deae96}{S\+D\+L\+\_\+\+Upper\+Blit}}}
+
+Performs a fast blit from the source surface to the destination surface.
+
+This assumes that the source and destination rectangles are the same size. If either {\ttfamily srcrect} or {\ttfamily dstrect} are N\+U\+LL, the entire surface ({\ttfamily src} or {\ttfamily dst}) is copied. The final blit rectangles are saved in {\ttfamily srcrect} and {\ttfamily dstrect} after all clipping is performed.
+
+\begin{DoxyReturn}{반환값}
+If the blit is successful, it returns 0, otherwise it returns -\/1.
+\end{DoxyReturn}
+The blit function should not be called on a locked surface.
+
+The blit semantics for surfaces with and without blending and colorkey are defined as follows\+: \begin{DoxyVerb}RGBA->RGB:
+  Source surface blend mode set to SDL_BLENDMODE_BLEND:
+    alpha-blend (using the source alpha-channel and per-surface alpha)
+    SDL_SRCCOLORKEY ignored.
+  Source surface blend mode set to SDL_BLENDMODE_NONE:
+    copy RGB.
+    if SDL_SRCCOLORKEY set, only copy the pixels matching the
+    RGB values of the source color key, ignoring alpha in the
+    comparison.
+
+RGB->RGBA:
+  Source surface blend mode set to SDL_BLENDMODE_BLEND:
+    alpha-blend (using the source per-surface alpha)
+  Source surface blend mode set to SDL_BLENDMODE_NONE:
+    copy RGB, set destination alpha to source per-surface alpha value.
+  both:
+    if SDL_SRCCOLORKEY set, only copy the pixels matching the
+    source color key.
+
+RGBA->RGBA:
+  Source surface blend mode set to SDL_BLENDMODE_BLEND:
+    alpha-blend (using the source alpha-channel and per-surface alpha)
+    SDL_SRCCOLORKEY ignored.
+  Source surface blend mode set to SDL_BLENDMODE_NONE:
+    copy all of RGBA to the destination.
+    if SDL_SRCCOLORKEY set, only copy the pixels matching the
+    RGB values of the source color key, ignoring alpha in the
+    comparison.
+
+RGB->RGB:
+  Source surface blend mode set to SDL_BLENDMODE_BLEND:
+    alpha-blend (using the source per-surface alpha)
+  Source surface blend mode set to SDL_BLENDMODE_NONE:
+    copy RGB.
+  both:
+    if SDL_SRCCOLORKEY set, only copy the pixels matching the
+    source color key.
+\end{DoxyVerb}
+
+
+You should call \mbox{\hyperlink{_s_d_l__surface_8h_aad8d7ebe5e953593cb7d91373e73ba9a}{S\+D\+L\+\_\+\+Blit\+Surface()}} unless you know exactly how S\+DL blitting works internally and how to use the other blit functions. \mbox{\Hypertarget{_s_d_l__surface_8h_a2d3381f5c76aec3fea3f8b990c2e9f6d}\label{_s_d_l__surface_8h_a2d3381f5c76aec3fea3f8b990c2e9f6d}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_DONTFREE@{SDL\_DONTFREE}}
+\index{SDL\_DONTFREE@{SDL\_DONTFREE}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_DONTFREE}{SDL\_DONTFREE}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+D\+O\+N\+T\+F\+R\+EE~0x00000004}
+
+Surface is referenced internally \mbox{\Hypertarget{_s_d_l__surface_8h_ae63aa646481001be542220a8733c3ce0}\label{_s_d_l__surface_8h_ae63aa646481001be542220a8733c3ce0}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_LoadBMP@{SDL\_LoadBMP}}
+\index{SDL\_LoadBMP@{SDL\_LoadBMP}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_LoadBMP}{SDL\_LoadBMP}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+Load\+B\+MP(\begin{DoxyParamCaption}\item[{}]{file }\end{DoxyParamCaption})~\mbox{\hyperlink{_s_d_l__surface_8h_aac1d1435b9fa8523d699c3a33264d559}{S\+D\+L\+\_\+\+Load\+B\+M\+P\+\_\+\+RW}}(S\+D\+L\+\_\+\+R\+W\+From\+File(file, \char`\"{}rb\char`\"{}), 1)}
+
+Load a surface from a file.
+
+Convenience macro. \mbox{\Hypertarget{_s_d_l__surface_8h_aba3239116c763175b6ea41ef78b72091}\label{_s_d_l__surface_8h_aba3239116c763175b6ea41ef78b72091}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_MUSTLOCK@{SDL\_MUSTLOCK}}
+\index{SDL\_MUSTLOCK@{SDL\_MUSTLOCK}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_MUSTLOCK}{SDL\_MUSTLOCK}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+M\+U\+S\+T\+L\+O\+CK(\begin{DoxyParamCaption}\item[{}]{S }\end{DoxyParamCaption})~(((S)-\/$>$flags \& \mbox{\hyperlink{_s_d_l__surface_8h_a3b3d53ad7ba0b7294ca25251d88d40fb}{S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+EL}}) != 0)}
+
+Evaluates to true if the surface needs to be locked before access. \mbox{\Hypertarget{_s_d_l__surface_8h_a4a5f795a69ac626fba73c4bd0bfd9626}\label{_s_d_l__surface_8h_a4a5f795a69ac626fba73c4bd0bfd9626}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_PREALLOC@{SDL\_PREALLOC}}
+\index{SDL\_PREALLOC@{SDL\_PREALLOC}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_PREALLOC}{SDL\_PREALLOC}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+P\+R\+E\+A\+L\+L\+OC~0x00000001}
+
+Surface uses preallocated memory \mbox{\Hypertarget{_s_d_l__surface_8h_a3b3d53ad7ba0b7294ca25251d88d40fb}\label{_s_d_l__surface_8h_a3b3d53ad7ba0b7294ca25251d88d40fb}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_RLEACCEL@{SDL\_RLEACCEL}}
+\index{SDL\_RLEACCEL@{SDL\_RLEACCEL}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_RLEACCEL}{SDL\_RLEACCEL}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+EL~0x00000002}
+
+Surface is R\+LE encoded \mbox{\Hypertarget{_s_d_l__surface_8h_a425e7a69acbdf2bd9ba46d332d917320}\label{_s_d_l__surface_8h_a425e7a69acbdf2bd9ba46d332d917320}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_SaveBMP@{SDL\_SaveBMP}}
+\index{SDL\_SaveBMP@{SDL\_SaveBMP}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SaveBMP}{SDL\_SaveBMP}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+Save\+B\+MP(\begin{DoxyParamCaption}\item[{}]{surface,  }\item[{}]{file }\end{DoxyParamCaption})~\mbox{\hyperlink{_s_d_l__surface_8h_aadc126a4edeafb5033d5e942cf32db6a}{S\+D\+L\+\_\+\+Save\+B\+M\+P\+\_\+\+RW}}(surface, S\+D\+L\+\_\+\+R\+W\+From\+File(file, \char`\"{}wb\char`\"{}), 1)}
+
+Save a surface to a file.
+
+Convenience macro. \mbox{\Hypertarget{_s_d_l__surface_8h_a48a8fb403cb1513b0f689b532dc75861}\label{_s_d_l__surface_8h_a48a8fb403cb1513b0f689b532dc75861}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_SIMD\_ALIGNED@{SDL\_SIMD\_ALIGNED}}
+\index{SDL\_SIMD\_ALIGNED@{SDL\_SIMD\_ALIGNED}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SIMD\_ALIGNED}{SDL\_SIMD\_ALIGNED}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+S\+I\+M\+D\+\_\+\+A\+L\+I\+G\+N\+ED~0x00000008}
+
+Surface uses aligned memory \mbox{\Hypertarget{_s_d_l__surface_8h_a59c7111f96872f973d0f058362761776}\label{_s_d_l__surface_8h_a59c7111f96872f973d0f058362761776}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_SWSURFACE@{SDL\_SWSURFACE}}
+\index{SDL\_SWSURFACE@{SDL\_SWSURFACE}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SWSURFACE}{SDL\_SWSURFACE}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+S\+W\+S\+U\+R\+F\+A\+CE~0}
+
+Just here for compatibility 
+
+\doxysubsection{타입정의 문서화}
+\mbox{\Hypertarget{_s_d_l__surface_8h_a32471ad028ae3d2a132302bc5efcb1ee}\label{_s_d_l__surface_8h_a32471ad028ae3d2a132302bc5efcb1ee}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_Surface@{SDL\_Surface}}
+\index{SDL\_Surface@{SDL\_Surface}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_Surface}{SDL\_Surface}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}}  \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}}}
+
+
+
+A collection of pixels used in software blitting. 
+
+\begin{DoxyNote}{주의}
+This structure should be treated as read-\/only, except for {\ttfamily pixels}, which, if not N\+U\+LL, contains the raw pixel data for the surface. 
+\end{DoxyNote}
+
+
+\doxysubsection{열거형 타입 문서화}
+\mbox{\Hypertarget{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446}\label{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_YUV\_CONVERSION\_MODE@{SDL\_YUV\_CONVERSION\_MODE}}
+\index{SDL\_YUV\_CONVERSION\_MODE@{SDL\_YUV\_CONVERSION\_MODE}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_YUV\_CONVERSION\_MODE}{SDL\_YUV\_CONVERSION\_MODE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446}{S\+D\+L\+\_\+\+Y\+U\+V\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+M\+O\+DE}}}
+
+
+
+The formula used for converting between Y\+UV and R\+GB 
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_YUV\_CONVERSION\_JPEG@{SDL\_YUV\_CONVERSION\_JPEG}!SDL\_surface.h@{SDL\_surface.h}}\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_YUV\_CONVERSION\_JPEG@{SDL\_YUV\_CONVERSION\_JPEG}}}\mbox{\Hypertarget{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446a779237ffb78ee935518b83e8ab8a35dc}\label{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446a779237ffb78ee935518b83e8ab8a35dc}} 
+S\+D\+L\+\_\+\+Y\+U\+V\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+J\+P\+EG&Full range J\+P\+EG \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_YUV\_CONVERSION\_BT601@{SDL\_YUV\_CONVERSION\_BT601}!SDL\_surface.h@{SDL\_surface.h}}\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_YUV\_CONVERSION\_BT601@{SDL\_YUV\_CONVERSION\_BT601}}}\mbox{\Hypertarget{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446a58058f0ed3146de73b031e256aa2aaaa}\label{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446a58058f0ed3146de73b031e256aa2aaaa}} 
+S\+D\+L\+\_\+\+Y\+U\+V\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+B\+T601&B\+T.\+601 (the default) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_YUV\_CONVERSION\_BT709@{SDL\_YUV\_CONVERSION\_BT709}!SDL\_surface.h@{SDL\_surface.h}}\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_YUV\_CONVERSION\_BT709@{SDL\_YUV\_CONVERSION\_BT709}}}\mbox{\Hypertarget{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446a806aeb86ff618a298206cbf921c0202a}\label{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446a806aeb86ff618a298206cbf921c0202a}} 
+S\+D\+L\+\_\+\+Y\+U\+V\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+B\+T709&B\+T.\+709 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_YUV\_CONVERSION\_AUTOMATIC@{SDL\_YUV\_CONVERSION\_AUTOMATIC}!SDL\_surface.h@{SDL\_surface.h}}\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_YUV\_CONVERSION\_AUTOMATIC@{SDL\_YUV\_CONVERSION\_AUTOMATIC}}}\mbox{\Hypertarget{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446acbf0cb1b718195c6c0960d4471a5ed0a}\label{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446acbf0cb1b718195c6c0960d4471a5ed0a}} 
+S\+D\+L\+\_\+\+Y\+U\+V\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+A\+U\+T\+O\+M\+A\+T\+IC&B\+T.\+601 for SD content, B\+T.\+709 for HD content \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{_s_d_l__surface_8h_a339c5728a1181e2d6334ad07e1e84440}\label{_s_d_l__surface_8h_a339c5728a1181e2d6334ad07e1e84440}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_ConvertPixels@{SDL\_ConvertPixels}}
+\index{SDL\_ConvertPixels@{SDL\_ConvertPixels}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_ConvertPixels()}{SDL\_ConvertPixels()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Convert\+Pixels (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{Uint32}]{src\+\_\+format,  }\item[{const void $\ast$}]{src,  }\item[{int}]{src\+\_\+pitch,  }\item[{Uint32}]{dst\+\_\+format,  }\item[{void $\ast$}]{dst,  }\item[{int}]{dst\+\_\+pitch }\end{DoxyParamCaption})}
+
+
+
+Copy a block of pixels of one format to another format 
+
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if there was an error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__surface_8h_a65fb480a0ac01b69f6999f48a6fd985b}\label{_s_d_l__surface_8h_a65fb480a0ac01b69f6999f48a6fd985b}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_ConvertSurface@{SDL\_ConvertSurface}}
+\index{SDL\_ConvertSurface@{SDL\_ConvertSurface}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_ConvertSurface()}{SDL\_ConvertSurface()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}}$\ast$ S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Convert\+Surface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{src,  }\item[{const \mbox{\hyperlink{struct_s_d_l___pixel_format}{S\+D\+L\+\_\+\+Pixel\+Format}} $\ast$}]{fmt,  }\item[{Uint32}]{flags }\end{DoxyParamCaption})}
+
+Creates a new surface of the specified format, and then copies and maps the given surface to it so the blit of the converted surface will be as fast as possible. If this function fails, it returns N\+U\+LL.
+
+The {\ttfamily flags} parameter is passed to \mbox{\hyperlink{_s_d_l__surface_8h_aac106bf796c828587cce76cb847d11ae}{S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface()}} and has those semantics. You can also pass \mbox{\hyperlink{_s_d_l__surface_8h_a3b3d53ad7ba0b7294ca25251d88d40fb}{S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+EL}} in the flags parameter and S\+DL will try to R\+LE accelerate colorkey and alpha blits in the resulting surface. \mbox{\Hypertarget{_s_d_l__surface_8h_aac106bf796c828587cce76cb847d11ae}\label{_s_d_l__surface_8h_aac106bf796c828587cce76cb847d11ae}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_CreateRGBSurface@{SDL\_CreateRGBSurface}}
+\index{SDL\_CreateRGBSurface@{SDL\_CreateRGBSurface}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_CreateRGBSurface()}{SDL\_CreateRGBSurface()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}}$\ast$ S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Create\+R\+G\+B\+Surface (\begin{DoxyParamCaption}\item[{Uint32}]{flags,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{depth,  }\item[{Uint32}]{Rmask,  }\item[{Uint32}]{Gmask,  }\item[{Uint32}]{Bmask,  }\item[{Uint32}]{Amask }\end{DoxyParamCaption})}
+
+Allocate and free an R\+GB surface.
+
+If the depth is 4 or 8 bits, an empty palette is allocated for the surface. If the depth is greater than 8 bits, the pixel format is set using the flags \textquotesingle{}\mbox{[}R\+GB\mbox{]}mask\textquotesingle{}.
+
+If the function runs out of memory, it will return N\+U\+LL.
+
+
+\begin{DoxyParams}{매개변수}
+{\em flags} & The {\ttfamily flags} are obsolete and should be set to 0. \\
+\hline
+{\em width} & The width in pixels of the surface to create. \\
+\hline
+{\em height} & The height in pixels of the surface to create. \\
+\hline
+{\em depth} & The depth in bits of the surface to create. \\
+\hline
+{\em Rmask} & The red mask of the surface to create. \\
+\hline
+{\em Gmask} & The green mask of the surface to create. \\
+\hline
+{\em Bmask} & The blue mask of the surface to create. \\
+\hline
+{\em Amask} & The alpha mask of the surface to create. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_s_d_l__surface_8h_a98b3595458c6271303d6470cb2b2c721}\label{_s_d_l__surface_8h_a98b3595458c6271303d6470cb2b2c721}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_FillRect@{SDL\_FillRect}}
+\index{SDL\_FillRect@{SDL\_FillRect}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_FillRect()}{SDL\_FillRect()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Fill\+Rect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{dst,  }\item[{const \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$}]{rect,  }\item[{Uint32}]{color }\end{DoxyParamCaption})}
+
+Performs a fast fill of the given rectangle with {\ttfamily color}.
+
+If {\ttfamily rect} is N\+U\+LL, the whole surface will be filled with {\ttfamily color}.
+
+The color should be a pixel of the format used by the surface, and can be generated by the \mbox{\hyperlink{_s_d_l__pixels_8h_a157cf64c250c578722b939ea11a85b39}{S\+D\+L\+\_\+\+Map\+R\+G\+B()}} function.
+
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 on error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__surface_8h_a7d7f71b94748a1b0db3b5b769834ed27}\label{_s_d_l__surface_8h_a7d7f71b94748a1b0db3b5b769834ed27}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_GetClipRect@{SDL\_GetClipRect}}
+\index{SDL\_GetClipRect@{SDL\_GetClipRect}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetClipRect()}{SDL\_GetClipRect()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Clip\+Rect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{surface,  }\item[{\mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$}]{rect }\end{DoxyParamCaption})}
+
+Gets the clipping rectangle for the destination surface in a blit.
+
+{\ttfamily rect} must be a pointer to a valid rectangle which will be filled with the correct values. \mbox{\Hypertarget{_s_d_l__surface_8h_a2ff80a244bad20f1c4fa85adf1e1deb9}\label{_s_d_l__surface_8h_a2ff80a244bad20f1c4fa85adf1e1deb9}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_GetColorKey@{SDL\_GetColorKey}}
+\index{SDL\_GetColorKey@{SDL\_GetColorKey}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetColorKey()}{SDL\_GetColorKey()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Color\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{surface,  }\item[{Uint32 $\ast$}]{key }\end{DoxyParamCaption})}
+
+
+
+Gets the color key (transparent pixel) in a blittable surface. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em surface} & The surface to update \\
+\hline
+{\em key} & A pointer filled in with the transparent pixel in the native surface format\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if the surface is not valid or colorkey is not enabled. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__surface_8h_a09a99bb24420857e85071e39607678f6}\label{_s_d_l__surface_8h_a09a99bb24420857e85071e39607678f6}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_GetSurfaceAlphaMod@{SDL\_GetSurfaceAlphaMod}}
+\index{SDL\_GetSurfaceAlphaMod@{SDL\_GetSurfaceAlphaMod}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetSurfaceAlphaMod()}{SDL\_GetSurfaceAlphaMod()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Surface\+Alpha\+Mod (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{surface,  }\item[{Uint8 $\ast$}]{alpha }\end{DoxyParamCaption})}
+
+
+
+Get the additional alpha value used in blit operations. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em surface} & The surface to query. \\
+\hline
+{\em alpha} & A pointer filled in with the current alpha value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if the surface is not valid.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__surface_8h_a0035f0239f0588d16c57aff7672be174}{S\+D\+L\+\_\+\+Set\+Surface\+Alpha\+Mod()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__surface_8h_a95570c617879f45bf7e2e4d330534f6b}\label{_s_d_l__surface_8h_a95570c617879f45bf7e2e4d330534f6b}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_GetSurfaceBlendMode@{SDL\_GetSurfaceBlendMode}}
+\index{SDL\_GetSurfaceBlendMode@{SDL\_GetSurfaceBlendMode}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetSurfaceBlendMode()}{SDL\_GetSurfaceBlendMode()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Surface\+Blend\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{surface,  }\item[{\mbox{\hyperlink{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1e}{S\+D\+L\+\_\+\+Blend\+Mode}} $\ast$}]{blend\+Mode }\end{DoxyParamCaption})}
+
+
+
+Get the blend mode used for blit operations. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em surface} & The surface to query. \\
+\hline
+{\em blend\+Mode} & A pointer filled in with the current blend mode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if the surface is not valid.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__surface_8h_a35f5b3b64c503c4a8da01566f62976a9}{S\+D\+L\+\_\+\+Set\+Surface\+Blend\+Mode()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__surface_8h_a5db1ae32b7884b598d86424e205c3a86}\label{_s_d_l__surface_8h_a5db1ae32b7884b598d86424e205c3a86}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_GetSurfaceColorMod@{SDL\_GetSurfaceColorMod}}
+\index{SDL\_GetSurfaceColorMod@{SDL\_GetSurfaceColorMod}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetSurfaceColorMod()}{SDL\_GetSurfaceColorMod()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Surface\+Color\+Mod (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{surface,  }\item[{Uint8 $\ast$}]{r,  }\item[{Uint8 $\ast$}]{g,  }\item[{Uint8 $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Get the additional color value used in blit operations. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em surface} & The surface to query. \\
+\hline
+{\em r} & A pointer filled in with the current red color value. \\
+\hline
+{\em g} & A pointer filled in with the current green color value. \\
+\hline
+{\em b} & A pointer filled in with the current blue color value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if the surface is not valid.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__surface_8h_a4edf978396e3f562d43c672630e0ca71}{S\+D\+L\+\_\+\+Set\+Surface\+Color\+Mod()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__surface_8h_a31ca900bd39b6805fc8586472be18c90}\label{_s_d_l__surface_8h_a31ca900bd39b6805fc8586472be18c90}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_HasColorKey@{SDL\_HasColorKey}}
+\index{SDL\_HasColorKey@{SDL\_HasColorKey}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_HasColorKey()}{SDL\_HasColorKey()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC S\+D\+L\+\_\+bool S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Has\+Color\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{surface }\end{DoxyParamCaption})}
+
+
+
+Returns whether the surface has a color key 
+
+\begin{DoxyReturn}{반환값}
+S\+D\+L\+\_\+\+T\+R\+UE if the surface has a color key, or S\+D\+L\+\_\+\+F\+A\+L\+SE if the surface is N\+U\+LL or has no color key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__surface_8h_aac1d1435b9fa8523d699c3a33264d559}\label{_s_d_l__surface_8h_aac1d1435b9fa8523d699c3a33264d559}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_LoadBMP\_RW@{SDL\_LoadBMP\_RW}}
+\index{SDL\_LoadBMP\_RW@{SDL\_LoadBMP\_RW}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_LoadBMP\_RW()}{SDL\_LoadBMP\_RW()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}}$\ast$ S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Load\+B\+M\+P\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops}} $\ast$}]{src,  }\item[{int}]{freesrc }\end{DoxyParamCaption})}
+
+Load a surface from a seekable S\+DL data stream (memory or file).
+
+If {\ttfamily freesrc} is non-\/zero, the stream will be closed after being read.
+
+The new surface should be freed with S\+D\+L\+\_\+\+Free\+Surface().
+
+\begin{DoxyReturn}{반환값}
+the new surface, or N\+U\+LL if there was an error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__surface_8h_a3d1da1c7ecdaa461fac51a10785f5077}\label{_s_d_l__surface_8h_a3d1da1c7ecdaa461fac51a10785f5077}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_LockSurface@{SDL\_LockSurface}}
+\index{SDL\_LockSurface@{SDL\_LockSurface}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_LockSurface()}{SDL\_LockSurface()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Lock\+Surface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{surface }\end{DoxyParamCaption})}
+
+
+
+Sets up a surface for directly accessing the pixels. 
+
+Between calls to \mbox{\hyperlink{_s_d_l__surface_8h_a3d1da1c7ecdaa461fac51a10785f5077}{S\+D\+L\+\_\+\+Lock\+Surface()}} / \mbox{\hyperlink{_s_d_l__surface_8h_a56b93f51358b55d7fc213a3ba9b02c24}{S\+D\+L\+\_\+\+Unlock\+Surface()}}, you can write to and read from {\ttfamily surface-\/$>$pixels}, using the pixel format stored in {\ttfamily surface-\/$>$format}. Once you are done accessing the surface, you should use \mbox{\hyperlink{_s_d_l__surface_8h_a56b93f51358b55d7fc213a3ba9b02c24}{S\+D\+L\+\_\+\+Unlock\+Surface()}} to release it.
+
+Not all surfaces require locking. If \mbox{\hyperlink{_s_d_l__surface_8h_aba3239116c763175b6ea41ef78b72091}{S\+D\+L\+\_\+\+M\+U\+S\+T\+L\+O\+C\+K(surface)}} evaluates to 0, then you can read and write to the surface at any time, and the pixel format of the surface will not change.
+
+No operating system or library calls should be made between lock/unlock pairs, as critical system locks may be held during this time.
+
+\mbox{\hyperlink{_s_d_l__surface_8h_a3d1da1c7ecdaa461fac51a10785f5077}{S\+D\+L\+\_\+\+Lock\+Surface()}} returns 0, or -\/1 if the surface couldn\textquotesingle{}t be locked.
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__surface_8h_a56b93f51358b55d7fc213a3ba9b02c24}{S\+D\+L\+\_\+\+Unlock\+Surface()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__surface_8h_a82bd1c0e0886d77e287207fe6351bf87}\label{_s_d_l__surface_8h_a82bd1c0e0886d77e287207fe6351bf87}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_LowerBlit@{SDL\_LowerBlit}}
+\index{SDL\_LowerBlit@{SDL\_LowerBlit}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_LowerBlit()}{SDL\_LowerBlit()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Lower\+Blit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{src,  }\item[{\mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$}]{srcrect,  }\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{dst,  }\item[{\mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$}]{dstrect }\end{DoxyParamCaption})}
+
+This is a semi-\/private blit function and it performs low-\/level surface blitting only. \mbox{\Hypertarget{_s_d_l__surface_8h_a5c6b2f06726600d41ff75ff259d4383b}\label{_s_d_l__surface_8h_a5c6b2f06726600d41ff75ff259d4383b}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_LowerBlitScaled@{SDL\_LowerBlitScaled}}
+\index{SDL\_LowerBlitScaled@{SDL\_LowerBlitScaled}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_LowerBlitScaled()}{SDL\_LowerBlitScaled()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Lower\+Blit\+Scaled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{src,  }\item[{\mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$}]{srcrect,  }\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{dst,  }\item[{\mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$}]{dstrect }\end{DoxyParamCaption})}
+
+This is a semi-\/private blit function and it performs low-\/level surface scaled blitting only. \mbox{\Hypertarget{_s_d_l__surface_8h_aadc126a4edeafb5033d5e942cf32db6a}\label{_s_d_l__surface_8h_aadc126a4edeafb5033d5e942cf32db6a}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_SaveBMP\_RW@{SDL\_SaveBMP\_RW}}
+\index{SDL\_SaveBMP\_RW@{SDL\_SaveBMP\_RW}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SaveBMP\_RW()}{SDL\_SaveBMP\_RW()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Save\+B\+M\+P\+\_\+\+RW (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{surface,  }\item[{\mbox{\hyperlink{struct_s_d_l___r_wops}{S\+D\+L\+\_\+\+R\+Wops}} $\ast$}]{dst,  }\item[{int}]{freedst }\end{DoxyParamCaption})}
+
+Save a surface to a seekable S\+DL data stream (memory or file).
+
+Surfaces with a 24-\/bit, 32-\/bit and paletted 8-\/bit format get saved in the B\+MP directly. Other R\+GB formats with 8-\/bit or higher get converted to a 24-\/bit surface or, if they have an alpha mask or a colorkey, to a 32-\/bit surface before they are saved. Y\+UV and paletted 1-\/bit and 4-\/bit formats are not supported.
+
+If {\ttfamily freedst} is non-\/zero, the stream will be closed after being written.
+
+\begin{DoxyReturn}{반환값}
+0 if successful or -\/1 if there was an error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__surface_8h_a6cf2c30be55f51fe9e4faf97e3f8d08b}\label{_s_d_l__surface_8h_a6cf2c30be55f51fe9e4faf97e3f8d08b}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_SetClipRect@{SDL\_SetClipRect}}
+\index{SDL\_SetClipRect@{SDL\_SetClipRect}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetClipRect()}{SDL\_SetClipRect()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC S\+D\+L\+\_\+bool S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Clip\+Rect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{surface,  }\item[{const \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$}]{rect }\end{DoxyParamCaption})}
+
+Sets the clipping rectangle for the destination surface in a blit.
+
+If the clip rectangle is N\+U\+LL, clipping will be disabled.
+
+If the clip rectangle doesn\textquotesingle{}t intersect the surface, the function will return S\+D\+L\+\_\+\+F\+A\+L\+SE and blits will be completely clipped. Otherwise the function returns S\+D\+L\+\_\+\+T\+R\+UE and blits to the surface will be clipped to the intersection of the surface area and the clipping rectangle.
+
+Note that blits are automatically clipped to the edges of the source and destination surfaces. \mbox{\Hypertarget{_s_d_l__surface_8h_a4cbe831b210dc900cb93101352357b73}\label{_s_d_l__surface_8h_a4cbe831b210dc900cb93101352357b73}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_SetColorKey@{SDL\_SetColorKey}}
+\index{SDL\_SetColorKey@{SDL\_SetColorKey}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetColorKey()}{SDL\_SetColorKey()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Color\+Key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{surface,  }\item[{int}]{flag,  }\item[{Uint32}]{key }\end{DoxyParamCaption})}
+
+
+
+Sets the color key (transparent pixel) in a blittable surface. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em surface} & The surface to update \\
+\hline
+{\em flag} & Non-\/zero to enable colorkey and 0 to disable colorkey \\
+\hline
+{\em key} & The transparent pixel in the native surface format\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if the surface is not valid
+\end{DoxyReturn}
+You can pass S\+D\+L\+\_\+\+R\+L\+E\+A\+C\+C\+EL to enable R\+LE accelerated blits. \mbox{\Hypertarget{_s_d_l__surface_8h_a0035f0239f0588d16c57aff7672be174}\label{_s_d_l__surface_8h_a0035f0239f0588d16c57aff7672be174}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_SetSurfaceAlphaMod@{SDL\_SetSurfaceAlphaMod}}
+\index{SDL\_SetSurfaceAlphaMod@{SDL\_SetSurfaceAlphaMod}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetSurfaceAlphaMod()}{SDL\_SetSurfaceAlphaMod()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Surface\+Alpha\+Mod (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{surface,  }\item[{Uint8}]{alpha }\end{DoxyParamCaption})}
+
+
+
+Set an additional alpha value used in blit operations. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em surface} & The surface to update. \\
+\hline
+{\em alpha} & The alpha value multiplied into blit operations.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if the surface is not valid.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__surface_8h_a09a99bb24420857e85071e39607678f6}{S\+D\+L\+\_\+\+Get\+Surface\+Alpha\+Mod()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__surface_8h_a35f5b3b64c503c4a8da01566f62976a9}\label{_s_d_l__surface_8h_a35f5b3b64c503c4a8da01566f62976a9}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_SetSurfaceBlendMode@{SDL\_SetSurfaceBlendMode}}
+\index{SDL\_SetSurfaceBlendMode@{SDL\_SetSurfaceBlendMode}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetSurfaceBlendMode()}{SDL\_SetSurfaceBlendMode()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Surface\+Blend\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{surface,  }\item[{\mbox{\hyperlink{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1e}{S\+D\+L\+\_\+\+Blend\+Mode}}}]{blend\+Mode }\end{DoxyParamCaption})}
+
+
+
+Set the blend mode used for blit operations. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em surface} & The surface to update. \\
+\hline
+{\em blend\+Mode} & \mbox{\hyperlink{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1e}{S\+D\+L\+\_\+\+Blend\+Mode}} to use for blit blending.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if the parameters are not valid.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__surface_8h_a95570c617879f45bf7e2e4d330534f6b}{S\+D\+L\+\_\+\+Get\+Surface\+Blend\+Mode()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__surface_8h_a4edf978396e3f562d43c672630e0ca71}\label{_s_d_l__surface_8h_a4edf978396e3f562d43c672630e0ca71}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_SetSurfaceColorMod@{SDL\_SetSurfaceColorMod}}
+\index{SDL\_SetSurfaceColorMod@{SDL\_SetSurfaceColorMod}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetSurfaceColorMod()}{SDL\_SetSurfaceColorMod()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Surface\+Color\+Mod (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{surface,  }\item[{Uint8}]{r,  }\item[{Uint8}]{g,  }\item[{Uint8}]{b }\end{DoxyParamCaption})}
+
+
+
+Set an additional color value used in blit operations. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em surface} & The surface to update. \\
+\hline
+{\em r} & The red color value multiplied into blit operations. \\
+\hline
+{\em g} & The green color value multiplied into blit operations. \\
+\hline
+{\em b} & The blue color value multiplied into blit operations.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if the surface is not valid.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__surface_8h_a5db1ae32b7884b598d86424e205c3a86}{S\+D\+L\+\_\+\+Get\+Surface\+Color\+Mod()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__surface_8h_a72c780465293acb1f586995943422a17}\label{_s_d_l__surface_8h_a72c780465293acb1f586995943422a17}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_SetSurfacePalette@{SDL\_SetSurfacePalette}}
+\index{SDL\_SetSurfacePalette@{SDL\_SetSurfacePalette}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetSurfacePalette()}{SDL\_SetSurfacePalette()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Surface\+Palette (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{surface,  }\item[{\mbox{\hyperlink{struct_s_d_l___palette}{S\+D\+L\+\_\+\+Palette}} $\ast$}]{palette }\end{DoxyParamCaption})}
+
+
+
+Set the palette used by a surface. 
+
+\begin{DoxyReturn}{반환값}
+0, or -\/1 if the surface format doesn\textquotesingle{}t use a palette.
+\end{DoxyReturn}
+\begin{DoxyNote}{주의}
+A single palette can be shared with many surfaces. 
+\end{DoxyNote}
+\mbox{\Hypertarget{_s_d_l__surface_8h_ae2f6d70b8071e83e0c84241dbdcd3a3b}\label{_s_d_l__surface_8h_ae2f6d70b8071e83e0c84241dbdcd3a3b}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_SetSurfaceRLE@{SDL\_SetSurfaceRLE}}
+\index{SDL\_SetSurfaceRLE@{SDL\_SetSurfaceRLE}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetSurfaceRLE()}{SDL\_SetSurfaceRLE()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Surface\+R\+LE (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{surface,  }\item[{int}]{flag }\end{DoxyParamCaption})}
+
+
+
+Sets the R\+LE acceleration hint for a surface. 
+
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if the surface is not valid
+\end{DoxyReturn}
+\begin{DoxyNote}{주의}
+If R\+LE is enabled, colorkey and alpha blending blits are much faster, but the surface must be locked before directly accessing the pixels. 
+\end{DoxyNote}
+\mbox{\Hypertarget{_s_d_l__surface_8h_aee44fe7d5dba376a971793d70ffcf55c}\label{_s_d_l__surface_8h_aee44fe7d5dba376a971793d70ffcf55c}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_SoftStretch@{SDL\_SoftStretch}}
+\index{SDL\_SoftStretch@{SDL\_SoftStretch}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SoftStretch()}{SDL\_SoftStretch()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Soft\+Stretch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{src,  }\item[{const \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$}]{srcrect,  }\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{dst,  }\item[{const \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$}]{dstrect }\end{DoxyParamCaption})}
+
+
+
+Perform a fast, low quality, stretch blit between two surfaces of the same pixel format. 
+
+\begin{DoxyNote}{주의}
+This function uses a static buffer, and is not thread-\/safe. 
+\end{DoxyNote}
+\mbox{\Hypertarget{_s_d_l__surface_8h_a56b93f51358b55d7fc213a3ba9b02c24}\label{_s_d_l__surface_8h_a56b93f51358b55d7fc213a3ba9b02c24}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_UnlockSurface@{SDL\_UnlockSurface}}
+\index{SDL\_UnlockSurface@{SDL\_UnlockSurface}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_UnlockSurface()}{SDL\_UnlockSurface()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Unlock\+Surface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{surface }\end{DoxyParamCaption})}
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__surface_8h_a3d1da1c7ecdaa461fac51a10785f5077}{S\+D\+L\+\_\+\+Lock\+Surface()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__surface_8h_ac418c4404813eeb32f4e1b24f9deae96}\label{_s_d_l__surface_8h_ac418c4404813eeb32f4e1b24f9deae96}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_UpperBlit@{SDL\_UpperBlit}}
+\index{SDL\_UpperBlit@{SDL\_UpperBlit}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_UpperBlit()}{SDL\_UpperBlit()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Upper\+Blit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{src,  }\item[{const \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$}]{srcrect,  }\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{dst,  }\item[{\mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$}]{dstrect }\end{DoxyParamCaption})}
+
+This is the public blit function, \mbox{\hyperlink{_s_d_l__surface_8h_aad8d7ebe5e953593cb7d91373e73ba9a}{S\+D\+L\+\_\+\+Blit\+Surface()}}, and it performs rectangle validation and clipping before passing it to \mbox{\hyperlink{_s_d_l__surface_8h_a82bd1c0e0886d77e287207fe6351bf87}{S\+D\+L\+\_\+\+Lower\+Blit()}} \mbox{\Hypertarget{_s_d_l__surface_8h_a90ac01634e9ee33764fcf5ec7bc43c46}\label{_s_d_l__surface_8h_a90ac01634e9ee33764fcf5ec7bc43c46}} 
+\index{SDL\_surface.h@{SDL\_surface.h}!SDL\_UpperBlitScaled@{SDL\_UpperBlitScaled}}
+\index{SDL\_UpperBlitScaled@{SDL\_UpperBlitScaled}!SDL\_surface.h@{SDL\_surface.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_UpperBlitScaled()}{SDL\_UpperBlitScaled()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Upper\+Blit\+Scaled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{src,  }\item[{const \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$}]{srcrect,  }\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{dst,  }\item[{\mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$}]{dstrect }\end{DoxyParamCaption})}
+
+This is the public scaled blit function, S\+D\+L\+\_\+\+Blit\+Scaled(), and it performs rectangle validation and clipping before passing it to \mbox{\hyperlink{_s_d_l__surface_8h_a5c6b2f06726600d41ff75ff259d4383b}{S\+D\+L\+\_\+\+Lower\+Blit\+Scaled()}} 

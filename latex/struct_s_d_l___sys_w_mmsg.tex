@@ -1,0 +1,64 @@
+\hypertarget{struct_s_d_l___sys_w_mmsg}{}\doxysection{S\+D\+L\+\_\+\+Sys\+W\+Mmsg 구조체 참조}
+\label{struct_s_d_l___sys_w_mmsg}\index{SDL\_SysWMmsg@{SDL\_SysWMmsg}}
+
+
+{\ttfamily \#include $<$S\+D\+L\+\_\+syswm.\+h$>$}
+
+\doxysubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_s_d_l___sys_w_mmsg_a95f9aae58d18ee8fac556416b322a5fb}\label{struct_s_d_l___sys_w_mmsg_a95f9aae58d18ee8fac556416b322a5fb}} 
+\mbox{\hyperlink{struct_s_d_l__version}{S\+D\+L\+\_\+version}} {\bfseries version}
+\item 
+\mbox{\Hypertarget{struct_s_d_l___sys_w_mmsg_a7c3900af5ea797f1318fc77ee0ecd11b}\label{struct_s_d_l___sys_w_mmsg_a7c3900af5ea797f1318fc77ee0ecd11b}} 
+\mbox{\hyperlink{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+T\+Y\+PE}} {\bfseries subsystem}
+\item 
+\mbox{\Hypertarget{struct_s_d_l___sys_w_mmsg_ab5fc74c70e9609c345599aee5d7f8fed}\label{struct_s_d_l___sys_w_mmsg_ab5fc74c70e9609c345599aee5d7f8fed}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>HWND \mbox{\hyperlink{struct_s_d_l___sys_w_mmsg_a55cf9583b5eddfe60a5c9851f9cce457}{hwnd}}\\
+\>\>UINT \mbox{\hyperlink{struct_s_d_l___sys_w_mmsg_a74894ed060d5508ab06aac584154d61e}{msg}}\\
+\>\>WPARAM \mbox{\hyperlink{struct_s_d_l___sys_w_mmsg_a7463730478d90ebc031d83098f3f74fc}{wParam}}\\
+\>\>LPARAM \mbox{\hyperlink{struct_s_d_l___sys_w_mmsg_a24c1e4c3cb8d9781d34e5d99df66ac36}{lParam}}\\
+\>\} {\bfseries win}\\
+\>int {\bfseries dummy}\\
+\} {\bfseries msg}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+The custom event structure. 
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{struct_s_d_l___sys_w_mmsg_a55cf9583b5eddfe60a5c9851f9cce457}\label{struct_s_d_l___sys_w_mmsg_a55cf9583b5eddfe60a5c9851f9cce457}} 
+\index{SDL\_SysWMmsg@{SDL\_SysWMmsg}!hwnd@{hwnd}}
+\index{hwnd@{hwnd}!SDL\_SysWMmsg@{SDL\_SysWMmsg}}
+\doxysubsubsection{\texorpdfstring{hwnd}{hwnd}}
+{\footnotesize\ttfamily H\+W\+ND S\+D\+L\+\_\+\+Sys\+W\+Mmsg\+::hwnd}
+
+The window for the message \mbox{\Hypertarget{struct_s_d_l___sys_w_mmsg_a24c1e4c3cb8d9781d34e5d99df66ac36}\label{struct_s_d_l___sys_w_mmsg_a24c1e4c3cb8d9781d34e5d99df66ac36}} 
+\index{SDL\_SysWMmsg@{SDL\_SysWMmsg}!lParam@{lParam}}
+\index{lParam@{lParam}!SDL\_SysWMmsg@{SDL\_SysWMmsg}}
+\doxysubsubsection{\texorpdfstring{lParam}{lParam}}
+{\footnotesize\ttfamily L\+P\+A\+R\+AM S\+D\+L\+\_\+\+Sys\+W\+Mmsg\+::l\+Param}
+
+L\+O\+NG message parameter \mbox{\Hypertarget{struct_s_d_l___sys_w_mmsg_a74894ed060d5508ab06aac584154d61e}\label{struct_s_d_l___sys_w_mmsg_a74894ed060d5508ab06aac584154d61e}} 
+\index{SDL\_SysWMmsg@{SDL\_SysWMmsg}!msg@{msg}}
+\index{msg@{msg}!SDL\_SysWMmsg@{SDL\_SysWMmsg}}
+\doxysubsubsection{\texorpdfstring{msg}{msg}}
+{\footnotesize\ttfamily U\+I\+NT S\+D\+L\+\_\+\+Sys\+W\+Mmsg\+::msg}
+
+The type of message \mbox{\Hypertarget{struct_s_d_l___sys_w_mmsg_a7463730478d90ebc031d83098f3f74fc}\label{struct_s_d_l___sys_w_mmsg_a7463730478d90ebc031d83098f3f74fc}} 
+\index{SDL\_SysWMmsg@{SDL\_SysWMmsg}!wParam@{wParam}}
+\index{wParam@{wParam}!SDL\_SysWMmsg@{SDL\_SysWMmsg}}
+\doxysubsubsection{\texorpdfstring{wParam}{wParam}}
+{\footnotesize\ttfamily W\+P\+A\+R\+AM S\+D\+L\+\_\+\+Sys\+W\+Mmsg\+::w\+Param}
+
+W\+O\+RD message parameter 
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+S\+D\+L/include/\mbox{\hyperlink{_s_d_l__syswm_8h}{S\+D\+L\+\_\+syswm.\+h}}\end{DoxyCompactItemize}

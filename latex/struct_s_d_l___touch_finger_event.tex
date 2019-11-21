@@ -1,0 +1,92 @@
+\hypertarget{struct_s_d_l___touch_finger_event}{}\doxysection{S\+D\+L\+\_\+\+Touch\+Finger\+Event 구조체 참조}
+\label{struct_s_d_l___touch_finger_event}\index{SDL\_TouchFingerEvent@{SDL\_TouchFingerEvent}}
+
+
+Touch finger event structure (event.\+tfinger.$\ast$)  
+
+
+
+
+{\ttfamily \#include $<$S\+D\+L\+\_\+events.\+h$>$}
+
+\doxysubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+Uint32 \mbox{\hyperlink{struct_s_d_l___touch_finger_event_a3883218fa3426065ca66086c100edbfa}{type}}
+\item 
+Uint32 \mbox{\hyperlink{struct_s_d_l___touch_finger_event_abde2ab5cb013bbd21e37a65e2f8fa666}{timestamp}}
+\item 
+S\+D\+L\+\_\+\+Touch\+ID \mbox{\hyperlink{struct_s_d_l___touch_finger_event_ad7a6f39ec9af1bf47b160d18314edd70}{touch\+Id}}
+\item 
+\mbox{\Hypertarget{struct_s_d_l___touch_finger_event_a8616d46ed19906e3ee90a4d481d3a284}\label{struct_s_d_l___touch_finger_event_a8616d46ed19906e3ee90a4d481d3a284}} 
+S\+D\+L\+\_\+\+Finger\+ID {\bfseries finger\+Id}
+\item 
+float \mbox{\hyperlink{struct_s_d_l___touch_finger_event_a0ce44b1342220fa17e9b9b4a77c2c906}{x}}
+\item 
+float \mbox{\hyperlink{struct_s_d_l___touch_finger_event_ac2bb8af638d2927a8e13f6ffe8f9384e}{y}}
+\item 
+float \mbox{\hyperlink{struct_s_d_l___touch_finger_event_ac6acac209d6e2bd659fdb6760081393d}{dx}}
+\item 
+float \mbox{\hyperlink{struct_s_d_l___touch_finger_event_a9c0320c5f18a6b9d10da657e166608c9}{dy}}
+\item 
+float \mbox{\hyperlink{struct_s_d_l___touch_finger_event_ab4fca822d0807b5748dbae8d3cc56524}{pressure}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+Touch finger event structure (event.\+tfinger.$\ast$) 
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{struct_s_d_l___touch_finger_event_ac6acac209d6e2bd659fdb6760081393d}\label{struct_s_d_l___touch_finger_event_ac6acac209d6e2bd659fdb6760081393d}} 
+\index{SDL\_TouchFingerEvent@{SDL\_TouchFingerEvent}!dx@{dx}}
+\index{dx@{dx}!SDL\_TouchFingerEvent@{SDL\_TouchFingerEvent}}
+\doxysubsubsection{\texorpdfstring{dx}{dx}}
+{\footnotesize\ttfamily float S\+D\+L\+\_\+\+Touch\+Finger\+Event\+::dx}
+
+Normalized in the range -\/1...1 \mbox{\Hypertarget{struct_s_d_l___touch_finger_event_a9c0320c5f18a6b9d10da657e166608c9}\label{struct_s_d_l___touch_finger_event_a9c0320c5f18a6b9d10da657e166608c9}} 
+\index{SDL\_TouchFingerEvent@{SDL\_TouchFingerEvent}!dy@{dy}}
+\index{dy@{dy}!SDL\_TouchFingerEvent@{SDL\_TouchFingerEvent}}
+\doxysubsubsection{\texorpdfstring{dy}{dy}}
+{\footnotesize\ttfamily float S\+D\+L\+\_\+\+Touch\+Finger\+Event\+::dy}
+
+Normalized in the range -\/1...1 \mbox{\Hypertarget{struct_s_d_l___touch_finger_event_ab4fca822d0807b5748dbae8d3cc56524}\label{struct_s_d_l___touch_finger_event_ab4fca822d0807b5748dbae8d3cc56524}} 
+\index{SDL\_TouchFingerEvent@{SDL\_TouchFingerEvent}!pressure@{pressure}}
+\index{pressure@{pressure}!SDL\_TouchFingerEvent@{SDL\_TouchFingerEvent}}
+\doxysubsubsection{\texorpdfstring{pressure}{pressure}}
+{\footnotesize\ttfamily float S\+D\+L\+\_\+\+Touch\+Finger\+Event\+::pressure}
+
+Normalized in the range 0...1 \mbox{\Hypertarget{struct_s_d_l___touch_finger_event_abde2ab5cb013bbd21e37a65e2f8fa666}\label{struct_s_d_l___touch_finger_event_abde2ab5cb013bbd21e37a65e2f8fa666}} 
+\index{SDL\_TouchFingerEvent@{SDL\_TouchFingerEvent}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!SDL\_TouchFingerEvent@{SDL\_TouchFingerEvent}}
+\doxysubsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily Uint32 S\+D\+L\+\_\+\+Touch\+Finger\+Event\+::timestamp}
+
+In milliseconds, populated using \mbox{\hyperlink{_s_d_l__timer_8h_a0b9bc71d6287e0ffafdc3419760fe2b3}{S\+D\+L\+\_\+\+Get\+Ticks()}} \mbox{\Hypertarget{struct_s_d_l___touch_finger_event_ad7a6f39ec9af1bf47b160d18314edd70}\label{struct_s_d_l___touch_finger_event_ad7a6f39ec9af1bf47b160d18314edd70}} 
+\index{SDL\_TouchFingerEvent@{SDL\_TouchFingerEvent}!touchId@{touchId}}
+\index{touchId@{touchId}!SDL\_TouchFingerEvent@{SDL\_TouchFingerEvent}}
+\doxysubsubsection{\texorpdfstring{touchId}{touchId}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Touch\+ID S\+D\+L\+\_\+\+Touch\+Finger\+Event\+::touch\+Id}
+
+The touch device id \mbox{\Hypertarget{struct_s_d_l___touch_finger_event_a3883218fa3426065ca66086c100edbfa}\label{struct_s_d_l___touch_finger_event_a3883218fa3426065ca66086c100edbfa}} 
+\index{SDL\_TouchFingerEvent@{SDL\_TouchFingerEvent}!type@{type}}
+\index{type@{type}!SDL\_TouchFingerEvent@{SDL\_TouchFingerEvent}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily Uint32 S\+D\+L\+\_\+\+Touch\+Finger\+Event\+::type}
+
+\+::\+S\+D\+L\+\_\+\+F\+I\+N\+G\+E\+R\+M\+O\+T\+I\+ON or \+::\+S\+D\+L\+\_\+\+F\+I\+N\+G\+E\+R\+D\+O\+WN or \+::\+S\+D\+L\+\_\+\+F\+I\+N\+G\+E\+R\+UP \mbox{\Hypertarget{struct_s_d_l___touch_finger_event_a0ce44b1342220fa17e9b9b4a77c2c906}\label{struct_s_d_l___touch_finger_event_a0ce44b1342220fa17e9b9b4a77c2c906}} 
+\index{SDL\_TouchFingerEvent@{SDL\_TouchFingerEvent}!x@{x}}
+\index{x@{x}!SDL\_TouchFingerEvent@{SDL\_TouchFingerEvent}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily float S\+D\+L\+\_\+\+Touch\+Finger\+Event\+::x}
+
+Normalized in the range 0...1 \mbox{\Hypertarget{struct_s_d_l___touch_finger_event_ac2bb8af638d2927a8e13f6ffe8f9384e}\label{struct_s_d_l___touch_finger_event_ac2bb8af638d2927a8e13f6ffe8f9384e}} 
+\index{SDL\_TouchFingerEvent@{SDL\_TouchFingerEvent}!y@{y}}
+\index{y@{y}!SDL\_TouchFingerEvent@{SDL\_TouchFingerEvent}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily float S\+D\+L\+\_\+\+Touch\+Finger\+Event\+::y}
+
+Normalized in the range 0...1 
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+S\+D\+L/include/\mbox{\hyperlink{_s_d_l__events_8h}{S\+D\+L\+\_\+events.\+h}}\end{DoxyCompactItemize}

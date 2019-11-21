@@ -1,0 +1,103 @@
+\hypertarget{_s_d_l__test__assert_8h}{}\doxysection{S\+D\+L/include/\+S\+D\+L\+\_\+test\+\_\+assert.h 파일 참조}
+\label{_s_d_l__test__assert_8h}\index{SDL/include/SDL\_test\_assert.h@{SDL/include/SDL\_test\_assert.h}}
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\doxysubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_d_l__test__assert_8h_adc9dbc949d8699a6f6515211a2efa0cf}\label{_s_d_l__test__assert_8h_adc9dbc949d8699a6f6515211a2efa0cf}} 
+\#define \mbox{\hyperlink{_s_d_l__test__assert_8h_adc9dbc949d8699a6f6515211a2efa0cf}{A\+S\+S\+E\+R\+T\+\_\+\+F\+A\+IL}}~0
+\begin{DoxyCompactList}\small\item\em Fails the assert. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__test__assert_8h_ae67a2f28e6df1e351df870754835a09a}\label{_s_d_l__test__assert_8h_ae67a2f28e6df1e351df870754835a09a}} 
+\#define \mbox{\hyperlink{_s_d_l__test__assert_8h_ae67a2f28e6df1e351df870754835a09a}{A\+S\+S\+E\+R\+T\+\_\+\+P\+A\+SS}}~1
+\begin{DoxyCompactList}\small\item\em Passes the assert. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_s_d_l__test__assert_8h_a633252c9cb122f42c502ca43d6f842ad}{S\+D\+L\+Test\+\_\+\+Assert}} (int assert\+Condition, S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+T\+R\+I\+NG const char $\ast$assert\+Description,...) S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+V\+A\+R\+A\+R\+G\+\_\+\+F\+U\+NC(2)
+\begin{DoxyCompactList}\small\item\em Assert that logs and break execution flow on failures. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_s_d_l__test__assert_8h_a9f6f6cecd54a5f7aeaf0c89e0f8fe0ab}{S\+D\+L\+Test\+\_\+\+Assert\+Check}} (int assert\+Condition, S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+T\+R\+I\+NG const char $\ast$assert\+Description,...) S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+V\+A\+R\+A\+R\+G\+\_\+\+F\+U\+NC(2)
+\begin{DoxyCompactList}\small\item\em Assert for test cases that logs but does not break execution flow on failures. Updates assertion counters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_d_l__test__assert_8h_a2156b479e33af1aa7e2c7d03c5cbb4c9}{S\+D\+L\+Test\+\_\+\+Assert\+Pass}} (S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+T\+R\+I\+NG const char $\ast$assert\+Description,...) S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+V\+A\+R\+A\+R\+G\+\_\+\+F\+U\+NC(1)
+\begin{DoxyCompactList}\small\item\em Explicitly pass without checking an assertion condition. Updates assertion counter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__test__assert_8h_a1f78edbf1f7a38ebfeb2a2c76e3a5e60}\label{_s_d_l__test__assert_8h_a1f78edbf1f7a38ebfeb2a2c76e3a5e60}} 
+void \mbox{\hyperlink{_s_d_l__test__assert_8h_a1f78edbf1f7a38ebfeb2a2c76e3a5e60}{S\+D\+L\+Test\+\_\+\+Reset\+Assert\+Summary}} (void)
+\begin{DoxyCompactList}\small\item\em Resets the assert summary counters to zero. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__test__assert_8h_a7e34c7c9d66a164ed785de905c75ab54}\label{_s_d_l__test__assert_8h_a7e34c7c9d66a164ed785de905c75ab54}} 
+void \mbox{\hyperlink{_s_d_l__test__assert_8h_a7e34c7c9d66a164ed785de905c75ab54}{S\+D\+L\+Test\+\_\+\+Log\+Assert\+Summary}} (void)
+\begin{DoxyCompactList}\small\item\em Logs summary of all assertions (total, pass, fail) since last reset as I\+N\+FO or E\+R\+R\+OR. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_s_d_l__test__assert_8h_ad8cea91b1ce4db4fdea8ebab455c2190}{S\+D\+L\+Test\+\_\+\+Assert\+Summary\+To\+Test\+Result}} (void)
+\begin{DoxyCompactList}\small\item\em Converts the current assert summary state to a test result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+Include file for S\+DL test framework.
+
+This code is a part of the S\+D\+L2\+\_\+test library, not the main S\+DL library. 
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{_s_d_l__test__assert_8h_a633252c9cb122f42c502ca43d6f842ad}\label{_s_d_l__test__assert_8h_a633252c9cb122f42c502ca43d6f842ad}} 
+\index{SDL\_test\_assert.h@{SDL\_test\_assert.h}!SDLTest\_Assert@{SDLTest\_Assert}}
+\index{SDLTest\_Assert@{SDLTest\_Assert}!SDL\_test\_assert.h@{SDL\_test\_assert.h}}
+\doxysubsubsection{\texorpdfstring{SDLTest\_Assert()}{SDLTest\_Assert()}}
+{\footnotesize\ttfamily void S\+D\+L\+Test\+\_\+\+Assert (\begin{DoxyParamCaption}\item[{int}]{assert\+Condition,  }\item[{S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+T\+R\+I\+NG const char $\ast$}]{assert\+Description,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Assert that logs and break execution flow on failures. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em assert\+Condition} & Evaluated condition or variable to assert; fail (==0) or pass (!=0). \\
+\hline
+{\em assert\+Description} & Message to log with the assert describing it. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_s_d_l__test__assert_8h_a9f6f6cecd54a5f7aeaf0c89e0f8fe0ab}\label{_s_d_l__test__assert_8h_a9f6f6cecd54a5f7aeaf0c89e0f8fe0ab}} 
+\index{SDL\_test\_assert.h@{SDL\_test\_assert.h}!SDLTest\_AssertCheck@{SDLTest\_AssertCheck}}
+\index{SDLTest\_AssertCheck@{SDLTest\_AssertCheck}!SDL\_test\_assert.h@{SDL\_test\_assert.h}}
+\doxysubsubsection{\texorpdfstring{SDLTest\_AssertCheck()}{SDLTest\_AssertCheck()}}
+{\footnotesize\ttfamily int S\+D\+L\+Test\+\_\+\+Assert\+Check (\begin{DoxyParamCaption}\item[{int}]{assert\+Condition,  }\item[{S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+T\+R\+I\+NG const char $\ast$}]{assert\+Description,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Assert for test cases that logs but does not break execution flow on failures. Updates assertion counters. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em assert\+Condition} & Evaluated condition or variable to assert; fail (==0) or pass (!=0). \\
+\hline
+{\em assert\+Description} & Message to log with the assert describing it.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+Returns the assert\+Condition so it can be used to externally to break execution flow if desired. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__test__assert_8h_a2156b479e33af1aa7e2c7d03c5cbb4c9}\label{_s_d_l__test__assert_8h_a2156b479e33af1aa7e2c7d03c5cbb4c9}} 
+\index{SDL\_test\_assert.h@{SDL\_test\_assert.h}!SDLTest\_AssertPass@{SDLTest\_AssertPass}}
+\index{SDLTest\_AssertPass@{SDLTest\_AssertPass}!SDL\_test\_assert.h@{SDL\_test\_assert.h}}
+\doxysubsubsection{\texorpdfstring{SDLTest\_AssertPass()}{SDLTest\_AssertPass()}}
+{\footnotesize\ttfamily void S\+D\+L\+Test\+\_\+\+Assert\+Pass (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+T\+R\+I\+NG const char $\ast$}]{assert\+Description,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Explicitly pass without checking an assertion condition. Updates assertion counter. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em assert\+Description} & Message to log with the assert describing it. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_s_d_l__test__assert_8h_ad8cea91b1ce4db4fdea8ebab455c2190}\label{_s_d_l__test__assert_8h_ad8cea91b1ce4db4fdea8ebab455c2190}} 
+\index{SDL\_test\_assert.h@{SDL\_test\_assert.h}!SDLTest\_AssertSummaryToTestResult@{SDLTest\_AssertSummaryToTestResult}}
+\index{SDLTest\_AssertSummaryToTestResult@{SDLTest\_AssertSummaryToTestResult}!SDL\_test\_assert.h@{SDL\_test\_assert.h}}
+\doxysubsubsection{\texorpdfstring{SDLTest\_AssertSummaryToTestResult()}{SDLTest\_AssertSummaryToTestResult()}}
+{\footnotesize\ttfamily int S\+D\+L\+Test\+\_\+\+Assert\+Summary\+To\+Test\+Result (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Converts the current assert summary state to a test result. 
+
+\begin{DoxyReturn}{반환값}
+T\+E\+S\+T\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+P\+A\+S\+S\+ED, T\+E\+S\+T\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+F\+A\+I\+L\+ED, or T\+E\+S\+T\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+N\+O\+\_\+\+A\+S\+S\+E\+RT 
+\end{DoxyReturn}

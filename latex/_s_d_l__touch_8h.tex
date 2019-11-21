@@ -1,0 +1,65 @@
+\hypertarget{_s_d_l__touch_8h}{}\doxysection{S\+D\+L/include/\+S\+D\+L\+\_\+touch.h 파일 참조}
+\label{_s_d_l__touch_8h}\index{SDL/include/SDL\_touch.h@{SDL/include/SDL\_touch.h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+error.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\doxysubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_s_d_l___finger}{S\+D\+L\+\_\+\+Finger}}
+\end{DoxyCompactItemize}
+\doxysubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_d_l__touch_8h_ac24e2ec23c2ac1675fec8f327ef45efe}\label{_s_d_l__touch_8h_ac24e2ec23c2ac1675fec8f327ef45efe}} 
+\#define {\bfseries S\+D\+L\+\_\+\+T\+O\+U\+C\+H\+\_\+\+M\+O\+U\+S\+E\+ID}~((Uint32)-\/1)
+\item 
+\mbox{\Hypertarget{_s_d_l__touch_8h_a014b4d4442ccb50ec471a7a6081b75d0}\label{_s_d_l__touch_8h_a014b4d4442ccb50ec471a7a6081b75d0}} 
+\#define {\bfseries S\+D\+L\+\_\+\+M\+O\+U\+S\+E\+\_\+\+T\+O\+U\+C\+H\+ID}~((Sint64)-\/1)
+\end{DoxyCompactItemize}
+\doxysubsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_d_l__touch_8h_a10f5f86abe4ea8308a8706bd5d3b337a}\label{_s_d_l__touch_8h_a10f5f86abe4ea8308a8706bd5d3b337a}} 
+typedef Sint64 {\bfseries S\+D\+L\+\_\+\+Touch\+ID}
+\item 
+\mbox{\Hypertarget{_s_d_l__touch_8h_a5fa58141f78415ca09645af359ad2250}\label{_s_d_l__touch_8h_a5fa58141f78415ca09645af359ad2250}} 
+typedef Sint64 {\bfseries S\+D\+L\+\_\+\+Finger\+ID}
+\item 
+\mbox{\Hypertarget{_s_d_l__touch_8h_aebfbaf6a1c2acd4e2595fcdeb911d4ac}\label{_s_d_l__touch_8h_aebfbaf6a1c2acd4e2595fcdeb911d4ac}} 
+typedef struct \mbox{\hyperlink{struct_s_d_l___finger}{S\+D\+L\+\_\+\+Finger}} {\bfseries S\+D\+L\+\_\+\+Finger}
+\end{DoxyCompactItemize}
+\doxysubsection*{열거형 타입}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_d_l__touch_8h_a63f6b605841f681e036a96d9b2790cff}\label{_s_d_l__touch_8h_a63f6b605841f681e036a96d9b2790cff}} 
+enum {\bfseries S\+D\+L\+\_\+\+Touch\+Device\+Type} \{ {\bfseries S\+D\+L\+\_\+\+T\+O\+U\+C\+H\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+V\+A\+L\+ID} = -\/1, 
+{\bfseries S\+D\+L\+\_\+\+T\+O\+U\+C\+H\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+D\+I\+R\+E\+CT}, 
+{\bfseries S\+D\+L\+\_\+\+T\+O\+U\+C\+H\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+A\+B\+S\+O\+L\+U\+TE}, 
+{\bfseries S\+D\+L\+\_\+\+T\+O\+U\+C\+H\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+D\+I\+R\+E\+C\+T\+\_\+\+R\+E\+L\+A\+T\+I\+VE}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_d_l__touch_8h_a14a41a2964ddf868a180e42ccfd441d1}\label{_s_d_l__touch_8h_a14a41a2964ddf868a180e42ccfd441d1}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__touch_8h_a14a41a2964ddf868a180e42ccfd441d1}{S\+D\+L\+\_\+\+Get\+Num\+Touch\+Devices}} (void)
+\begin{DoxyCompactList}\small\item\em Get the number of registered touch devices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__touch_8h_af23f09dc79eace93cdc8dd770eed0d0a}\label{_s_d_l__touch_8h_af23f09dc79eace93cdc8dd770eed0d0a}} 
+D\+E\+C\+L\+S\+P\+EC S\+D\+L\+\_\+\+Touch\+ID S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__touch_8h_af23f09dc79eace93cdc8dd770eed0d0a}{S\+D\+L\+\_\+\+Get\+Touch\+Device}} (int index)
+\begin{DoxyCompactList}\small\item\em Get the touch ID with the given index, or 0 if the index is invalid. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__touch_8h_acb47d9bf9103c6c039127cea040d89a7}\label{_s_d_l__touch_8h_acb47d9bf9103c6c039127cea040d89a7}} 
+D\+E\+C\+L\+S\+P\+EC S\+D\+L\+\_\+\+Touch\+Device\+Type S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__touch_8h_acb47d9bf9103c6c039127cea040d89a7}{S\+D\+L\+\_\+\+Get\+Touch\+Device\+Type}} (S\+D\+L\+\_\+\+Touch\+ID touch\+ID)
+\begin{DoxyCompactList}\small\item\em Get the type of the given touch device. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__touch_8h_a7dcd1494c8dd433b7ef7b24c2926e721}\label{_s_d_l__touch_8h_a7dcd1494c8dd433b7ef7b24c2926e721}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__touch_8h_a7dcd1494c8dd433b7ef7b24c2926e721}{S\+D\+L\+\_\+\+Get\+Num\+Touch\+Fingers}} (S\+D\+L\+\_\+\+Touch\+ID touch\+ID)
+\begin{DoxyCompactList}\small\item\em Get the number of active fingers for a given touch device. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__touch_8h_a50902a3c1e4dba0b82cb73cb786dae41}\label{_s_d_l__touch_8h_a50902a3c1e4dba0b82cb73cb786dae41}} 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{struct_s_d_l___finger}{S\+D\+L\+\_\+\+Finger}} $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__touch_8h_a50902a3c1e4dba0b82cb73cb786dae41}{S\+D\+L\+\_\+\+Get\+Touch\+Finger}} (S\+D\+L\+\_\+\+Touch\+ID touch\+ID, int index)
+\begin{DoxyCompactList}\small\item\em Get the finger object of the given touch, with the given index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+Include file for S\+DL touch event handling. 

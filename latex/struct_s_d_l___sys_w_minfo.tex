@@ -1,0 +1,59 @@
+\hypertarget{struct_s_d_l___sys_w_minfo}{}\doxysection{S\+D\+L\+\_\+\+Sys\+W\+Minfo 구조체 참조}
+\label{struct_s_d_l___sys_w_minfo}\index{SDL\_SysWMinfo@{SDL\_SysWMinfo}}
+
+
+{\ttfamily \#include $<$S\+D\+L\+\_\+syswm.\+h$>$}
+
+\doxysubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_s_d_l___sys_w_minfo_ac3a70af022d4849e9ff546595e94627f}\label{struct_s_d_l___sys_w_minfo_ac3a70af022d4849e9ff546595e94627f}} 
+\mbox{\hyperlink{struct_s_d_l__version}{S\+D\+L\+\_\+version}} {\bfseries version}
+\item 
+\mbox{\Hypertarget{struct_s_d_l___sys_w_minfo_a438b6a06ab3ee417293c7b7fc5a23855}\label{struct_s_d_l___sys_w_minfo_a438b6a06ab3ee417293c7b7fc5a23855}} 
+\mbox{\hyperlink{_s_d_l__syswm_8h_a064c26598287280fff2a00d6758ac4f7}{S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+T\+Y\+PE}} {\bfseries subsystem}
+\item 
+\mbox{\Hypertarget{struct_s_d_l___sys_w_minfo_a4e90cf02d24a53a9305948e167df83c6}\label{struct_s_d_l___sys_w_minfo_a4e90cf02d24a53a9305948e167df83c6}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>HWND \mbox{\hyperlink{struct_s_d_l___sys_w_minfo_af06225591ff07e837bbd037728a525b9}{window}}\\
+\>\>HDC \mbox{\hyperlink{struct_s_d_l___sys_w_minfo_a5c9d0745b083422834681e99c38b803e}{hdc}}\\
+\>\>HINSTANCE \mbox{\hyperlink{struct_s_d_l___sys_w_minfo_ae3e93d21e2b20b2069f5f7d5308194f1}{hinstance}}\\
+\>\} {\bfseries win}\\
+\>Uint8 {\bfseries dummy} \mbox{[}64\mbox{]}\\
+\} {\bfseries info}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+The custom window manager information structure.
+
+When this structure is returned, it holds information about which low level system it is using, and will be one of S\+D\+L\+\_\+\+S\+Y\+S\+W\+M\+\_\+\+T\+Y\+PE. 
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{struct_s_d_l___sys_w_minfo_a5c9d0745b083422834681e99c38b803e}\label{struct_s_d_l___sys_w_minfo_a5c9d0745b083422834681e99c38b803e}} 
+\index{SDL\_SysWMinfo@{SDL\_SysWMinfo}!hdc@{hdc}}
+\index{hdc@{hdc}!SDL\_SysWMinfo@{SDL\_SysWMinfo}}
+\doxysubsubsection{\texorpdfstring{hdc}{hdc}}
+{\footnotesize\ttfamily H\+DC S\+D\+L\+\_\+\+Sys\+W\+Minfo\+::hdc}
+
+The window device context \mbox{\Hypertarget{struct_s_d_l___sys_w_minfo_ae3e93d21e2b20b2069f5f7d5308194f1}\label{struct_s_d_l___sys_w_minfo_ae3e93d21e2b20b2069f5f7d5308194f1}} 
+\index{SDL\_SysWMinfo@{SDL\_SysWMinfo}!hinstance@{hinstance}}
+\index{hinstance@{hinstance}!SDL\_SysWMinfo@{SDL\_SysWMinfo}}
+\doxysubsubsection{\texorpdfstring{hinstance}{hinstance}}
+{\footnotesize\ttfamily H\+I\+N\+S\+T\+A\+N\+CE S\+D\+L\+\_\+\+Sys\+W\+Minfo\+::hinstance}
+
+The instance handle \mbox{\Hypertarget{struct_s_d_l___sys_w_minfo_af06225591ff07e837bbd037728a525b9}\label{struct_s_d_l___sys_w_minfo_af06225591ff07e837bbd037728a525b9}} 
+\index{SDL\_SysWMinfo@{SDL\_SysWMinfo}!window@{window}}
+\index{window@{window}!SDL\_SysWMinfo@{SDL\_SysWMinfo}}
+\doxysubsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily H\+W\+ND S\+D\+L\+\_\+\+Sys\+W\+Minfo\+::window}
+
+The window handle 
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+S\+D\+L/include/\mbox{\hyperlink{_s_d_l__syswm_8h}{S\+D\+L\+\_\+syswm.\+h}}\end{DoxyCompactItemize}

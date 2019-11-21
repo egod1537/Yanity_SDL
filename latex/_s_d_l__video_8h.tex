@@ -1,0 +1,2091 @@
+\hypertarget{_s_d_l__video_8h}{}\doxysection{S\+D\+L/include/\+S\+D\+L\+\_\+video.h 파일 참조}
+\label{_s_d_l__video_8h}\index{SDL/include/SDL\_video.h@{SDL/include/SDL\_video.h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+pixels.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+rect.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+surface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\doxysubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_s_d_l___display_mode}{S\+D\+L\+\_\+\+Display\+Mode}}
+\begin{DoxyCompactList}\small\item\em The structure that defines a display mode \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a0eee89b50bf349f05cb28d6ca7c2dec8}\label{_s_d_l__video_8h_a0eee89b50bf349f05cb28d6ca7c2dec8}} 
+\#define \mbox{\hyperlink{_s_d_l__video_8h_a0eee89b50bf349f05cb28d6ca7c2dec8}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D\+\_\+\+M\+A\+SK}}~0x1\+F\+F\+F0000u
+\begin{DoxyCompactList}\small\item\em Used to indicate that you don\textquotesingle{}t care what the window position is. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a29aa3ade62cfe16de4c8b1e9c4272ab0}\label{_s_d_l__video_8h_a29aa3ade62cfe16de4c8b1e9c4272ab0}} 
+\#define {\bfseries S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D\+\_\+\+D\+I\+S\+P\+L\+AY}(X)~(\mbox{\hyperlink{_s_d_l__video_8h_a0eee89b50bf349f05cb28d6ca7c2dec8}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D\+\_\+\+M\+A\+SK}}$\vert$(X))
+\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a20917558a7e5fb159647980218726a52}\label{_s_d_l__video_8h_a20917558a7e5fb159647980218726a52}} 
+\#define {\bfseries S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED}~S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D\+\_\+\+D\+I\+S\+P\+L\+AY(0)
+\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a8ded7367fc7c4375cc195ff4a2a2132c}\label{_s_d_l__video_8h_a8ded7367fc7c4375cc195ff4a2a2132c}} 
+\#define {\bfseries S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+I\+S\+U\+N\+D\+E\+F\+I\+N\+ED}(X)~(((X)\&0x\+F\+F\+F\+F0000) == \mbox{\hyperlink{_s_d_l__video_8h_a0eee89b50bf349f05cb28d6ca7c2dec8}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+U\+N\+D\+E\+F\+I\+N\+E\+D\+\_\+\+M\+A\+SK}})
+\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a5088b87c9d01cc26915ff082aaf014fa}\label{_s_d_l__video_8h_a5088b87c9d01cc26915ff082aaf014fa}} 
+\#define \mbox{\hyperlink{_s_d_l__video_8h_a5088b87c9d01cc26915ff082aaf014fa}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+C\+E\+N\+T\+E\+R\+E\+D\+\_\+\+M\+A\+SK}}~0x2\+F\+F\+F0000u
+\begin{DoxyCompactList}\small\item\em Used to indicate that the window position should be centered. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a3399af2e94d0de95e69e6bcc57969d58}\label{_s_d_l__video_8h_a3399af2e94d0de95e69e6bcc57969d58}} 
+\#define {\bfseries S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+C\+E\+N\+T\+E\+R\+E\+D\+\_\+\+D\+I\+S\+P\+L\+AY}(X)~(\mbox{\hyperlink{_s_d_l__video_8h_a5088b87c9d01cc26915ff082aaf014fa}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+C\+E\+N\+T\+E\+R\+E\+D\+\_\+\+M\+A\+SK}}$\vert$(X))
+\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a8d2f428ddef3b4ccf08915814e35d9c7}\label{_s_d_l__video_8h_a8d2f428ddef3b4ccf08915814e35d9c7}} 
+\#define {\bfseries S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+C\+E\+N\+T\+E\+R\+ED}~S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+C\+E\+N\+T\+E\+R\+E\+D\+\_\+\+D\+I\+S\+P\+L\+AY(0)
+\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a07ffe394c82e7c5d93443e76e5356cbb}\label{_s_d_l__video_8h_a07ffe394c82e7c5d93443e76e5356cbb}} 
+\#define {\bfseries S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+I\+S\+C\+E\+N\+T\+E\+R\+ED}(X)~(((X)\&0x\+F\+F\+F\+F0000) == \mbox{\hyperlink{_s_d_l__video_8h_a5088b87c9d01cc26915ff082aaf014fa}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+C\+E\+N\+T\+E\+R\+E\+D\+\_\+\+M\+A\+SK}})
+\end{DoxyCompactItemize}
+\doxysubsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}}
+\begin{DoxyCompactList}\small\item\em The type used to identify a window \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a0d64dcf67c9685d09cbe051448e1b3f3}\label{_s_d_l__video_8h_a0d64dcf67c9685d09cbe051448e1b3f3}} 
+typedef void $\ast$ \mbox{\hyperlink{_s_d_l__video_8h_a0d64dcf67c9685d09cbe051448e1b3f3}{S\+D\+L\+\_\+\+G\+L\+Context}}
+\begin{DoxyCompactList}\small\item\em An opaque handle to an Open\+GL context. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{_s_d_l__video_8h_a0415a108581752b68c6aca800ff3bad5}{S\+D\+L\+\_\+\+Hit\+Test\+Result}}(S\+D\+L\+C\+A\+LL $\ast$ \mbox{\hyperlink{_s_d_l__video_8h_a247c7fd43bb60b20630945a5bd9e4957}{S\+D\+L\+\_\+\+Hit\+Test}}) (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$win, const \mbox{\hyperlink{struct_s_d_l___point}{S\+D\+L\+\_\+\+Point}} $\ast$area, void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Callback used for hit-\/testing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{열거형 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18}{S\+D\+L\+\_\+\+Window\+Flags}} \{ \newline
+\mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18ac7b8279bdf5e22a0b4a95aae3d846923}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+EN}} = 0x00000001, 
+\mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a5cf8af096f1870b0c2b12267cabd1f7a}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+O\+P\+E\+N\+GL}} = 0x00000002, 
+\mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a4300d051290adcb71c1b5e82e2553c4d}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+H\+O\+WN}} = 0x00000004, 
+\mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18adda25e98e54964c0c2ec9ac31f5e629c}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+I\+D\+D\+EN}} = 0x00000008, 
+\newline
+\mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18af7baea7dc9c0e4f09b28793504b02e4c}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+L\+E\+SS}} = 0x00000010, 
+\mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18aaf59a5e2f762aa2b6d2e49b0ca220fd8}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+R\+E\+S\+I\+Z\+A\+B\+LE}} = 0x00000020, 
+\mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a7f08ee26b5773412a212233ddc168c5a}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+M\+I\+N\+I\+M\+I\+Z\+ED}} = 0x00000040, 
+\mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18acd8063a617f2ce05f694ecdbf56f811a}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+M\+A\+X\+I\+M\+I\+Z\+ED}} = 0x00000080, 
+\newline
+\mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18aaf410e1082e45a55ef9176163610dba2}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+I\+N\+P\+U\+T\+\_\+\+G\+R\+A\+B\+B\+ED}} = 0x00000100, 
+\mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18afcbb682c0942bc106af1474c1d34bb53}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+I\+N\+P\+U\+T\+\_\+\+F\+O\+C\+US}} = 0x00000200, 
+\mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18aa722d0955c297fc60c09b10e1679684c}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+F\+O\+C\+US}} = 0x00000400, 
+{\bfseries S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+E\+N\+\_\+\+D\+E\+S\+K\+T\+OP} = ( S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+EN $\vert$ 0x00001000 ), 
+\newline
+\mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a1ac8e0ef2237a089cf487d7e7fcc6e23}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+O\+R\+E\+I\+GN}} = 0x00000800, 
+\mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a03ec21b04fa4e5c8cc868aa01a0c1bf3}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+A\+L\+L\+O\+W\+\_\+\+H\+I\+G\+H\+D\+PI}} = 0x00002000, 
+\mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a4c16b51a323741bf5c492adce34e5882}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+C\+A\+P\+T\+U\+RE}} = 0x00004000, 
+\mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a318e8aee0e3fddcfe2257757c6eb3128}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+A\+L\+W\+A\+Y\+S\+\_\+\+O\+N\+\_\+\+T\+OP}} = 0x00008000, 
+\newline
+\mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a4bd52941a63adc993271579d52fb6641}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+K\+I\+P\+\_\+\+T\+A\+S\+K\+B\+AR}} = 0x00010000, 
+\mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a94224404de009a2fb6856a6a69d20d85}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+U\+T\+I\+L\+I\+TY}} = 0x00020000, 
+\mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a226509512aeab3c2c01deb75c182adf5}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+T\+O\+O\+L\+T\+IP}} = 0x00040000, 
+\mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18aeb1e21d5d8ed10b5d65ab0909b5c8c0d}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+P\+O\+P\+U\+P\+\_\+\+M\+E\+NU}} = 0x00080000, 
+\newline
+\mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a55d2d1e92b96050c5a9cd8280d78f26c}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+V\+U\+L\+K\+AN}} = 0x10000000
+ \}
+\begin{DoxyCompactList}\small\item\em The flags on a window \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3bab}{S\+D\+L\+\_\+\+Window\+Event\+ID}} \{ \newline
+\mbox{\hyperlink{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3babaee1301eee7ad982c50cd310607f968b7}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+N\+O\+NE}}, 
+\mbox{\hyperlink{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba5e91fe11ed6a24a377a77d024c9639d5}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+S\+H\+O\+WN}}, 
+\mbox{\hyperlink{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba04e5bd277e03b61a6e4b577f2a3fda55}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+H\+I\+D\+D\+EN}}, 
+\mbox{\hyperlink{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3babac37af5c3ce56fe0956bc310821d59489}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+E\+X\+P\+O\+S\+ED}}, 
+\newline
+\mbox{\hyperlink{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba64da80af7b0a58689f07c7196de23da5}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+M\+O\+V\+ED}}, 
+\mbox{\hyperlink{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba26096363b1a5a1eccc56a00d5f61948d}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+I\+Z\+ED}}, 
+\mbox{\hyperlink{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba98e76df5341be0a05c7461e32c7835f0}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+C\+H\+A\+N\+G\+ED}}, 
+\mbox{\hyperlink{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba70577b21b05c509d0342a5649092928d}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+M\+I\+N\+I\+M\+I\+Z\+ED}}, 
+\newline
+\mbox{\hyperlink{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba83593cf9ef16d0eaeeaac19b32a86a05}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+M\+A\+X\+I\+M\+I\+Z\+ED}}, 
+\mbox{\hyperlink{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba9ebe8fbb15f1bf06521d6b5484de3d89}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+T\+O\+R\+ED}}, 
+\mbox{\hyperlink{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3babac6990e7537a4cc6cc7aaabc3376b9eb5}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+E\+N\+T\+ER}}, 
+\mbox{\hyperlink{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba7e1afdd5cfea592a59e129419b431bd5}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+L\+E\+A\+VE}}, 
+\newline
+\mbox{\hyperlink{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba529d1b574e559ee46892024e1c2e6c92}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+F\+O\+C\+U\+S\+\_\+\+G\+A\+I\+N\+ED}}, 
+\mbox{\hyperlink{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba239e734c6ba478fb2f694fc7cde30c31}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+F\+O\+C\+U\+S\+\_\+\+L\+O\+ST}}, 
+\mbox{\hyperlink{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba2483911a3a2a20dbb1c88a15ffb9a360}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+C\+L\+O\+SE}}, 
+\mbox{\hyperlink{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba69ee247e6859b1d5d7dfffb7c1a99b4e}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+T\+A\+K\+E\+\_\+\+F\+O\+C\+US}}, 
+\newline
+\mbox{\hyperlink{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba425a0e4dca5ba339eed8166248eeef8e}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+H\+I\+T\+\_\+\+T\+E\+ST}}
+ \}
+\begin{DoxyCompactList}\small\item\em Event subtype for window events \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_s_d_l__video_8h_ad671b39d95c255af51db93cb54512ffc}{S\+D\+L\+\_\+\+Display\+Event\+ID}} \{ \mbox{\hyperlink{_s_d_l__video_8h_ad671b39d95c255af51db93cb54512ffca0f22fc5951aac829337807e4238110e5}{S\+D\+L\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+E\+V\+E\+N\+T\+\_\+\+N\+O\+NE}}, 
+\mbox{\hyperlink{_s_d_l__video_8h_ad671b39d95c255af51db93cb54512ffca79af38ade27966e9e53476f5d3755f04}{S\+D\+L\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+E\+V\+E\+N\+T\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON}}
+ \}
+\begin{DoxyCompactList}\small\item\em Event subtype for display events \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbde}{S\+D\+L\+\_\+\+Display\+Orientation}} \{ \newline
+\mbox{\hyperlink{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbdeacb20982c4f82c7271a66a76b98eda731}{S\+D\+L\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+U\+N\+K\+N\+O\+WN}}, 
+\mbox{\hyperlink{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbdea5b1e627bf8f8be31d62292681f42694b}{S\+D\+L\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+L\+A\+N\+D\+S\+C\+A\+PE}}, 
+\mbox{\hyperlink{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbdea6cd1294f411220564276f85c32616c6a}{S\+D\+L\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E\+\_\+\+F\+L\+I\+P\+P\+ED}}, 
+\mbox{\hyperlink{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbdea5fb622ac90f47a799d7d7f660d7c860b}{S\+D\+L\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+P\+O\+R\+T\+R\+A\+IT}}, 
+\newline
+\mbox{\hyperlink{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbdea66727ec5e93a1112a254b4d3b8e867db}{S\+D\+L\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+F\+L\+I\+P\+P\+ED}}
+ \}
+\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a2de24951bbc6626dc259ec0db5ae8ed4}\label{_s_d_l__video_8h_a2de24951bbc6626dc259ec0db5ae8ed4}} 
+enum \mbox{\hyperlink{_s_d_l__video_8h_a2de24951bbc6626dc259ec0db5ae8ed4}{S\+D\+L\+\_\+\+G\+Lattr}} \{ \newline
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+R\+E\+D\+\_\+\+S\+I\+ZE}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+G\+R\+E\+E\+N\+\_\+\+S\+I\+ZE}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+B\+L\+U\+E\+\_\+\+S\+I\+ZE}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+A\+L\+P\+H\+A\+\_\+\+S\+I\+ZE}, 
+\newline
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+D\+O\+U\+B\+L\+E\+B\+U\+F\+F\+ER}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+D\+E\+P\+T\+H\+\_\+\+S\+I\+ZE}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+S\+T\+E\+N\+C\+I\+L\+\_\+\+S\+I\+ZE}, 
+\newline
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+A\+C\+C\+U\+M\+\_\+\+R\+E\+D\+\_\+\+S\+I\+ZE}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+A\+C\+C\+U\+M\+\_\+\+G\+R\+E\+E\+N\+\_\+\+S\+I\+ZE}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+A\+C\+C\+U\+M\+\_\+\+B\+L\+U\+E\+\_\+\+S\+I\+ZE}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+A\+C\+C\+U\+M\+\_\+\+A\+L\+P\+H\+A\+\_\+\+S\+I\+ZE}, 
+\newline
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+S\+T\+E\+R\+EO}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+M\+U\+L\+T\+I\+S\+A\+M\+P\+L\+E\+B\+U\+F\+F\+E\+RS}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+M\+U\+L\+T\+I\+S\+A\+M\+P\+L\+E\+S\+A\+M\+P\+L\+ES}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+A\+C\+C\+E\+L\+E\+R\+A\+T\+E\+D\+\_\+\+V\+I\+S\+U\+AL}, 
+\newline
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+R\+E\+T\+A\+I\+N\+E\+D\+\_\+\+B\+A\+C\+K\+I\+NG}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+E\+GL}, 
+\newline
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+F\+L\+A\+GS}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+M\+A\+SK}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+S\+H\+A\+R\+E\+\_\+\+W\+I\+T\+H\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+C\+O\+N\+T\+E\+XT}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+F\+R\+A\+M\+E\+B\+U\+F\+F\+E\+R\+\_\+\+S\+R\+G\+B\+\_\+\+C\+A\+P\+A\+B\+LE}, 
+\newline
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+B\+E\+H\+A\+V\+I\+OR}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+R\+E\+S\+E\+T\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+ON}, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR}
+ \}
+\begin{DoxyCompactList}\small\item\em Open\+GL configuration attributes \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_s_d_l__video_8h_ad5ea1835b83fe139bcc182c3326d7a5f}{S\+D\+L\+\_\+\+G\+Lprofile}} \{ {\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+C\+O\+RE} = 0x0001, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+I\+L\+I\+TY} = 0x0002, 
+\mbox{\hyperlink{_s_d_l__video_8h_ad5ea1835b83fe139bcc182c3326d7a5fa721fa797743fb228d804532cab8b8faa}{S\+D\+L\+\_\+\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+ES}} = 0x0004
+ \}
+\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_abd0baef2bdd92997a9436f5b62b18f5d}\label{_s_d_l__video_8h_abd0baef2bdd92997a9436f5b62b18f5d}} 
+enum {\bfseries S\+D\+L\+\_\+\+G\+Lcontext\+Flag} \{ {\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+D\+E\+B\+U\+G\+\_\+\+F\+L\+AG} = 0x0001, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+F\+L\+AG} = 0x0002, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+R\+O\+B\+U\+S\+T\+\_\+\+A\+C\+C\+E\+S\+S\+\_\+\+F\+L\+AG} = 0x0004, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+R\+E\+S\+E\+T\+\_\+\+I\+S\+O\+L\+A\+T\+I\+O\+N\+\_\+\+F\+L\+AG} = 0x0008
+ \}
+\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a9a34b07d44a580ac7216b6c842663aed}\label{_s_d_l__video_8h_a9a34b07d44a580ac7216b6c842663aed}} 
+enum {\bfseries S\+D\+L\+\_\+\+G\+Lcontext\+Release\+Flag} \{ {\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+B\+E\+H\+A\+V\+I\+O\+R\+\_\+\+N\+O\+NE} = 0x0000, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+B\+E\+H\+A\+V\+I\+O\+R\+\_\+\+F\+L\+U\+SH} = 0x0001
+ \}
+\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_af68cd1e823f43af61bbeb1701c641375}\label{_s_d_l__video_8h_af68cd1e823f43af61bbeb1701c641375}} 
+enum {\bfseries S\+D\+L\+\_\+\+G\+L\+Context\+Reset\+Notification} \{ {\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+R\+E\+S\+E\+T\+\_\+\+N\+O\+\_\+\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+ON} = 0x0000, 
+{\bfseries S\+D\+L\+\_\+\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+R\+E\+S\+E\+T\+\_\+\+L\+O\+S\+E\+\_\+\+C\+O\+N\+T\+E\+XT} = 0x0001
+ \}
+\item 
+enum \mbox{\hyperlink{_s_d_l__video_8h_a0415a108581752b68c6aca800ff3bad5}{S\+D\+L\+\_\+\+Hit\+Test\+Result}} \{ \newline
+\mbox{\hyperlink{_s_d_l__video_8h_a0415a108581752b68c6aca800ff3bad5a3eb7be45c88e40366315d453f3bf721e}{S\+D\+L\+\_\+\+H\+I\+T\+T\+E\+S\+T\+\_\+\+N\+O\+R\+M\+AL}}, 
+\mbox{\hyperlink{_s_d_l__video_8h_a0415a108581752b68c6aca800ff3bad5a078a028af8c26848cf3576bd0c4d8fc9}{S\+D\+L\+\_\+\+H\+I\+T\+T\+E\+S\+T\+\_\+\+D\+R\+A\+G\+G\+A\+B\+LE}}, 
+{\bfseries S\+D\+L\+\_\+\+H\+I\+T\+T\+E\+S\+T\+\_\+\+R\+E\+S\+I\+Z\+E\+\_\+\+T\+O\+P\+L\+E\+FT}, 
+{\bfseries S\+D\+L\+\_\+\+H\+I\+T\+T\+E\+S\+T\+\_\+\+R\+E\+S\+I\+Z\+E\+\_\+\+T\+OP}, 
+\newline
+{\bfseries S\+D\+L\+\_\+\+H\+I\+T\+T\+E\+S\+T\+\_\+\+R\+E\+S\+I\+Z\+E\+\_\+\+T\+O\+P\+R\+I\+G\+HT}, 
+{\bfseries S\+D\+L\+\_\+\+H\+I\+T\+T\+E\+S\+T\+\_\+\+R\+E\+S\+I\+Z\+E\+\_\+\+R\+I\+G\+HT}, 
+{\bfseries S\+D\+L\+\_\+\+H\+I\+T\+T\+E\+S\+T\+\_\+\+R\+E\+S\+I\+Z\+E\+\_\+\+B\+O\+T\+T\+O\+M\+R\+I\+G\+HT}, 
+{\bfseries S\+D\+L\+\_\+\+H\+I\+T\+T\+E\+S\+T\+\_\+\+R\+E\+S\+I\+Z\+E\+\_\+\+B\+O\+T\+T\+OM}, 
+\newline
+{\bfseries S\+D\+L\+\_\+\+H\+I\+T\+T\+E\+S\+T\+\_\+\+R\+E\+S\+I\+Z\+E\+\_\+\+B\+O\+T\+T\+O\+M\+L\+E\+FT}, 
+{\bfseries S\+D\+L\+\_\+\+H\+I\+T\+T\+E\+S\+T\+\_\+\+R\+E\+S\+I\+Z\+E\+\_\+\+L\+E\+FT}
+ \}
+\begin{DoxyCompactList}\small\item\em Possible return values from the S\+D\+L\+\_\+\+Hit\+Test callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_ac6f3250a95bd027fd1a374d7ed15fc57}{S\+D\+L\+\_\+\+Get\+Num\+Video\+Drivers}} (void)
+\begin{DoxyCompactList}\small\item\em Get the number of video drivers compiled into S\+DL \end{DoxyCompactList}\item 
+const D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a2c902b2b8f4e614dd183a275567706f8}{S\+D\+L\+\_\+\+Get\+Video\+Driver}} (int index)
+\begin{DoxyCompactList}\small\item\em Get the name of a built in video driver. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a05244b30716f0339dcd140c6f92017b7}{S\+D\+L\+\_\+\+Video\+Init}} (const char $\ast$driver\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Initialize the video subsystem, optionally specifying a video driver. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_ade5fc4847320fb235f17265b683fa013}{S\+D\+L\+\_\+\+Video\+Quit}} (void)
+\begin{DoxyCompactList}\small\item\em Shuts down the video subsystem. \end{DoxyCompactList}\item 
+const D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_aa2b9855f6ba9d32037e03a1122cea943}{S\+D\+L\+\_\+\+Get\+Current\+Video\+Driver}} (void)
+\begin{DoxyCompactList}\small\item\em Returns the name of the currently initialized video driver. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a074d185b7ef04e0305acdeeb049dd2be}{S\+D\+L\+\_\+\+Get\+Num\+Video\+Displays}} (void)
+\begin{DoxyCompactList}\small\item\em Returns the number of available video displays. \end{DoxyCompactList}\item 
+const D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_ae9a23c9ca35b026c9359520ae4d63d25}{S\+D\+L\+\_\+\+Get\+Display\+Name}} (int display\+Index)
+\begin{DoxyCompactList}\small\item\em Get the name of a display in U\+T\+F-\/8 encoding \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_ac05213009395c10ae40bede2de8e08a1}{S\+D\+L\+\_\+\+Get\+Display\+Bounds}} (int display\+Index, \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$rect)
+\begin{DoxyCompactList}\small\item\em Get the desktop area represented by a display, with the primary display located at 0,0 \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a9898f2e51cd90ace84cb0c6ea65d7051}{S\+D\+L\+\_\+\+Get\+Display\+Usable\+Bounds}} (int display\+Index, \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$rect)
+\begin{DoxyCompactList}\small\item\em Get the usable desktop area represented by a display, with the primary display located at 0,0 \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a8207ec5d13bd87158cbb42ef76e33216}{S\+D\+L\+\_\+\+Get\+Display\+D\+PI}} (int display\+Index, float $\ast$ddpi, float $\ast$hdpi, float $\ast$vdpi)
+\begin{DoxyCompactList}\small\item\em Get the dots/pixels-\/per-\/inch for a display \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbde}{S\+D\+L\+\_\+\+Display\+Orientation}} S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a6540db01a424ced1847376e583361ecb}{S\+D\+L\+\_\+\+Get\+Display\+Orientation}} (int display\+Index)
+\begin{DoxyCompactList}\small\item\em Get the orientation of a display \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a5abcf18592f00019c517e791f8ba53fc}{S\+D\+L\+\_\+\+Get\+Num\+Display\+Modes}} (int display\+Index)
+\begin{DoxyCompactList}\small\item\em Returns the number of available display modes. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a0a53e003ec6ad24dd2bbbcd0ad297311}{S\+D\+L\+\_\+\+Get\+Display\+Mode}} (int display\+Index, int mode\+Index, \mbox{\hyperlink{struct_s_d_l___display_mode}{S\+D\+L\+\_\+\+Display\+Mode}} $\ast$mode)
+\begin{DoxyCompactList}\small\item\em Fill in information about a specific display mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_ab97bca68fc068a6ecc3db473c4c0defd}\label{_s_d_l__video_8h_ab97bca68fc068a6ecc3db473c4c0defd}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_ab97bca68fc068a6ecc3db473c4c0defd}{S\+D\+L\+\_\+\+Get\+Desktop\+Display\+Mode}} (int display\+Index, \mbox{\hyperlink{struct_s_d_l___display_mode}{S\+D\+L\+\_\+\+Display\+Mode}} $\ast$mode)
+\begin{DoxyCompactList}\small\item\em Fill in information about the desktop display mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a14dce1cb33085b36f08d27b3d8f2335b}\label{_s_d_l__video_8h_a14dce1cb33085b36f08d27b3d8f2335b}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a14dce1cb33085b36f08d27b3d8f2335b}{S\+D\+L\+\_\+\+Get\+Current\+Display\+Mode}} (int display\+Index, \mbox{\hyperlink{struct_s_d_l___display_mode}{S\+D\+L\+\_\+\+Display\+Mode}} $\ast$mode)
+\begin{DoxyCompactList}\small\item\em Fill in information about the current display mode. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{struct_s_d_l___display_mode}{S\+D\+L\+\_\+\+Display\+Mode}} $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a794be92ee0a9efca226fa19a635fa470}{S\+D\+L\+\_\+\+Get\+Closest\+Display\+Mode}} (int display\+Index, const \mbox{\hyperlink{struct_s_d_l___display_mode}{S\+D\+L\+\_\+\+Display\+Mode}} $\ast$mode, \mbox{\hyperlink{struct_s_d_l___display_mode}{S\+D\+L\+\_\+\+Display\+Mode}} $\ast$closest)
+\begin{DoxyCompactList}\small\item\em Get the closest match to the requested display mode. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a0be1d0a4d1f9a0da23b78db2f55871b5}{S\+D\+L\+\_\+\+Get\+Window\+Display\+Index}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Get the display index associated with a window. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a2ca17d1e857d1560738e002c9935088a}{S\+D\+L\+\_\+\+Set\+Window\+Display\+Mode}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, const \mbox{\hyperlink{struct_s_d_l___display_mode}{S\+D\+L\+\_\+\+Display\+Mode}} $\ast$mode)
+\begin{DoxyCompactList}\small\item\em Set the display mode used when a fullscreen window is visible. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a8185547bc7cb0bbeb400f459792d081a}{S\+D\+L\+\_\+\+Get\+Window\+Display\+Mode}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, \mbox{\hyperlink{struct_s_d_l___display_mode}{S\+D\+L\+\_\+\+Display\+Mode}} $\ast$mode)
+\begin{DoxyCompactList}\small\item\em Fill in information about the display mode used when a fullscreen window is visible. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a3abb4a27f109ac055eb2a82227a9d11f}\label{_s_d_l__video_8h_a3abb4a27f109ac055eb2a82227a9d11f}} 
+D\+E\+C\+L\+S\+P\+EC Uint32 S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a3abb4a27f109ac055eb2a82227a9d11f}{S\+D\+L\+\_\+\+Get\+Window\+Pixel\+Format}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Get the pixel format associated with the window. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a42565088bdb739a5353fd67abbe235d2}{S\+D\+L\+\_\+\+Create\+Window}} (const char $\ast$title, int x, int y, int w, int h, Uint32 flags)
+\begin{DoxyCompactList}\small\item\em Create a window with the specified position, dimensions, and flags. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a54b9e13dbc5bf587a8765a9ec0a29772}{S\+D\+L\+\_\+\+Create\+Window\+From}} (const void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Create an S\+DL window from an existing native window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a1f6c1c22ced1564ffd0d54bbf9824134}\label{_s_d_l__video_8h_a1f6c1c22ced1564ffd0d54bbf9824134}} 
+D\+E\+C\+L\+S\+P\+EC Uint32 S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a1f6c1c22ced1564ffd0d54bbf9824134}{S\+D\+L\+\_\+\+Get\+Window\+ID}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Get the numeric ID of a window, for logging purposes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_adc713c8b1a570b9654981d6b079671fb}\label{_s_d_l__video_8h_adc713c8b1a570b9654981d6b079671fb}} 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_adc713c8b1a570b9654981d6b079671fb}{S\+D\+L\+\_\+\+Get\+Window\+From\+ID}} (Uint32 id)
+\begin{DoxyCompactList}\small\item\em Get a window from a stored ID, or N\+U\+LL if it doesn\textquotesingle{}t exist. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a4445733f04a1a9dd0e063cd4738f285f}\label{_s_d_l__video_8h_a4445733f04a1a9dd0e063cd4738f285f}} 
+D\+E\+C\+L\+S\+P\+EC Uint32 S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a4445733f04a1a9dd0e063cd4738f285f}{S\+D\+L\+\_\+\+Get\+Window\+Flags}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Get the window flags. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a41aabc4b68f75f41d97995e02eb9deb6}{S\+D\+L\+\_\+\+Set\+Window\+Title}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, const char $\ast$title)
+\begin{DoxyCompactList}\small\item\em Set the title of a window, in U\+T\+F-\/8 format. \end{DoxyCompactList}\item 
+const D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a35ac3137acd51e9b19baef3497070a22}{S\+D\+L\+\_\+\+Get\+Window\+Title}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Get the title of a window, in U\+T\+F-\/8 format. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a0b6910b5d5aa2df0aeda257e445a472e}{S\+D\+L\+\_\+\+Set\+Window\+Icon}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$icon)
+\begin{DoxyCompactList}\small\item\em Set the icon for a window. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_afc7a842e8843235d2ede124a1fd076ec}{S\+D\+L\+\_\+\+Set\+Window\+Data}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, const char $\ast$name, void $\ast$userdata)
+\begin{DoxyCompactList}\small\item\em Associate an arbitrary named pointer with a window. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_ad714a638020c06ad03f113e3d069cf88}{S\+D\+L\+\_\+\+Get\+Window\+Data}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, const char $\ast$name)
+\begin{DoxyCompactList}\small\item\em Retrieve the data pointer associated with a window. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_ab200a53e01ddc697fd6b8e017cc4e6dd}{S\+D\+L\+\_\+\+Set\+Window\+Position}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, int x, int y)
+\begin{DoxyCompactList}\small\item\em Set the position of a window. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a03adfc1ed4aaf57da4af00bd247ac99c}{S\+D\+L\+\_\+\+Get\+Window\+Position}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, int $\ast$x, int $\ast$y)
+\begin{DoxyCompactList}\small\item\em Get the position of a window. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a29b118c6932ccb94d85b5435ae1e0a19}{S\+D\+L\+\_\+\+Set\+Window\+Size}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, int w, int h)
+\begin{DoxyCompactList}\small\item\em Set the size of a window\textquotesingle{}s client area. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a5cbfffcfec91c22a7ca95fd1d5163db5}{S\+D\+L\+\_\+\+Get\+Window\+Size}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, int $\ast$w, int $\ast$h)
+\begin{DoxyCompactList}\small\item\em Get the size of a window\textquotesingle{}s client area. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a1f309d151c3526b1ac3a7cb9c1a231ae}{S\+D\+L\+\_\+\+Get\+Window\+Borders\+Size}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, int $\ast$top, int $\ast$left, int $\ast$bottom, int $\ast$right)
+\begin{DoxyCompactList}\small\item\em Get the size of a window\textquotesingle{}s borders (decorations) around the client area. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a1b6dd546d8dec383be411f98926335ae}{S\+D\+L\+\_\+\+Set\+Window\+Minimum\+Size}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, int min\+\_\+w, int min\+\_\+h)
+\begin{DoxyCompactList}\small\item\em Set the minimum size of a window\textquotesingle{}s client area. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_afe1c6ca08d5b8c336b1276236559287a}{S\+D\+L\+\_\+\+Get\+Window\+Minimum\+Size}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, int $\ast$w, int $\ast$h)
+\begin{DoxyCompactList}\small\item\em Get the minimum size of a window\textquotesingle{}s client area. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_aaf95e53a3b70d55d71d7b2cf822ea77e}{S\+D\+L\+\_\+\+Set\+Window\+Maximum\+Size}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, int max\+\_\+w, int max\+\_\+h)
+\begin{DoxyCompactList}\small\item\em Set the maximum size of a window\textquotesingle{}s client area. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a38d65795da3feacfec1c392c101e92fd}{S\+D\+L\+\_\+\+Get\+Window\+Maximum\+Size}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, int $\ast$w, int $\ast$h)
+\begin{DoxyCompactList}\small\item\em Get the maximum size of a window\textquotesingle{}s client area. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_afb4b868e2cc0107ed6bcf5ba7aa376e0}{S\+D\+L\+\_\+\+Set\+Window\+Bordered}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, S\+D\+L\+\_\+bool bordered)
+\begin{DoxyCompactList}\small\item\em Set the border state of a window. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a42d2451050ae01aaf2974344b9d4a812}{S\+D\+L\+\_\+\+Set\+Window\+Resizable}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, S\+D\+L\+\_\+bool resizable)
+\begin{DoxyCompactList}\small\item\em Set the user-\/resizable state of a window. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a6051ce26885b32b80bc7285b4facd0a1}{S\+D\+L\+\_\+\+Show\+Window}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Show a window. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_aa3cbe663e0bd62aa7a747a6c11781766}{S\+D\+L\+\_\+\+Hide\+Window}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Hide a window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a4b66b90f95780276addc14bc573c9f3c}\label{_s_d_l__video_8h_a4b66b90f95780276addc14bc573c9f3c}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a4b66b90f95780276addc14bc573c9f3c}{S\+D\+L\+\_\+\+Raise\+Window}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Raise a window above other windows and set the input focus. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a8d969b660fee270f84cb403c8b75ded6}{S\+D\+L\+\_\+\+Maximize\+Window}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Make a window as large as possible. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a9f802f6c7952552b1cb26958fad3f2a6}{S\+D\+L\+\_\+\+Minimize\+Window}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Minimize a window to an iconic representation. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_afea37fca3b12f454e7f91d919fc99fbd}{S\+D\+L\+\_\+\+Restore\+Window}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Restore the size and position of a minimized or maximized window. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_ab4aa48f0a29f0868ce4e0422c02ed2fa}{S\+D\+L\+\_\+\+Set\+Window\+Fullscreen}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, Uint32 flags)
+\begin{DoxyCompactList}\small\item\em Set a window\textquotesingle{}s fullscreen state. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a0f7a1d102e1d5dd2d739ad70fe268385}{S\+D\+L\+\_\+\+Get\+Window\+Surface}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Get the S\+DL surface associated with the window. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a7bbfee05788dc85a1d67218cf3006653}{S\+D\+L\+\_\+\+Update\+Window\+Surface}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Copy the window surface to the screen. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_ae6b0c6cf354beb87291887bfa02385b1}{S\+D\+L\+\_\+\+Update\+Window\+Surface\+Rects}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, const \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$rects, int numrects)
+\begin{DoxyCompactList}\small\item\em Copy a number of rectangles on the window surface to the screen. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_abe7fd559e9d6da046c5984dea679a89b}{S\+D\+L\+\_\+\+Set\+Window\+Grab}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, S\+D\+L\+\_\+bool grabbed)
+\begin{DoxyCompactList}\small\item\em Set a window\textquotesingle{}s input grab mode. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC S\+D\+L\+\_\+bool S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_ad4e451db3880b6e0dd6647cbc351c6c0}{S\+D\+L\+\_\+\+Get\+Window\+Grab}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Get a window\textquotesingle{}s input grab mode. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a8c6fb2a477c4d309f53bce34ee26d4df}{S\+D\+L\+\_\+\+Get\+Grabbed\+Window}} (void)
+\begin{DoxyCompactList}\small\item\em Get the window that currently has an input grab enabled. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a896972250b4d2e0f75888fa44fa792ec}{S\+D\+L\+\_\+\+Set\+Window\+Brightness}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, float brightness)
+\begin{DoxyCompactList}\small\item\em Set the brightness (gamma correction) for a window. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC float S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a21c10969331c89e8d0e6a8f998a3c319}{S\+D\+L\+\_\+\+Get\+Window\+Brightness}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Get the brightness (gamma correction) for a window. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_ac10be8659aa8b5bdefb8ce43b6961f7f}{S\+D\+L\+\_\+\+Set\+Window\+Opacity}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, float opacity)
+\begin{DoxyCompactList}\small\item\em Set the opacity for a window \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a9a85fb11978adecf13a04976efe6ceca}{S\+D\+L\+\_\+\+Get\+Window\+Opacity}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, float $\ast$out\+\_\+opacity)
+\begin{DoxyCompactList}\small\item\em Get the opacity of a window. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_afb7627a0ede24c28453857fff4f02aca}{S\+D\+L\+\_\+\+Set\+Window\+Modal\+For}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$modal\+\_\+window, \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$parent\+\_\+window)
+\begin{DoxyCompactList}\small\item\em Sets the window as a modal for another window (T\+O\+DO\+: reconsider this function and/or its name) \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_aa77986a0f56e51f216af57d829bca896}{S\+D\+L\+\_\+\+Set\+Window\+Input\+Focus}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Explicitly sets input focus to the window. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a6799acf235454f519ac209ccf14caa67}{S\+D\+L\+\_\+\+Set\+Window\+Gamma\+Ramp}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, const Uint16 $\ast$red, const Uint16 $\ast$green, const Uint16 $\ast$blue)
+\begin{DoxyCompactList}\small\item\em Set the gamma ramp for a window. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_af4d647be3bb21a33586d69d5cad87ead}{S\+D\+L\+\_\+\+Get\+Window\+Gamma\+Ramp}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, Uint16 $\ast$red, Uint16 $\ast$green, Uint16 $\ast$blue)
+\begin{DoxyCompactList}\small\item\em Get the gamma ramp for a window. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a23e14e1f21f7fb3727f38fd9b0711186}{S\+D\+L\+\_\+\+Set\+Window\+Hit\+Test}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, \mbox{\hyperlink{_s_d_l__video_8h_a247c7fd43bb60b20630945a5bd9e4957}{S\+D\+L\+\_\+\+Hit\+Test}} callback, void $\ast$callback\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Provide a callback that decides if a window region has special properties. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a72609295a4faee0587268339ccff80c2}\label{_s_d_l__video_8h_a72609295a4faee0587268339ccff80c2}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a72609295a4faee0587268339ccff80c2}{S\+D\+L\+\_\+\+Destroy\+Window}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Destroy a window. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC S\+D\+L\+\_\+bool S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a4b5c116d57947bf508c13b21aac49cbf}{S\+D\+L\+\_\+\+Is\+Screen\+Saver\+Enabled}} (void)
+\begin{DoxyCompactList}\small\item\em Returns whether the screensaver is currently enabled (default off). \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a17846c713066aa29a86e1be205a7fc3e}{S\+D\+L\+\_\+\+Enable\+Screen\+Saver}} (void)
+\begin{DoxyCompactList}\small\item\em Allow the screen to be blanked by a screensaver \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a68eb0d850934fa1c7ac12c30f2d56a84}{S\+D\+L\+\_\+\+Disable\+Screen\+Saver}} (void)
+\begin{DoxyCompactList}\small\item\em Prevent the screen from being blanked by a screensaver \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Open\+GL support functions}\par
+\begin{DoxyCompactItemize}
+\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a398df9aaf43a69dc2cfaab5b306b8f91}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Load\+Library}} (const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Dynamically load an Open\+GL library. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a6329bc32811639fe6f71606801cd9e7b}\label{_s_d_l__video_8h_a6329bc32811639fe6f71606801cd9e7b}} 
+D\+E\+C\+L\+S\+P\+EC void $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a6329bc32811639fe6f71606801cd9e7b}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Proc\+Address}} (const char $\ast$proc)
+\begin{DoxyCompactList}\small\item\em Get the address of an Open\+GL function. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a92103adf9637ec2dc471714076872bdc}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Unload\+Library}} (void)
+\begin{DoxyCompactList}\small\item\em Unload the Open\+GL library previously loaded by \mbox{\hyperlink{_s_d_l__video_8h_a398df9aaf43a69dc2cfaab5b306b8f91}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Load\+Library()}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a1fa0cc176fbc16db139b40a121e9cfa7}\label{_s_d_l__video_8h_a1fa0cc176fbc16db139b40a121e9cfa7}} 
+D\+E\+C\+L\+S\+P\+EC S\+D\+L\+\_\+bool S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a1fa0cc176fbc16db139b40a121e9cfa7}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Extension\+Supported}} (const char $\ast$extension)
+\begin{DoxyCompactList}\small\item\em Return true if an Open\+GL extension is supported for the current context. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_ac96f25a7a6b28387d2813d8db71921ff}\label{_s_d_l__video_8h_ac96f25a7a6b28387d2813d8db71921ff}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_ac96f25a7a6b28387d2813d8db71921ff}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Reset\+Attributes}} (void)
+\begin{DoxyCompactList}\small\item\em Reset all previously set Open\+GL context attributes to their default values \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_aed4d4347f2d5def1532bc22893e0e0d9}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Set\+Attribute}} (\mbox{\hyperlink{_s_d_l__video_8h_a2de24951bbc6626dc259ec0db5ae8ed4}{S\+D\+L\+\_\+\+G\+Lattr}} attr, int value)
+\begin{DoxyCompactList}\small\item\em Set an Open\+GL window attribute before window creation. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a611bbed6c7374329e1d1b9c31b06976d}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Attribute}} (\mbox{\hyperlink{_s_d_l__video_8h_a2de24951bbc6626dc259ec0db5ae8ed4}{S\+D\+L\+\_\+\+G\+Lattr}} attr, int $\ast$value)
+\begin{DoxyCompactList}\small\item\em Get the actual value for an attribute from the current context. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{_s_d_l__video_8h_a0d64dcf67c9685d09cbe051448e1b3f3}{S\+D\+L\+\_\+\+G\+L\+Context}} S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a0e14c935cf304133278893bf6c1d2691}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Create\+Context}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Create an Open\+GL context for use with an Open\+GL window, and make it current. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a5a2ad98e8920f8069bf89eb3f9bbc377}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Make\+Current}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, \mbox{\hyperlink{_s_d_l__video_8h_a0d64dcf67c9685d09cbe051448e1b3f3}{S\+D\+L\+\_\+\+G\+L\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Set up an Open\+GL context for rendering into an Open\+GL window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a9965884a9c717690a44128afa279d144}\label{_s_d_l__video_8h_a9965884a9c717690a44128afa279d144}} 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a9965884a9c717690a44128afa279d144}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Current\+Window}} (void)
+\begin{DoxyCompactList}\small\item\em Get the currently active Open\+GL window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a742f600404b9090bd64f8e863ece98c8}\label{_s_d_l__video_8h_a742f600404b9090bd64f8e863ece98c8}} 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{_s_d_l__video_8h_a0d64dcf67c9685d09cbe051448e1b3f3}{S\+D\+L\+\_\+\+G\+L\+Context}} S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a742f600404b9090bd64f8e863ece98c8}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Current\+Context}} (void)
+\begin{DoxyCompactList}\small\item\em Get the currently active Open\+GL context. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_ac21851bbd91760c5bab92594a58edba3}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Drawable\+Size}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, int $\ast$w, int $\ast$h)
+\begin{DoxyCompactList}\small\item\em Get the size of a window\textquotesingle{}s underlying drawable in pixels (for use with gl\+Viewport). \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a68b0d06595d086d9244fd49afe3e8360}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Set\+Swap\+Interval}} (int interval)
+\begin{DoxyCompactList}\small\item\em Set the swap interval for the current Open\+GL context. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_ae96490db6285ed0df44a9b1c0f498605}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Swap\+Interval}} (void)
+\begin{DoxyCompactList}\small\item\em Get the swap interval for the current Open\+GL context. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__video_8h_a11d1245662f49f6af257627119f22835}\label{_s_d_l__video_8h_a11d1245662f49f6af257627119f22835}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_a11d1245662f49f6af257627119f22835}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Swap\+Window}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Swap the Open\+GL buffers for a window, if double-\/buffering is supported. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__video_8h_aa64ab050e0bd3a61057c3dffe953aa9f}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Delete\+Context}} (\mbox{\hyperlink{_s_d_l__video_8h_a0d64dcf67c9685d09cbe051448e1b3f3}{S\+D\+L\+\_\+\+G\+L\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Delete an Open\+GL context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{상세한 설명}
+Header file for S\+DL video functions. 
+
+\doxysubsection{타입정의 문서화}
+\mbox{\Hypertarget{_s_d_l__video_8h_a247c7fd43bb60b20630945a5bd9e4957}\label{_s_d_l__video_8h_a247c7fd43bb60b20630945a5bd9e4957}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_HitTest@{SDL\_HitTest}}
+\index{SDL\_HitTest@{SDL\_HitTest}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_HitTest}{SDL\_HitTest}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{_s_d_l__video_8h_a0415a108581752b68c6aca800ff3bad5}{S\+D\+L\+\_\+\+Hit\+Test\+Result}}(S\+D\+L\+C\+A\+LL $\ast$ S\+D\+L\+\_\+\+Hit\+Test) (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$win, const \mbox{\hyperlink{struct_s_d_l___point}{S\+D\+L\+\_\+\+Point}} $\ast$area, void $\ast$data)}
+
+
+
+Callback used for hit-\/testing. 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a23e14e1f21f7fb3727f38fd9b0711186}{S\+D\+L\+\_\+\+Set\+Window\+Hit\+Test}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}\label{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_Window@{SDL\_Window}}
+\index{SDL\_Window@{SDL\_Window}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_Window}{SDL\_Window}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}}}
+
+
+
+The type used to identify a window 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a42565088bdb739a5353fd67abbe235d2}{S\+D\+L\+\_\+\+Create\+Window()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a54b9e13dbc5bf587a8765a9ec0a29772}{S\+D\+L\+\_\+\+Create\+Window\+From()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a72609295a4faee0587268339ccff80c2}{S\+D\+L\+\_\+\+Destroy\+Window()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_ad714a638020c06ad03f113e3d069cf88}{S\+D\+L\+\_\+\+Get\+Window\+Data()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a4445733f04a1a9dd0e063cd4738f285f}{S\+D\+L\+\_\+\+Get\+Window\+Flags()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_ad4e451db3880b6e0dd6647cbc351c6c0}{S\+D\+L\+\_\+\+Get\+Window\+Grab()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a03adfc1ed4aaf57da4af00bd247ac99c}{S\+D\+L\+\_\+\+Get\+Window\+Position()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a5cbfffcfec91c22a7ca95fd1d5163db5}{S\+D\+L\+\_\+\+Get\+Window\+Size()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a35ac3137acd51e9b19baef3497070a22}{S\+D\+L\+\_\+\+Get\+Window\+Title()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_aa3cbe663e0bd62aa7a747a6c11781766}{S\+D\+L\+\_\+\+Hide\+Window()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a8d969b660fee270f84cb403c8b75ded6}{S\+D\+L\+\_\+\+Maximize\+Window()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a9f802f6c7952552b1cb26958fad3f2a6}{S\+D\+L\+\_\+\+Minimize\+Window()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a4b66b90f95780276addc14bc573c9f3c}{S\+D\+L\+\_\+\+Raise\+Window()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_afea37fca3b12f454e7f91d919fc99fbd}{S\+D\+L\+\_\+\+Restore\+Window()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_afc7a842e8843235d2ede124a1fd076ec}{S\+D\+L\+\_\+\+Set\+Window\+Data()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_ab4aa48f0a29f0868ce4e0422c02ed2fa}{S\+D\+L\+\_\+\+Set\+Window\+Fullscreen()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_abe7fd559e9d6da046c5984dea679a89b}{S\+D\+L\+\_\+\+Set\+Window\+Grab()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a0b6910b5d5aa2df0aeda257e445a472e}{S\+D\+L\+\_\+\+Set\+Window\+Icon()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_ab200a53e01ddc697fd6b8e017cc4e6dd}{S\+D\+L\+\_\+\+Set\+Window\+Position()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a29b118c6932ccb94d85b5435ae1e0a19}{S\+D\+L\+\_\+\+Set\+Window\+Size()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_afb4b868e2cc0107ed6bcf5ba7aa376e0}{S\+D\+L\+\_\+\+Set\+Window\+Bordered()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a42d2451050ae01aaf2974344b9d4a812}{S\+D\+L\+\_\+\+Set\+Window\+Resizable()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a41aabc4b68f75f41d97995e02eb9deb6}{S\+D\+L\+\_\+\+Set\+Window\+Title()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a6051ce26885b32b80bc7285b4facd0a1}{S\+D\+L\+\_\+\+Show\+Window()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{열거형 타입 문서화}
+\mbox{\Hypertarget{_s_d_l__video_8h_ad671b39d95c255af51db93cb54512ffc}\label{_s_d_l__video_8h_ad671b39d95c255af51db93cb54512ffc}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_DisplayEventID@{SDL\_DisplayEventID}}
+\index{SDL\_DisplayEventID@{SDL\_DisplayEventID}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_DisplayEventID}{SDL\_DisplayEventID}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_s_d_l__video_8h_ad671b39d95c255af51db93cb54512ffc}{S\+D\+L\+\_\+\+Display\+Event\+ID}}}
+
+
+
+Event subtype for display events 
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_DISPLAYEVENT\_NONE@{SDL\_DISPLAYEVENT\_NONE}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_DISPLAYEVENT\_NONE@{SDL\_DISPLAYEVENT\_NONE}}}\mbox{\Hypertarget{_s_d_l__video_8h_ad671b39d95c255af51db93cb54512ffca0f22fc5951aac829337807e4238110e5}\label{_s_d_l__video_8h_ad671b39d95c255af51db93cb54512ffca0f22fc5951aac829337807e4238110e5}} 
+S\+D\+L\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+E\+V\+E\+N\+T\+\_\+\+N\+O\+NE&Never used \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_DISPLAYEVENT\_ORIENTATION@{SDL\_DISPLAYEVENT\_ORIENTATION}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_DISPLAYEVENT\_ORIENTATION@{SDL\_DISPLAYEVENT\_ORIENTATION}}}\mbox{\Hypertarget{_s_d_l__video_8h_ad671b39d95c255af51db93cb54512ffca79af38ade27966e9e53476f5d3755f04}\label{_s_d_l__video_8h_ad671b39d95c255af51db93cb54512ffca79af38ade27966e9e53476f5d3755f04}} 
+S\+D\+L\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+E\+V\+E\+N\+T\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+ON&Display orientation has changed to data1 \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbde}\label{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbde}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_DisplayOrientation@{SDL\_DisplayOrientation}}
+\index{SDL\_DisplayOrientation@{SDL\_DisplayOrientation}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_DisplayOrientation}{SDL\_DisplayOrientation}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbde}{S\+D\+L\+\_\+\+Display\+Orientation}}}
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_ORIENTATION\_UNKNOWN@{SDL\_ORIENTATION\_UNKNOWN}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_ORIENTATION\_UNKNOWN@{SDL\_ORIENTATION\_UNKNOWN}}}\mbox{\Hypertarget{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbdeacb20982c4f82c7271a66a76b98eda731}\label{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbdeacb20982c4f82c7271a66a76b98eda731}} 
+S\+D\+L\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+U\+N\+K\+N\+O\+WN&The display orientation can\textquotesingle{}t be determined \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_ORIENTATION\_LANDSCAPE@{SDL\_ORIENTATION\_LANDSCAPE}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_ORIENTATION\_LANDSCAPE@{SDL\_ORIENTATION\_LANDSCAPE}}}\mbox{\Hypertarget{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbdea5b1e627bf8f8be31d62292681f42694b}\label{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbdea5b1e627bf8f8be31d62292681f42694b}} 
+S\+D\+L\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+L\+A\+N\+D\+S\+C\+A\+PE&The display is in landscape mode, with the right side up, relative to portrait mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_ORIENTATION\_LANDSCAPE\_FLIPPED@{SDL\_ORIENTATION\_LANDSCAPE\_FLIPPED}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_ORIENTATION\_LANDSCAPE\_FLIPPED@{SDL\_ORIENTATION\_LANDSCAPE\_FLIPPED}}}\mbox{\Hypertarget{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbdea6cd1294f411220564276f85c32616c6a}\label{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbdea6cd1294f411220564276f85c32616c6a}} 
+S\+D\+L\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+L\+A\+N\+D\+S\+C\+A\+P\+E\+\_\+\+F\+L\+I\+P\+P\+ED&The display is in landscape mode, with the left side up, relative to portrait mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_ORIENTATION\_PORTRAIT@{SDL\_ORIENTATION\_PORTRAIT}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_ORIENTATION\_PORTRAIT@{SDL\_ORIENTATION\_PORTRAIT}}}\mbox{\Hypertarget{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbdea5fb622ac90f47a799d7d7f660d7c860b}\label{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbdea5fb622ac90f47a799d7d7f660d7c860b}} 
+S\+D\+L\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+P\+O\+R\+T\+R\+A\+IT&The display is in portrait mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_ORIENTATION\_PORTRAIT\_FLIPPED@{SDL\_ORIENTATION\_PORTRAIT\_FLIPPED}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_ORIENTATION\_PORTRAIT\_FLIPPED@{SDL\_ORIENTATION\_PORTRAIT\_FLIPPED}}}\mbox{\Hypertarget{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbdea66727ec5e93a1112a254b4d3b8e867db}\label{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbdea66727ec5e93a1112a254b4d3b8e867db}} 
+S\+D\+L\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+F\+L\+I\+P\+P\+ED&The display is in portrait mode, upside down \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_s_d_l__video_8h_ad5ea1835b83fe139bcc182c3326d7a5f}\label{_s_d_l__video_8h_ad5ea1835b83fe139bcc182c3326d7a5f}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GLprofile@{SDL\_GLprofile}}
+\index{SDL\_GLprofile@{SDL\_GLprofile}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GLprofile}{SDL\_GLprofile}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_s_d_l__video_8h_ad5ea1835b83fe139bcc182c3326d7a5f}{S\+D\+L\+\_\+\+G\+Lprofile}}}
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_GL\_CONTEXT\_PROFILE\_ES@{SDL\_GL\_CONTEXT\_PROFILE\_ES}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_GL\_CONTEXT\_PROFILE\_ES@{SDL\_GL\_CONTEXT\_PROFILE\_ES}}}\mbox{\Hypertarget{_s_d_l__video_8h_ad5ea1835b83fe139bcc182c3326d7a5fa721fa797743fb228d804532cab8b8faa}\label{_s_d_l__video_8h_ad5ea1835b83fe139bcc182c3326d7a5fa721fa797743fb228d804532cab8b8faa}} 
+S\+D\+L\+\_\+\+G\+L\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+ES&G\+L\+X\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+E\+S2\+\_\+\+P\+R\+O\+F\+I\+L\+E\+\_\+\+B\+I\+T\+\_\+\+E\+XT \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_s_d_l__video_8h_a0415a108581752b68c6aca800ff3bad5}\label{_s_d_l__video_8h_a0415a108581752b68c6aca800ff3bad5}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_HitTestResult@{SDL\_HitTestResult}}
+\index{SDL\_HitTestResult@{SDL\_HitTestResult}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_HitTestResult}{SDL\_HitTestResult}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_s_d_l__video_8h_a0415a108581752b68c6aca800ff3bad5}{S\+D\+L\+\_\+\+Hit\+Test\+Result}}}
+
+
+
+Possible return values from the S\+D\+L\+\_\+\+Hit\+Test callback. 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a247c7fd43bb60b20630945a5bd9e4957}{S\+D\+L\+\_\+\+Hit\+Test}} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_HITTEST\_NORMAL@{SDL\_HITTEST\_NORMAL}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_HITTEST\_NORMAL@{SDL\_HITTEST\_NORMAL}}}\mbox{\Hypertarget{_s_d_l__video_8h_a0415a108581752b68c6aca800ff3bad5a3eb7be45c88e40366315d453f3bf721e}\label{_s_d_l__video_8h_a0415a108581752b68c6aca800ff3bad5a3eb7be45c88e40366315d453f3bf721e}} 
+S\+D\+L\+\_\+\+H\+I\+T\+T\+E\+S\+T\+\_\+\+N\+O\+R\+M\+AL&Region is normal. No special properties. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_HITTEST\_DRAGGABLE@{SDL\_HITTEST\_DRAGGABLE}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_HITTEST\_DRAGGABLE@{SDL\_HITTEST\_DRAGGABLE}}}\mbox{\Hypertarget{_s_d_l__video_8h_a0415a108581752b68c6aca800ff3bad5a078a028af8c26848cf3576bd0c4d8fc9}\label{_s_d_l__video_8h_a0415a108581752b68c6aca800ff3bad5a078a028af8c26848cf3576bd0c4d8fc9}} 
+S\+D\+L\+\_\+\+H\+I\+T\+T\+E\+S\+T\+\_\+\+D\+R\+A\+G\+G\+A\+B\+LE&Region can drag entire window. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3bab}\label{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3bab}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_WindowEventID@{SDL\_WindowEventID}}
+\index{SDL\_WindowEventID@{SDL\_WindowEventID}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_WindowEventID}{SDL\_WindowEventID}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3bab}{S\+D\+L\+\_\+\+Window\+Event\+ID}}}
+
+
+
+Event subtype for window events 
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOWEVENT\_NONE@{SDL\_WINDOWEVENT\_NONE}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOWEVENT\_NONE@{SDL\_WINDOWEVENT\_NONE}}}\mbox{\Hypertarget{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3babaee1301eee7ad982c50cd310607f968b7}\label{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3babaee1301eee7ad982c50cd310607f968b7}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+N\+O\+NE&Never used \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOWEVENT\_SHOWN@{SDL\_WINDOWEVENT\_SHOWN}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOWEVENT\_SHOWN@{SDL\_WINDOWEVENT\_SHOWN}}}\mbox{\Hypertarget{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba5e91fe11ed6a24a377a77d024c9639d5}\label{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba5e91fe11ed6a24a377a77d024c9639d5}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+S\+H\+O\+WN&Window has been shown \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOWEVENT\_HIDDEN@{SDL\_WINDOWEVENT\_HIDDEN}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOWEVENT\_HIDDEN@{SDL\_WINDOWEVENT\_HIDDEN}}}\mbox{\Hypertarget{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba04e5bd277e03b61a6e4b577f2a3fda55}\label{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba04e5bd277e03b61a6e4b577f2a3fda55}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+H\+I\+D\+D\+EN&Window has been hidden \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOWEVENT\_EXPOSED@{SDL\_WINDOWEVENT\_EXPOSED}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOWEVENT\_EXPOSED@{SDL\_WINDOWEVENT\_EXPOSED}}}\mbox{\Hypertarget{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3babac37af5c3ce56fe0956bc310821d59489}\label{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3babac37af5c3ce56fe0956bc310821d59489}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+E\+X\+P\+O\+S\+ED&Window has been exposed and should be redrawn \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOWEVENT\_MOVED@{SDL\_WINDOWEVENT\_MOVED}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOWEVENT\_MOVED@{SDL\_WINDOWEVENT\_MOVED}}}\mbox{\Hypertarget{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba64da80af7b0a58689f07c7196de23da5}\label{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba64da80af7b0a58689f07c7196de23da5}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+M\+O\+V\+ED&Window has been moved to data1, data2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOWEVENT\_RESIZED@{SDL\_WINDOWEVENT\_RESIZED}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOWEVENT\_RESIZED@{SDL\_WINDOWEVENT\_RESIZED}}}\mbox{\Hypertarget{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba26096363b1a5a1eccc56a00d5f61948d}\label{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba26096363b1a5a1eccc56a00d5f61948d}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+I\+Z\+ED&Window has been resized to data1xdata2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOWEVENT\_SIZE\_CHANGED@{SDL\_WINDOWEVENT\_SIZE\_CHANGED}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOWEVENT\_SIZE\_CHANGED@{SDL\_WINDOWEVENT\_SIZE\_CHANGED}}}\mbox{\Hypertarget{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba98e76df5341be0a05c7461e32c7835f0}\label{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba98e76df5341be0a05c7461e32c7835f0}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+S\+I\+Z\+E\+\_\+\+C\+H\+A\+N\+G\+ED&The window size has changed, either as a result of an A\+PI call or through the system or user changing the window size. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOWEVENT\_MINIMIZED@{SDL\_WINDOWEVENT\_MINIMIZED}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOWEVENT\_MINIMIZED@{SDL\_WINDOWEVENT\_MINIMIZED}}}\mbox{\Hypertarget{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba70577b21b05c509d0342a5649092928d}\label{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba70577b21b05c509d0342a5649092928d}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+M\+I\+N\+I\+M\+I\+Z\+ED&Window has been minimized \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOWEVENT\_MAXIMIZED@{SDL\_WINDOWEVENT\_MAXIMIZED}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOWEVENT\_MAXIMIZED@{SDL\_WINDOWEVENT\_MAXIMIZED}}}\mbox{\Hypertarget{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba83593cf9ef16d0eaeeaac19b32a86a05}\label{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba83593cf9ef16d0eaeeaac19b32a86a05}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+M\+A\+X\+I\+M\+I\+Z\+ED&Window has been maximized \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOWEVENT\_RESTORED@{SDL\_WINDOWEVENT\_RESTORED}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOWEVENT\_RESTORED@{SDL\_WINDOWEVENT\_RESTORED}}}\mbox{\Hypertarget{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba9ebe8fbb15f1bf06521d6b5484de3d89}\label{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba9ebe8fbb15f1bf06521d6b5484de3d89}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+R\+E\+S\+T\+O\+R\+ED&Window has been restored to normal size and position \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOWEVENT\_ENTER@{SDL\_WINDOWEVENT\_ENTER}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOWEVENT\_ENTER@{SDL\_WINDOWEVENT\_ENTER}}}\mbox{\Hypertarget{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3babac6990e7537a4cc6cc7aaabc3376b9eb5}\label{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3babac6990e7537a4cc6cc7aaabc3376b9eb5}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+E\+N\+T\+ER&Window has gained mouse focus \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOWEVENT\_LEAVE@{SDL\_WINDOWEVENT\_LEAVE}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOWEVENT\_LEAVE@{SDL\_WINDOWEVENT\_LEAVE}}}\mbox{\Hypertarget{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba7e1afdd5cfea592a59e129419b431bd5}\label{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba7e1afdd5cfea592a59e129419b431bd5}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+L\+E\+A\+VE&Window has lost mouse focus \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOWEVENT\_FOCUS\_GAINED@{SDL\_WINDOWEVENT\_FOCUS\_GAINED}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOWEVENT\_FOCUS\_GAINED@{SDL\_WINDOWEVENT\_FOCUS\_GAINED}}}\mbox{\Hypertarget{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba529d1b574e559ee46892024e1c2e6c92}\label{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba529d1b574e559ee46892024e1c2e6c92}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+F\+O\+C\+U\+S\+\_\+\+G\+A\+I\+N\+ED&Window has gained keyboard focus \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOWEVENT\_FOCUS\_LOST@{SDL\_WINDOWEVENT\_FOCUS\_LOST}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOWEVENT\_FOCUS\_LOST@{SDL\_WINDOWEVENT\_FOCUS\_LOST}}}\mbox{\Hypertarget{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba239e734c6ba478fb2f694fc7cde30c31}\label{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba239e734c6ba478fb2f694fc7cde30c31}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+F\+O\+C\+U\+S\+\_\+\+L\+O\+ST&Window has lost keyboard focus \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOWEVENT\_CLOSE@{SDL\_WINDOWEVENT\_CLOSE}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOWEVENT\_CLOSE@{SDL\_WINDOWEVENT\_CLOSE}}}\mbox{\Hypertarget{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba2483911a3a2a20dbb1c88a15ffb9a360}\label{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba2483911a3a2a20dbb1c88a15ffb9a360}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+C\+L\+O\+SE&The window manager requests that the window be closed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOWEVENT\_TAKE\_FOCUS@{SDL\_WINDOWEVENT\_TAKE\_FOCUS}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOWEVENT\_TAKE\_FOCUS@{SDL\_WINDOWEVENT\_TAKE\_FOCUS}}}\mbox{\Hypertarget{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba69ee247e6859b1d5d7dfffb7c1a99b4e}\label{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba69ee247e6859b1d5d7dfffb7c1a99b4e}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+T\+A\+K\+E\+\_\+\+F\+O\+C\+US&Window is being offered a focus (should Set\+Window\+Input\+Focus() on itself or a subwindow, or ignore) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOWEVENT\_HIT\_TEST@{SDL\_WINDOWEVENT\_HIT\_TEST}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOWEVENT\_HIT\_TEST@{SDL\_WINDOWEVENT\_HIT\_TEST}}}\mbox{\Hypertarget{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba425a0e4dca5ba339eed8166248eeef8e}\label{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3baba425a0e4dca5ba339eed8166248eeef8e}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+N\+T\+\_\+\+H\+I\+T\+\_\+\+T\+E\+ST&Window had a hit test that wasn\textquotesingle{}t S\+D\+L\+\_\+\+H\+I\+T\+T\+E\+S\+T\+\_\+\+N\+O\+R\+M\+AL. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_WindowFlags@{SDL\_WindowFlags}}
+\index{SDL\_WindowFlags@{SDL\_WindowFlags}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_WindowFlags}{SDL\_WindowFlags}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18}{S\+D\+L\+\_\+\+Window\+Flags}}}
+
+
+
+The flags on a window 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a4445733f04a1a9dd0e063cd4738f285f}{S\+D\+L\+\_\+\+Get\+Window\+Flags()}} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOW\_FULLSCREEN@{SDL\_WINDOW\_FULLSCREEN}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOW\_FULLSCREEN@{SDL\_WINDOW\_FULLSCREEN}}}\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18ac7b8279bdf5e22a0b4a95aae3d846923}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18ac7b8279bdf5e22a0b4a95aae3d846923}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+EN&fullscreen window \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOW\_OPENGL@{SDL\_WINDOW\_OPENGL}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOW\_OPENGL@{SDL\_WINDOW\_OPENGL}}}\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a5cf8af096f1870b0c2b12267cabd1f7a}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a5cf8af096f1870b0c2b12267cabd1f7a}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+O\+P\+E\+N\+GL&window usable with Open\+GL context \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOW\_SHOWN@{SDL\_WINDOW\_SHOWN}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOW\_SHOWN@{SDL\_WINDOW\_SHOWN}}}\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a4300d051290adcb71c1b5e82e2553c4d}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a4300d051290adcb71c1b5e82e2553c4d}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+H\+O\+WN&window is visible \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOW\_HIDDEN@{SDL\_WINDOW\_HIDDEN}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOW\_HIDDEN@{SDL\_WINDOW\_HIDDEN}}}\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18adda25e98e54964c0c2ec9ac31f5e629c}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18adda25e98e54964c0c2ec9ac31f5e629c}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+I\+D\+D\+EN&window is not visible \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOW\_BORDERLESS@{SDL\_WINDOW\_BORDERLESS}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOW\_BORDERLESS@{SDL\_WINDOW\_BORDERLESS}}}\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18af7baea7dc9c0e4f09b28793504b02e4c}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18af7baea7dc9c0e4f09b28793504b02e4c}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+L\+E\+SS&no window decoration \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOW\_RESIZABLE@{SDL\_WINDOW\_RESIZABLE}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOW\_RESIZABLE@{SDL\_WINDOW\_RESIZABLE}}}\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18aaf59a5e2f762aa2b6d2e49b0ca220fd8}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18aaf59a5e2f762aa2b6d2e49b0ca220fd8}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+R\+E\+S\+I\+Z\+A\+B\+LE&window can be resized \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOW\_MINIMIZED@{SDL\_WINDOW\_MINIMIZED}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOW\_MINIMIZED@{SDL\_WINDOW\_MINIMIZED}}}\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a7f08ee26b5773412a212233ddc168c5a}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a7f08ee26b5773412a212233ddc168c5a}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+M\+I\+N\+I\+M\+I\+Z\+ED&window is minimized \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOW\_MAXIMIZED@{SDL\_WINDOW\_MAXIMIZED}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOW\_MAXIMIZED@{SDL\_WINDOW\_MAXIMIZED}}}\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18acd8063a617f2ce05f694ecdbf56f811a}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18acd8063a617f2ce05f694ecdbf56f811a}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+M\+A\+X\+I\+M\+I\+Z\+ED&window is maximized \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOW\_INPUT\_GRABBED@{SDL\_WINDOW\_INPUT\_GRABBED}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOW\_INPUT\_GRABBED@{SDL\_WINDOW\_INPUT\_GRABBED}}}\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18aaf410e1082e45a55ef9176163610dba2}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18aaf410e1082e45a55ef9176163610dba2}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+I\+N\+P\+U\+T\+\_\+\+G\+R\+A\+B\+B\+ED&window has grabbed input focus \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOW\_INPUT\_FOCUS@{SDL\_WINDOW\_INPUT\_FOCUS}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOW\_INPUT\_FOCUS@{SDL\_WINDOW\_INPUT\_FOCUS}}}\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18afcbb682c0942bc106af1474c1d34bb53}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18afcbb682c0942bc106af1474c1d34bb53}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+I\+N\+P\+U\+T\+\_\+\+F\+O\+C\+US&window has input focus \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOW\_MOUSE\_FOCUS@{SDL\_WINDOW\_MOUSE\_FOCUS}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOW\_MOUSE\_FOCUS@{SDL\_WINDOW\_MOUSE\_FOCUS}}}\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18aa722d0955c297fc60c09b10e1679684c}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18aa722d0955c297fc60c09b10e1679684c}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+F\+O\+C\+US&window has mouse focus \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOW\_FOREIGN@{SDL\_WINDOW\_FOREIGN}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOW\_FOREIGN@{SDL\_WINDOW\_FOREIGN}}}\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a1ac8e0ef2237a089cf487d7e7fcc6e23}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a1ac8e0ef2237a089cf487d7e7fcc6e23}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+O\+R\+E\+I\+GN&window not created by S\+DL \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOW\_ALLOW\_HIGHDPI@{SDL\_WINDOW\_ALLOW\_HIGHDPI}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOW\_ALLOW\_HIGHDPI@{SDL\_WINDOW\_ALLOW\_HIGHDPI}}}\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a03ec21b04fa4e5c8cc868aa01a0c1bf3}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a03ec21b04fa4e5c8cc868aa01a0c1bf3}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+A\+L\+L\+O\+W\+\_\+\+H\+I\+G\+H\+D\+PI&window should be created in high-\/\+D\+PI mode if supported. On mac\+OS N\+S\+High\+Resolution\+Capable must be set true in the application\textquotesingle{}s Info.\+plist for this to have any effect. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOW\_MOUSE\_CAPTURE@{SDL\_WINDOW\_MOUSE\_CAPTURE}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOW\_MOUSE\_CAPTURE@{SDL\_WINDOW\_MOUSE\_CAPTURE}}}\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a4c16b51a323741bf5c492adce34e5882}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a4c16b51a323741bf5c492adce34e5882}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+M\+O\+U\+S\+E\+\_\+\+C\+A\+P\+T\+U\+RE&window has mouse captured (unrelated to I\+N\+P\+U\+T\+\_\+\+G\+R\+A\+B\+B\+ED) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOW\_ALWAYS\_ON\_TOP@{SDL\_WINDOW\_ALWAYS\_ON\_TOP}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOW\_ALWAYS\_ON\_TOP@{SDL\_WINDOW\_ALWAYS\_ON\_TOP}}}\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a318e8aee0e3fddcfe2257757c6eb3128}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a318e8aee0e3fddcfe2257757c6eb3128}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+A\+L\+W\+A\+Y\+S\+\_\+\+O\+N\+\_\+\+T\+OP&window should always be above others \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOW\_SKIP\_TASKBAR@{SDL\_WINDOW\_SKIP\_TASKBAR}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOW\_SKIP\_TASKBAR@{SDL\_WINDOW\_SKIP\_TASKBAR}}}\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a4bd52941a63adc993271579d52fb6641}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a4bd52941a63adc993271579d52fb6641}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+K\+I\+P\+\_\+\+T\+A\+S\+K\+B\+AR&window should not be added to the taskbar \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOW\_UTILITY@{SDL\_WINDOW\_UTILITY}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOW\_UTILITY@{SDL\_WINDOW\_UTILITY}}}\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a94224404de009a2fb6856a6a69d20d85}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a94224404de009a2fb6856a6a69d20d85}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+U\+T\+I\+L\+I\+TY&window should be treated as a utility window \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOW\_TOOLTIP@{SDL\_WINDOW\_TOOLTIP}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOW\_TOOLTIP@{SDL\_WINDOW\_TOOLTIP}}}\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a226509512aeab3c2c01deb75c182adf5}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a226509512aeab3c2c01deb75c182adf5}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+T\+O\+O\+L\+T\+IP&window should be treated as a tooltip \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOW\_POPUP\_MENU@{SDL\_WINDOW\_POPUP\_MENU}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOW\_POPUP\_MENU@{SDL\_WINDOW\_POPUP\_MENU}}}\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18aeb1e21d5d8ed10b5d65ab0909b5c8c0d}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18aeb1e21d5d8ed10b5d65ab0909b5c8c0d}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+P\+O\+P\+U\+P\+\_\+\+M\+E\+NU&window should be treated as a popup menu \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SDL\_WINDOW\_VULKAN@{SDL\_WINDOW\_VULKAN}!SDL\_video.h@{SDL\_video.h}}\index{SDL\_video.h@{SDL\_video.h}!SDL\_WINDOW\_VULKAN@{SDL\_WINDOW\_VULKAN}}}\mbox{\Hypertarget{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a55d2d1e92b96050c5a9cd8280d78f26c}\label{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a55d2d1e92b96050c5a9cd8280d78f26c}} 
+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+V\+U\+L\+K\+AN&window usable for Vulkan surface \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{_s_d_l__video_8h_a42565088bdb739a5353fd67abbe235d2}\label{_s_d_l__video_8h_a42565088bdb739a5353fd67abbe235d2}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_CreateWindow@{SDL\_CreateWindow}}
+\index{SDL\_CreateWindow@{SDL\_CreateWindow}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_CreateWindow()}{SDL\_CreateWindow()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}}$\ast$ S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Create\+Window (\begin{DoxyParamCaption}\item[{const char $\ast$}]{title,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{Uint32}]{flags }\end{DoxyParamCaption})}
+
+
+
+Create a window with the specified position, dimensions, and flags. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em title} & The title of the window, in U\+T\+F-\/8 encoding. \\
+\hline
+{\em x} & The x position of the window, \+::\+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+C\+E\+N\+T\+E\+R\+ED, or \+::\+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED. \\
+\hline
+{\em y} & The y position of the window, \+::\+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+C\+E\+N\+T\+E\+R\+ED, or \+::\+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED. \\
+\hline
+{\em w} & The width of the window, in screen coordinates. \\
+\hline
+{\em h} & The height of the window, in screen coordinates. \\
+\hline
+{\em flags} & The flags for the window, a mask of any of the following\+: \mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18ac7b8279bdf5e22a0b4a95aae3d846923}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+F\+U\+L\+L\+S\+C\+R\+E\+EN}}, \mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a5cf8af096f1870b0c2b12267cabd1f7a}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+O\+P\+E\+N\+GL}}, \mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18adda25e98e54964c0c2ec9ac31f5e629c}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+I\+D\+D\+EN}}, \mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18af7baea7dc9c0e4f09b28793504b02e4c}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+L\+E\+SS}}, \mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18aaf59a5e2f762aa2b6d2e49b0ca220fd8}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+R\+E\+S\+I\+Z\+A\+B\+LE}}, \mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18acd8063a617f2ce05f694ecdbf56f811a}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+M\+A\+X\+I\+M\+I\+Z\+ED}}, \mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a7f08ee26b5773412a212233ddc168c5a}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+M\+I\+N\+I\+M\+I\+Z\+ED}}, \mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18aaf410e1082e45a55ef9176163610dba2}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+I\+N\+P\+U\+T\+\_\+\+G\+R\+A\+B\+B\+ED}}, \mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a03ec21b04fa4e5c8cc868aa01a0c1bf3}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+A\+L\+L\+O\+W\+\_\+\+H\+I\+G\+H\+D\+PI}}, \mbox{\hyperlink{_s_d_l__video_8h_ab10f4fd6a082ef06fcae96860c95fb18a55d2d1e92b96050c5a9cd8280d78f26c}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+V\+U\+L\+K\+AN}}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+The created window, or N\+U\+LL if window creation failed.
+\end{DoxyReturn}
+If the window is created with the S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+A\+L\+L\+O\+W\+\_\+\+H\+I\+G\+H\+D\+PI flag, its size in pixels may differ from its size in screen coordinates on platforms with high-\/\+D\+PI support (e.\+g. i\+OS and Mac OS X). Use \mbox{\hyperlink{_s_d_l__video_8h_a5cbfffcfec91c22a7ca95fd1d5163db5}{S\+D\+L\+\_\+\+Get\+Window\+Size()}} to query the client area\textquotesingle{}s size in screen coordinates, and \mbox{\hyperlink{_s_d_l__video_8h_ac21851bbd91760c5bab92594a58edba3}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Drawable\+Size()}}, \mbox{\hyperlink{_s_d_l__vulkan_8h_a170ea51b623cbda9f945b37c037d7974}{S\+D\+L\+\_\+\+Vulkan\+\_\+\+Get\+Drawable\+Size()}}, or \mbox{\hyperlink{_s_d_l__render_8h_abfc0c9a50d9d1870ab7d271b7a73d8ab}{S\+D\+L\+\_\+\+Get\+Renderer\+Output\+Size()}} to query the drawable size in pixels.
+
+If the window is created with any of the S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+O\+P\+E\+N\+GL or S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+V\+U\+L\+K\+AN flags, then the corresponding Load\+Library function (S\+D\+L\+\_\+\+G\+L\+\_\+\+Load\+Library or S\+D\+L\+\_\+\+Vulkan\+\_\+\+Load\+Library) is called and the corresponding Unload\+Library function is called by \mbox{\hyperlink{_s_d_l__video_8h_a72609295a4faee0587268339ccff80c2}{S\+D\+L\+\_\+\+Destroy\+Window()}}.
+
+If S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+V\+U\+L\+K\+AN is specified and there isn\textquotesingle{}t a working Vulkan driver, \mbox{\hyperlink{_s_d_l__video_8h_a42565088bdb739a5353fd67abbe235d2}{S\+D\+L\+\_\+\+Create\+Window()}} will fail because \mbox{\hyperlink{_s_d_l__vulkan_8h_a9fcc0942c8eaa67c3eff2e3526304b5b}{S\+D\+L\+\_\+\+Vulkan\+\_\+\+Load\+Library()}} will fail.
+
+\begin{DoxyNote}{주의}
+On non-\/\+Apple devices, S\+DL requires you to either not link to the Vulkan loader or link to a dynamic library version. This limitation may be removed in a future version of S\+DL.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a72609295a4faee0587268339ccff80c2}{S\+D\+L\+\_\+\+Destroy\+Window()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a398df9aaf43a69dc2cfaab5b306b8f91}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Load\+Library()}} 
+
+\mbox{\hyperlink{_s_d_l__vulkan_8h_a9fcc0942c8eaa67c3eff2e3526304b5b}{S\+D\+L\+\_\+\+Vulkan\+\_\+\+Load\+Library()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a54b9e13dbc5bf587a8765a9ec0a29772}\label{_s_d_l__video_8h_a54b9e13dbc5bf587a8765a9ec0a29772}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_CreateWindowFrom@{SDL\_CreateWindowFrom}}
+\index{SDL\_CreateWindowFrom@{SDL\_CreateWindowFrom}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_CreateWindowFrom()}{SDL\_CreateWindowFrom()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}}$\ast$ S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Create\+Window\+From (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Create an S\+DL window from an existing native window. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em data} & A pointer to driver-\/dependent window creation data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+The created window, or N\+U\+LL if window creation failed.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a72609295a4faee0587268339ccff80c2}{S\+D\+L\+\_\+\+Destroy\+Window()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a68eb0d850934fa1c7ac12c30f2d56a84}\label{_s_d_l__video_8h_a68eb0d850934fa1c7ac12c30f2d56a84}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_DisableScreenSaver@{SDL\_DisableScreenSaver}}
+\index{SDL\_DisableScreenSaver@{SDL\_DisableScreenSaver}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_DisableScreenSaver()}{SDL\_DisableScreenSaver()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Disable\+Screen\+Saver (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Prevent the screen from being blanked by a screensaver 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a4b5c116d57947bf508c13b21aac49cbf}{S\+D\+L\+\_\+\+Is\+Screen\+Saver\+Enabled()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a17846c713066aa29a86e1be205a7fc3e}{S\+D\+L\+\_\+\+Enable\+Screen\+Saver()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a17846c713066aa29a86e1be205a7fc3e}\label{_s_d_l__video_8h_a17846c713066aa29a86e1be205a7fc3e}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_EnableScreenSaver@{SDL\_EnableScreenSaver}}
+\index{SDL\_EnableScreenSaver@{SDL\_EnableScreenSaver}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_EnableScreenSaver()}{SDL\_EnableScreenSaver()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Enable\+Screen\+Saver (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Allow the screen to be blanked by a screensaver 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a4b5c116d57947bf508c13b21aac49cbf}{S\+D\+L\+\_\+\+Is\+Screen\+Saver\+Enabled()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a68eb0d850934fa1c7ac12c30f2d56a84}{S\+D\+L\+\_\+\+Disable\+Screen\+Saver()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a794be92ee0a9efca226fa19a635fa470}\label{_s_d_l__video_8h_a794be92ee0a9efca226fa19a635fa470}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetClosestDisplayMode@{SDL\_GetClosestDisplayMode}}
+\index{SDL\_GetClosestDisplayMode@{SDL\_GetClosestDisplayMode}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetClosestDisplayMode()}{SDL\_GetClosestDisplayMode()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{struct_s_d_l___display_mode}{S\+D\+L\+\_\+\+Display\+Mode}}$\ast$ S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Closest\+Display\+Mode (\begin{DoxyParamCaption}\item[{int}]{display\+Index,  }\item[{const \mbox{\hyperlink{struct_s_d_l___display_mode}{S\+D\+L\+\_\+\+Display\+Mode}} $\ast$}]{mode,  }\item[{\mbox{\hyperlink{struct_s_d_l___display_mode}{S\+D\+L\+\_\+\+Display\+Mode}} $\ast$}]{closest }\end{DoxyParamCaption})}
+
+
+
+Get the closest match to the requested display mode. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em display\+Index} & The index of display from which mode should be queried. \\
+\hline
+{\em mode} & The desired display mode \\
+\hline
+{\em closest} & A pointer to a display mode to be filled in with the closest match of the available display modes.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+The passed in value {\ttfamily closest}, or N\+U\+LL if no matching video mode was available.
+\end{DoxyReturn}
+The available display modes are scanned, and {\ttfamily closest} is filled in with the closest mode matching the requested mode and returned. The mode format and refresh\+\_\+rate default to the desktop mode if they are 0. The modes are scanned with size being first priority, format being second priority, and finally checking the refresh\+\_\+rate. If all the available modes are too small, then N\+U\+LL is returned.
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a5abcf18592f00019c517e791f8ba53fc}{S\+D\+L\+\_\+\+Get\+Num\+Display\+Modes()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a0a53e003ec6ad24dd2bbbcd0ad297311}{S\+D\+L\+\_\+\+Get\+Display\+Mode()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_aa2b9855f6ba9d32037e03a1122cea943}\label{_s_d_l__video_8h_aa2b9855f6ba9d32037e03a1122cea943}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetCurrentVideoDriver@{SDL\_GetCurrentVideoDriver}}
+\index{SDL\_GetCurrentVideoDriver@{SDL\_GetCurrentVideoDriver}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetCurrentVideoDriver()}{SDL\_GetCurrentVideoDriver()}}
+{\footnotesize\ttfamily const D\+E\+C\+L\+S\+P\+EC char$\ast$ S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Current\+Video\+Driver (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns the name of the currently initialized video driver. 
+
+\begin{DoxyReturn}{반환값}
+The name of the current video driver or N\+U\+LL if no driver has been initialized
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_ac6f3250a95bd027fd1a374d7ed15fc57}{S\+D\+L\+\_\+\+Get\+Num\+Video\+Drivers()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a2c902b2b8f4e614dd183a275567706f8}{S\+D\+L\+\_\+\+Get\+Video\+Driver()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_ac05213009395c10ae40bede2de8e08a1}\label{_s_d_l__video_8h_ac05213009395c10ae40bede2de8e08a1}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetDisplayBounds@{SDL\_GetDisplayBounds}}
+\index{SDL\_GetDisplayBounds@{SDL\_GetDisplayBounds}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetDisplayBounds()}{SDL\_GetDisplayBounds()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Display\+Bounds (\begin{DoxyParamCaption}\item[{int}]{display\+Index,  }\item[{\mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$}]{rect }\end{DoxyParamCaption})}
+
+
+
+Get the desktop area represented by a display, with the primary display located at 0,0 
+
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if the index is out of range.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a074d185b7ef04e0305acdeeb049dd2be}{S\+D\+L\+\_\+\+Get\+Num\+Video\+Displays()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a8207ec5d13bd87158cbb42ef76e33216}\label{_s_d_l__video_8h_a8207ec5d13bd87158cbb42ef76e33216}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetDisplayDPI@{SDL\_GetDisplayDPI}}
+\index{SDL\_GetDisplayDPI@{SDL\_GetDisplayDPI}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetDisplayDPI()}{SDL\_GetDisplayDPI()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Display\+D\+PI (\begin{DoxyParamCaption}\item[{int}]{display\+Index,  }\item[{float $\ast$}]{ddpi,  }\item[{float $\ast$}]{hdpi,  }\item[{float $\ast$}]{vdpi }\end{DoxyParamCaption})}
+
+
+
+Get the dots/pixels-\/per-\/inch for a display 
+
+\begin{DoxyNote}{주의}
+Diagonal, horizontal and vertical D\+PI can all be optionally returned if the parameter is non-\/\+N\+U\+LL.
+\end{DoxyNote}
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if no D\+PI information is available or the index is out of range.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a074d185b7ef04e0305acdeeb049dd2be}{S\+D\+L\+\_\+\+Get\+Num\+Video\+Displays()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a0a53e003ec6ad24dd2bbbcd0ad297311}\label{_s_d_l__video_8h_a0a53e003ec6ad24dd2bbbcd0ad297311}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetDisplayMode@{SDL\_GetDisplayMode}}
+\index{SDL\_GetDisplayMode@{SDL\_GetDisplayMode}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetDisplayMode()}{SDL\_GetDisplayMode()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Display\+Mode (\begin{DoxyParamCaption}\item[{int}]{display\+Index,  }\item[{int}]{mode\+Index,  }\item[{\mbox{\hyperlink{struct_s_d_l___display_mode}{S\+D\+L\+\_\+\+Display\+Mode}} $\ast$}]{mode }\end{DoxyParamCaption})}
+
+
+
+Fill in information about a specific display mode. 
+
+\begin{DoxyNote}{주의}
+The display modes are sorted in this priority\+: \begin{DoxyItemize}
+\item bits per pixel -\/$>$ more colors to fewer colors \item width -\/$>$ largest to smallest \item height -\/$>$ largest to smallest \item refresh rate -\/$>$ highest to lowest\end{DoxyItemize}
+
+\end{DoxyNote}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a5abcf18592f00019c517e791f8ba53fc}{S\+D\+L\+\_\+\+Get\+Num\+Display\+Modes()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_ae9a23c9ca35b026c9359520ae4d63d25}\label{_s_d_l__video_8h_ae9a23c9ca35b026c9359520ae4d63d25}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetDisplayName@{SDL\_GetDisplayName}}
+\index{SDL\_GetDisplayName@{SDL\_GetDisplayName}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetDisplayName()}{SDL\_GetDisplayName()}}
+{\footnotesize\ttfamily const D\+E\+C\+L\+S\+P\+EC char$\ast$ S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Display\+Name (\begin{DoxyParamCaption}\item[{int}]{display\+Index }\end{DoxyParamCaption})}
+
+
+
+Get the name of a display in U\+T\+F-\/8 encoding 
+
+\begin{DoxyReturn}{반환값}
+The name of a display, or N\+U\+LL for an invalid display index.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a074d185b7ef04e0305acdeeb049dd2be}{S\+D\+L\+\_\+\+Get\+Num\+Video\+Displays()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a6540db01a424ced1847376e583361ecb}\label{_s_d_l__video_8h_a6540db01a424ced1847376e583361ecb}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetDisplayOrientation@{SDL\_GetDisplayOrientation}}
+\index{SDL\_GetDisplayOrientation@{SDL\_GetDisplayOrientation}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetDisplayOrientation()}{SDL\_GetDisplayOrientation()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{_s_d_l__video_8h_af2b86ebfae9cd2f87ea6c18dd109dbde}{S\+D\+L\+\_\+\+Display\+Orientation}} S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Display\+Orientation (\begin{DoxyParamCaption}\item[{int}]{display\+Index }\end{DoxyParamCaption})}
+
+
+
+Get the orientation of a display 
+
+\begin{DoxyReturn}{반환값}
+The orientation of the display, or S\+D\+L\+\_\+\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+\_\+\+U\+N\+K\+N\+O\+WN if it isn\textquotesingle{}t available.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a074d185b7ef04e0305acdeeb049dd2be}{S\+D\+L\+\_\+\+Get\+Num\+Video\+Displays()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a9898f2e51cd90ace84cb0c6ea65d7051}\label{_s_d_l__video_8h_a9898f2e51cd90ace84cb0c6ea65d7051}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetDisplayUsableBounds@{SDL\_GetDisplayUsableBounds}}
+\index{SDL\_GetDisplayUsableBounds@{SDL\_GetDisplayUsableBounds}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetDisplayUsableBounds()}{SDL\_GetDisplayUsableBounds()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Display\+Usable\+Bounds (\begin{DoxyParamCaption}\item[{int}]{display\+Index,  }\item[{\mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$}]{rect }\end{DoxyParamCaption})}
+
+
+
+Get the usable desktop area represented by a display, with the primary display located at 0,0 
+
+This is the same area as \mbox{\hyperlink{_s_d_l__video_8h_ac05213009395c10ae40bede2de8e08a1}{S\+D\+L\+\_\+\+Get\+Display\+Bounds()}} reports, but with portions reserved by the system removed. For example, on Mac OS X, this subtracts the area occupied by the menu bar and dock.
+
+Setting a window to be fullscreen generally bypasses these unusable areas, so these are good guidelines for the maximum space available to a non-\/fullscreen window.
+
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if the index is out of range.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_ac05213009395c10ae40bede2de8e08a1}{S\+D\+L\+\_\+\+Get\+Display\+Bounds()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a074d185b7ef04e0305acdeeb049dd2be}{S\+D\+L\+\_\+\+Get\+Num\+Video\+Displays()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a8c6fb2a477c4d309f53bce34ee26d4df}\label{_s_d_l__video_8h_a8c6fb2a477c4d309f53bce34ee26d4df}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetGrabbedWindow@{SDL\_GetGrabbedWindow}}
+\index{SDL\_GetGrabbedWindow@{SDL\_GetGrabbedWindow}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetGrabbedWindow()}{SDL\_GetGrabbedWindow()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}}$\ast$ S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Grabbed\+Window (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the window that currently has an input grab enabled. 
+
+\begin{DoxyReturn}{반환값}
+This returns the window if input is grabbed, and N\+U\+LL otherwise.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_abe7fd559e9d6da046c5984dea679a89b}{S\+D\+L\+\_\+\+Set\+Window\+Grab()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a5abcf18592f00019c517e791f8ba53fc}\label{_s_d_l__video_8h_a5abcf18592f00019c517e791f8ba53fc}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetNumDisplayModes@{SDL\_GetNumDisplayModes}}
+\index{SDL\_GetNumDisplayModes@{SDL\_GetNumDisplayModes}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetNumDisplayModes()}{SDL\_GetNumDisplayModes()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Num\+Display\+Modes (\begin{DoxyParamCaption}\item[{int}]{display\+Index }\end{DoxyParamCaption})}
+
+
+
+Returns the number of available display modes. 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a0a53e003ec6ad24dd2bbbcd0ad297311}{S\+D\+L\+\_\+\+Get\+Display\+Mode()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a074d185b7ef04e0305acdeeb049dd2be}\label{_s_d_l__video_8h_a074d185b7ef04e0305acdeeb049dd2be}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetNumVideoDisplays@{SDL\_GetNumVideoDisplays}}
+\index{SDL\_GetNumVideoDisplays@{SDL\_GetNumVideoDisplays}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetNumVideoDisplays()}{SDL\_GetNumVideoDisplays()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Num\+Video\+Displays (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns the number of available video displays. 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_ac05213009395c10ae40bede2de8e08a1}{S\+D\+L\+\_\+\+Get\+Display\+Bounds()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_ac6f3250a95bd027fd1a374d7ed15fc57}\label{_s_d_l__video_8h_ac6f3250a95bd027fd1a374d7ed15fc57}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetNumVideoDrivers@{SDL\_GetNumVideoDrivers}}
+\index{SDL\_GetNumVideoDrivers@{SDL\_GetNumVideoDrivers}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetNumVideoDrivers()}{SDL\_GetNumVideoDrivers()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Num\+Video\+Drivers (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the number of video drivers compiled into S\+DL 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a2c902b2b8f4e614dd183a275567706f8}{S\+D\+L\+\_\+\+Get\+Video\+Driver()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a2c902b2b8f4e614dd183a275567706f8}\label{_s_d_l__video_8h_a2c902b2b8f4e614dd183a275567706f8}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetVideoDriver@{SDL\_GetVideoDriver}}
+\index{SDL\_GetVideoDriver@{SDL\_GetVideoDriver}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetVideoDriver()}{SDL\_GetVideoDriver()}}
+{\footnotesize\ttfamily const D\+E\+C\+L\+S\+P\+EC char$\ast$ S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Video\+Driver (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Get the name of a built in video driver. 
+
+\begin{DoxyNote}{주의}
+The video drivers are presented in the order in which they are normally checked during initialization.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_ac6f3250a95bd027fd1a374d7ed15fc57}{S\+D\+L\+\_\+\+Get\+Num\+Video\+Drivers()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a1f309d151c3526b1ac3a7cb9c1a231ae}\label{_s_d_l__video_8h_a1f309d151c3526b1ac3a7cb9c1a231ae}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetWindowBordersSize@{SDL\_GetWindowBordersSize}}
+\index{SDL\_GetWindowBordersSize@{SDL\_GetWindowBordersSize}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetWindowBordersSize()}{SDL\_GetWindowBordersSize()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Window\+Borders\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{int $\ast$}]{top,  }\item[{int $\ast$}]{left,  }\item[{int $\ast$}]{bottom,  }\item[{int $\ast$}]{right }\end{DoxyParamCaption})}
+
+
+
+Get the size of a window\textquotesingle{}s borders (decorations) around the client area. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window to query. \\
+\hline
+{\em top} & Pointer to variable for storing the size of the top border. N\+U\+LL is permitted. \\
+\hline
+{\em left} & Pointer to variable for storing the size of the left border. N\+U\+LL is permitted. \\
+\hline
+{\em bottom} & Pointer to variable for storing the size of the bottom border. N\+U\+LL is permitted. \\
+\hline
+{\em right} & Pointer to variable for storing the size of the right border. N\+U\+LL is permitted.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if getting this information is not supported.
+\end{DoxyReturn}
+\begin{DoxyNote}{주의}
+if this function fails (returns -\/1), the size values will be initialized to 0, 0, 0, 0 (if a non-\/\+N\+U\+LL pointer is provided), as if the window in question was borderless. 
+\end{DoxyNote}
+\mbox{\Hypertarget{_s_d_l__video_8h_a21c10969331c89e8d0e6a8f998a3c319}\label{_s_d_l__video_8h_a21c10969331c89e8d0e6a8f998a3c319}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetWindowBrightness@{SDL\_GetWindowBrightness}}
+\index{SDL\_GetWindowBrightness@{SDL\_GetWindowBrightness}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetWindowBrightness()}{SDL\_GetWindowBrightness()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC float S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Window\+Brightness (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Get the brightness (gamma correction) for a window. 
+
+\begin{DoxyReturn}{반환값}
+The last brightness value passed to \mbox{\hyperlink{_s_d_l__video_8h_a896972250b4d2e0f75888fa44fa792ec}{S\+D\+L\+\_\+\+Set\+Window\+Brightness()}}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a896972250b4d2e0f75888fa44fa792ec}{S\+D\+L\+\_\+\+Set\+Window\+Brightness()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_ad714a638020c06ad03f113e3d069cf88}\label{_s_d_l__video_8h_ad714a638020c06ad03f113e3d069cf88}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetWindowData@{SDL\_GetWindowData}}
+\index{SDL\_GetWindowData@{SDL\_GetWindowData}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetWindowData()}{SDL\_GetWindowData()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void$\ast$ S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Window\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Retrieve the data pointer associated with a window. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window to query. \\
+\hline
+{\em name} & The name of the pointer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+The value associated with \textquotesingle{}name\textquotesingle{}
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_afc7a842e8843235d2ede124a1fd076ec}{S\+D\+L\+\_\+\+Set\+Window\+Data()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a0be1d0a4d1f9a0da23b78db2f55871b5}\label{_s_d_l__video_8h_a0be1d0a4d1f9a0da23b78db2f55871b5}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetWindowDisplayIndex@{SDL\_GetWindowDisplayIndex}}
+\index{SDL\_GetWindowDisplayIndex@{SDL\_GetWindowDisplayIndex}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetWindowDisplayIndex()}{SDL\_GetWindowDisplayIndex()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Window\+Display\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Get the display index associated with a window. 
+
+\begin{DoxyReturn}{반환값}
+the display index of the display containing the center of the window, or -\/1 on error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__video_8h_a8185547bc7cb0bbeb400f459792d081a}\label{_s_d_l__video_8h_a8185547bc7cb0bbeb400f459792d081a}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetWindowDisplayMode@{SDL\_GetWindowDisplayMode}}
+\index{SDL\_GetWindowDisplayMode@{SDL\_GetWindowDisplayMode}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetWindowDisplayMode()}{SDL\_GetWindowDisplayMode()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Window\+Display\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{\mbox{\hyperlink{struct_s_d_l___display_mode}{S\+D\+L\+\_\+\+Display\+Mode}} $\ast$}]{mode }\end{DoxyParamCaption})}
+
+
+
+Fill in information about the display mode used when a fullscreen window is visible. 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a2ca17d1e857d1560738e002c9935088a}{S\+D\+L\+\_\+\+Set\+Window\+Display\+Mode()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_ab4aa48f0a29f0868ce4e0422c02ed2fa}{S\+D\+L\+\_\+\+Set\+Window\+Fullscreen()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_af4d647be3bb21a33586d69d5cad87ead}\label{_s_d_l__video_8h_af4d647be3bb21a33586d69d5cad87ead}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetWindowGammaRamp@{SDL\_GetWindowGammaRamp}}
+\index{SDL\_GetWindowGammaRamp@{SDL\_GetWindowGammaRamp}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetWindowGammaRamp()}{SDL\_GetWindowGammaRamp()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Window\+Gamma\+Ramp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{Uint16 $\ast$}]{red,  }\item[{Uint16 $\ast$}]{green,  }\item[{Uint16 $\ast$}]{blue }\end{DoxyParamCaption})}
+
+
+
+Get the gamma ramp for a window. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window from which the gamma ramp should be queried. \\
+\hline
+{\em red} & A pointer to a 256 element array of 16-\/bit quantities to hold the translation table for the red channel, or N\+U\+LL. \\
+\hline
+{\em green} & A pointer to a 256 element array of 16-\/bit quantities to hold the translation table for the green channel, or N\+U\+LL. \\
+\hline
+{\em blue} & A pointer to a 256 element array of 16-\/bit quantities to hold the translation table for the blue channel, or N\+U\+LL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if gamma ramps are unsupported.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a6799acf235454f519ac209ccf14caa67}{S\+D\+L\+\_\+\+Set\+Window\+Gamma\+Ramp()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_ad4e451db3880b6e0dd6647cbc351c6c0}\label{_s_d_l__video_8h_ad4e451db3880b6e0dd6647cbc351c6c0}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetWindowGrab@{SDL\_GetWindowGrab}}
+\index{SDL\_GetWindowGrab@{SDL\_GetWindowGrab}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetWindowGrab()}{SDL\_GetWindowGrab()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC S\+D\+L\+\_\+bool S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Window\+Grab (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Get a window\textquotesingle{}s input grab mode. 
+
+\begin{DoxyReturn}{반환값}
+This returns S\+D\+L\+\_\+\+T\+R\+UE if input is grabbed, and S\+D\+L\+\_\+\+F\+A\+L\+SE otherwise.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_abe7fd559e9d6da046c5984dea679a89b}{S\+D\+L\+\_\+\+Set\+Window\+Grab()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a38d65795da3feacfec1c392c101e92fd}\label{_s_d_l__video_8h_a38d65795da3feacfec1c392c101e92fd}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetWindowMaximumSize@{SDL\_GetWindowMaximumSize}}
+\index{SDL\_GetWindowMaximumSize@{SDL\_GetWindowMaximumSize}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetWindowMaximumSize()}{SDL\_GetWindowMaximumSize()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Window\+Maximum\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{int $\ast$}]{w,  }\item[{int $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Get the maximum size of a window\textquotesingle{}s client area. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window to query. \\
+\hline
+{\em w} & Pointer to variable for storing the maximum width, may be N\+U\+LL \\
+\hline
+{\em h} & Pointer to variable for storing the maximum height, may be N\+U\+LL\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_afe1c6ca08d5b8c336b1276236559287a}{S\+D\+L\+\_\+\+Get\+Window\+Minimum\+Size()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_aaf95e53a3b70d55d71d7b2cf822ea77e}{S\+D\+L\+\_\+\+Set\+Window\+Maximum\+Size()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_afe1c6ca08d5b8c336b1276236559287a}\label{_s_d_l__video_8h_afe1c6ca08d5b8c336b1276236559287a}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetWindowMinimumSize@{SDL\_GetWindowMinimumSize}}
+\index{SDL\_GetWindowMinimumSize@{SDL\_GetWindowMinimumSize}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetWindowMinimumSize()}{SDL\_GetWindowMinimumSize()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Window\+Minimum\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{int $\ast$}]{w,  }\item[{int $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Get the minimum size of a window\textquotesingle{}s client area. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window to query. \\
+\hline
+{\em w} & Pointer to variable for storing the minimum width, may be N\+U\+LL \\
+\hline
+{\em h} & Pointer to variable for storing the minimum height, may be N\+U\+LL\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a38d65795da3feacfec1c392c101e92fd}{S\+D\+L\+\_\+\+Get\+Window\+Maximum\+Size()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a1b6dd546d8dec383be411f98926335ae}{S\+D\+L\+\_\+\+Set\+Window\+Minimum\+Size()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a9a85fb11978adecf13a04976efe6ceca}\label{_s_d_l__video_8h_a9a85fb11978adecf13a04976efe6ceca}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetWindowOpacity@{SDL\_GetWindowOpacity}}
+\index{SDL\_GetWindowOpacity@{SDL\_GetWindowOpacity}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetWindowOpacity()}{SDL\_GetWindowOpacity()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Window\+Opacity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{float $\ast$}]{out\+\_\+opacity }\end{DoxyParamCaption})}
+
+
+
+Get the opacity of a window. 
+
+If transparency isn\textquotesingle{}t supported on this platform, opacity will be reported as 1.\+0f without error.
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window in question. \\
+\hline
+{\em out\+\_\+opacity} & Opacity (0.\+0f -\/ transparent, 1.\+0f -\/ opaque)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 on error (invalid window, etc).
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_ac10be8659aa8b5bdefb8ce43b6961f7f}{S\+D\+L\+\_\+\+Set\+Window\+Opacity()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a03adfc1ed4aaf57da4af00bd247ac99c}\label{_s_d_l__video_8h_a03adfc1ed4aaf57da4af00bd247ac99c}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetWindowPosition@{SDL\_GetWindowPosition}}
+\index{SDL\_GetWindowPosition@{SDL\_GetWindowPosition}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetWindowPosition()}{SDL\_GetWindowPosition()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Window\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{int $\ast$}]{x,  }\item[{int $\ast$}]{y }\end{DoxyParamCaption})}
+
+
+
+Get the position of a window. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window to query. \\
+\hline
+{\em x} & Pointer to variable for storing the x position, in screen coordinates. May be N\+U\+LL. \\
+\hline
+{\em y} & Pointer to variable for storing the y position, in screen coordinates. May be N\+U\+LL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_ab200a53e01ddc697fd6b8e017cc4e6dd}{S\+D\+L\+\_\+\+Set\+Window\+Position()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a5cbfffcfec91c22a7ca95fd1d5163db5}\label{_s_d_l__video_8h_a5cbfffcfec91c22a7ca95fd1d5163db5}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetWindowSize@{SDL\_GetWindowSize}}
+\index{SDL\_GetWindowSize@{SDL\_GetWindowSize}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetWindowSize()}{SDL\_GetWindowSize()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Window\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{int $\ast$}]{w,  }\item[{int $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Get the size of a window\textquotesingle{}s client area. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window to query. \\
+\hline
+{\em w} & Pointer to variable for storing the width, in screen coordinates. May be N\+U\+LL. \\
+\hline
+{\em h} & Pointer to variable for storing the height, in screen coordinates. May be N\+U\+LL.\\
+\hline
+\end{DoxyParams}
+The window size in screen coordinates may differ from the size in pixels, if the window was created with S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+A\+L\+L\+O\+W\+\_\+\+H\+I\+G\+H\+D\+PI on a platform with high-\/dpi support (e.\+g. i\+OS or OS X). Use \mbox{\hyperlink{_s_d_l__video_8h_ac21851bbd91760c5bab92594a58edba3}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Drawable\+Size()}} or \mbox{\hyperlink{_s_d_l__render_8h_abfc0c9a50d9d1870ab7d271b7a73d8ab}{S\+D\+L\+\_\+\+Get\+Renderer\+Output\+Size()}} to get the real client area size in pixels.
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a29b118c6932ccb94d85b5435ae1e0a19}{S\+D\+L\+\_\+\+Set\+Window\+Size()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a0f7a1d102e1d5dd2d739ad70fe268385}\label{_s_d_l__video_8h_a0f7a1d102e1d5dd2d739ad70fe268385}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetWindowSurface@{SDL\_GetWindowSurface}}
+\index{SDL\_GetWindowSurface@{SDL\_GetWindowSurface}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetWindowSurface()}{SDL\_GetWindowSurface()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}}$\ast$ S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Window\+Surface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Get the S\+DL surface associated with the window. 
+
+\begin{DoxyReturn}{반환값}
+The window\textquotesingle{}s framebuffer surface, or N\+U\+LL on error.
+\end{DoxyReturn}
+A new surface will be created with the optimal format for the window, if necessary. This surface will be freed when the window is destroyed.
+
+\begin{DoxyNote}{주의}
+You may not combine this with 3D or the rendering A\+PI on this window.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a7bbfee05788dc85a1d67218cf3006653}{S\+D\+L\+\_\+\+Update\+Window\+Surface()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_ae6b0c6cf354beb87291887bfa02385b1}{S\+D\+L\+\_\+\+Update\+Window\+Surface\+Rects()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a35ac3137acd51e9b19baef3497070a22}\label{_s_d_l__video_8h_a35ac3137acd51e9b19baef3497070a22}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GetWindowTitle@{SDL\_GetWindowTitle}}
+\index{SDL\_GetWindowTitle@{SDL\_GetWindowTitle}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GetWindowTitle()}{SDL\_GetWindowTitle()}}
+{\footnotesize\ttfamily const D\+E\+C\+L\+S\+P\+EC char$\ast$ S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Get\+Window\+Title (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Get the title of a window, in U\+T\+F-\/8 format. 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a41aabc4b68f75f41d97995e02eb9deb6}{S\+D\+L\+\_\+\+Set\+Window\+Title()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a0e14c935cf304133278893bf6c1d2691}\label{_s_d_l__video_8h_a0e14c935cf304133278893bf6c1d2691}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GL\_CreateContext@{SDL\_GL\_CreateContext}}
+\index{SDL\_GL\_CreateContext@{SDL\_GL\_CreateContext}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GL\_CreateContext()}{SDL\_GL\_CreateContext()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{_s_d_l__video_8h_a0d64dcf67c9685d09cbe051448e1b3f3}{S\+D\+L\+\_\+\+G\+L\+Context}} S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+G\+L\+\_\+\+Create\+Context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Create an Open\+GL context for use with an Open\+GL window, and make it current. 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_aa64ab050e0bd3a61057c3dffe953aa9f}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Delete\+Context()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_aa64ab050e0bd3a61057c3dffe953aa9f}\label{_s_d_l__video_8h_aa64ab050e0bd3a61057c3dffe953aa9f}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GL\_DeleteContext@{SDL\_GL\_DeleteContext}}
+\index{SDL\_GL\_DeleteContext@{SDL\_GL\_DeleteContext}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GL\_DeleteContext()}{SDL\_GL\_DeleteContext()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+G\+L\+\_\+\+Delete\+Context (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a0d64dcf67c9685d09cbe051448e1b3f3}{S\+D\+L\+\_\+\+G\+L\+Context}}}]{context }\end{DoxyParamCaption})}
+
+
+
+Delete an Open\+GL context. 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a0e14c935cf304133278893bf6c1d2691}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Create\+Context()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a611bbed6c7374329e1d1b9c31b06976d}\label{_s_d_l__video_8h_a611bbed6c7374329e1d1b9c31b06976d}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GL\_GetAttribute@{SDL\_GL\_GetAttribute}}
+\index{SDL\_GL\_GetAttribute@{SDL\_GL\_GetAttribute}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GL\_GetAttribute()}{SDL\_GL\_GetAttribute()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Attribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a2de24951bbc6626dc259ec0db5ae8ed4}{S\+D\+L\+\_\+\+G\+Lattr}}}]{attr,  }\item[{int $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Get the actual value for an attribute from the current context. 
+
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if the attribute could not be retrieved. The integer at {\ttfamily value} will be modified in either case. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__video_8h_ac21851bbd91760c5bab92594a58edba3}\label{_s_d_l__video_8h_ac21851bbd91760c5bab92594a58edba3}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GL\_GetDrawableSize@{SDL\_GL\_GetDrawableSize}}
+\index{SDL\_GL\_GetDrawableSize@{SDL\_GL\_GetDrawableSize}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GL\_GetDrawableSize()}{SDL\_GL\_GetDrawableSize()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Drawable\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{int $\ast$}]{w,  }\item[{int $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Get the size of a window\textquotesingle{}s underlying drawable in pixels (for use with gl\+Viewport). 
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & Window from which the drawable size should be queried \\
+\hline
+{\em w} & Pointer to variable for storing the width in pixels, may be N\+U\+LL \\
+\hline
+{\em h} & Pointer to variable for storing the height in pixels, may be N\+U\+LL\\
+\hline
+\end{DoxyParams}
+This may differ from \mbox{\hyperlink{_s_d_l__video_8h_a5cbfffcfec91c22a7ca95fd1d5163db5}{S\+D\+L\+\_\+\+Get\+Window\+Size()}} if we\textquotesingle{}re rendering to a high-\/\+D\+PI drawable, i.\+e. the window was created with S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+A\+L\+L\+O\+W\+\_\+\+H\+I\+G\+H\+D\+PI on a platform with high-\/\+D\+PI support (Apple calls this \char`\"{}\+Retina\char`\"{}), and not disabled by the S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+H\+I\+G\+H\+D\+P\+I\+\_\+\+D\+I\+S\+A\+B\+L\+ED hint.
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a5cbfffcfec91c22a7ca95fd1d5163db5}{S\+D\+L\+\_\+\+Get\+Window\+Size()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a42565088bdb739a5353fd67abbe235d2}{S\+D\+L\+\_\+\+Create\+Window()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_ae96490db6285ed0df44a9b1c0f498605}\label{_s_d_l__video_8h_ae96490db6285ed0df44a9b1c0f498605}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GL\_GetSwapInterval@{SDL\_GL\_GetSwapInterval}}
+\index{SDL\_GL\_GetSwapInterval@{SDL\_GL\_GetSwapInterval}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GL\_GetSwapInterval()}{SDL\_GL\_GetSwapInterval()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Swap\+Interval (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the swap interval for the current Open\+GL context. 
+
+\begin{DoxyReturn}{반환값}
+0 if there is no vertical retrace synchronization, 1 if the buffer swap is synchronized with the vertical retrace, and -\/1 if late swaps happen immediately instead of waiting for the next retrace. If the system can\textquotesingle{}t determine the swap interval, or there isn\textquotesingle{}t a valid current context, this will return 0 as a safe default.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a68b0d06595d086d9244fd49afe3e8360}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Set\+Swap\+Interval()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a398df9aaf43a69dc2cfaab5b306b8f91}\label{_s_d_l__video_8h_a398df9aaf43a69dc2cfaab5b306b8f91}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GL\_LoadLibrary@{SDL\_GL\_LoadLibrary}}
+\index{SDL\_GL\_LoadLibrary@{SDL\_GL\_LoadLibrary}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GL\_LoadLibrary()}{SDL\_GL\_LoadLibrary()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+G\+L\+\_\+\+Load\+Library (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Dynamically load an Open\+GL library. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em path} & The platform dependent Open\+GL library name, or N\+U\+LL to open the default Open\+GL library.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if the library couldn\textquotesingle{}t be loaded.
+\end{DoxyReturn}
+This should be done after initializing the video driver, but before creating any Open\+GL windows. If no Open\+GL library is loaded, the default library will be loaded upon creation of the first Open\+GL window.
+
+\begin{DoxyNote}{주의}
+If you do this, you need to retrieve all of the GL functions used in your program from the dynamic library using \mbox{\hyperlink{_s_d_l__video_8h_a6329bc32811639fe6f71606801cd9e7b}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Proc\+Address()}}.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a6329bc32811639fe6f71606801cd9e7b}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Proc\+Address()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a92103adf9637ec2dc471714076872bdc}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Unload\+Library()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a5a2ad98e8920f8069bf89eb3f9bbc377}\label{_s_d_l__video_8h_a5a2ad98e8920f8069bf89eb3f9bbc377}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GL\_MakeCurrent@{SDL\_GL\_MakeCurrent}}
+\index{SDL\_GL\_MakeCurrent@{SDL\_GL\_MakeCurrent}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GL\_MakeCurrent()}{SDL\_GL\_MakeCurrent()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+G\+L\+\_\+\+Make\+Current (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{\mbox{\hyperlink{_s_d_l__video_8h_a0d64dcf67c9685d09cbe051448e1b3f3}{S\+D\+L\+\_\+\+G\+L\+Context}}}]{context }\end{DoxyParamCaption})}
+
+
+
+Set up an Open\+GL context for rendering into an Open\+GL window. 
+
+\begin{DoxyNote}{주의}
+The context must have been created with a compatible window. 
+\end{DoxyNote}
+\mbox{\Hypertarget{_s_d_l__video_8h_aed4d4347f2d5def1532bc22893e0e0d9}\label{_s_d_l__video_8h_aed4d4347f2d5def1532bc22893e0e0d9}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GL\_SetAttribute@{SDL\_GL\_SetAttribute}}
+\index{SDL\_GL\_SetAttribute@{SDL\_GL\_SetAttribute}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GL\_SetAttribute()}{SDL\_GL\_SetAttribute()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+G\+L\+\_\+\+Set\+Attribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a2de24951bbc6626dc259ec0db5ae8ed4}{S\+D\+L\+\_\+\+G\+Lattr}}}]{attr,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Set an Open\+GL window attribute before window creation. 
+
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if the attribute could not be set. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__video_8h_a68b0d06595d086d9244fd49afe3e8360}\label{_s_d_l__video_8h_a68b0d06595d086d9244fd49afe3e8360}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GL\_SetSwapInterval@{SDL\_GL\_SetSwapInterval}}
+\index{SDL\_GL\_SetSwapInterval@{SDL\_GL\_SetSwapInterval}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GL\_SetSwapInterval()}{SDL\_GL\_SetSwapInterval()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+G\+L\+\_\+\+Set\+Swap\+Interval (\begin{DoxyParamCaption}\item[{int}]{interval }\end{DoxyParamCaption})}
+
+
+
+Set the swap interval for the current Open\+GL context. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em interval} & 0 for immediate updates, 1 for updates synchronized with the vertical retrace. If the system supports it, you may specify -\/1 to allow late swaps to happen immediately instead of waiting for the next retrace.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if setting the swap interval is not supported.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_ae96490db6285ed0df44a9b1c0f498605}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Swap\+Interval()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a92103adf9637ec2dc471714076872bdc}\label{_s_d_l__video_8h_a92103adf9637ec2dc471714076872bdc}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_GL\_UnloadLibrary@{SDL\_GL\_UnloadLibrary}}
+\index{SDL\_GL\_UnloadLibrary@{SDL\_GL\_UnloadLibrary}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_GL\_UnloadLibrary()}{SDL\_GL\_UnloadLibrary()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+G\+L\+\_\+\+Unload\+Library (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Unload the Open\+GL library previously loaded by \mbox{\hyperlink{_s_d_l__video_8h_a398df9aaf43a69dc2cfaab5b306b8f91}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Load\+Library()}}. 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a398df9aaf43a69dc2cfaab5b306b8f91}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Load\+Library()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_aa3cbe663e0bd62aa7a747a6c11781766}\label{_s_d_l__video_8h_aa3cbe663e0bd62aa7a747a6c11781766}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_HideWindow@{SDL\_HideWindow}}
+\index{SDL\_HideWindow@{SDL\_HideWindow}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_HideWindow()}{SDL\_HideWindow()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Hide\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Hide a window. 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a6051ce26885b32b80bc7285b4facd0a1}{S\+D\+L\+\_\+\+Show\+Window()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a4b5c116d57947bf508c13b21aac49cbf}\label{_s_d_l__video_8h_a4b5c116d57947bf508c13b21aac49cbf}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_IsScreenSaverEnabled@{SDL\_IsScreenSaverEnabled}}
+\index{SDL\_IsScreenSaverEnabled@{SDL\_IsScreenSaverEnabled}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_IsScreenSaverEnabled()}{SDL\_IsScreenSaverEnabled()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC S\+D\+L\+\_\+bool S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Is\+Screen\+Saver\+Enabled (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns whether the screensaver is currently enabled (default off). 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a17846c713066aa29a86e1be205a7fc3e}{S\+D\+L\+\_\+\+Enable\+Screen\+Saver()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a68eb0d850934fa1c7ac12c30f2d56a84}{S\+D\+L\+\_\+\+Disable\+Screen\+Saver()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a8d969b660fee270f84cb403c8b75ded6}\label{_s_d_l__video_8h_a8d969b660fee270f84cb403c8b75ded6}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_MaximizeWindow@{SDL\_MaximizeWindow}}
+\index{SDL\_MaximizeWindow@{SDL\_MaximizeWindow}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_MaximizeWindow()}{SDL\_MaximizeWindow()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Maximize\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Make a window as large as possible. 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_afea37fca3b12f454e7f91d919fc99fbd}{S\+D\+L\+\_\+\+Restore\+Window()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a9f802f6c7952552b1cb26958fad3f2a6}\label{_s_d_l__video_8h_a9f802f6c7952552b1cb26958fad3f2a6}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_MinimizeWindow@{SDL\_MinimizeWindow}}
+\index{SDL\_MinimizeWindow@{SDL\_MinimizeWindow}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_MinimizeWindow()}{SDL\_MinimizeWindow()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Minimize\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Minimize a window to an iconic representation. 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_afea37fca3b12f454e7f91d919fc99fbd}{S\+D\+L\+\_\+\+Restore\+Window()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_afea37fca3b12f454e7f91d919fc99fbd}\label{_s_d_l__video_8h_afea37fca3b12f454e7f91d919fc99fbd}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_RestoreWindow@{SDL\_RestoreWindow}}
+\index{SDL\_RestoreWindow@{SDL\_RestoreWindow}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_RestoreWindow()}{SDL\_RestoreWindow()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Restore\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Restore the size and position of a minimized or maximized window. 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a8d969b660fee270f84cb403c8b75ded6}{S\+D\+L\+\_\+\+Maximize\+Window()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a9f802f6c7952552b1cb26958fad3f2a6}{S\+D\+L\+\_\+\+Minimize\+Window()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_afb4b868e2cc0107ed6bcf5ba7aa376e0}\label{_s_d_l__video_8h_afb4b868e2cc0107ed6bcf5ba7aa376e0}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_SetWindowBordered@{SDL\_SetWindowBordered}}
+\index{SDL\_SetWindowBordered@{SDL\_SetWindowBordered}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetWindowBordered()}{SDL\_SetWindowBordered()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Window\+Bordered (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{S\+D\+L\+\_\+bool}]{bordered }\end{DoxyParamCaption})}
+
+
+
+Set the border state of a window. 
+
+This will add or remove the window\textquotesingle{}s S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+O\+R\+D\+E\+R\+L\+E\+SS flag and add or remove the border from the actual window. This is a no-\/op if the window\textquotesingle{}s border already matches the requested state.
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window of which to change the border state. \\
+\hline
+{\em bordered} & S\+D\+L\+\_\+\+F\+A\+L\+SE to remove border, S\+D\+L\+\_\+\+T\+R\+UE to add border.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{주의}
+You can\textquotesingle{}t change the border state of a fullscreen window.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a4445733f04a1a9dd0e063cd4738f285f}{S\+D\+L\+\_\+\+Get\+Window\+Flags()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a896972250b4d2e0f75888fa44fa792ec}\label{_s_d_l__video_8h_a896972250b4d2e0f75888fa44fa792ec}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_SetWindowBrightness@{SDL\_SetWindowBrightness}}
+\index{SDL\_SetWindowBrightness@{SDL\_SetWindowBrightness}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetWindowBrightness()}{SDL\_SetWindowBrightness()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Window\+Brightness (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{float}]{brightness }\end{DoxyParamCaption})}
+
+
+
+Set the brightness (gamma correction) for a window. 
+
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if setting the brightness isn\textquotesingle{}t supported.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a21c10969331c89e8d0e6a8f998a3c319}{S\+D\+L\+\_\+\+Get\+Window\+Brightness()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a6799acf235454f519ac209ccf14caa67}{S\+D\+L\+\_\+\+Set\+Window\+Gamma\+Ramp()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_afc7a842e8843235d2ede124a1fd076ec}\label{_s_d_l__video_8h_afc7a842e8843235d2ede124a1fd076ec}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_SetWindowData@{SDL\_SetWindowData}}
+\index{SDL\_SetWindowData@{SDL\_SetWindowData}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetWindowData()}{SDL\_SetWindowData()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void$\ast$ S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Window\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{const char $\ast$}]{name,  }\item[{void $\ast$}]{userdata }\end{DoxyParamCaption})}
+
+
+
+Associate an arbitrary named pointer with a window. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window to associate with the pointer. \\
+\hline
+{\em name} & The name of the pointer. \\
+\hline
+{\em userdata} & The associated pointer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+The previous value associated with \textquotesingle{}name\textquotesingle{}
+\end{DoxyReturn}
+\begin{DoxyNote}{주의}
+The name is case-\/sensitive.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_ad714a638020c06ad03f113e3d069cf88}{S\+D\+L\+\_\+\+Get\+Window\+Data()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a2ca17d1e857d1560738e002c9935088a}\label{_s_d_l__video_8h_a2ca17d1e857d1560738e002c9935088a}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_SetWindowDisplayMode@{SDL\_SetWindowDisplayMode}}
+\index{SDL\_SetWindowDisplayMode@{SDL\_SetWindowDisplayMode}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetWindowDisplayMode()}{SDL\_SetWindowDisplayMode()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Window\+Display\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{const \mbox{\hyperlink{struct_s_d_l___display_mode}{S\+D\+L\+\_\+\+Display\+Mode}} $\ast$}]{mode }\end{DoxyParamCaption})}
+
+
+
+Set the display mode used when a fullscreen window is visible. 
+
+By default the window\textquotesingle{}s dimensions and the desktop format and refresh rate are used.
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window for which the display mode should be set. \\
+\hline
+{\em mode} & The mode to use, or N\+U\+LL for the default mode.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if setting the display mode failed.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a8185547bc7cb0bbeb400f459792d081a}{S\+D\+L\+\_\+\+Get\+Window\+Display\+Mode()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_ab4aa48f0a29f0868ce4e0422c02ed2fa}{S\+D\+L\+\_\+\+Set\+Window\+Fullscreen()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_ab4aa48f0a29f0868ce4e0422c02ed2fa}\label{_s_d_l__video_8h_ab4aa48f0a29f0868ce4e0422c02ed2fa}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_SetWindowFullscreen@{SDL\_SetWindowFullscreen}}
+\index{SDL\_SetWindowFullscreen@{SDL\_SetWindowFullscreen}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetWindowFullscreen()}{SDL\_SetWindowFullscreen()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Window\+Fullscreen (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{Uint32}]{flags }\end{DoxyParamCaption})}
+
+
+
+Set a window\textquotesingle{}s fullscreen state. 
+
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if setting the display mode failed.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a2ca17d1e857d1560738e002c9935088a}{S\+D\+L\+\_\+\+Set\+Window\+Display\+Mode()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a8185547bc7cb0bbeb400f459792d081a}{S\+D\+L\+\_\+\+Get\+Window\+Display\+Mode()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a6799acf235454f519ac209ccf14caa67}\label{_s_d_l__video_8h_a6799acf235454f519ac209ccf14caa67}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_SetWindowGammaRamp@{SDL\_SetWindowGammaRamp}}
+\index{SDL\_SetWindowGammaRamp@{SDL\_SetWindowGammaRamp}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetWindowGammaRamp()}{SDL\_SetWindowGammaRamp()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Window\+Gamma\+Ramp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{const Uint16 $\ast$}]{red,  }\item[{const Uint16 $\ast$}]{green,  }\item[{const Uint16 $\ast$}]{blue }\end{DoxyParamCaption})}
+
+
+
+Set the gamma ramp for a window. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window for which the gamma ramp should be set. \\
+\hline
+{\em red} & The translation table for the red channel, or N\+U\+LL. \\
+\hline
+{\em green} & The translation table for the green channel, or N\+U\+LL. \\
+\hline
+{\em blue} & The translation table for the blue channel, or N\+U\+LL.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if gamma ramps are unsupported.
+\end{DoxyReturn}
+Set the gamma translation table for the red, green, and blue channels of the video hardware. Each table is an array of 256 16-\/bit quantities, representing a mapping between the input and output for that channel. The input is the index into the array, and the output is the 16-\/bit gamma value at that index, scaled to the output color precision.
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_af4d647be3bb21a33586d69d5cad87ead}{S\+D\+L\+\_\+\+Get\+Window\+Gamma\+Ramp()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_abe7fd559e9d6da046c5984dea679a89b}\label{_s_d_l__video_8h_abe7fd559e9d6da046c5984dea679a89b}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_SetWindowGrab@{SDL\_SetWindowGrab}}
+\index{SDL\_SetWindowGrab@{SDL\_SetWindowGrab}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetWindowGrab()}{SDL\_SetWindowGrab()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Window\+Grab (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{S\+D\+L\+\_\+bool}]{grabbed }\end{DoxyParamCaption})}
+
+
+
+Set a window\textquotesingle{}s input grab mode. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window for which the input grab mode should be set. \\
+\hline
+{\em grabbed} & This is S\+D\+L\+\_\+\+T\+R\+UE to grab input, and S\+D\+L\+\_\+\+F\+A\+L\+SE to release input.\\
+\hline
+\end{DoxyParams}
+If the caller enables a grab while another window is currently grabbed, the other window loses its grab in favor of the caller\textquotesingle{}s window.
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_ad4e451db3880b6e0dd6647cbc351c6c0}{S\+D\+L\+\_\+\+Get\+Window\+Grab()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a23e14e1f21f7fb3727f38fd9b0711186}\label{_s_d_l__video_8h_a23e14e1f21f7fb3727f38fd9b0711186}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_SetWindowHitTest@{SDL\_SetWindowHitTest}}
+\index{SDL\_SetWindowHitTest@{SDL\_SetWindowHitTest}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetWindowHitTest()}{SDL\_SetWindowHitTest()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Window\+Hit\+Test (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{\mbox{\hyperlink{_s_d_l__video_8h_a247c7fd43bb60b20630945a5bd9e4957}{S\+D\+L\+\_\+\+Hit\+Test}}}]{callback,  }\item[{void $\ast$}]{callback\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Provide a callback that decides if a window region has special properties. 
+
+Normally windows are dragged and resized by decorations provided by the system window manager (a title bar, borders, etc), but for some apps, it makes sense to drag them from somewhere else inside the window itself; for example, one might have a borderless window that wants to be draggable from any part, or simulate its own title bar, etc.
+
+This function lets the app provide a callback that designates pieces of a given window as special. This callback is run during event processing if we need to tell the OS to treat a region of the window specially; the use of this callback is known as \char`\"{}hit testing.\char`\"{}
+
+Mouse input may not be delivered to your application if it is within a special area; the OS will often apply that input to moving the window or resizing the window and not deliver it to the application.
+
+Specifying N\+U\+LL for a callback disables hit-\/testing. Hit-\/testing is disabled by default.
+
+Platforms that don\textquotesingle{}t support this functionality will return -\/1 unconditionally, even if you\textquotesingle{}re attempting to disable hit-\/testing.
+
+Your callback may fire at any time, and its firing does not indicate any specific behavior (for example, on Windows, this certainly might fire when the OS is deciding whether to drag your window, but it fires for lots of other reasons, too, some unrelated to anything you probably care about {\itshape and when the mouse isn\textquotesingle{}t actually at the location it is testing}). Since this can fire at any time, you should try to keep your callback efficient, devoid of allocations, etc.
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window to set hit-\/testing on. \\
+\hline
+{\em callback} & The callback to call when doing a hit-\/test. \\
+\hline
+{\em callback\+\_\+data} & An app-\/defined void pointer passed to the callback. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+0 on success, -\/1 on error (including unsupported). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__video_8h_a0b6910b5d5aa2df0aeda257e445a472e}\label{_s_d_l__video_8h_a0b6910b5d5aa2df0aeda257e445a472e}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_SetWindowIcon@{SDL\_SetWindowIcon}}
+\index{SDL\_SetWindowIcon@{SDL\_SetWindowIcon}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetWindowIcon()}{SDL\_SetWindowIcon()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Window\+Icon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$}]{icon }\end{DoxyParamCaption})}
+
+
+
+Set the icon for a window. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window for which the icon should be set. \\
+\hline
+{\em icon} & The icon for the window. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_s_d_l__video_8h_aa77986a0f56e51f216af57d829bca896}\label{_s_d_l__video_8h_aa77986a0f56e51f216af57d829bca896}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_SetWindowInputFocus@{SDL\_SetWindowInputFocus}}
+\index{SDL\_SetWindowInputFocus@{SDL\_SetWindowInputFocus}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetWindowInputFocus()}{SDL\_SetWindowInputFocus()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Window\+Input\+Focus (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Explicitly sets input focus to the window. 
+
+You almost certainly want \mbox{\hyperlink{_s_d_l__video_8h_a4b66b90f95780276addc14bc573c9f3c}{S\+D\+L\+\_\+\+Raise\+Window()}} instead of this function. Use this with caution, as you might give focus to a window that\textquotesingle{}s completely obscured by other windows.
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window that should get the input focus\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 otherwise. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a4b66b90f95780276addc14bc573c9f3c}{S\+D\+L\+\_\+\+Raise\+Window()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_aaf95e53a3b70d55d71d7b2cf822ea77e}\label{_s_d_l__video_8h_aaf95e53a3b70d55d71d7b2cf822ea77e}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_SetWindowMaximumSize@{SDL\_SetWindowMaximumSize}}
+\index{SDL\_SetWindowMaximumSize@{SDL\_SetWindowMaximumSize}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetWindowMaximumSize()}{SDL\_SetWindowMaximumSize()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Window\+Maximum\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{int}]{max\+\_\+w,  }\item[{int}]{max\+\_\+h }\end{DoxyParamCaption})}
+
+
+
+Set the maximum size of a window\textquotesingle{}s client area. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window to set a new maximum size. \\
+\hline
+{\em max\+\_\+w} & The maximum width of the window, must be $>$0 \\
+\hline
+{\em max\+\_\+h} & The maximum height of the window, must be $>$0\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{주의}
+You can\textquotesingle{}t change the maximum size of a fullscreen window, it automatically matches the size of the display mode.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a38d65795da3feacfec1c392c101e92fd}{S\+D\+L\+\_\+\+Get\+Window\+Maximum\+Size()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a1b6dd546d8dec383be411f98926335ae}{S\+D\+L\+\_\+\+Set\+Window\+Minimum\+Size()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a1b6dd546d8dec383be411f98926335ae}\label{_s_d_l__video_8h_a1b6dd546d8dec383be411f98926335ae}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_SetWindowMinimumSize@{SDL\_SetWindowMinimumSize}}
+\index{SDL\_SetWindowMinimumSize@{SDL\_SetWindowMinimumSize}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetWindowMinimumSize()}{SDL\_SetWindowMinimumSize()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Window\+Minimum\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{int}]{min\+\_\+w,  }\item[{int}]{min\+\_\+h }\end{DoxyParamCaption})}
+
+
+
+Set the minimum size of a window\textquotesingle{}s client area. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window to set a new minimum size. \\
+\hline
+{\em min\+\_\+w} & The minimum width of the window, must be $>$0 \\
+\hline
+{\em min\+\_\+h} & The minimum height of the window, must be $>$0\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{주의}
+You can\textquotesingle{}t change the minimum size of a fullscreen window, it automatically matches the size of the display mode.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_afe1c6ca08d5b8c336b1276236559287a}{S\+D\+L\+\_\+\+Get\+Window\+Minimum\+Size()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_aaf95e53a3b70d55d71d7b2cf822ea77e}{S\+D\+L\+\_\+\+Set\+Window\+Maximum\+Size()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_afb7627a0ede24c28453857fff4f02aca}\label{_s_d_l__video_8h_afb7627a0ede24c28453857fff4f02aca}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_SetWindowModalFor@{SDL\_SetWindowModalFor}}
+\index{SDL\_SetWindowModalFor@{SDL\_SetWindowModalFor}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetWindowModalFor()}{SDL\_SetWindowModalFor()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Window\+Modal\+For (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{modal\+\_\+window,  }\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{parent\+\_\+window }\end{DoxyParamCaption})}
+
+
+
+Sets the window as a modal for another window (T\+O\+DO\+: reconsider this function and/or its name) 
+
+
+\begin{DoxyParams}{매개변수}
+{\em modal\+\_\+window} & The window that should be modal \\
+\hline
+{\em parent\+\_\+window} & The parent window\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__video_8h_ac10be8659aa8b5bdefb8ce43b6961f7f}\label{_s_d_l__video_8h_ac10be8659aa8b5bdefb8ce43b6961f7f}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_SetWindowOpacity@{SDL\_SetWindowOpacity}}
+\index{SDL\_SetWindowOpacity@{SDL\_SetWindowOpacity}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetWindowOpacity()}{SDL\_SetWindowOpacity()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Window\+Opacity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{float}]{opacity }\end{DoxyParamCaption})}
+
+
+
+Set the opacity for a window 
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window which will be made transparent or opaque \\
+\hline
+{\em opacity} & Opacity (0.\+0f -\/ transparent, 1.\+0f -\/ opaque) This will be clamped internally between 0.\+0f and 1.\+0f.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 if setting the opacity isn\textquotesingle{}t supported.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a9a85fb11978adecf13a04976efe6ceca}{S\+D\+L\+\_\+\+Get\+Window\+Opacity()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_ab200a53e01ddc697fd6b8e017cc4e6dd}\label{_s_d_l__video_8h_ab200a53e01ddc697fd6b8e017cc4e6dd}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_SetWindowPosition@{SDL\_SetWindowPosition}}
+\index{SDL\_SetWindowPosition@{SDL\_SetWindowPosition}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetWindowPosition()}{SDL\_SetWindowPosition()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Window\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Set the position of a window. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window to reposition. \\
+\hline
+{\em x} & The x coordinate of the window in screen coordinates, or \+::\+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+C\+E\+N\+T\+E\+R\+ED or \+::\+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED. \\
+\hline
+{\em y} & The y coordinate of the window in screen coordinates, or \+::\+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+C\+E\+N\+T\+E\+R\+ED or \+::\+S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+P\+O\+S\+\_\+\+U\+N\+D\+E\+F\+I\+N\+ED.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{주의}
+The window coordinate origin is the upper left of the display.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a03adfc1ed4aaf57da4af00bd247ac99c}{S\+D\+L\+\_\+\+Get\+Window\+Position()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a42d2451050ae01aaf2974344b9d4a812}\label{_s_d_l__video_8h_a42d2451050ae01aaf2974344b9d4a812}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_SetWindowResizable@{SDL\_SetWindowResizable}}
+\index{SDL\_SetWindowResizable@{SDL\_SetWindowResizable}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetWindowResizable()}{SDL\_SetWindowResizable()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Window\+Resizable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{S\+D\+L\+\_\+bool}]{resizable }\end{DoxyParamCaption})}
+
+
+
+Set the user-\/resizable state of a window. 
+
+This will add or remove the window\textquotesingle{}s S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+R\+E\+S\+I\+Z\+A\+B\+LE flag and allow/disallow user resizing of the window. This is a no-\/op if the window\textquotesingle{}s resizable state already matches the requested state.
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window of which to change the resizable state. \\
+\hline
+{\em resizable} & S\+D\+L\+\_\+\+T\+R\+UE to allow resizing, S\+D\+L\+\_\+\+F\+A\+L\+SE to disallow.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{주의}
+You can\textquotesingle{}t change the resizable state of a fullscreen window.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a4445733f04a1a9dd0e063cd4738f285f}{S\+D\+L\+\_\+\+Get\+Window\+Flags()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a29b118c6932ccb94d85b5435ae1e0a19}\label{_s_d_l__video_8h_a29b118c6932ccb94d85b5435ae1e0a19}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_SetWindowSize@{SDL\_SetWindowSize}}
+\index{SDL\_SetWindowSize@{SDL\_SetWindowSize}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetWindowSize()}{SDL\_SetWindowSize()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Window\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})}
+
+
+
+Set the size of a window\textquotesingle{}s client area. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & The window to resize. \\
+\hline
+{\em w} & The width of the window, in screen coordinates. Must be $>$0. \\
+\hline
+{\em h} & The height of the window, in screen coordinates. Must be $>$0.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{주의}
+Fullscreen windows automatically match the size of the display mode, and you should use \mbox{\hyperlink{_s_d_l__video_8h_a2ca17d1e857d1560738e002c9935088a}{S\+D\+L\+\_\+\+Set\+Window\+Display\+Mode()}} to change their size.
+\end{DoxyNote}
+The window size in screen coordinates may differ from the size in pixels, if the window was created with S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+A\+L\+L\+O\+W\+\_\+\+H\+I\+G\+H\+D\+PI on a platform with high-\/dpi support (e.\+g. i\+OS or OS X). Use \mbox{\hyperlink{_s_d_l__video_8h_ac21851bbd91760c5bab92594a58edba3}{S\+D\+L\+\_\+\+G\+L\+\_\+\+Get\+Drawable\+Size()}} or \mbox{\hyperlink{_s_d_l__render_8h_abfc0c9a50d9d1870ab7d271b7a73d8ab}{S\+D\+L\+\_\+\+Get\+Renderer\+Output\+Size()}} to get the real client area size in pixels.
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a5cbfffcfec91c22a7ca95fd1d5163db5}{S\+D\+L\+\_\+\+Get\+Window\+Size()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a2ca17d1e857d1560738e002c9935088a}{S\+D\+L\+\_\+\+Set\+Window\+Display\+Mode()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a41aabc4b68f75f41d97995e02eb9deb6}\label{_s_d_l__video_8h_a41aabc4b68f75f41d97995e02eb9deb6}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_SetWindowTitle@{SDL\_SetWindowTitle}}
+\index{SDL\_SetWindowTitle@{SDL\_SetWindowTitle}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_SetWindowTitle()}{SDL\_SetWindowTitle()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Set\+Window\+Title (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{const char $\ast$}]{title }\end{DoxyParamCaption})}
+
+
+
+Set the title of a window, in U\+T\+F-\/8 format. 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a35ac3137acd51e9b19baef3497070a22}{S\+D\+L\+\_\+\+Get\+Window\+Title()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a6051ce26885b32b80bc7285b4facd0a1}\label{_s_d_l__video_8h_a6051ce26885b32b80bc7285b4facd0a1}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_ShowWindow@{SDL\_ShowWindow}}
+\index{SDL\_ShowWindow@{SDL\_ShowWindow}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_ShowWindow()}{SDL\_ShowWindow()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Show\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Show a window. 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_aa3cbe663e0bd62aa7a747a6c11781766}{S\+D\+L\+\_\+\+Hide\+Window()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a7bbfee05788dc85a1d67218cf3006653}\label{_s_d_l__video_8h_a7bbfee05788dc85a1d67218cf3006653}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_UpdateWindowSurface@{SDL\_UpdateWindowSurface}}
+\index{SDL\_UpdateWindowSurface@{SDL\_UpdateWindowSurface}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_UpdateWindowSurface()}{SDL\_UpdateWindowSurface()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Update\+Window\+Surface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window }\end{DoxyParamCaption})}
+
+
+
+Copy the window surface to the screen. 
+
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 on error.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a0f7a1d102e1d5dd2d739ad70fe268385}{S\+D\+L\+\_\+\+Get\+Window\+Surface()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_ae6b0c6cf354beb87291887bfa02385b1}{S\+D\+L\+\_\+\+Update\+Window\+Surface\+Rects()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_ae6b0c6cf354beb87291887bfa02385b1}\label{_s_d_l__video_8h_ae6b0c6cf354beb87291887bfa02385b1}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_UpdateWindowSurfaceRects@{SDL\_UpdateWindowSurfaceRects}}
+\index{SDL\_UpdateWindowSurfaceRects@{SDL\_UpdateWindowSurfaceRects}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_UpdateWindowSurfaceRects()}{SDL\_UpdateWindowSurfaceRects()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Update\+Window\+Surface\+Rects (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{const \mbox{\hyperlink{struct_s_d_l___rect}{S\+D\+L\+\_\+\+Rect}} $\ast$}]{rects,  }\item[{int}]{numrects }\end{DoxyParamCaption})}
+
+
+
+Copy a number of rectangles on the window surface to the screen. 
+
+\begin{DoxyReturn}{반환값}
+0 on success, or -\/1 on error.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a0f7a1d102e1d5dd2d739ad70fe268385}{S\+D\+L\+\_\+\+Get\+Window\+Surface()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a7bbfee05788dc85a1d67218cf3006653}{S\+D\+L\+\_\+\+Update\+Window\+Surface()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_a05244b30716f0339dcd140c6f92017b7}\label{_s_d_l__video_8h_a05244b30716f0339dcd140c6f92017b7}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_VideoInit@{SDL\_VideoInit}}
+\index{SDL\_VideoInit@{SDL\_VideoInit}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_VideoInit()}{SDL\_VideoInit()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Video\+Init (\begin{DoxyParamCaption}\item[{const char $\ast$}]{driver\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Initialize the video subsystem, optionally specifying a video driver. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em driver\+\_\+name} & Initialize a specific driver by name, or N\+U\+LL for the default video driver.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+0 on success, -\/1 on error
+\end{DoxyReturn}
+This function initializes the video subsystem; setting up a connection to the window manager, etc, and determines the available display modes and pixel formats, but does not initialize a window or graphics mode.
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_ade5fc4847320fb235f17265b683fa013}{S\+D\+L\+\_\+\+Video\+Quit()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__video_8h_ade5fc4847320fb235f17265b683fa013}\label{_s_d_l__video_8h_ade5fc4847320fb235f17265b683fa013}} 
+\index{SDL\_video.h@{SDL\_video.h}!SDL\_VideoQuit@{SDL\_VideoQuit}}
+\index{SDL\_VideoQuit@{SDL\_VideoQuit}!SDL\_video.h@{SDL\_video.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_VideoQuit()}{SDL\_VideoQuit()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Video\+Quit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Shuts down the video subsystem. 
+
+This function closes all windows, and restores the original video mode.
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a05244b30716f0339dcd140c6f92017b7}{S\+D\+L\+\_\+\+Video\+Init()}} 
+\end{DoxySeeAlso}

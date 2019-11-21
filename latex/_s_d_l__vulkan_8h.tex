@@ -1,0 +1,201 @@
+\hypertarget{_s_d_l__vulkan_8h}{}\doxysection{S\+D\+L/include/\+S\+D\+L\+\_\+vulkan.h 파일 참조}
+\label{_s_d_l__vulkan_8h}\index{SDL/include/SDL\_vulkan.h@{SDL/include/SDL\_vulkan.h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+video.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\doxysubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_d_l__vulkan_8h_a2c83a74883be356d314441ccc41e7768}\label{_s_d_l__vulkan_8h_a2c83a74883be356d314441ccc41e7768}} 
+\#define {\bfseries V\+K\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+H\+A\+N\+D\+LE}(object)~typedef struct object\#\#\+\_\+T$\ast$ object;
+\item 
+\mbox{\Hypertarget{_s_d_l__vulkan_8h_a04d8504e79be7e7ff48e313ed88a54ad}\label{_s_d_l__vulkan_8h_a04d8504e79be7e7ff48e313ed88a54ad}} 
+\#define {\bfseries V\+K\+\_\+\+D\+E\+F\+I\+N\+E\+\_\+\+N\+O\+N\+\_\+\+D\+I\+S\+P\+A\+T\+C\+H\+A\+B\+L\+E\+\_\+\+H\+A\+N\+D\+LE}(object)~typedef uint64\+\_\+t object;
+\end{DoxyCompactItemize}
+\doxysubsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_d_l__vulkan_8h_a8e23cebc65f7965cf8e90ae275bc8808}\label{_s_d_l__vulkan_8h_a8e23cebc65f7965cf8e90ae275bc8808}} 
+typedef Vk\+Instance {\bfseries S\+D\+L\+\_\+vulkan\+Instance}
+\item 
+\mbox{\Hypertarget{_s_d_l__vulkan_8h_a974edccc428069558c705abf6d302dee}\label{_s_d_l__vulkan_8h_a974edccc428069558c705abf6d302dee}} 
+typedef Vk\+Surface\+K\+HR {\bfseries S\+D\+L\+\_\+vulkan\+Surface}
+\end{DoxyCompactItemize}
+\doxysubsection*{함수}
+\begin{Indent}\textbf{ Vulkan support functions}\par
+{\em \begin{DoxyNote}{주의}
+S\+D\+L\+\_\+\+Vulkan\+\_\+\+Get\+Instance\+Extensions \& S\+D\+L\+\_\+\+Vulkan\+\_\+\+Create\+Surface A\+PI is compatable with Tizen\textquotesingle{}s implementation of Vulkan in S\+DL. 
+\end{DoxyNote}
+}\begin{DoxyCompactItemize}
+\item 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__vulkan_8h_a9fcc0942c8eaa67c3eff2e3526304b5b}{S\+D\+L\+\_\+\+Vulkan\+\_\+\+Load\+Library}} (const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Dynamically load a Vulkan loader library. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void $\ast$S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__vulkan_8h_aee3a196487ad045f8c2b5a0708f5bf55}{S\+D\+L\+\_\+\+Vulkan\+\_\+\+Get\+Vk\+Get\+Instance\+Proc\+Addr}} (void)
+\begin{DoxyCompactList}\small\item\em Get the address of the {\ttfamily vk\+Get\+Instance\+Proc\+Addr} function. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__vulkan_8h_a92970fb6bc833a8cc65217638d599ff2}{S\+D\+L\+\_\+\+Vulkan\+\_\+\+Unload\+Library}} (void)
+\begin{DoxyCompactList}\small\item\em Unload the Vulkan loader library previously loaded by {\ttfamily \mbox{\hyperlink{_s_d_l__vulkan_8h_a9fcc0942c8eaa67c3eff2e3526304b5b}{S\+D\+L\+\_\+\+Vulkan\+\_\+\+Load\+Library()}}}. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC S\+D\+L\+\_\+bool S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__vulkan_8h_a46d6b686f9154e972d6254fc3757bd0d}{S\+D\+L\+\_\+\+Vulkan\+\_\+\+Get\+Instance\+Extensions}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, unsigned int $\ast$p\+Count, const char $\ast$$\ast$p\+Names)
+\begin{DoxyCompactList}\small\item\em Get the names of the Vulkan instance extensions needed to create a surface with {\ttfamily \mbox{\hyperlink{_s_d_l__vulkan_8h_a1613884948ea2b2671cea8f43462642b}{S\+D\+L\+\_\+\+Vulkan\+\_\+\+Create\+Surface()}}}. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC S\+D\+L\+\_\+bool S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__vulkan_8h_a1613884948ea2b2671cea8f43462642b}{S\+D\+L\+\_\+\+Vulkan\+\_\+\+Create\+Surface}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, Vk\+Instance instance, Vk\+Surface\+K\+HR $\ast$surface)
+\begin{DoxyCompactList}\small\item\em Create a Vulkan rendering surface for a window. \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__vulkan_8h_a170ea51b623cbda9f945b37c037d7974}{S\+D\+L\+\_\+\+Vulkan\+\_\+\+Get\+Drawable\+Size}} (\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$window, int $\ast$w, int $\ast$h)
+\begin{DoxyCompactList}\small\item\em Get the size of a window\textquotesingle{}s underlying drawable in pixels (for use with setting viewport, scissor \& etc). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{상세한 설명}
+Header file for functions to creating Vulkan surfaces on S\+DL windows. 
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{_s_d_l__vulkan_8h_a1613884948ea2b2671cea8f43462642b}\label{_s_d_l__vulkan_8h_a1613884948ea2b2671cea8f43462642b}} 
+\index{SDL\_vulkan.h@{SDL\_vulkan.h}!SDL\_Vulkan\_CreateSurface@{SDL\_Vulkan\_CreateSurface}}
+\index{SDL\_Vulkan\_CreateSurface@{SDL\_Vulkan\_CreateSurface}!SDL\_vulkan.h@{SDL\_vulkan.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_Vulkan\_CreateSurface()}{SDL\_Vulkan\_CreateSurface()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC S\+D\+L\+\_\+bool S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Vulkan\+\_\+\+Create\+Surface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{Vk\+Instance}]{instance,  }\item[{Vk\+Surface\+K\+HR $\ast$}]{surface }\end{DoxyParamCaption})}
+
+
+
+Create a Vulkan rendering surface for a window. 
+
+
+\begin{DoxyParams}[1]{매개변수}
+\mbox{\texttt{ in}}  & {\em window} & S\+D\+L\+\_\+\+Window to which to attach the rendering surface. \\
+\hline
+\mbox{\texttt{ in}}  & {\em instance} & handle to the Vulkan instance to use. \\
+\hline
+\mbox{\texttt{ out}}  & {\em surface} & pointer to a Vk\+Surface\+K\+HR handle to receive the handle of the newly created surface.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+{\ttfamily S\+D\+L\+\_\+\+T\+R\+UE} on success, {\ttfamily S\+D\+L\+\_\+\+F\+A\+L\+SE} on error.
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{VkInstance instance;}
+\DoxyCodeLine{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{SDL\_Window}} *window;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// create instance and window}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// create the Vulkan surface}}
+\DoxyCodeLine{VkSurfaceKHR surface;}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(!\mbox{\hyperlink{_s_d_l__vulkan_8h_a1613884948ea2b2671cea8f43462642b}{SDL\_Vulkan\_CreateSurface}}(window, instance, \&surface))}
+\DoxyCodeLine{    handle\_error();}
+\end{DoxyCode}
+
+
+\begin{DoxyNote}{주의}
+{\itshape window} should have been created with the {\ttfamily S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+V\+U\+L\+K\+AN} flag.
+
+{\itshape instance} should have been created with the extensions returned by {\ttfamily \mbox{\hyperlink{_s_d_l__vulkan_8h_a1613884948ea2b2671cea8f43462642b}{S\+D\+L\+\_\+\+Vulkan\+\_\+\+Create\+Surface()}}} enabled.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__vulkan_8h_a46d6b686f9154e972d6254fc3757bd0d}{S\+D\+L\+\_\+\+Vulkan\+\_\+\+Get\+Instance\+Extensions()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__vulkan_8h_a170ea51b623cbda9f945b37c037d7974}\label{_s_d_l__vulkan_8h_a170ea51b623cbda9f945b37c037d7974}} 
+\index{SDL\_vulkan.h@{SDL\_vulkan.h}!SDL\_Vulkan\_GetDrawableSize@{SDL\_Vulkan\_GetDrawableSize}}
+\index{SDL\_Vulkan\_GetDrawableSize@{SDL\_Vulkan\_GetDrawableSize}!SDL\_vulkan.h@{SDL\_vulkan.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_Vulkan\_GetDrawableSize()}{SDL\_Vulkan\_GetDrawableSize()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Vulkan\+\_\+\+Get\+Drawable\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{int $\ast$}]{w,  }\item[{int $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Get the size of a window\textquotesingle{}s underlying drawable in pixels (for use with setting viewport, scissor \& etc). 
+
+
+\begin{DoxyParams}{매개변수}
+{\em window} & S\+D\+L\+\_\+\+Window from which the drawable size should be queried \\
+\hline
+{\em w} & Pointer to variable for storing the width in pixels, may be N\+U\+LL \\
+\hline
+{\em h} & Pointer to variable for storing the height in pixels, may be N\+U\+LL\\
+\hline
+\end{DoxyParams}
+This may differ from \mbox{\hyperlink{_s_d_l__video_8h_a5cbfffcfec91c22a7ca95fd1d5163db5}{S\+D\+L\+\_\+\+Get\+Window\+Size()}} if we\textquotesingle{}re rendering to a high-\/\+D\+PI drawable, i.\+e. the window was created with S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+A\+L\+L\+O\+W\+\_\+\+H\+I\+G\+H\+D\+PI on a platform with high-\/\+D\+PI support (Apple calls this \char`\"{}\+Retina\char`\"{}), and not disabled by the {\ttfamily S\+D\+L\+\_\+\+H\+I\+N\+T\+\_\+\+V\+I\+D\+E\+O\+\_\+\+H\+I\+G\+H\+D\+P\+I\+\_\+\+D\+I\+S\+A\+B\+L\+ED} hint.
+
+\begin{DoxyNote}{주의}
+On mac\+OS high-\/\+D\+PI support must be enabled for an application by setting N\+S\+High\+Resolution\+Capable to true in its Info.\+plist.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__video_8h_a5cbfffcfec91c22a7ca95fd1d5163db5}{S\+D\+L\+\_\+\+Get\+Window\+Size()}} 
+
+\mbox{\hyperlink{_s_d_l__video_8h_a42565088bdb739a5353fd67abbe235d2}{S\+D\+L\+\_\+\+Create\+Window()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__vulkan_8h_a46d6b686f9154e972d6254fc3757bd0d}\label{_s_d_l__vulkan_8h_a46d6b686f9154e972d6254fc3757bd0d}} 
+\index{SDL\_vulkan.h@{SDL\_vulkan.h}!SDL\_Vulkan\_GetInstanceExtensions@{SDL\_Vulkan\_GetInstanceExtensions}}
+\index{SDL\_Vulkan\_GetInstanceExtensions@{SDL\_Vulkan\_GetInstanceExtensions}!SDL\_vulkan.h@{SDL\_vulkan.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_Vulkan\_GetInstanceExtensions()}{SDL\_Vulkan\_GetInstanceExtensions()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC S\+D\+L\+\_\+bool S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Vulkan\+\_\+\+Get\+Instance\+Extensions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$}]{window,  }\item[{unsigned int $\ast$}]{p\+Count,  }\item[{const char $\ast$$\ast$}]{p\+Names }\end{DoxyParamCaption})}
+
+
+
+Get the names of the Vulkan instance extensions needed to create a surface with {\ttfamily \mbox{\hyperlink{_s_d_l__vulkan_8h_a1613884948ea2b2671cea8f43462642b}{S\+D\+L\+\_\+\+Vulkan\+\_\+\+Create\+Surface()}}}. 
+
+
+\begin{DoxyParams}[1]{매개변수}
+\mbox{\texttt{ in}}  & {\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_s_d_l__vulkan_8h_aee3a196487ad045f8c2b5a0708f5bf55}\label{_s_d_l__vulkan_8h_aee3a196487ad045f8c2b5a0708f5bf55}} 
+\index{SDL\_vulkan.h@{SDL\_vulkan.h}!SDL\_Vulkan\_GetVkGetInstanceProcAddr@{SDL\_Vulkan\_GetVkGetInstanceProcAddr}}
+\index{SDL\_Vulkan\_GetVkGetInstanceProcAddr@{SDL\_Vulkan\_GetVkGetInstanceProcAddr}!SDL\_vulkan.h@{SDL\_vulkan.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_Vulkan\_GetVkGetInstanceProcAddr()}{SDL\_Vulkan\_GetVkGetInstanceProcAddr()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void$\ast$ S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Vulkan\+\_\+\+Get\+Vk\+Get\+Instance\+Proc\+Addr (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the address of the {\ttfamily vk\+Get\+Instance\+Proc\+Addr} function. 
+
+\begin{DoxyNote}{주의}
+This should be called after either calling S\+D\+L\+\_\+\+Vulkan\+\_\+\+Load\+Library or creating an S\+D\+L\+\_\+\+Window with the S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+V\+U\+L\+K\+AN flag. 
+\end{DoxyNote}
+\mbox{\Hypertarget{_s_d_l__vulkan_8h_a9fcc0942c8eaa67c3eff2e3526304b5b}\label{_s_d_l__vulkan_8h_a9fcc0942c8eaa67c3eff2e3526304b5b}} 
+\index{SDL\_vulkan.h@{SDL\_vulkan.h}!SDL\_Vulkan\_LoadLibrary@{SDL\_Vulkan\_LoadLibrary}}
+\index{SDL\_Vulkan\_LoadLibrary@{SDL\_Vulkan\_LoadLibrary}!SDL\_vulkan.h@{SDL\_vulkan.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_Vulkan\_LoadLibrary()}{SDL\_Vulkan\_LoadLibrary()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Vulkan\+\_\+\+Load\+Library (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Dynamically load a Vulkan loader library. 
+
+
+\begin{DoxyParams}[1]{매개변수}
+\mbox{\texttt{ in}}  & {\em path} & The platform dependent Vulkan loader library name, or {\ttfamily N\+U\+LL}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+{\ttfamily 0} on success, or {\ttfamily -\/1} if the library couldn\textquotesingle{}t be loaded.
+\end{DoxyReturn}
+If {\itshape path} is N\+U\+LL S\+DL will use the value of the environment variable {\ttfamily S\+D\+L\+\_\+\+V\+U\+L\+K\+A\+N\+\_\+\+L\+I\+B\+R\+A\+RY}, if set, otherwise it loads the default Vulkan loader library.
+
+This should be called after initializing the video driver, but before creating any Vulkan windows. If no Vulkan loader library is loaded, the default library will be loaded upon creation of the first Vulkan window.
+
+\begin{DoxyNote}{주의}
+It is fairly common for Vulkan applications to link with {\itshape libvulkan} instead of explicitly loading it at run time. This will work with S\+DL provided the application links to a dynamic library and both it and S\+DL use the same search path.
+
+If you specify a non-\/\+N\+U\+LL {\ttfamily path}, an application should retrieve all of the Vulkan functions it uses from the dynamic library using {\ttfamily \mbox{\hyperlink{_s_d_l__vulkan_8h_aee3a196487ad045f8c2b5a0708f5bf55}{S\+D\+L\+\_\+\+Vulkan\+\_\+\+Get\+Vk\+Get\+Instance\+Proc\+Addr()}}} unless you can guarantee {\ttfamily path} points to the same vulkan loader library the application linked to.
+
+On Apple devices, if {\itshape path} is N\+U\+LL, S\+DL will attempt to find the vk\+Get\+Instance\+Proc\+Addr address within all the mach-\/o images of the current process. This is because it is fairly common for Vulkan applications to link with libvulkan (and historically Molten\+VK was provided as a static library). If it is not found then, on mac\+OS, S\+DL will attempt to load {\ttfamily vulkan.\+framework/vulkan}, {\ttfamily libvulkan.\+1.\+dylib}, followed by {\ttfamily libvulkan.\+dylib}, in that order. On i\+OS S\+DL will attempt to load {\ttfamily libvulkan.\+dylib} only. Applications using a dynamic framework or .dylib must ensure it is included in its application bundle.
+
+On non-\/\+Apple devices, application linking with a static libvulkan is not supported. Either do not link to the Vulkan loader or link to a dynamic library version.
+
+This function will fail if there are no working Vulkan drivers installed.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__vulkan_8h_aee3a196487ad045f8c2b5a0708f5bf55}{S\+D\+L\+\_\+\+Vulkan\+\_\+\+Get\+Vk\+Get\+Instance\+Proc\+Addr()}} 
+
+\mbox{\hyperlink{_s_d_l__vulkan_8h_a92970fb6bc833a8cc65217638d599ff2}{S\+D\+L\+\_\+\+Vulkan\+\_\+\+Unload\+Library()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{_s_d_l__vulkan_8h_a92970fb6bc833a8cc65217638d599ff2}\label{_s_d_l__vulkan_8h_a92970fb6bc833a8cc65217638d599ff2}} 
+\index{SDL\_vulkan.h@{SDL\_vulkan.h}!SDL\_Vulkan\_UnloadLibrary@{SDL\_Vulkan\_UnloadLibrary}}
+\index{SDL\_Vulkan\_UnloadLibrary@{SDL\_Vulkan\_UnloadLibrary}!SDL\_vulkan.h@{SDL\_vulkan.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_Vulkan\_UnloadLibrary()}{SDL\_Vulkan\_UnloadLibrary()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Vulkan\+\_\+\+Unload\+Library (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Unload the Vulkan loader library previously loaded by {\ttfamily \mbox{\hyperlink{_s_d_l__vulkan_8h_a9fcc0942c8eaa67c3eff2e3526304b5b}{S\+D\+L\+\_\+\+Vulkan\+\_\+\+Load\+Library()}}}. 
+
+\begin{DoxySeeAlso}{참고}
+\mbox{\hyperlink{_s_d_l__vulkan_8h_a9fcc0942c8eaa67c3eff2e3526304b5b}{S\+D\+L\+\_\+\+Vulkan\+\_\+\+Load\+Library()}} 
+\end{DoxySeeAlso}

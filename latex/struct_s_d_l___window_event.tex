@@ -1,0 +1,82 @@
+\hypertarget{struct_s_d_l___window_event}{}\doxysection{S\+D\+L\+\_\+\+Window\+Event 구조체 참조}
+\label{struct_s_d_l___window_event}\index{SDL\_WindowEvent@{SDL\_WindowEvent}}
+
+
+Window state change event data (event.\+window.$\ast$)  
+
+
+
+
+{\ttfamily \#include $<$S\+D\+L\+\_\+events.\+h$>$}
+
+\doxysubsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+Uint32 \mbox{\hyperlink{struct_s_d_l___window_event_a01c8c8fbe8564e690f958d2db560f657}{type}}
+\item 
+Uint32 \mbox{\hyperlink{struct_s_d_l___window_event_a7b0bf569b20cfa4e3fb76e3301d616f9}{timestamp}}
+\item 
+Uint32 \mbox{\hyperlink{struct_s_d_l___window_event_a4b31796ffc84fbb7f6e9ba33e127619a}{window\+ID}}
+\item 
+Uint8 \mbox{\hyperlink{struct_s_d_l___window_event_a485cd1f07f0f22fdb9f4c4bf214011dc}{event}}
+\item 
+\mbox{\Hypertarget{struct_s_d_l___window_event_a09ee59114246eceed4a281033ec6609b}\label{struct_s_d_l___window_event_a09ee59114246eceed4a281033ec6609b}} 
+Uint8 {\bfseries padding1}
+\item 
+\mbox{\Hypertarget{struct_s_d_l___window_event_a6bcf773b690b894e8c04c591826d0c8a}\label{struct_s_d_l___window_event_a6bcf773b690b894e8c04c591826d0c8a}} 
+Uint8 {\bfseries padding2}
+\item 
+\mbox{\Hypertarget{struct_s_d_l___window_event_ac352263b5fa4ba6dbd64a48062d5e29f}\label{struct_s_d_l___window_event_ac352263b5fa4ba6dbd64a48062d5e29f}} 
+Uint8 {\bfseries padding3}
+\item 
+Sint32 \mbox{\hyperlink{struct_s_d_l___window_event_a01da0025428d3434c80021f3e4089fec}{data1}}
+\item 
+Sint32 \mbox{\hyperlink{struct_s_d_l___window_event_af6cd0a21bc9ecadfee42f6a0147d7171}{data2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+Window state change event data (event.\+window.$\ast$) 
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{struct_s_d_l___window_event_a01da0025428d3434c80021f3e4089fec}\label{struct_s_d_l___window_event_a01da0025428d3434c80021f3e4089fec}} 
+\index{SDL\_WindowEvent@{SDL\_WindowEvent}!data1@{data1}}
+\index{data1@{data1}!SDL\_WindowEvent@{SDL\_WindowEvent}}
+\doxysubsubsection{\texorpdfstring{data1}{data1}}
+{\footnotesize\ttfamily Sint32 S\+D\+L\+\_\+\+Window\+Event\+::data1}
+
+event dependent data \mbox{\Hypertarget{struct_s_d_l___window_event_af6cd0a21bc9ecadfee42f6a0147d7171}\label{struct_s_d_l___window_event_af6cd0a21bc9ecadfee42f6a0147d7171}} 
+\index{SDL\_WindowEvent@{SDL\_WindowEvent}!data2@{data2}}
+\index{data2@{data2}!SDL\_WindowEvent@{SDL\_WindowEvent}}
+\doxysubsubsection{\texorpdfstring{data2}{data2}}
+{\footnotesize\ttfamily Sint32 S\+D\+L\+\_\+\+Window\+Event\+::data2}
+
+event dependent data \mbox{\Hypertarget{struct_s_d_l___window_event_a485cd1f07f0f22fdb9f4c4bf214011dc}\label{struct_s_d_l___window_event_a485cd1f07f0f22fdb9f4c4bf214011dc}} 
+\index{SDL\_WindowEvent@{SDL\_WindowEvent}!event@{event}}
+\index{event@{event}!SDL\_WindowEvent@{SDL\_WindowEvent}}
+\doxysubsubsection{\texorpdfstring{event}{event}}
+{\footnotesize\ttfamily Uint8 S\+D\+L\+\_\+\+Window\+Event\+::event}
+
+\mbox{\hyperlink{_s_d_l__video_8h_ac486b40a4860d980dbc74d0b4adf3bab}{S\+D\+L\+\_\+\+Window\+Event\+ID}} \mbox{\Hypertarget{struct_s_d_l___window_event_a7b0bf569b20cfa4e3fb76e3301d616f9}\label{struct_s_d_l___window_event_a7b0bf569b20cfa4e3fb76e3301d616f9}} 
+\index{SDL\_WindowEvent@{SDL\_WindowEvent}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!SDL\_WindowEvent@{SDL\_WindowEvent}}
+\doxysubsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily Uint32 S\+D\+L\+\_\+\+Window\+Event\+::timestamp}
+
+In milliseconds, populated using \mbox{\hyperlink{_s_d_l__timer_8h_a0b9bc71d6287e0ffafdc3419760fe2b3}{S\+D\+L\+\_\+\+Get\+Ticks()}} \mbox{\Hypertarget{struct_s_d_l___window_event_a01c8c8fbe8564e690f958d2db560f657}\label{struct_s_d_l___window_event_a01c8c8fbe8564e690f958d2db560f657}} 
+\index{SDL\_WindowEvent@{SDL\_WindowEvent}!type@{type}}
+\index{type@{type}!SDL\_WindowEvent@{SDL\_WindowEvent}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily Uint32 S\+D\+L\+\_\+\+Window\+Event\+::type}
+
+\mbox{\hyperlink{_s_d_l__events_8h_a3b589e89be6b35c02e0dd34a55f3fccaa5ff4e41f0d8b5def11cfe6a69ec0b698}{S\+D\+L\+\_\+\+W\+I\+N\+D\+O\+W\+E\+V\+E\+NT}} \mbox{\Hypertarget{struct_s_d_l___window_event_a4b31796ffc84fbb7f6e9ba33e127619a}\label{struct_s_d_l___window_event_a4b31796ffc84fbb7f6e9ba33e127619a}} 
+\index{SDL\_WindowEvent@{SDL\_WindowEvent}!windowID@{windowID}}
+\index{windowID@{windowID}!SDL\_WindowEvent@{SDL\_WindowEvent}}
+\doxysubsubsection{\texorpdfstring{windowID}{windowID}}
+{\footnotesize\ttfamily Uint32 S\+D\+L\+\_\+\+Window\+Event\+::window\+ID}
+
+The associated window 
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+S\+D\+L/include/\mbox{\hyperlink{_s_d_l__events_8h}{S\+D\+L\+\_\+events.\+h}}\end{DoxyCompactItemize}

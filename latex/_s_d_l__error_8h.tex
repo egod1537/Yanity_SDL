@@ -1,0 +1,47 @@
+\hypertarget{_s_d_l__error_8h}{}\doxysection{S\+D\+L/include/\+S\+D\+L\+\_\+error.h 파일 참조}
+\label{_s_d_l__error_8h}\index{SDL/include/SDL\_error.h@{SDL/include/SDL\_error.h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_d_l__error_8h_a26775853eaf43390bbceb27eb21a2240}\label{_s_d_l__error_8h_a26775853eaf43390bbceb27eb21a2240}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+\+Set\+Error} (S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+T\+R\+I\+NG const char $\ast$fmt,...) S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+V\+A\+R\+A\+R\+G\+\_\+\+F\+U\+NC(1)
+\item 
+\mbox{\Hypertarget{_s_d_l__error_8h_af3cc615dad0d5ed6b36cb84cab15ecb6}\label{_s_d_l__error_8h_af3cc615dad0d5ed6b36cb84cab15ecb6}} 
+const D\+E\+C\+L\+S\+P\+EC char $\ast$S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+\+Get\+Error} (void)
+\item 
+\mbox{\Hypertarget{_s_d_l__error_8h_a007ed517953a99a46e46be567ef5609e}\label{_s_d_l__error_8h_a007ed517953a99a46e46be567ef5609e}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+\+Clear\+Error} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Internal error functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_d_l__error_8h_a440edcb93dba4e39c88ecf8dc676b6c1}\label{_s_d_l__error_8h_a440edcb93dba4e39c88ecf8dc676b6c1}} 
+\#define {\bfseries S\+D\+L\+\_\+\+Out\+Of\+Memory}()~S\+D\+L\+\_\+\+Error(S\+D\+L\+\_\+\+E\+N\+O\+M\+EM)
+\item 
+\mbox{\Hypertarget{_s_d_l__error_8h_a45dc695e3a906dd40f00e204ace3bcf5}\label{_s_d_l__error_8h_a45dc695e3a906dd40f00e204ace3bcf5}} 
+\#define {\bfseries S\+D\+L\+\_\+\+Unsupported}()~S\+D\+L\+\_\+\+Error(S\+D\+L\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+ED)
+\item 
+\mbox{\Hypertarget{_s_d_l__error_8h_a5875c9c083a88408e11abeaa8391dfa5}\label{_s_d_l__error_8h_a5875c9c083a88408e11abeaa8391dfa5}} 
+\#define {\bfseries S\+D\+L\+\_\+\+Invalid\+Param\+Error}(param)~S\+D\+L\+\_\+\+Set\+Error(\char`\"{}Parameter \textquotesingle{}\%s\textquotesingle{} is invalid\char`\"{}, (param))
+\item 
+\mbox{\Hypertarget{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1}\label{_s_d_l__error_8h_a5c417ba725f086b33390a5e5d5dabfe1}} 
+enum {\bfseries S\+D\+L\+\_\+errorcode} \{ \newline
+{\bfseries S\+D\+L\+\_\+\+E\+N\+O\+M\+EM}, 
+{\bfseries S\+D\+L\+\_\+\+E\+F\+R\+E\+AD}, 
+{\bfseries S\+D\+L\+\_\+\+E\+F\+W\+R\+I\+TE}, 
+{\bfseries S\+D\+L\+\_\+\+E\+F\+S\+E\+EK}, 
+\newline
+{\bfseries S\+D\+L\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+ED}, 
+{\bfseries S\+D\+L\+\_\+\+L\+A\+S\+T\+E\+R\+R\+OR}
+ \}
+\item 
+\mbox{\Hypertarget{_s_d_l__error_8h_a0ec05915c315049ed2ab74cfe1ff980f}\label{_s_d_l__error_8h_a0ec05915c315049ed2ab74cfe1ff980f}} 
+D\+E\+C\+L\+S\+P\+EC int S\+D\+L\+C\+A\+LL {\bfseries S\+D\+L\+\_\+\+Error} (S\+D\+L\+\_\+errorcode code)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+Simple error message routines for S\+DL. 

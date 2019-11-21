@@ -1,0 +1,194 @@
+\hypertarget{_s_d_l__test__common_8h}{}\doxysection{S\+D\+L/include/\+S\+D\+L\+\_\+test\+\_\+common.h 파일 참조}
+\label{_s_d_l__test__common_8h}\index{SDL/include/SDL\_test\_common.h@{SDL/include/SDL\_test\_common.h}}
+{\ttfamily \#include \char`\"{}S\+D\+L.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\doxysubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_s_d_l_test___common_state}{S\+D\+L\+Test\+\_\+\+Common\+State}}
+\end{DoxyCompactItemize}
+\doxysubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_d_l__test__common_8h_a6ca4df6b9e1495a80a2929a5187cb9b9}\label{_s_d_l__test__common_8h_a6ca4df6b9e1495a80a2929a5187cb9b9}} 
+\#define {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+W\+I\+D\+TH}~640
+\item 
+\mbox{\Hypertarget{_s_d_l__test__common_8h_a030ebc610fddb0a18d62829ab376bf85}\label{_s_d_l__test__common_8h_a030ebc610fddb0a18d62829ab376bf85}} 
+\#define {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+I\+G\+HT}~480
+\item 
+\mbox{\Hypertarget{_s_d_l__test__common_8h_ab5d2ba75c3cd702f1a269c406902ddcb}\label{_s_d_l__test__common_8h_ab5d2ba75c3cd702f1a269c406902ddcb}} 
+\#define {\bfseries V\+E\+R\+B\+O\+S\+E\+\_\+\+V\+I\+D\+EO}~0x00000001
+\item 
+\mbox{\Hypertarget{_s_d_l__test__common_8h_a3a535ac3889907ff97e556a3cae117cc}\label{_s_d_l__test__common_8h_a3a535ac3889907ff97e556a3cae117cc}} 
+\#define {\bfseries V\+E\+R\+B\+O\+S\+E\+\_\+\+M\+O\+D\+ES}~0x00000002
+\item 
+\mbox{\Hypertarget{_s_d_l__test__common_8h_a7bdcd39423e8261d05407ab758feb037}\label{_s_d_l__test__common_8h_a7bdcd39423e8261d05407ab758feb037}} 
+\#define {\bfseries V\+E\+R\+B\+O\+S\+E\+\_\+\+R\+E\+N\+D\+ER}~0x00000004
+\item 
+\mbox{\Hypertarget{_s_d_l__test__common_8h_a3e5a47c9aaa54a2b134b0066f48b4e0c}\label{_s_d_l__test__common_8h_a3e5a47c9aaa54a2b134b0066f48b4e0c}} 
+\#define {\bfseries V\+E\+R\+B\+O\+S\+E\+\_\+\+E\+V\+E\+NT}~0x00000008
+\item 
+\mbox{\Hypertarget{_s_d_l__test__common_8h_ab607cbf4694150235976fc1ef6e68387}\label{_s_d_l__test__common_8h_ab607cbf4694150235976fc1ef6e68387}} 
+\#define {\bfseries V\+E\+R\+B\+O\+S\+E\+\_\+\+A\+U\+D\+IO}~0x00000010
+\end{DoxyCompactItemize}
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_s_d_l_test___common_state}{S\+D\+L\+Test\+\_\+\+Common\+State}} $\ast$ \mbox{\hyperlink{_s_d_l__test__common_8h_a8752973417c10ede61c07fba67c65f7a}{S\+D\+L\+Test\+\_\+\+Common\+Create\+State}} (char $\ast$$\ast$argv, Uint32 flags)
+\begin{DoxyCompactList}\small\item\em Parse command line parameters and create common state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_s_d_l__test__common_8h_a6ffe001ae2299720a92b80812dbc48b9}{S\+D\+L\+Test\+\_\+\+Common\+Arg}} (\mbox{\hyperlink{struct_s_d_l_test___common_state}{S\+D\+L\+Test\+\_\+\+Common\+State}} $\ast$state, int index)
+\begin{DoxyCompactList}\small\item\em Process one common argument. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_d_l__test__common_8h_aa048e9175cca826d9dbd6c5d72284e38}{S\+D\+L\+Test\+\_\+\+Common\+Log\+Usage}} (\mbox{\hyperlink{struct_s_d_l_test___common_state}{S\+D\+L\+Test\+\_\+\+Common\+State}} $\ast$state, const char $\ast$argv0, const char $\ast$$\ast$options)
+\begin{DoxyCompactList}\small\item\em Logs command line usage info. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+bool \mbox{\hyperlink{_s_d_l__test__common_8h_a7405405819a77e317a1edda6be974187}{S\+D\+L\+Test\+\_\+\+Common\+Init}} (\mbox{\hyperlink{struct_s_d_l_test___common_state}{S\+D\+L\+Test\+\_\+\+Common\+State}} $\ast$state)
+\begin{DoxyCompactList}\small\item\em Open test window. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+bool \mbox{\hyperlink{_s_d_l__test__common_8h_a39a960ca01f07491d42008a137db6f1c}{S\+D\+L\+Test\+\_\+\+Common\+Default\+Args}} (\mbox{\hyperlink{struct_s_d_l_test___common_state}{S\+D\+L\+Test\+\_\+\+Common\+State}} $\ast$state, const int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Easy argument handling when test app doesn\textquotesingle{}t need any custom args. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_d_l__test__common_8h_a5fb0eb864d62d6d9f6d932c9abccd1f4}{S\+D\+L\+Test\+\_\+\+Common\+Event}} (\mbox{\hyperlink{struct_s_d_l_test___common_state}{S\+D\+L\+Test\+\_\+\+Common\+State}} $\ast$state, \mbox{\hyperlink{union_s_d_l___event}{S\+D\+L\+\_\+\+Event}} $\ast$event, int $\ast$done)
+\begin{DoxyCompactList}\small\item\em Common event handler for test windows. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_s_d_l__test__common_8h_a2d24c255140a7e90c753eb363ef4d96e}{S\+D\+L\+Test\+\_\+\+Common\+Quit}} (\mbox{\hyperlink{struct_s_d_l_test___common_state}{S\+D\+L\+Test\+\_\+\+Common\+State}} $\ast$state)
+\begin{DoxyCompactList}\small\item\em Close test window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+Include file for S\+DL test framework.
+
+This code is a part of the S\+D\+L2\+\_\+test library, not the main S\+DL library. 
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{_s_d_l__test__common_8h_a6ffe001ae2299720a92b80812dbc48b9}\label{_s_d_l__test__common_8h_a6ffe001ae2299720a92b80812dbc48b9}} 
+\index{SDL\_test\_common.h@{SDL\_test\_common.h}!SDLTest\_CommonArg@{SDLTest\_CommonArg}}
+\index{SDLTest\_CommonArg@{SDLTest\_CommonArg}!SDL\_test\_common.h@{SDL\_test\_common.h}}
+\doxysubsubsection{\texorpdfstring{SDLTest\_CommonArg()}{SDLTest\_CommonArg()}}
+{\footnotesize\ttfamily int S\+D\+L\+Test\+\_\+\+Common\+Arg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l_test___common_state}{S\+D\+L\+Test\+\_\+\+Common\+State}} $\ast$}]{state,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Process one common argument. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em state} & The common state describing the test window to create. \\
+\hline
+{\em index} & The index of the argument to process in argv\mbox{[}\mbox{]}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+The number of arguments processed (i.\+e. 1 for --fullscreen, 2 for --video \mbox{[}videodriver\mbox{]}, or -\/1 on error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__test__common_8h_a8752973417c10ede61c07fba67c65f7a}\label{_s_d_l__test__common_8h_a8752973417c10ede61c07fba67c65f7a}} 
+\index{SDL\_test\_common.h@{SDL\_test\_common.h}!SDLTest\_CommonCreateState@{SDLTest\_CommonCreateState}}
+\index{SDLTest\_CommonCreateState@{SDLTest\_CommonCreateState}!SDL\_test\_common.h@{SDL\_test\_common.h}}
+\doxysubsubsection{\texorpdfstring{SDLTest\_CommonCreateState()}{SDLTest\_CommonCreateState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_d_l_test___common_state}{S\+D\+L\+Test\+\_\+\+Common\+State}}$\ast$ S\+D\+L\+Test\+\_\+\+Common\+Create\+State (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{argv,  }\item[{Uint32}]{flags }\end{DoxyParamCaption})}
+
+
+
+Parse command line parameters and create common state. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em argv} & Array of command line parameters \\
+\hline
+{\em flags} & Flags indicating which subsystem to initialize (i.\+e. S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+V\+I\+D\+EO $\vert$ S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+A\+U\+D\+IO)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+Returns a newly allocated common state object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__test__common_8h_a39a960ca01f07491d42008a137db6f1c}\label{_s_d_l__test__common_8h_a39a960ca01f07491d42008a137db6f1c}} 
+\index{SDL\_test\_common.h@{SDL\_test\_common.h}!SDLTest\_CommonDefaultArgs@{SDLTest\_CommonDefaultArgs}}
+\index{SDLTest\_CommonDefaultArgs@{SDLTest\_CommonDefaultArgs}!SDL\_test\_common.h@{SDL\_test\_common.h}}
+\doxysubsubsection{\texorpdfstring{SDLTest\_CommonDefaultArgs()}{SDLTest\_CommonDefaultArgs()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+bool S\+D\+L\+Test\+\_\+\+Common\+Default\+Args (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l_test___common_state}{S\+D\+L\+Test\+\_\+\+Common\+State}} $\ast$}]{state,  }\item[{const int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Easy argument handling when test app doesn\textquotesingle{}t need any custom args. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em state} & The common state describing the test window to create. \\
+\hline
+{\em argc} & argc, as supplied to S\+D\+L\+\_\+main \\
+\hline
+{\em argv} & argv, as supplied to S\+D\+L\+\_\+main\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+False if app should quit, true otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__test__common_8h_a5fb0eb864d62d6d9f6d932c9abccd1f4}\label{_s_d_l__test__common_8h_a5fb0eb864d62d6d9f6d932c9abccd1f4}} 
+\index{SDL\_test\_common.h@{SDL\_test\_common.h}!SDLTest\_CommonEvent@{SDLTest\_CommonEvent}}
+\index{SDLTest\_CommonEvent@{SDLTest\_CommonEvent}!SDL\_test\_common.h@{SDL\_test\_common.h}}
+\doxysubsubsection{\texorpdfstring{SDLTest\_CommonEvent()}{SDLTest\_CommonEvent()}}
+{\footnotesize\ttfamily void S\+D\+L\+Test\+\_\+\+Common\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l_test___common_state}{S\+D\+L\+Test\+\_\+\+Common\+State}} $\ast$}]{state,  }\item[{\mbox{\hyperlink{union_s_d_l___event}{S\+D\+L\+\_\+\+Event}} $\ast$}]{event,  }\item[{int $\ast$}]{done }\end{DoxyParamCaption})}
+
+
+
+Common event handler for test windows. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em state} & The common state used to create test window. \\
+\hline
+{\em event} & The event to handle. \\
+\hline
+{\em done} & Flag indicating we are done. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_s_d_l__test__common_8h_a7405405819a77e317a1edda6be974187}\label{_s_d_l__test__common_8h_a7405405819a77e317a1edda6be974187}} 
+\index{SDL\_test\_common.h@{SDL\_test\_common.h}!SDLTest\_CommonInit@{SDLTest\_CommonInit}}
+\index{SDLTest\_CommonInit@{SDLTest\_CommonInit}!SDL\_test\_common.h@{SDL\_test\_common.h}}
+\doxysubsubsection{\texorpdfstring{SDLTest\_CommonInit()}{SDLTest\_CommonInit()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+bool S\+D\+L\+Test\+\_\+\+Common\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l_test___common_state}{S\+D\+L\+Test\+\_\+\+Common\+State}} $\ast$}]{state }\end{DoxyParamCaption})}
+
+
+
+Open test window. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em state} & The common state describing the test window to create.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+True if initialization succeeded, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_s_d_l__test__common_8h_aa048e9175cca826d9dbd6c5d72284e38}\label{_s_d_l__test__common_8h_aa048e9175cca826d9dbd6c5d72284e38}} 
+\index{SDL\_test\_common.h@{SDL\_test\_common.h}!SDLTest\_CommonLogUsage@{SDLTest\_CommonLogUsage}}
+\index{SDLTest\_CommonLogUsage@{SDLTest\_CommonLogUsage}!SDL\_test\_common.h@{SDL\_test\_common.h}}
+\doxysubsubsection{\texorpdfstring{SDLTest\_CommonLogUsage()}{SDLTest\_CommonLogUsage()}}
+{\footnotesize\ttfamily void S\+D\+L\+Test\+\_\+\+Common\+Log\+Usage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l_test___common_state}{S\+D\+L\+Test\+\_\+\+Common\+State}} $\ast$}]{state,  }\item[{const char $\ast$}]{argv0,  }\item[{const char $\ast$$\ast$}]{options }\end{DoxyParamCaption})}
+
+
+
+Logs command line usage info. 
+
+This logs the appropriate command line options for the subsystems in use plus other common options, and then any application-\/specific options. This uses the \mbox{\hyperlink{_s_d_l__log_8h_a712dc42164c67b7f9e23dc0e3b15bd92}{S\+D\+L\+\_\+\+Log()}} function and splits up output to be friendly to 80-\/character-\/wide terminals.
+
+
+\begin{DoxyParams}{매개변수}
+{\em state} & The common state describing the test window for the app. \\
+\hline
+{\em argv0} & argv\mbox{[}0\mbox{]}, as passed to main/\+S\+D\+L\+\_\+main. \\
+\hline
+{\em options} & an array of strings for application specific options. The last element of the array should be N\+U\+LL. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_s_d_l__test__common_8h_a2d24c255140a7e90c753eb363ef4d96e}\label{_s_d_l__test__common_8h_a2d24c255140a7e90c753eb363ef4d96e}} 
+\index{SDL\_test\_common.h@{SDL\_test\_common.h}!SDLTest\_CommonQuit@{SDLTest\_CommonQuit}}
+\index{SDLTest\_CommonQuit@{SDLTest\_CommonQuit}!SDL\_test\_common.h@{SDL\_test\_common.h}}
+\doxysubsubsection{\texorpdfstring{SDLTest\_CommonQuit()}{SDLTest\_CommonQuit()}}
+{\footnotesize\ttfamily void S\+D\+L\+Test\+\_\+\+Common\+Quit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_d_l_test___common_state}{S\+D\+L\+Test\+\_\+\+Common\+State}} $\ast$}]{state }\end{DoxyParamCaption})}
+
+
+
+Close test window. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em state} & The common state used to create test window. \\
+\hline
+\end{DoxyParams}

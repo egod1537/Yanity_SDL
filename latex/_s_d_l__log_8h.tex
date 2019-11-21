@@ -1,0 +1,154 @@
+\hypertarget{_s_d_l__log_8h}{}\doxysection{S\+D\+L/include/\+S\+D\+L\+\_\+log.h 파일 참조}
+\label{_s_d_l__log_8h}\index{SDL/include/SDL\_log.h@{SDL/include/SDL\_log.h}}
+{\ttfamily \#include \char`\"{}S\+D\+L\+\_\+stdinc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}begin\+\_\+code.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}close\+\_\+code.\+h\char`\"{}}\newline
+\doxysubsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_s_d_l__log_8h_a06c6de264730f257cdba6188b6aaae12}{S\+D\+L\+\_\+\+M\+A\+X\+\_\+\+L\+O\+G\+\_\+\+M\+E\+S\+S\+A\+GE}}~4096
+\begin{DoxyCompactList}\small\item\em The maximum size of a log message \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_d_l__log_8h_a11c2a5b3bbfd910cf18fbc70cf513e24}\label{_s_d_l__log_8h_a11c2a5b3bbfd910cf18fbc70cf513e24}} 
+typedef void(S\+D\+L\+C\+A\+LL $\ast$ \mbox{\hyperlink{_s_d_l__log_8h_a11c2a5b3bbfd910cf18fbc70cf513e24}{S\+D\+L\+\_\+\+Log\+Output\+Function}}) (void $\ast$userdata, int category, \mbox{\hyperlink{_s_d_l__log_8h_a09e04f1d062a71901f59592c276ad946}{S\+D\+L\+\_\+\+Log\+Priority}} priority, const char $\ast$message)
+\begin{DoxyCompactList}\small\item\em The prototype for the log output function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{열거형 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}, 
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+E\+R\+R\+OR}, 
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+A\+S\+S\+E\+RT}, 
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+S\+Y\+S\+T\+EM}, 
+\newline
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+A\+U\+D\+IO}, 
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+V\+I\+D\+EO}, 
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+R\+E\+N\+D\+ER}, 
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+I\+N\+P\+UT}, 
+\newline
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+T\+E\+ST}, 
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D1}, 
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D2}, 
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D3}, 
+\newline
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D4}, 
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D5}, 
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D6}, 
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D7}, 
+\newline
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D8}, 
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D9}, 
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D10}, 
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+C\+U\+S\+T\+OM}
+ \}
+\begin{DoxyCompactList}\small\item\em The predefined log categories \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__log_8h_a09e04f1d062a71901f59592c276ad946}\label{_s_d_l__log_8h_a09e04f1d062a71901f59592c276ad946}} 
+enum \mbox{\hyperlink{_s_d_l__log_8h_a09e04f1d062a71901f59592c276ad946}{S\+D\+L\+\_\+\+Log\+Priority}} \{ \newline
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+V\+E\+R\+B\+O\+SE} = 1, 
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+D\+E\+B\+UG}, 
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+I\+N\+FO}, 
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+W\+A\+RN}, 
+\newline
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+E\+R\+R\+OR}, 
+{\bfseries S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+C\+R\+I\+T\+I\+C\+AL}, 
+{\bfseries S\+D\+L\+\_\+\+N\+U\+M\+\_\+\+L\+O\+G\+\_\+\+P\+R\+I\+O\+R\+I\+T\+I\+ES}
+ \}
+\begin{DoxyCompactList}\small\item\em The predefined log priorities \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_s_d_l__log_8h_a8f54656094d10994fdb5399f271906ef}\label{_s_d_l__log_8h_a8f54656094d10994fdb5399f271906ef}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__log_8h_a8f54656094d10994fdb5399f271906ef}{S\+D\+L\+\_\+\+Log\+Set\+All\+Priority}} (\mbox{\hyperlink{_s_d_l__log_8h_a09e04f1d062a71901f59592c276ad946}{S\+D\+L\+\_\+\+Log\+Priority}} priority)
+\begin{DoxyCompactList}\small\item\em Set the priority of all log categories \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__log_8h_a9a4809ac7942e029d0bf17f380d23f73}\label{_s_d_l__log_8h_a9a4809ac7942e029d0bf17f380d23f73}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__log_8h_a9a4809ac7942e029d0bf17f380d23f73}{S\+D\+L\+\_\+\+Log\+Set\+Priority}} (int category, \mbox{\hyperlink{_s_d_l__log_8h_a09e04f1d062a71901f59592c276ad946}{S\+D\+L\+\_\+\+Log\+Priority}} priority)
+\begin{DoxyCompactList}\small\item\em Set the priority of a particular log category \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__log_8h_a26f0cff24dadd97d09808b6aaad3f5f4}\label{_s_d_l__log_8h_a26f0cff24dadd97d09808b6aaad3f5f4}} 
+D\+E\+C\+L\+S\+P\+EC \mbox{\hyperlink{_s_d_l__log_8h_a09e04f1d062a71901f59592c276ad946}{S\+D\+L\+\_\+\+Log\+Priority}} S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__log_8h_a26f0cff24dadd97d09808b6aaad3f5f4}{S\+D\+L\+\_\+\+Log\+Get\+Priority}} (int category)
+\begin{DoxyCompactList}\small\item\em Get the priority of a particular log category \end{DoxyCompactList}\item 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__log_8h_acf17b4ea6a83e308c815fd4d50544eba}{S\+D\+L\+\_\+\+Log\+Reset\+Priorities}} (void)
+\begin{DoxyCompactList}\small\item\em Reset all priorities to default. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__log_8h_a712dc42164c67b7f9e23dc0e3b15bd92}\label{_s_d_l__log_8h_a712dc42164c67b7f9e23dc0e3b15bd92}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__log_8h_a712dc42164c67b7f9e23dc0e3b15bd92}{S\+D\+L\+\_\+\+Log}} (S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+T\+R\+I\+NG const char $\ast$fmt,...) S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+V\+A\+R\+A\+R\+G\+\_\+\+F\+U\+NC(1)
+\begin{DoxyCompactList}\small\item\em Log a message with S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+C\+A\+T\+E\+G\+O\+R\+Y\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON and S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+I\+N\+FO \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__log_8h_a34a7d9211a9ced1c1a6db4be0f3fbb7e}\label{_s_d_l__log_8h_a34a7d9211a9ced1c1a6db4be0f3fbb7e}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__log_8h_a34a7d9211a9ced1c1a6db4be0f3fbb7e}{S\+D\+L\+\_\+\+Log\+Verbose}} (int category, S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+T\+R\+I\+NG const char $\ast$fmt,...) S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+V\+A\+R\+A\+R\+G\+\_\+\+F\+U\+NC(2)
+\begin{DoxyCompactList}\small\item\em Log a message with S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+V\+E\+R\+B\+O\+SE \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__log_8h_a0749fe47180b98c04bd82aca7235d703}\label{_s_d_l__log_8h_a0749fe47180b98c04bd82aca7235d703}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__log_8h_a0749fe47180b98c04bd82aca7235d703}{S\+D\+L\+\_\+\+Log\+Debug}} (int category, S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+T\+R\+I\+NG const char $\ast$fmt,...) S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+V\+A\+R\+A\+R\+G\+\_\+\+F\+U\+NC(2)
+\begin{DoxyCompactList}\small\item\em Log a message with S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+D\+E\+B\+UG \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__log_8h_a81c8956ea1a84ad325c3f5ecd2094515}\label{_s_d_l__log_8h_a81c8956ea1a84ad325c3f5ecd2094515}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__log_8h_a81c8956ea1a84ad325c3f5ecd2094515}{S\+D\+L\+\_\+\+Log\+Info}} (int category, S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+T\+R\+I\+NG const char $\ast$fmt,...) S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+V\+A\+R\+A\+R\+G\+\_\+\+F\+U\+NC(2)
+\begin{DoxyCompactList}\small\item\em Log a message with S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+I\+N\+FO \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__log_8h_a91a7a09fec470638f028138626b3d126}\label{_s_d_l__log_8h_a91a7a09fec470638f028138626b3d126}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__log_8h_a91a7a09fec470638f028138626b3d126}{S\+D\+L\+\_\+\+Log\+Warn}} (int category, S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+T\+R\+I\+NG const char $\ast$fmt,...) S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+V\+A\+R\+A\+R\+G\+\_\+\+F\+U\+NC(2)
+\begin{DoxyCompactList}\small\item\em Log a message with S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+W\+A\+RN \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__log_8h_acabe956be51b7a4c877dbfcb0489a02f}\label{_s_d_l__log_8h_acabe956be51b7a4c877dbfcb0489a02f}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__log_8h_acabe956be51b7a4c877dbfcb0489a02f}{S\+D\+L\+\_\+\+Log\+Error}} (int category, S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+T\+R\+I\+NG const char $\ast$fmt,...) S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+V\+A\+R\+A\+R\+G\+\_\+\+F\+U\+NC(2)
+\begin{DoxyCompactList}\small\item\em Log a message with S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+E\+R\+R\+OR \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__log_8h_a3600cf500a030f892d41a61d9d30de19}\label{_s_d_l__log_8h_a3600cf500a030f892d41a61d9d30de19}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__log_8h_a3600cf500a030f892d41a61d9d30de19}{S\+D\+L\+\_\+\+Log\+Critical}} (int category, S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+T\+R\+I\+NG const char $\ast$fmt,...) S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+V\+A\+R\+A\+R\+G\+\_\+\+F\+U\+NC(2)
+\begin{DoxyCompactList}\small\item\em Log a message with S\+D\+L\+\_\+\+L\+O\+G\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+C\+R\+I\+T\+I\+C\+AL \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__log_8h_a7fcfeca9c95069b6432bf1cdb01d0ba4}\label{_s_d_l__log_8h_a7fcfeca9c95069b6432bf1cdb01d0ba4}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__log_8h_a7fcfeca9c95069b6432bf1cdb01d0ba4}{S\+D\+L\+\_\+\+Log\+Message}} (int category, \mbox{\hyperlink{_s_d_l__log_8h_a09e04f1d062a71901f59592c276ad946}{S\+D\+L\+\_\+\+Log\+Priority}} priority, S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+F\+O\+R\+M\+A\+T\+\_\+\+S\+T\+R\+I\+NG const char $\ast$fmt,...) S\+D\+L\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+V\+A\+R\+A\+R\+G\+\_\+\+F\+U\+NC(3)
+\begin{DoxyCompactList}\small\item\em Log a message with the specified category and priority. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__log_8h_a2cacafd4d8e6d258da40e97a3cb3f80b}\label{_s_d_l__log_8h_a2cacafd4d8e6d258da40e97a3cb3f80b}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__log_8h_a2cacafd4d8e6d258da40e97a3cb3f80b}{S\+D\+L\+\_\+\+Log\+MessageV}} (int category, \mbox{\hyperlink{_s_d_l__log_8h_a09e04f1d062a71901f59592c276ad946}{S\+D\+L\+\_\+\+Log\+Priority}} priority, const char $\ast$fmt, va\+\_\+list ap)
+\begin{DoxyCompactList}\small\item\em Log a message with the specified category and priority. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__log_8h_a074ce8cf644b09454ec112084f9f399e}\label{_s_d_l__log_8h_a074ce8cf644b09454ec112084f9f399e}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__log_8h_a074ce8cf644b09454ec112084f9f399e}{S\+D\+L\+\_\+\+Log\+Get\+Output\+Function}} (\mbox{\hyperlink{_s_d_l__log_8h_a11c2a5b3bbfd910cf18fbc70cf513e24}{S\+D\+L\+\_\+\+Log\+Output\+Function}} $\ast$callback, void $\ast$$\ast$userdata)
+\begin{DoxyCompactList}\small\item\em Get the current log output function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_s_d_l__log_8h_a229eb1fdf797f548b20ee98ca8acaac6}\label{_s_d_l__log_8h_a229eb1fdf797f548b20ee98ca8acaac6}} 
+D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL \mbox{\hyperlink{_s_d_l__log_8h_a229eb1fdf797f548b20ee98ca8acaac6}{S\+D\+L\+\_\+\+Log\+Set\+Output\+Function}} (\mbox{\hyperlink{_s_d_l__log_8h_a11c2a5b3bbfd910cf18fbc70cf513e24}{S\+D\+L\+\_\+\+Log\+Output\+Function}} callback, void $\ast$userdata)
+\begin{DoxyCompactList}\small\item\em This function allows you to replace the default log output function with one of your own. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+Simple log messages with categories and priorities.
+
+By default logs are quiet, but if you\textquotesingle{}re debugging S\+DL you might want\+: \begin{DoxyVerb}SDL_LogSetAllPriority(SDL_LOG_PRIORITY_WARN);
+\end{DoxyVerb}
+
+
+Here\textquotesingle{}s where the messages go on different platforms\+: Windows\+: debug output stream Android\+: log output Others\+: standard error output (stderr) 
+
+\doxysubsection{매크로 문서화}
+\mbox{\Hypertarget{_s_d_l__log_8h_a06c6de264730f257cdba6188b6aaae12}\label{_s_d_l__log_8h_a06c6de264730f257cdba6188b6aaae12}} 
+\index{SDL\_log.h@{SDL\_log.h}!SDL\_MAX\_LOG\_MESSAGE@{SDL\_MAX\_LOG\_MESSAGE}}
+\index{SDL\_MAX\_LOG\_MESSAGE@{SDL\_MAX\_LOG\_MESSAGE}!SDL\_log.h@{SDL\_log.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_MAX\_LOG\_MESSAGE}{SDL\_MAX\_LOG\_MESSAGE}}
+{\footnotesize\ttfamily \#define S\+D\+L\+\_\+\+M\+A\+X\+\_\+\+L\+O\+G\+\_\+\+M\+E\+S\+S\+A\+GE~4096}
+
+
+
+The maximum size of a log message 
+
+Messages longer than the maximum size will be truncated 
+
+\doxysubsection{열거형 타입 문서화}
+\mbox{\Hypertarget{_s_d_l__log_8h_abc6126af1d45847bc59afa0aa3216b04}\label{_s_d_l__log_8h_abc6126af1d45847bc59afa0aa3216b04}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+
+
+The predefined log categories 
+
+By default the application category is enabled at the I\+N\+FO level, the assert category is enabled at the W\+A\+RN level, test is enabled at the V\+E\+R\+B\+O\+SE level and all other categories are enabled at the C\+R\+I\+T\+I\+C\+AL level. 
+
+\doxysubsection{함수 문서화}
+\mbox{\Hypertarget{_s_d_l__log_8h_acf17b4ea6a83e308c815fd4d50544eba}\label{_s_d_l__log_8h_acf17b4ea6a83e308c815fd4d50544eba}} 
+\index{SDL\_log.h@{SDL\_log.h}!SDL\_LogResetPriorities@{SDL\_LogResetPriorities}}
+\index{SDL\_LogResetPriorities@{SDL\_LogResetPriorities}!SDL\_log.h@{SDL\_log.h}}
+\doxysubsubsection{\texorpdfstring{SDL\_LogResetPriorities()}{SDL\_LogResetPriorities()}}
+{\footnotesize\ttfamily D\+E\+C\+L\+S\+P\+EC void S\+D\+L\+C\+A\+LL S\+D\+L\+\_\+\+Log\+Reset\+Priorities (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Reset all priorities to default. 
+
+\begin{DoxyNote}{주의}
+This is called in \mbox{\hyperlink{_s_d_l_8h_afdabaf714781099083592051f2d9ac11}{S\+D\+L\+\_\+\+Quit()}}. 
+\end{DoxyNote}
