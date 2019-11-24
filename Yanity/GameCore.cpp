@@ -1,5 +1,9 @@
 #include "GameCore.h"
 
+#include "stdafx.h"
+#include "SDL_stdafx.h"
+#include "GraphicCore.h"
+
 static GameCore* _instance;
 
 void GameCore::Init() {

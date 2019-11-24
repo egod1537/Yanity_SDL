@@ -1,6 +1,7 @@
 #pragma once
 
-#include "GameCore.h"
+#include "SDL_stdafx.h"
+#include "Vector2.h"
 
 class Input {
 

@@ -1,26 +1,30 @@
 #include "PhysX.h"
 
-std::vector<Colider*> Collision;
+#include "Colider.h"
+#include "BoxColider.h"
+#include "SphereColider.h"
 
-bool PhysX::isCollision(Vector2 _pos) {
+#include "Lib.h"
 
-	bool collision = false;
+static PhysX* _instance;
 
-	Lib::Lib_ItrVector<Colider*>(Collision,
-		[&](Colider* _colider) {
+PhysX& PhysX::getInstance() {
 
-			if (_colider->isCollision(_pos)) {
+	if (_instance == nullptr) _instance = new PhysX();
 
-				collision = true;
-				return;
-
-			}
-
-		}
-	);
-
-	return collision;
+	return *_instance;
 
 }
 
-void PhysX::AddColider(Colider* _colider) { Collision.push_back(_colider); }
+void PhysX::Run() {
+
+	Lib::Lib_ItrVector<Colider*>(
+	Coliders,
+	[&](Colider* other) {
+
+		other->Collision();
+
+	}
+	);
+
+}

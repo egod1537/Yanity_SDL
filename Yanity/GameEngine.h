@@ -13,5 +13,3 @@
 
 #include "Components.h"
 #include "Input.h"
-
-#include "PhysX.h"

@@ -1,5 +1,8 @@
 #include "SpriteRenderer.h"
 
+#include "GameObject.h"
+#include "Lib.h"
+
 void SpriteRenderer::Update() {
 
 	Vector2 _scale = gameobject->getScale();
@@ -16,7 +19,7 @@ void SpriteRenderer::Update() {
 
 		GraphicCore::getInstance().
 			DrawTexture(_texture,
-						Lib::ViewPortPosToScreenPos(gameobject->getPosition() - center),
+						gameobject->getPosition() - center,
 						gameobject->transform.Rotation,
 						_size,
 						Pivot);

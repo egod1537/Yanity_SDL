@@ -1,6 +1,7 @@
 #pragma once
 
-#include "GameCore.h"
+#include "Vector2.h"
+#include "Transform.h"
 
 struct RenderBlock {
 
@@ -41,6 +42,8 @@ public:
 	
 	void DrawSquare(SDL_Color, Vector2, Vector2);
 	void DrawFillSquare(SDL_Color, Vector2, Vector2);
+
+	void DrawSphere(SDL_Color, Vector2, float);
 
 	SDL_Texture* LoadTexture(std::string);
 

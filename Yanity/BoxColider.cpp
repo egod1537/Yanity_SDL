@@ -1,17 +1,67 @@
 #include "BoxColider.h"
 
-bool BoxColider::isCollision(Vector2 _pos) {
+#include "SphereColider.h"
+#include "GraphicCore.h"
+#include "Color.h"
 
-	if (!isTrigger) return false;
+void BoxColider::Update() {
 
-	Vector2 trPos = gameobject->transform.Position;
+	if (DebugMode) {
 
-	Vector2 trScale = gameobject->transform.Scale;
+		GraphicCore::getInstance().DrawFillSquare(Color::GREEN(), min, max);
 
-	Vector2 Size1 = Vector2(trPos.x - trScale.x / 2, trPos.y - trScale.y / 2),
-		Size2 = Vector2(trPos.x + trScale.x / 2, trPos.y + trScale.y / 2);
+	}
 
-	return (Size1.x <= _pos.x && _pos.x <= Size2.x
-			|| Size1.y <= _pos.y && _pos.y <= Size2.y);
+	min = gameobject->getPosition() - Scale * 0.5f;
+	max = gameobject->getPosition() + Scale * 0.5f;
+
+}
+
+bool BoxColider::isCollision(BoxColider* _colider) {
+
+	if (max.x < _colider->min.x || min.x > _colider->max.x) return false;
+	if (max.y < _colider->min.y || min.y > _colider->max.y) return false;
+
+	return true;
+
+}
+
+bool BoxColider::isCollision(SphereColider* _colider) {
+
+	return false;
+
+}
+
+void BoxColider::Collision() {
+
+	Rigidbody *rigidbody = gameobject->GetComponenet<Rigidbody*>();
+
+	if (rigidbody == nullptr) return;
+
+	PhysX ph = PhysX::getInstance();
+
+	Lib::Lib_ItrVector<Colider*>(
+	ph.Coliders,
+	[&](Colider* other) {
+
+		if (other != this) {
+
+			bool col = other->isCollision(this);
+
+			if (col) {
+
+				if(!rigidbody->Collision) RunOnEnter(other);
+				else RunOnStay(other);
+				
+			}
+			else
+				if (rigidbody->Collision) RunOnExit(other);
+
+			rigidbody->Collision = (isTrigger) ? false : col;
+
+		}
+
+	}
+	);
 
 }

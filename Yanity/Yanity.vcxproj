@@ -135,6 +135,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BoxColider.cpp" />
+    <ClCompile Include="Colider.cpp" />
     <ClCompile Include="GameCore.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GraphicCore.cpp" />
@@ -143,9 +144,12 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PhysX.cpp" />
     <ClCompile Include="PlayerController.cpp" />
+    <ClCompile Include="Rigidbody.cpp" />
     <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SphereColider.cpp" />
     <ClCompile Include="SpriteRenderer.cpp" />
     <ClCompile Include="temp.cpp" />
+    <ClCompile Include="TestColiderCheck.cpp" />
     <ClCompile Include="Vector2.cpp" />
     <ClCompile Include="WindowManager.cpp" />
   </ItemGroup>
@@ -165,11 +169,13 @@
     <ClInclude Include="OEvent.h" />
     <ClInclude Include="PhysX.h" />
     <ClInclude Include="PlayerController.h" />
+    <ClInclude Include="Rigidbody.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SDL_stdafx.h" />
     <ClInclude Include="SphereColider.h" />
     <ClInclude Include="SpriteRenderer.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TestColiderCheck.h" />
     <ClInclude Include="Transform.h" />
     <ClInclude Include="Vector2.h" />
     <ClInclude Include="WindowManager.h" />

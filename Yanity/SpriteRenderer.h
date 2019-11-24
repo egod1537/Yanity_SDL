@@ -31,11 +31,7 @@ public:
 
 	}
 
-	void Component::Awake() {}
-	void Component::OnEnable() {}
-	void Component::Start() {}
-	void Component::Update();
-	void Component::Destory() {}
+	void Update();
 
 	Vector2 getTextureSize();
 	void setColorTint(int r = 255, int g = 255, int b = 255, int a = 255);

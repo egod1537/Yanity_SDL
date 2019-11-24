@@ -1,8 +1,6 @@
 #pragma once
 
-#include "GraphicCore.h"
-#include "lib_stdafx.h"
-#include "stdafx.h"
+#include "Vector2.h"
 #include "SDL_stdafx.h"
 
 class WindowManager {

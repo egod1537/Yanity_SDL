@@ -18,7 +18,7 @@ SDL_Rect Lib::Vector2ToRect(Vector2 _vec1, Vector2 _vec2) {
 
 	_rect.x = _vec1.x; _rect.y = _vec1.y;
 
-	_rect.w = _vec2.x - _vec1.x; _rect.h = _vec2.y - _vec2.y;
+	_rect.w = _vec2.x - _vec1.x; _rect.h = _vec2.y - _vec1.y;
 
 	return _rect;
 

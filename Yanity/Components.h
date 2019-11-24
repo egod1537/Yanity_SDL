@@ -5,3 +5,7 @@
 #include "PlayerController.h"
 
 #include "BoxColider.h"
+#include "SphereColider.h"
+#include "Rigidbody.h"
+
+#include "TestColiderCheck.h"

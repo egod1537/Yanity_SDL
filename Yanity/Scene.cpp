@@ -1,5 +1,11 @@
 #include "Scene.h"
 
+#include "Lib.h"
+#include "GameObject.h"
+#include "GraphicCore.h"
+#include "Input.h"
+#include "PhysX.h"
+
 void Scene::Enable() {
 
 	isActive = true;
@@ -45,6 +51,7 @@ void Scene::Run() {
 
 	while (isActive) {
 
+		SDL_SetRenderDrawColor(_renderer, 0, 0, 0, 0);
 		SDL_RenderClear(_renderer);
 
 		if (SDL_PollEvent(&Event)) Input::keyStateHandler(Event.key.keysym.sym, Event.type); 
@@ -56,6 +63,8 @@ void Scene::Run() {
 				callback->RunUpdate();
 			}
 		);
+
+		PhysX::getInstance().Run();
 
 		GraphicCore::getInstance().Render();
 

@@ -1,14 +1,22 @@
 #pragma once
 
 #include "stdafx.h"
-#include "Colider.h"
+
+class Colider;
+
+class BoxColider;
+class SphereColider;
 
 class PhysX {
 
 public:
 
-	static bool isCollision(Vector2);
+	PhysX() {}
 
-	static void AddColider(Colider*);
+	std::vector<Colider*> Coliders;
+
+	static PhysX& getInstance();
+
+	void Run();
 
 };

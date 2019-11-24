@@ -99,8 +99,20 @@
     <ClCompile Include="BoxColider.cpp">
       <Filter>소스 파일\Component\SystemComponent\Colider</Filter>
     </ClCompile>
+    <ClCompile Include="SphereColider.cpp">
+      <Filter>소스 파일\Component\SystemComponent\Colider</Filter>
+    </ClCompile>
     <ClCompile Include="PhysX.cpp">
       <Filter>소스 파일\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Colider.cpp">
+      <Filter>소스 파일\Component\SystemComponent\Colider</Filter>
+    </ClCompile>
+    <ClCompile Include="TestColiderCheck.cpp">
+      <Filter>소스 파일\Component\UserComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="Rigidbody.cpp">
+      <Filter>소스 파일\Component\SystemComponent</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -152,14 +164,14 @@
     <ClInclude Include="PlayerController.h">
       <Filter>헤더 파일\Component\UserComponent</Filter>
     </ClInclude>
-    <ClInclude Include="OEvent.h">
-      <Filter>헤더 파일\lib</Filter>
-    </ClInclude>
-    <ClInclude Include="PhysX.h">
-      <Filter>헤더 파일\Engine</Filter>
-    </ClInclude>
     <ClInclude Include="WindowManager.h">
       <Filter>헤더 파일\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>헤더 파일\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="OEvent.h">
+      <Filter>헤더 파일\lib</Filter>
     </ClInclude>
     <ClInclude Include="Colider.h">
       <Filter>헤더 파일\Component\SystemComponent\Colider</Filter>
@@ -170,8 +182,14 @@
     <ClInclude Include="SphereColider.h">
       <Filter>헤더 파일\Component\SystemComponent\Colider</Filter>
     </ClInclude>
-    <ClInclude Include="Color.h">
-      <Filter>헤더 파일\lib</Filter>
+    <ClInclude Include="PhysX.h">
+      <Filter>헤더 파일\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Rigidbody.h">
+      <Filter>헤더 파일\Component\SystemComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="TestColiderCheck.h">
+      <Filter>헤더 파일\Component\UserComponent</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

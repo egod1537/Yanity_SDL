@@ -1,5 +1,7 @@
 #include "WindowManager.h"
 
+#include "GraphicCore.h"
+
 static WindowManager* _instance;
 
 WindowManager& WindowManager::getInstance() {

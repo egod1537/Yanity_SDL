@@ -1,14 +1,18 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 중간 디렉터리(x64\Debug\)에 다른 프로젝트(Yanity.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
 cl : 명령줄 warning D9035: 'Gm' 옵션은 더 이상 사용되지 않으므로 이후 릴리스에서 제거될 예정입니다.
 cl : 명령줄 warning D9030: '/Gm'이(가) 다중 처리와 호환되지 않습니다. /MP 스위치를 무시합니다.
-  Lib.cpp
-e:\desktop\cg++2\yanity\yanity\lib.cpp(19): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-e:\desktop\cg++2\yanity\yanity\lib.cpp(21): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  GraphicCore.cpp
-e:\desktop\cg++2\yanity\yanity\graphiccore.cpp(9): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-e:\desktop\cg++2\yanity\yanity\graphiccore.cpp(33): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-e:\desktop\cg++2\yanity\yanity\graphiccore.cpp(65): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-e:\desktop\cg++2\yanity\yanity\graphiccore.cpp(67): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-e:\desktop\cg++2\yanity\yanity\graphiccore.cpp(69): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  main.cpp
+e:\desktop\yanity\yanity\spriterenderer.h(30): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Rigidbody.cpp
+e:\desktop\yanity\yanity\gameobject.h(74): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  e:\desktop\yanity\yanity\rigidbody.cpp(16): note: 컴파일 중인 함수 템플릿 인스턴스화 'T *GameObject::GetComponenet<BoxColider*>(void)'에 대한 참조를 확인하십시오.
+          with
+          [
+              T=BoxColider *
+          ]
   코드를 생성하고 있습니다...
-  Yanity.vcxproj -> E:\Desktop\CG++2\Yanity\x64\Debug\CG++2.exe
+  건너뛰고 있습니다... (관련된 변경 내용 없음)
+  WindowManager.cpp
+  Input.cpp
+  GameCore.cpp
+  Yanity.vcxproj -> E:\Desktop\Yanity\x64\Debug\CG++2.exe

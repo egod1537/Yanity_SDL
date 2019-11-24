@@ -1,22 +1,20 @@
 #pragma once
 
-#include "PhysX.h"
 #include "Colider.h"
 
 class BoxColider : public Colider {
 
 public:
 
-	Vector2 ColiderScale;
+	Vector2 Scale, min, max;
 
-	BoxColider() : ColiderScale{ Vector2(1, 1) } { PhysX::AddColider(this); }
+	BoxColider() { PhysX::getInstance().Coliders.push_back(this); }
 
-	void Component::Awake() {}
-	void Component::OnEnable() {}
-	void Component::Start() {}
-	void Component::Update() {}
-	void Component::Destory() {}
+	void Update();
 
-	bool Colider::isCollision(Vector2);
+	bool isCollision(BoxColider*);
+	bool isCollision(SphereColider*);
+
+	void Collision();
 
 };

@@ -1,7 +1,8 @@
 #pragma once
 
-#include "GameCore.h"
-#include "Input.h"
+#include "GameObject.h"
+
+class GameObject;
 
 class Scene {
 

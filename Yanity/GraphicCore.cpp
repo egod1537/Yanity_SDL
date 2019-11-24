@@ -1,5 +1,8 @@
 #include "GraphicCore.h"
 
+#include "WindowManager.h"
+#include "Lib.h"
+
 static GraphicCore* _instance;
 
 void GraphicCore::Init() {
@@ -55,6 +58,8 @@ void GraphicCore::DrawTexture(
 	SDL_Texture* _texture, Vector2 _pos,
 	float _angle, Vector2 _scale, Vector2 _pivot) {
 
+	_pos = Lib::ViewPortPosToScreenPos(_pos);
+
 	SDL_Rect src, dst;
 	SDL_Point center;
 
@@ -74,12 +79,15 @@ void GraphicCore::DrawTexture(
 void GraphicCore::DrawTexture(
 	SDL_Texture* _texture, Transform transform) {
 
-	DrawTexture(_texture, transform.Position, transform.Rotation, transform.Scale);
+	DrawTexture(_texture, Lib::ViewPortPosToScreenPos(transform.Position), transform.Rotation, transform.Scale);
 
 }
 
 void GraphicCore::DrawSquare
 (SDL_Color _color, Vector2 _pos1, Vector2 _pos2) {
+
+	_pos1 = Lib::ViewPortPosToScreenPos(_pos1);
+	_pos2 = Lib::ViewPortPosToScreenPos(_pos2);
 
 	SDL_SetRenderDrawColor(renderer, _color.r, _color.g, _color.b, _color.a);
 
@@ -91,11 +99,29 @@ void GraphicCore::DrawSquare
 void GraphicCore::DrawFillSquare
 (SDL_Color _color, Vector2 _pos1, Vector2 _pos2) {
 
+	_pos1 = Lib::ViewPortPosToScreenPos(_pos1);
+	_pos2 = Lib::ViewPortPosToScreenPos(_pos2);
+
 	SDL_SetRenderDrawColor(renderer, _color.r, _color.g, _color.b, _color.a);
 
 	SDL_Rect _rect = Lib::Vector2ToRect(_pos1, _pos2);
 
 	SDL_RenderFillRect(renderer, &_rect);
+
+}
+
+void GraphicCore::DrawSphere
+(SDL_Color _color, Vector2 _pos, float _radius) {
+
+	_radius *= 2;
+
+	SDL_Texture *texture = LoadTexture("img/Sphere.png");
+
+	SDL_SetTextureColorMod(texture, _color.r, _color.g, _color.b);
+
+	SDL_SetTextureAlphaMod(texture, _color.a);
+
+	DrawTexture(texture, _pos - Vector2(1, 1) * _radius * 0.5f, 0, Vector2(1, 1) * _radius);
 
 }
 
