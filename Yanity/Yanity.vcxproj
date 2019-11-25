@@ -95,7 +95,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)\SDL_ttf\include;$(SolutionDir)\SDL_net\include;$(SolutionDir)\SDL_mixer\include;$(SolutionDir)\SDL_image\include;$(SolutionDir)\SDL\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <MinimalRebuild>true</MinimalRebuild>
+      <MinimalRebuild>false</MinimalRebuild>
       <GenerateXMLDocumentationFiles>false</GenerateXMLDocumentationFiles>
       <XMLDocumentationFileName>$(IntDir)</XMLDocumentationFileName>
     </ClCompile>
@@ -135,6 +135,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BoxColider.cpp" />
+    <ClCompile Include="Button.cpp" />
     <ClCompile Include="Colider.cpp" />
     <ClCompile Include="GameCore.cpp" />
     <ClCompile Include="GameObject.cpp" />
@@ -155,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BoxColider.h" />
+    <ClInclude Include="Button.h" />
     <ClInclude Include="Colider.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="Component.h" />

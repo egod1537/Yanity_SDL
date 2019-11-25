@@ -4,6 +4,8 @@
 #include "GraphicCore.h"
 #include "Color.h"
 
+void SphereColider::Awake() { PhysX::getInstance().Coliders.push_back(this); }
+
 void SphereColider::Update() {
 
 	if (DebugMode) {
@@ -14,6 +16,17 @@ void SphereColider::Update() {
 
 }
 
+bool SphereColider::isCollision(Vector2 _pos) {
+
+	float r = Radius;
+
+	r *= r;
+
+	Vector2 trPos = gameobject->getPosition();
+
+	return r > pow((trPos.x - _pos.x), 2) + pow((trPos.y - _pos.y), 2);
+
+}
 bool SphereColider::isCollision(SphereColider* _colider) {
 
 	float r = Radius + _colider->Radius;
@@ -26,7 +39,6 @@ bool SphereColider::isCollision(SphereColider* _colider) {
 	return r > pow((trPos.x - _cPos.x), 2) + pow((trPos.y - _cPos.y), 2);
 
 }
-
 bool SphereColider::isCollision(BoxColider* _colider) {
 
 	return false;
@@ -41,28 +53,38 @@ void SphereColider::Collision() {
 
 	PhysX ph = PhysX::getInstance();
 
+	bool Collision = false;
+
+	Rigidbody *rig;
+
+	int i = 0;
+
 	Lib::Lib_ItrVector<Colider*>(
 		ph.Coliders,
 		[&](Colider* other) {
 
-		if (other != this) {
+		if (other == this) return;
 
-			bool col = other->isCollision(this);
+		bool col = other->isCollision(this);
 
-			if (col) {
+		rig = other->gameobject->GetComponenet<Rigidbody*>();
 
-				if (!rigidbody->Collision) RunOnEnter(other);
-				else RunOnStay(other);
+		if (col) {
 
-			}
-			else
-				if (rigidbody->Collision) RunOnExit(other);
+			if (!rig->Collision) { RunOnEnter(other); }
+			else RunOnStay(other);
 
-			rigidbody->Collision = (isTrigger) ? false : col;
+			Collision = true;
 
 		}
+		else
+			if (rig->Collision) RunOnExit(other);
+
+		if (!rig->Collision) rig->Collision = col;
 
 	}
 	);
+
+	rigidbody->Collision = Collision;
 
 }

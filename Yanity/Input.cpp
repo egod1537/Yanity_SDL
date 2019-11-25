@@ -4,65 +4,33 @@ SDL_Event Event;
 
 Vector2 MousePosition;
 
-std::map<SDL_Keycode, int> KeyState;
+const Uint8* Keystates;
+bool Left = false;
 
-void Input::keyStateHandler(SDL_Keycode _keycode, Uint32 _eventtype) {
+void Input::Handler() {
 
-	KeyState[_keycode] = _eventtype;
+	Keystates = SDL_GetKeyboardState(NULL);
 
-}
-
-bool Input::getKeyDown(SDL_Keycode _key) {return (KeyState[_key] == SDL_KEYDOWN);}
-
-bool Input::getKeyUp(SDL_Keycode _key) { return (KeyState[_key] == SDL_KEYUP); }
-
-bool Input::getMouseLeftClickDown() {
-
-	if (!SDL_PollEvent(&Event)) return false;
-
-	if (Event.type != SDL_MOUSEBUTTONDOWN) return false;
-
-	if (Event.button.button != SDL_BUTTON_LEFT) return false;
-
-	return true;
+	Left = SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(SDL_BUTTON_LEFT);
 
 }
 
-bool Input::getMouseLeftClickUp() {
+bool Input::getKeyDown(int _key) { return Keystates[_key]; }
 
-	if (!SDL_PollEvent(&Event)) return false;
+bool Input::getMouseLeftClickDown() {return Left;}
 
-	if (Event.type != SDL_MOUSEBUTTONUP) return false;
+bool Input::getMouseLeftClickUp() 
+{
 
-	if (Event.button.button != SDL_BUTTON_LEFT) return false;
+	std::cout << "Left : " << Left << ", State : " << (SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(SDL_BUTTON_LEFT)) << "\n";
 
-	return true;
-
-}
-
-bool Input::getMouseRightClickDown() {
-
-	if (!SDL_PollEvent(&Event)) return false;
-
-	if (Event.type != SDL_MOUSEBUTTONDOWN) return false;
-
-	if (Event.button.button != SDL_BUTTON_RIGHT) return false;
-
-	return true;
-	
-}
-
-bool Input::getMouseRightClickUp() {
-
-	if (!SDL_PollEvent(&Event)) return false;
-
-	if (Event.type != SDL_MOUSEBUTTONUP) return false;
-
-	if (Event.button.button != SDL_BUTTON_RIGHT) return false;
-
-	return true;
+	return (Left == true && SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(SDL_BUTTON_LEFT) == false);
 
 }
+
+bool Input::getMouseRightClickDown() { return SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(SDL_BUTTON_RIGHT); }
+
+bool Input::getMouseRightClickUp() {return false;}
 
 Vector2 Input::getMousePosition() {
 

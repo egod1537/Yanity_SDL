@@ -8,10 +8,12 @@ public:
 
 	Vector2 Scale, min, max;
 
-	BoxColider() { PhysX::getInstance().Coliders.push_back(this); }
+	BoxColider(){ }
 
+	void Awake();
 	void Update();
 
+	bool isCollision(Vector2);
 	bool isCollision(BoxColider*);
 	bool isCollision(SphereColider*);
 

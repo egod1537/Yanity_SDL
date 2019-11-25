@@ -18,6 +18,7 @@ public:
 
 	virtual void Collision() {}
 
+	virtual bool isCollision(Vector2) { return false; }
 	virtual bool isCollision(BoxColider*) { return false; }
 	virtual bool isCollision(SphereColider*) { return false; }
 

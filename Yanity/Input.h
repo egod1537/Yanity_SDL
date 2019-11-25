@@ -9,10 +9,9 @@ public:
 
 	Input() {}
 
-	static void keyStateHandler(SDL_Keycode _keycode, Uint32 _eventtype);
+	static void Handler();
 
-	static bool getKeyDown(SDL_Keycode _key);
-	static bool getKeyUp(SDL_Keycode _key);
+	static bool getKeyDown(int);
 
 	static bool getMouseLeftClickDown();
 	static bool getMouseLeftClickUp();

@@ -8,10 +8,12 @@ public:
 
 	float Radius;
 
-	SphereColider() { PhysX::getInstance().Coliders.push_back(this); }
+	SphereColider() { }
 
+	void Awake();
 	void Update();
 
+	bool isCollision(Vector2);
 	bool isCollision(BoxColider*);
 	bool isCollision(SphereColider*);
 

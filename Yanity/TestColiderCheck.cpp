@@ -14,7 +14,7 @@ void TestColiderCheck::OnTriggerEnter(Colider* other) {
 
 void TestColiderCheck::OnColiderStay(Colider* other) {
 
-	//std::cout << "Colider Stay\n";
+	std::cout << "Colider Stay\n";
 
 }
 

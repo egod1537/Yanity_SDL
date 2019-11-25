@@ -22,6 +22,8 @@ void Rigidbody::MovePosition(Vector2 _pos) {
 
 		boxColider->Collision();
 
+		if (boxColider->isTrigger) return;
+
 	}
 
 	#pragma endregion
@@ -30,7 +32,13 @@ void Rigidbody::MovePosition(Vector2 _pos) {
 
 	SphereColider *sphereColider = gameobject->GetComponenet<SphereColider*>();
 
-	if (sphereColider != nullptr) sphereColider->Collision();
+	if (sphereColider != nullptr) {
+
+		sphereColider->Collision();
+
+		if (sphereColider->isTrigger) return;
+
+	}
 
 	#pragma endregion
 

@@ -10,12 +10,10 @@ public:
 
 	bool isActive = false;
 
-	std::vector<GameObject*> listGameObeject;
+	std::vector<GameObject*> listGameObject;
 
 	void Enable();
 	void Disable();
-
-	void Run();
 
 	void AddGameObject(GameObject* gameobject);
 
