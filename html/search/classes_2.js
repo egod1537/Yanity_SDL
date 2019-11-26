@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['colider_1308',['Colider',['../class_colider.html',1,'']]],
-  ['color_1309',['Color',['../class_color.html',1,'']]],
-  ['component_1310',['Component',['../class_component.html',1,'']]]
+  ['gamecore_88',['GameCore',['../class_game_core.html',1,'']]],
+  ['gameobject_89',['GameObject',['../class_game_object.html',1,'']]],
+  ['graphiccore_90',['GraphicCore',['../class_graphic_core.html',1,'']]]
 ];

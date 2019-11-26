@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['gamecore_74',['GameCore',['../class_game_core.html',1,'']]],
-  ['gameobject_75',['GameObject',['../class_game_object.html',1,'']]],
-  ['getinstance_76',['getInstance',['../class_game_core.html#a17e48fbd2ef7774535a0a5cbfc9a9463',1,'GameCore']]],
-  ['graphiccore_77',['GraphicCore',['../class_graphic_core.html',1,'']]]
+  ['lib_31',['Lib',['../class_lib.html',1,'']]],
+  ['loadtexture_32',['LoadTexture',['../class_graphic_core.html#a2f09f46509760c465a6947f6770b179a',1,'GraphicCore']]]
 ];

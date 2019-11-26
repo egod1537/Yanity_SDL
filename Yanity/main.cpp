@@ -1,3 +1,7 @@
+///@mainpage Yanity Document Page
+///@author wethinknewrise
+///@date 2019-11-27
+
 #include "GameEngine.h"
 
 int main(int argc, char* args[]) {

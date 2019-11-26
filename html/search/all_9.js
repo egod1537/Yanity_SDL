@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['input_83',['Input',['../class_input.html',1,'']]],
-  ['int_84',['int',['../struct_s_d_l___r_wops.html#ab303bcbb0f6742a141ba8b2998923f47',1,'SDL_RWops']]],
-  ['interval_85',['interval',['../struct_s_d_l___haptic_constant.html#ab1f7f0df856f4cf1fdf937cb886226b4',1,'SDL_HapticConstant::interval()'],['../struct_s_d_l___haptic_periodic.html#a076d266e917098d89b2385b631629162',1,'SDL_HapticPeriodic::interval()'],['../struct_s_d_l___haptic_condition.html#aafc182abea1078bed7e9cf5d0e713ea2',1,'SDL_HapticCondition::interval()'],['../struct_s_d_l___haptic_ramp.html#a4b89d108cfa7e96ea58b58771334c33d',1,'SDL_HapticRamp::interval()'],['../struct_s_d_l___haptic_custom.html#afdeb26b1709254545e00a59a0a6c360c',1,'SDL_HapticCustom::interval()']]],
-  ['ipaddress_86',['IPaddress',['../struct_i_paddress.html',1,'']]],
-  ['iscapture_87',['iscapture',['../struct_s_d_l___audio_device_event.html#a1482dcd50b47046ef8e9bfa7cc7457d9',1,'SDL_AudioDeviceEvent']]],
-  ['ios_88',['iOS',['../md__s_d_l_docs__r_e_a_d_m_e-ios.html',1,'']]]
+  ['oevent_36',['OEvent',['../class_o_event.html',1,'']]],
+  ['oncoliderenter_37',['OnColiderEnter',['../class_component.html#abbc2bf42faeedc04041d56685e8afbc3',1,'Component::OnColiderEnter()'],['../class_test_colider_check.html#a48e9f042b4f9e3bc8de76795ac2cf692',1,'TestColiderCheck::OnColiderEnter()']]],
+  ['oncoliderexit_38',['OnColiderExit',['../class_component.html#a1c8fc2086fe181c87a685c315547da03',1,'Component::OnColiderExit()'],['../class_test_colider_check.html#a92ad89cf20415e8528bc8cf1523808a3',1,'TestColiderCheck::OnColiderExit()']]],
+  ['oncoliderstay_39',['OnColiderStay',['../class_component.html#aaadd6be57e953627f8be27a7665abe6b',1,'Component::OnColiderStay()'],['../class_test_colider_check.html#aa0a23cea9faf9273a7baed5dcbbf7846',1,'TestColiderCheck::OnColiderStay()']]],
+  ['onenable_40',['OnEnable',['../class_component.html#a0203b02cea981c919d1196d01881e0b0',1,'Component']]],
+  ['ontriggerenter_41',['OnTriggerEnter',['../class_component.html#a4377ad88e195119af262ac769ee130f0',1,'Component::OnTriggerEnter()'],['../class_test_colider_check.html#a070812bc55edba43310702142f6fa05a',1,'TestColiderCheck::OnTriggerEnter()']]],
+  ['ontriggerexit_42',['OnTriggerExit',['../class_component.html#afd5bcb9f1ba36988b5dbd795a735080e',1,'Component::OnTriggerExit()'],['../class_test_colider_check.html#a139465c40cda9d7f14e45a8f3fbdf32b',1,'TestColiderCheck::OnTriggerExit()']]],
+  ['ontriggerstay_43',['OnTriggerStay',['../class_component.html#a6d2bcd686bd7d07bf4a38665fba218b0',1,'Component::OnTriggerStay()'],['../class_test_colider_check.html#a768d3e863b670a03864e595a7f063968',1,'TestColiderCheck::OnTriggerStay()']]]
 ];

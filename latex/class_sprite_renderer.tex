@@ -1,62 +1,79 @@
-\hypertarget{class_sprite_renderer}{}\doxysection{Sprite\+Renderer 클래스 참조}
+\hypertarget{class_sprite_renderer}{}\doxysection{Sprite\+Renderer Class Reference}
 \label{class_sprite_renderer}\index{SpriteRenderer@{SpriteRenderer}}
-Sprite\+Renderer에 대한 상속 다이어그램 \+: \begin{figure}[H]
+
+
+화면에 Sprite를 출력해주는 Component입니다.  
+
+
+
+
+{\ttfamily \#include $<$Sprite\+Renderer.\+h$>$}
+
+Inheritance diagram for Sprite\+Renderer\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=2.000000cm]{class_sprite_renderer}
 \end{center}
 \end{figure}
-\doxysubsection*{Public 멤버 함수}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_sprite_renderer_a4b8f458c73ff1093bea4344048eb7cc1}\label{class_sprite_renderer_a4b8f458c73ff1093bea4344048eb7cc1}} 
-{\bfseries Sprite\+Renderer} (std\+::string \+\_\+img\+\_\+path)
-\item 
-\mbox{\Hypertarget{class_sprite_renderer_a853b3f5b00d9967efcc5ca78193ab41c}\label{class_sprite_renderer_a853b3f5b00d9967efcc5ca78193ab41c}} 
-void {\bfseries Component\+::\+Awake} ()
-\item 
-\mbox{\Hypertarget{class_sprite_renderer_a22fb22fde8183642ec85e8df09db2e00}\label{class_sprite_renderer_a22fb22fde8183642ec85e8df09db2e00}} 
-void {\bfseries Component\+::\+On\+Enable} ()
-\item 
-\mbox{\Hypertarget{class_sprite_renderer_a5ab367e2ff72ee5f28e27c2c475858e6}\label{class_sprite_renderer_a5ab367e2ff72ee5f28e27c2c475858e6}} 
-void {\bfseries Component\+::\+Start} ()
-\item 
-\mbox{\Hypertarget{class_sprite_renderer_aee8bbe5fa2acb146ea184bb2a0172bdf}\label{class_sprite_renderer_aee8bbe5fa2acb146ea184bb2a0172bdf}} 
-void {\bfseries Component\+::\+Update} ()
-\item 
-\mbox{\Hypertarget{class_sprite_renderer_ac95e7d59685f5209b95dc3f89675d5e1}\label{class_sprite_renderer_ac95e7d59685f5209b95dc3f89675d5e1}} 
-void {\bfseries Component\+::\+Destory} ()
-\item 
+\mbox{\hyperlink{class_sprite_renderer_a4b8f458c73ff1093bea4344048eb7cc1}{Sprite\+Renderer}} (std\+::string \+\_\+img\+\_\+path)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_sprite_renderer}{Sprite\+Renderer}} 생성자 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sprite_renderer_a42bbfcfec2c9412ae320cf50fdf13c54}\label{class_sprite_renderer_a42bbfcfec2c9412ae320cf50fdf13c54}} 
+void \mbox{\hyperlink{class_sprite_renderer_a42bbfcfec2c9412ae320cf50fdf13c54}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Component가 Frame Upadte 될 때 실행되는 Callback Method. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_sprite_renderer_ad15637eb29f8dba324500c0d5222c98f}\label{class_sprite_renderer_ad15637eb29f8dba324500c0d5222c98f}} 
-\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries get\+Texture\+Size} ()
-\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_sprite_renderer_ad15637eb29f8dba324500c0d5222c98f}{get\+Texture\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Sprite의 본래 이미지 크기를 가져옵니다. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_sprite_renderer_aee6eda722b0fe41e1b7c65376fb7cf7c}\label{class_sprite_renderer_aee6eda722b0fe41e1b7c65376fb7cf7c}} 
-void {\bfseries set\+Color\+Tint} (int r=255, int g=255, int b=255, int a=255)
-\end{DoxyCompactItemize}
-\doxysubsection*{Public 속성}
+void \mbox{\hyperlink{class_sprite_renderer_aee6eda722b0fe41e1b7c65376fb7cf7c}{set\+Color\+Tint}} (int r=255, int g=255, int b=255, int a=255)
+\begin{DoxyCompactList}\small\item\em Sprite의 \mbox{\hyperlink{class_color}{Color}} Tint를 설정합니다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_sprite_renderer_a4ca8a82cf807e618194ed0c6a64aac45}\label{class_sprite_renderer_a4ca8a82cf807e618194ed0c6a64aac45}} 
-std\+::string {\bfseries img\+\_\+path}
-\item 
+std\+::string \mbox{\hyperlink{class_sprite_renderer_a4ca8a82cf807e618194ed0c6a64aac45}{img\+\_\+path}}
+\begin{DoxyCompactList}\small\item\em Sprite의 파일 경로 입니다. 기본적으로 \char`\"{}img/\char`\"{}를 가르킵니다. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_sprite_renderer_aa75de924501a3a2d1db46f261b294e45}\label{class_sprite_renderer_aa75de924501a3a2d1db46f261b294e45}} 
 S\+D\+L\+\_\+\+Texture $\ast$ {\bfseries \+\_\+texture}
 \item 
 \mbox{\Hypertarget{class_sprite_renderer_ad8c56a7f283c5bcf4d825d5a6f52c430}\label{class_sprite_renderer_ad8c56a7f283c5bcf4d825d5a6f52c430}} 
-\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries Size}
-\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_sprite_renderer_ad8c56a7f283c5bcf4d825d5a6f52c430}{Size}}
+\begin{DoxyCompactList}\small\item\em Sprite의 본래 이미지 크기 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_sprite_renderer_a3976238eff7773ba472ce7a691494a81}\label{class_sprite_renderer_a3976238eff7773ba472ce7a691494a81}} 
-\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries Pivot}
-\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_sprite_renderer_a3976238eff7773ba472ce7a691494a81}{Pivot}}
+\begin{DoxyCompactList}\small\item\em Sprite의 Pivot. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_sprite_renderer_aafdd3269f6d4610ae48c23916ad762eb}\label{class_sprite_renderer_aafdd3269f6d4610ae48c23916ad762eb}} 
-\mbox{\hyperlink{struct_s_d_l___color}{S\+D\+L\+\_\+\+Color}} {\bfseries Color\+Tint}
-\item 
+S\+D\+L\+\_\+\+Color \mbox{\hyperlink{class_sprite_renderer_aafdd3269f6d4610ae48c23916ad762eb}{Color\+Tint}}
+\begin{DoxyCompactList}\small\item\em Sprite에 덧 씌우는 \mbox{\hyperlink{class_color}{Color}} Filter. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_sprite_renderer_a65cc72fff4dd219a4994d1a823d69280}\label{class_sprite_renderer_a65cc72fff4dd219a4994d1a823d69280}} 
-int {\bfseries Depth}
-\end{DoxyCompactItemize}
+int \mbox{\hyperlink{class_sprite_renderer_a65cc72fff4dd219a4994d1a823d69280}{Depth}}
+\begin{DoxyCompactList}\small\item\em Sprite Render 순서 낮을 수록 먼저 Render 됩니다. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\doxysubsection{Detailed Description}
+화면에 Sprite를 출력해주는 Component입니다. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sprite_renderer_a4b8f458c73ff1093bea4344048eb7cc1}\label{class_sprite_renderer_a4b8f458c73ff1093bea4344048eb7cc1}} 
+\index{SpriteRenderer@{SpriteRenderer}!SpriteRenderer@{SpriteRenderer}}
+\index{SpriteRenderer@{SpriteRenderer}!SpriteRenderer@{SpriteRenderer}}
+\doxysubsubsection{\texorpdfstring{SpriteRenderer()}{SpriteRenderer()}}
+{\footnotesize\ttfamily Sprite\+Renderer\+::\+Sprite\+Renderer (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+img\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_sprite_renderer}{Sprite\+Renderer}} 생성자 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \+\_\+img\+\_\+path \+: Sprite 파일 경로 \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 Yanity/Sprite\+Renderer.\+h\item 
 Yanity/Sprite\+Renderer.\+cpp\end{DoxyCompactItemize}

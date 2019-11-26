@@ -1,0 +1,64 @@
+\hypertarget{class_rigidbody}{}\doxysection{Rigidbody Class Reference}
+\label{class_rigidbody}\index{Rigidbody@{Rigidbody}}
+
+
+Game\+Object에 물리를 적용시키는 Component입니다.  
+
+
+
+
+{\ttfamily \#include $<$Rigidbody.\+h$>$}
+
+Inheritance diagram for Rigidbody\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_rigidbody}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_rigidbody_a1852da49abe111a1da9d1365ed971f8c}{Move\+Position}} (\mbox{\hyperlink{class_vector2}{Vector2}})
+\begin{DoxyCompactList}\small\item\em 물리를 포함한 \mbox{\hyperlink{class_game_object}{Game\+Object}} 이동하는 함수 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_rigidbody_abd218783295c710fb63ca3e89ecaf8e9}\label{class_rigidbody_abd218783295c710fb63ca3e89ecaf8e9}} 
+bool \mbox{\hyperlink{class_rigidbody_abd218783295c710fb63ca3e89ecaf8e9}{Collision}} = false
+\begin{DoxyCompactList}\small\item\em 현재 충돌 상태 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Game\+Object에 물리를 적용시키는 Component입니다. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]아직 미구현한 항목들이 많다.
+\begin{DoxyItemize}
+\item Box \mbox{\hyperlink{class_colider}{Colider}} vs Sphere \mbox{\hyperlink{class_colider}{Colider}} 충돌 처리
+\item 반사 벡터
+\item 중력 
+\end{DoxyItemize}\end{DoxyRefDesc}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_rigidbody_a1852da49abe111a1da9d1365ed971f8c}\label{class_rigidbody_a1852da49abe111a1da9d1365ed971f8c}} 
+\index{Rigidbody@{Rigidbody}!MovePosition@{MovePosition}}
+\index{MovePosition@{MovePosition}!Rigidbody@{Rigidbody}}
+\doxysubsubsection{\texorpdfstring{MovePosition()}{MovePosition()}}
+{\footnotesize\ttfamily void Rigidbody\+::\+Move\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+물리를 포함한 \mbox{\hyperlink{class_game_object}{Game\+Object}} 이동하는 함수 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_vector2}{Vector2}}} & \+: 이동할 \mbox{\hyperlink{class_vector2}{Vector2}} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Yanity/Rigidbody.\+h\item 
+Yanity/Rigidbody.\+cpp\end{DoxyCompactItemize}

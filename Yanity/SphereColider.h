@@ -2,11 +2,12 @@
 
 #include "Colider.h"
 
+///@brief Sphere 형태의 Colider 컴포넌트 입니다.
 class SphereColider : public Colider {
 
 public:
 
-	float Radius;
+	float Radius; ///< SphereColider의 반지름
 
 	SphereColider() { }
 

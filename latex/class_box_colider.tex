@@ -1,40 +1,125 @@
-\hypertarget{class_box_colider}{}\doxysection{Box\+Colider 클래스 참조}
+\hypertarget{class_box_colider}{}\doxysection{Box\+Colider Class Reference}
 \label{class_box_colider}\index{BoxColider@{BoxColider}}
-Box\+Colider에 대한 상속 다이어그램 \+: \begin{figure}[H]
+
+
+Box 형태의 \mbox{\hyperlink{class_colider}{Colider}} 컴포넌트 입니다.  
+
+
+
+
+{\ttfamily \#include $<$Box\+Colider.\+h$>$}
+
+Inheritance diagram for Box\+Colider\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[height=3.000000cm]{class_box_colider}
 \end{center}
 \end{figure}
-\doxysubsection*{Public 멤버 함수}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_box_colider_a99ed50bda783a4f7bde69e267d7fd49c}\label{class_box_colider_a99ed50bda783a4f7bde69e267d7fd49c}} 
-void {\bfseries Component\+::\+Awake} ()
-\item 
-\mbox{\Hypertarget{class_box_colider_ac6b18f01aee0a35ca56625131344a24d}\label{class_box_colider_ac6b18f01aee0a35ca56625131344a24d}} 
-void {\bfseries Component\+::\+On\+Enable} ()
-\item 
-\mbox{\Hypertarget{class_box_colider_a6e2a3b36cf8f21b532d09b5da01da43b}\label{class_box_colider_a6e2a3b36cf8f21b532d09b5da01da43b}} 
-void {\bfseries Component\+::\+Start} ()
-\item 
-\mbox{\Hypertarget{class_box_colider_a17dd7f8a8cfaa1ce6a97b765d69cdc43}\label{class_box_colider_a17dd7f8a8cfaa1ce6a97b765d69cdc43}} 
-void {\bfseries Component\+::\+Update} ()
-\item 
-\mbox{\Hypertarget{class_box_colider_a684162dfbc132454f41bfad9e8f96912}\label{class_box_colider_a684162dfbc132454f41bfad9e8f96912}} 
-void {\bfseries Component\+::\+Destory} ()
-\item 
-\mbox{\Hypertarget{class_box_colider_a4cb3e424a71d00979847ea9b2e95b661}\label{class_box_colider_a4cb3e424a71d00979847ea9b2e95b661}} 
-bool {\bfseries Colider\+::is\+Collision} (\mbox{\hyperlink{class_vector2}{Vector2}})
-\end{DoxyCompactItemize}
-\doxysubsection*{Public 속성}
+\mbox{\Hypertarget{class_box_colider_a161cd25ead54202c5851a83b12e03db4}\label{class_box_colider_a161cd25ead54202c5851a83b12e03db4}} 
+void \mbox{\hyperlink{class_box_colider_a161cd25ead54202c5851a83b12e03db4}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em 오브젝트가 초기화 될 때 실행되는 callback Method \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_box_colider_af0ce1854ff00a9b1a3069d9916901e16}\label{class_box_colider_af0ce1854ff00a9b1a3069d9916901e16}} 
+void \mbox{\hyperlink{class_box_colider_af0ce1854ff00a9b1a3069d9916901e16}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Component가 Frame Upadte 될 때 실행되는 Callback Method. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_box_colider_a3dd951e0ae6f4f5e7527d4d3e76b428f}{is\+Collision}} (\mbox{\hyperlink{class_vector2}{Vector2}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_vector2}{Vector2}} Vertex이 Box\+Colider에 포함되는지 확인 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_box_colider_ab435bb31fab432fa80a4dbebd55560dd}{is\+Collision}} (\mbox{\hyperlink{class_box_colider}{Box\+Colider}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Box\+Colider가 Box\+Colider에 포함되는지 확인 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_box_colider_aed04bddfcd0c8b90201d577d9082fd01}{is\+Collision}} (\mbox{\hyperlink{class_sphere_colider}{Sphere\+Colider}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Sphere\+Colider이 Box\+Colider에 포함되는지 확인 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_box_colider_a3333e3ebf978350f350b98982c39ec9c}\label{class_box_colider_a3333e3ebf978350f350b98982c39ec9c}} 
+void \mbox{\hyperlink{class_box_colider_a3333e3ebf978350f350b98982c39ec9c}{Collision}} ()
+\begin{DoxyCompactList}\small\item\em 충돌 확인 및 \mbox{\hyperlink{class_colider}{Colider}} Callback Method 실행 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_box_colider_a6e47fc657885b5569daef2a4aee35a52}\label{class_box_colider_a6e47fc657885b5569daef2a4aee35a52}} 
-\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries Colider\+Scale}
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{class_box_colider_a0bc954dabe18f3e5ea85c1632b280f8b}\label{class_box_colider_a0bc954dabe18f3e5ea85c1632b280f8b}} 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_box_colider_a0bc954dabe18f3e5ea85c1632b280f8b}{Scale}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_box_colider}{Box\+Colider}} 중심을 시작인 크기 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_box_colider_a5726d0cb9ff4e97f3b84c6a4ed87e9b5}\label{class_box_colider_a5726d0cb9ff4e97f3b84c6a4ed87e9b5}} 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_box_colider_a5726d0cb9ff4e97f3b84c6a4ed87e9b5}{min}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_box_colider}{Box\+Colider}} 시작점 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_box_colider_ae126dd4a9101b9169641f978614f967d}\label{class_box_colider_ae126dd4a9101b9169641f978614f967d}} 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_box_colider_ae126dd4a9101b9169641f978614f967d}{max}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_box_colider}{Box\+Colider}} 끝점 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\doxysubsection{Detailed Description}
+Box 형태의 \mbox{\hyperlink{class_colider}{Colider}} 컴포넌트 입니다. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_box_colider_ab435bb31fab432fa80a4dbebd55560dd}\label{class_box_colider_ab435bb31fab432fa80a4dbebd55560dd}} 
+\index{BoxColider@{BoxColider}!isCollision@{isCollision}}
+\index{isCollision@{isCollision}!BoxColider@{BoxColider}}
+\doxysubsubsection{\texorpdfstring{isCollision()}{isCollision()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool Box\+Colider\+::is\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_box_colider}{Box\+Colider}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Box\+Colider가 Box\+Colider에 포함되는지 확인 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Box\+Colider$\ast$} & \+: 대상 Box\+Colider$\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+포함되면 true, 이외에는 false 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_colider_ac4c474b4780ee6c07ccaf508e401e94b}{Colider}}.
+
+\mbox{\Hypertarget{class_box_colider_aed04bddfcd0c8b90201d577d9082fd01}\label{class_box_colider_aed04bddfcd0c8b90201d577d9082fd01}} 
+\index{BoxColider@{BoxColider}!isCollision@{isCollision}}
+\index{isCollision@{isCollision}!BoxColider@{BoxColider}}
+\doxysubsubsection{\texorpdfstring{isCollision()}{isCollision()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool Box\+Colider\+::is\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sphere_colider}{Sphere\+Colider}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sphere\+Colider이 Box\+Colider에 포함되는지 확인 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Sphere\+Colider$\ast$} & \+: 대상 Sphere\+Colider$\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+포함되면 true, 이외에는 false 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_colider_a798a2305727af64e790d5f70107d46d1}{Colider}}.
+
+\mbox{\Hypertarget{class_box_colider_a3dd951e0ae6f4f5e7527d4d3e76b428f}\label{class_box_colider_a3dd951e0ae6f4f5e7527d4d3e76b428f}} 
+\index{BoxColider@{BoxColider}!isCollision@{isCollision}}
+\index{isCollision@{isCollision}!BoxColider@{BoxColider}}
+\doxysubsubsection{\texorpdfstring{isCollision()}{isCollision()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool Box\+Colider\+::is\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_vector2}{Vector2}} Vertex이 Box\+Colider에 포함되는지 확인 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_vector2}{Vector2}}} & \+: Pos 확인할 점 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+포함되면 true, 이외에는 false 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_colider_a49405ed08ec421d3a0a2ad4b87fe75c3}{Colider}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Yanity/Box\+Colider.\+h\end{DoxyCompactItemize}
+Yanity/Box\+Colider.\+h\item 
+Yanity/Box\+Colider.\+cpp\end{DoxyCompactItemize}

@@ -1,11 +1,11 @@
-\hypertarget{class_game_object}{}\doxysection{Game\+Object 클래스 참조}
+\hypertarget{class_game_object}{}\doxysection{Game\+Object Class Reference}
 \label{class_game_object}\index{GameObject@{GameObject}}
-\doxysubsection*{클래스}
+\doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{class_game_object_1_1_builder}{Builder}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Public 멤버 함수}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_game_object_a5547a5e16dc964d4005c88810012aa83}\label{class_game_object_a5547a5e16dc964d4005c88810012aa83}} 
@@ -26,6 +26,24 @@ void {\bfseries Run\+Destroy} ()
 \mbox{\Hypertarget{class_game_object_a5f02658d9977fba0e95422b85e39b067}\label{class_game_object_a5f02658d9977fba0e95422b85e39b067}} 
 void {\bfseries Run\+On\+Enable} ()
 \item 
+\mbox{\Hypertarget{class_game_object_a3119a4212bae52f408503ddd46dd2926}\label{class_game_object_a3119a4212bae52f408503ddd46dd2926}} 
+void {\bfseries Run\+On\+Colider\+Enter} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
+\item 
+\mbox{\Hypertarget{class_game_object_a7553c792047cd39a71036353f557a1b7}\label{class_game_object_a7553c792047cd39a71036353f557a1b7}} 
+void {\bfseries Run\+On\+Colider\+Stay} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
+\item 
+\mbox{\Hypertarget{class_game_object_a6c493d5309f8c33a08d24c7c999d8381}\label{class_game_object_a6c493d5309f8c33a08d24c7c999d8381}} 
+void {\bfseries Run\+On\+Colider\+Exit} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
+\item 
+\mbox{\Hypertarget{class_game_object_a00292e06a91d0b88038a0e9ee5673b40}\label{class_game_object_a00292e06a91d0b88038a0e9ee5673b40}} 
+void {\bfseries Run\+On\+Trigger\+Enter} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
+\item 
+\mbox{\Hypertarget{class_game_object_a9e68babda836b27001ec7b204b5d21bf}\label{class_game_object_a9e68babda836b27001ec7b204b5d21bf}} 
+void {\bfseries Run\+On\+Trigger\+Stay} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
+\item 
+\mbox{\Hypertarget{class_game_object_ab0327ad84a8d522db700c1d5aaacc3b1}\label{class_game_object_ab0327ad84a8d522db700c1d5aaacc3b1}} 
+void {\bfseries Run\+On\+Trigger\+Exit} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
+\item 
 \mbox{\Hypertarget{class_game_object_afe72426e1fb00885fc736dbae0030d81}\label{class_game_object_afe72426e1fb00885fc736dbae0030d81}} 
 void {\bfseries Enable} ()
 \item 
@@ -41,26 +59,47 @@ void {\bfseries Add\+Component} (\mbox{\hyperlink{class_component}{Component}} $
 \mbox{\Hypertarget{class_game_object_ad9b65fe0831fdf8c447539e60e86c875}\label{class_game_object_ad9b65fe0831fdf8c447539e60e86c875}} 
 \mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries get\+Local\+Position} ()
 \item 
+\mbox{\Hypertarget{class_game_object_abb228e65e6526a0d8623c56c7f8e1d6f}\label{class_game_object_abb228e65e6526a0d8623c56c7f8e1d6f}} 
+void {\bfseries set\+Local\+Position} (\mbox{\hyperlink{class_vector2}{Vector2}})
+\item 
 \mbox{\Hypertarget{class_game_object_a5da507fb010080921e78cd6a531a52c2}\label{class_game_object_a5da507fb010080921e78cd6a531a52c2}} 
 float {\bfseries get\+Local\+Rotation} ()
+\item 
+\mbox{\Hypertarget{class_game_object_ad98fabb4f644e19fa0cbcc38d1fbe647}\label{class_game_object_ad98fabb4f644e19fa0cbcc38d1fbe647}} 
+void {\bfseries set\+Local\+Rotation} (float)
 \item 
 \mbox{\Hypertarget{class_game_object_a793abf30f8036fbfff7b7211566c8b89}\label{class_game_object_a793abf30f8036fbfff7b7211566c8b89}} 
 \mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries get\+Local\+Scale} ()
 \item 
+\mbox{\Hypertarget{class_game_object_add0dbcfb3840d2d58328e606ec090b49}\label{class_game_object_add0dbcfb3840d2d58328e606ec090b49}} 
+void {\bfseries set\+Local\+Scale} (\mbox{\hyperlink{class_vector2}{Vector2}})
+\item 
 \mbox{\Hypertarget{class_game_object_a8f579dedcf9539924c65131b31687757}\label{class_game_object_a8f579dedcf9539924c65131b31687757}} 
 \mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries get\+Position} ()
+\item 
+\mbox{\Hypertarget{class_game_object_aef36adda1c0aee190b35bb1d37778a79}\label{class_game_object_aef36adda1c0aee190b35bb1d37778a79}} 
+void {\bfseries set\+Position} (\mbox{\hyperlink{class_vector2}{Vector2}})
 \item 
 \mbox{\Hypertarget{class_game_object_a475fb0bf4b62321c40d0a94c8c7c4f74}\label{class_game_object_a475fb0bf4b62321c40d0a94c8c7c4f74}} 
 float {\bfseries get\+Rotation} ()
 \item 
+\mbox{\Hypertarget{class_game_object_a9b8a3958c7a317ce532efe13aa2bc5bd}\label{class_game_object_a9b8a3958c7a317ce532efe13aa2bc5bd}} 
+void {\bfseries set\+Rotation} (float)
+\item 
 \mbox{\Hypertarget{class_game_object_ad98b347b0815312451a7e613671778f4}\label{class_game_object_ad98b347b0815312451a7e613671778f4}} 
 \mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries get\+Scale} ()
+\item 
+\mbox{\Hypertarget{class_game_object_a424fca58902b93a66fe30ae051108583}\label{class_game_object_a424fca58902b93a66fe30ae051108583}} 
+void {\bfseries set\+Scale} (\mbox{\hyperlink{class_vector2}{Vector2}})
 \end{DoxyCompactItemize}
-\doxysubsection*{Public 속성}
+\doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_game_object_a6dce128635639c95ec25525845233234}\label{class_game_object_a6dce128635639c95ec25525845233234}} 
 bool {\bfseries is\+Enable} = true
+\item 
+\mbox{\Hypertarget{class_game_object_a3e3a27a4cf69093b5f76afe70f0fe288}\label{class_game_object_a3e3a27a4cf69093b5f76afe70f0fe288}} 
+std\+::string {\bfseries Name}
 \item 
 \mbox{\Hypertarget{class_game_object_aca9d47509902bba733b217e5e3e96977}\label{class_game_object_aca9d47509902bba733b217e5e3e96977}} 
 \mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$ {\bfseries Parent}
@@ -73,7 +112,7 @@ std\+::vector$<$ \mbox{\hyperlink{class_component}{Component}} $\ast$ $>$ {\bfse
 \end{DoxyCompactItemize}
 
 
-이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 Yanity/Game\+Object.\+h\item 
 Yanity/Game\+Object.\+cpp\end{DoxyCompactItemize}

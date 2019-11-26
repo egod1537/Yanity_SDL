@@ -1,18 +1,13 @@
 var searchData=
 [
-  ['large_5fmagnitude_96',['large_magnitude',['../struct_s_d_l___haptic_left_right.html#a8cd16fe2200ef10cc4f3b4209adef959',1,'SDL_HapticLeftRight']]],
-  ['left_5fcoeff_97',['left_coeff',['../struct_s_d_l___haptic_condition.html#a2adf52c32f60f0b6826b1e3add2eae7a',1,'SDL_HapticCondition']]],
-  ['left_5fsat_98',['left_sat',['../struct_s_d_l___haptic_condition.html#a953448774c40818a4f47c6efea21124d',1,'SDL_HapticCondition']]],
-  ['leftright_99',['leftright',['../union_s_d_l___haptic_effect.html#a3c254b81c1ff41c7888eee0cd0076a12',1,'SDL_HapticEffect']]],
-  ['len_100',['len',['../struct_s_d_l___audio_c_v_t.html#aeaeb8c5a63c3ab96471fbfdf412c78ff',1,'SDL_AudioCVT']]],
-  ['len_5fcvt_101',['len_cvt',['../struct_s_d_l___audio_c_v_t.html#a5c60163f34d1947e5b166c23aba9879d',1,'SDL_AudioCVT']]],
-  ['len_5fmult_102',['len_mult',['../struct_s_d_l___audio_c_v_t.html#ac9662d47cf2348b82b27b151150116b0',1,'SDL_AudioCVT']]],
-  ['len_5fratio_103',['len_ratio',['../struct_s_d_l___audio_c_v_t.html#a5628ff5ccf711de9d77c0a4a9f57d2f0',1,'SDL_AudioCVT']]],
-  ['length_104',['length',['../struct_s_d_l___text_editing_event.html#adca95505c0bf212834930df58f6d1aa5',1,'SDL_TextEditingEvent::length()'],['../struct_s_d_l___haptic_constant.html#aeb994c356b1d236b060f277d157e98ec',1,'SDL_HapticConstant::length()'],['../struct_s_d_l___haptic_periodic.html#a0ef0b17c54aaa5c99886c2a618444026',1,'SDL_HapticPeriodic::length()'],['../struct_s_d_l___haptic_condition.html#ad0efb0a6ddc20f058e87199eaaa95978',1,'SDL_HapticCondition::length()'],['../struct_s_d_l___haptic_ramp.html#a57e75237507701405af2a3caf34cdb5a',1,'SDL_HapticRamp::length()'],['../struct_s_d_l___haptic_left_right.html#a5b942fee53f1ec77d3fb91a6e89b0196',1,'SDL_HapticLeftRight::length()'],['../struct_s_d_l___haptic_custom.html#ad70e8bc2cff74b99d704a757c16b363f',1,'SDL_HapticCustom::length()']]],
-  ['level_105',['level',['../struct_s_d_l___haptic_constant.html#a5b095eea77464623ed57af15f29f4ca6',1,'SDL_HapticConstant']]],
-  ['lib_106',['Lib',['../class_lib.html',1,'']]],
-  ['lock_5fdata_107',['lock_data',['../struct_s_d_l___surface.html#a0afacfb933b54a9af0846a307a6924fb',1,'SDL_Surface']]],
-  ['locked_108',['locked',['../struct_s_d_l___surface.html#a5022edaeea1c0a055fa5d6dccba41de2',1,'SDL_Surface']]],
-  ['lparam_109',['lParam',['../struct_s_d_l___sys_w_mmsg.html#a24c1e4c3cb8d9781d34e5d99df66ac36',1,'SDL_SysWMmsg']]],
-  ['linux_110',['Linux',['../md__s_d_l_docs__r_e_a_d_m_e-linux.html',1,'']]]
+  ['scale_63',['Scale',['../class_box_colider.html#a0bc954dabe18f3e5ea85c1632b280f8b',1,'BoxColider::Scale()'],['../struct_transform.html#ac618f1bd30efc5bf71d7fd57bf319221',1,'Transform::Scale()']]],
+  ['scene_64',['Scene',['../class_scene.html',1,'']]],
+  ['setcolortint_65',['setColorTint',['../class_sprite_renderer.html#aee6eda722b0fe41e1b7c65376fb7cf7c',1,'SpriteRenderer']]],
+  ['setwindowicon_66',['SetWindowIcon',['../class_window_manager.html#a0ad7169cdb239701cc58272697e0b624',1,'WindowManager']]],
+  ['setwindowname_67',['SetWindowName',['../class_window_manager.html#ada1595236ac4d1d1302bac5681abee42',1,'WindowManager']]],
+  ['setwindowsize_68',['SetWindowSize',['../class_window_manager.html#a7d3fe456558b4efcd7946db585831c7b',1,'WindowManager']]],
+  ['size_69',['Size',['../class_sprite_renderer.html#ad8c56a7f283c5bcf4d825d5a6f52c430',1,'SpriteRenderer']]],
+  ['spherecolider_70',['SphereColider',['../class_sphere_colider.html',1,'']]],
+  ['spriterenderer_71',['SpriteRenderer',['../class_sprite_renderer.html',1,'SpriteRenderer'],['../class_sprite_renderer.html#a4b8f458c73ff1093bea4344048eb7cc1',1,'SpriteRenderer::SpriteRenderer()']]],
+  ['start_72',['Start',['../class_button.html#ac8483ba97daf06584361b2e4bdee8749',1,'Button::Start()'],['../class_component.html#a3f57807787e0015833ccffd83fb63d14',1,'Component::Start()']]]
 ];

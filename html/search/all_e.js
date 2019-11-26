@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['native_20client_127',['Native Client',['../md__s_d_l_docs__r_e_a_d_m_e-nacl.html',1,'']]],
-  ['name_128',['name',['../struct_s_d_l___renderer_info.html#a433ecb2865c81ba9f28038e56a4ae6f3',1,'SDL_RendererInfo']]],
-  ['needed_129',['needed',['../struct_s_d_l___audio_c_v_t.html#ac600a035a48df05e14d3712fd6953ad4',1,'SDL_AudioCVT']]],
-  ['num_5ftexture_5fformats_130',['num_texture_formats',['../struct_s_d_l___renderer_info.html#acdec165b2053b914313f5996983ec6b8',1,'SDL_RendererInfo']]]
+  ['update_77',['Update',['../class_box_colider.html#af0ce1854ff00a9b1a3069d9916901e16',1,'BoxColider::Update()'],['../class_button.html#a23e8bc9ad05142244ea4e79a406a6c9c',1,'Button::Update()'],['../class_colider.html#ac83aa2a1d96104a4f13d8388d6a257a0',1,'Colider::Update()'],['../class_component.html#aaf2ce6dc5752072492f790ad4c7955bb',1,'Component::Update()'],['../class_player_controller.html#a2e0c380d64a88c8cfe60ce8452921227',1,'PlayerController::Update()'],['../class_sphere_colider.html#a5dca476cb100f93c40336adfdbdaa460',1,'SphereColider::Update()'],['../class_sprite_renderer.html#a42bbfcfec2c9412ae320cf50fdf13c54',1,'SpriteRenderer::Update()']]]
 ];

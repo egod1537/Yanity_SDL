@@ -1,4 +1,4 @@
-LATEX_CMD=xelatex
+LATEX_CMD=pdflatex
 
 all: refman.pdf
 

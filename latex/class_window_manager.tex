@@ -1,26 +1,83 @@
-\hypertarget{class_window_manager}{}\doxysection{Window\+Manager 클래스 참조}
+\hypertarget{class_window_manager}{}\doxysection{Window\+Manager Class Reference}
 \label{class_window_manager}\index{WindowManager@{WindowManager}}
-\doxysubsection*{Public 멤버 함수}
+
+
+Window Form을 관리해주는 class입니다.  
+
+
+
+
+{\ttfamily \#include $<$Window\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_window_manager_a1537e44e24f52b8182de5175d2531dc9}\label{class_window_manager_a1537e44e24f52b8182de5175d2531dc9}} 
-void {\bfseries Set\+Window\+Name} (std\+::string \+\_\+name)
-\item 
-\mbox{\Hypertarget{class_window_manager_a19f62d2ff510a05c325c6d7609791b7f}\label{class_window_manager_a19f62d2ff510a05c325c6d7609791b7f}} 
-void {\bfseries Set\+Window\+Icon} (\mbox{\hyperlink{struct_s_d_l___surface}{S\+D\+L\+\_\+\+Surface}} $\ast$\+\_\+img)
-\item 
-\mbox{\Hypertarget{class_window_manager_a1b55cb47e68919776db74e38f3e0e3e4}\label{class_window_manager_a1b55cb47e68919776db74e38f3e0e3e4}} 
-void {\bfseries Set\+Window\+Size} (\mbox{\hyperlink{class_vector2}{Vector2}} \+\_\+vec)
-\end{DoxyCompactItemize}
-\doxysubsection*{정적 Public 멤버 함수}
+void \mbox{\hyperlink{class_window_manager_ada1595236ac4d1d1302bac5681abee42}{Set\+Window\+Name}} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Window Form의 이름을 정해줍니다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_manager_a0ad7169cdb239701cc58272697e0b624}{Set\+Window\+Icon}} (S\+D\+L\+\_\+\+Surface $\ast$)
+\begin{DoxyCompactList}\small\item\em Window Form의 아이콘을 정해줍니다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_window_manager_a7d3fe456558b4efcd7946db585831c7b}{Set\+Window\+Size}} (\mbox{\hyperlink{class_vector2}{Vector2}})
+\begin{DoxyCompactList}\small\item\em Window Form의 크기를 정해줍니다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_window_manager_a4f5e8cf13cbe4f2d80f3dbcf7f3fb2eb}\label{class_window_manager_a4f5e8cf13cbe4f2d80f3dbcf7f3fb2eb}} 
-static \mbox{\hyperlink{class_window_manager}{Window\+Manager}} \& {\bfseries get\+Instance} ()
-\end{DoxyCompactItemize}
+static \mbox{\hyperlink{class_window_manager}{Window\+Manager}} \& \mbox{\hyperlink{class_window_manager_a4f5e8cf13cbe4f2d80f3dbcf7f3fb2eb}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Singleton Method. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\doxysubsection{Detailed Description}
+Window Form을 관리해주는 class입니다. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_window_manager_a0ad7169cdb239701cc58272697e0b624}\label{class_window_manager_a0ad7169cdb239701cc58272697e0b624}} 
+\index{WindowManager@{WindowManager}!SetWindowIcon@{SetWindowIcon}}
+\index{SetWindowIcon@{SetWindowIcon}!WindowManager@{WindowManager}}
+\doxysubsubsection{\texorpdfstring{SetWindowIcon()}{SetWindowIcon()}}
+{\footnotesize\ttfamily void Window\+Manager\+::\+Set\+Window\+Icon (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{\+\_\+img }\end{DoxyParamCaption})}
+
+
+
+Window Form의 아이콘을 정해줍니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Surface} & \+: 아이콘의 Surface \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_window_manager_ada1595236ac4d1d1302bac5681abee42}\label{class_window_manager_ada1595236ac4d1d1302bac5681abee42}} 
+\index{WindowManager@{WindowManager}!SetWindowName@{SetWindowName}}
+\index{SetWindowName@{SetWindowName}!WindowManager@{WindowManager}}
+\doxysubsubsection{\texorpdfstring{SetWindowName()}{SetWindowName()}}
+{\footnotesize\ttfamily void Window\+Manager\+::\+Set\+Window\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Window Form의 이름을 정해줍니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \+: 이름 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_window_manager_a7d3fe456558b4efcd7946db585831c7b}\label{class_window_manager_a7d3fe456558b4efcd7946db585831c7b}} 
+\index{WindowManager@{WindowManager}!SetWindowSize@{SetWindowSize}}
+\index{SetWindowSize@{SetWindowSize}!WindowManager@{WindowManager}}
+\doxysubsubsection{\texorpdfstring{SetWindowSize()}{SetWindowSize()}}
+{\footnotesize\ttfamily void Window\+Manager\+::\+Set\+Window\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+vec }\end{DoxyParamCaption})}
+
+
+
+Window Form의 크기를 정해줍니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_vector2}{Vector2}}} & \+: 크기 x, y \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 Yanity/Window\+Manager.\+h\item 
 Yanity/Window\+Manager.\+cpp\end{DoxyCompactItemize}

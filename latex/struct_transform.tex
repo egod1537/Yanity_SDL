@@ -1,25 +1,61 @@
-\hypertarget{struct_transform}{}\doxysection{Transform 구조체 참조}
+\hypertarget{struct_transform}{}\doxysection{Transform Struct Reference}
 \label{struct_transform}\index{Transform@{Transform}}
-\doxysubsection*{Public 멤버 함수}
+
+
+Obejct에서 위치, 각도, 크기 정보를 가진 struct입니다.  
+
+
+
+
+{\ttfamily \#include $<$Transform.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{struct_transform_a7b72f667a4eebbb399e393f8ada635d1}\label{struct_transform_a7b72f667a4eebbb399e393f8ada635d1}} 
-{\bfseries Transform} (\mbox{\hyperlink{class_vector2}{Vector2}} \+\_\+pos, float \+\_\+angle, \mbox{\hyperlink{class_vector2}{Vector2}} \+\_\+scale)
-\end{DoxyCompactItemize}
-\doxysubsection*{Public 속성}
+\mbox{\Hypertarget{struct_transform_aa08ca4266efabc768973cdeea51945ab}\label{struct_transform_aa08ca4266efabc768973cdeea51945ab}} 
+\mbox{\hyperlink{struct_transform_aa08ca4266efabc768973cdeea51945ab}{Transform}} ()
+\begin{DoxyCompactList}\small\item\em Transform의 생성자 입니다. 인자가 비어있으면 알아서 초기화가 됩니다. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_transform_a7b72f667a4eebbb399e393f8ada635d1}{Transform}} (\mbox{\hyperlink{class_vector2}{Vector2}} \+\_\+pos, float \+\_\+angle, \mbox{\hyperlink{class_vector2}{Vector2}} \+\_\+scale)
+\begin{DoxyCompactList}\small\item\em Transform의 생성자입니다. 직접 값을 대입할 수 있습니다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{struct_transform_ae9737941143652227c8ec0c9cdbad401}\label{struct_transform_ae9737941143652227c8ec0c9cdbad401}} 
-\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries Position}
-\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{struct_transform_ae9737941143652227c8ec0c9cdbad401}{Position}}
+\begin{DoxyCompactList}\small\item\em Object의 위치 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{struct_transform_ac618f1bd30efc5bf71d7fd57bf319221}\label{struct_transform_ac618f1bd30efc5bf71d7fd57bf319221}} 
-\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries Scale}
-\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{struct_transform_ac618f1bd30efc5bf71d7fd57bf319221}{Scale}}
+\begin{DoxyCompactList}\small\item\em Object의 크기 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{struct_transform_a71a6a4d39085257b7e7afe39d38f48ad}\label{struct_transform_a71a6a4d39085257b7e7afe39d38f48ad}} 
-float {\bfseries Rotation}
-\end{DoxyCompactItemize}
+float \mbox{\hyperlink{struct_transform_a71a6a4d39085257b7e7afe39d38f48ad}{Rotation}}
+\begin{DoxyCompactList}\small\item\em Object의 각도 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\doxysubsection{Detailed Description}
+Obejct에서 위치, 각도, 크기 정보를 가진 struct입니다. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_transform_a7b72f667a4eebbb399e393f8ada635d1}\label{struct_transform_a7b72f667a4eebbb399e393f8ada635d1}} 
+\index{Transform@{Transform}!Transform@{Transform}}
+\index{Transform@{Transform}!Transform@{Transform}}
+\doxysubsubsection{\texorpdfstring{Transform()}{Transform()}}
+{\footnotesize\ttfamily Transform\+::\+Transform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+pos,  }\item[{float}]{\+\_\+angle,  }\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transform의 생성자입니다. 직접 값을 대입할 수 있습니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_vector2}{Vector2}}} & \+\_\+pos \+: Object의 위치 \\
+\hline
+{\em float} & \+\_\+angle \+: Object의 각도 \\
+\hline
+{\em \mbox{\hyperlink{class_vector2}{Vector2}}} & \+\_\+scale \+: Object의 크기 \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
 Yanity/Transform.\+h\end{DoxyCompactItemize}

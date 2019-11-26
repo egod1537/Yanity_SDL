@@ -1,0 +1,119 @@
+\hypertarget{class_sphere_colider}{}\doxysection{Sphere\+Colider Class Reference}
+\label{class_sphere_colider}\index{SphereColider@{SphereColider}}
+
+
+Sphere 형태의 \mbox{\hyperlink{class_colider}{Colider}} 컴포넌트 입니다.  
+
+
+
+
+{\ttfamily \#include $<$Sphere\+Colider.\+h$>$}
+
+Inheritance diagram for Sphere\+Colider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_sphere_colider}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sphere_colider_af975a07ddddd7837e45ef400e71a5dac}\label{class_sphere_colider_af975a07ddddd7837e45ef400e71a5dac}} 
+void \mbox{\hyperlink{class_sphere_colider_af975a07ddddd7837e45ef400e71a5dac}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em 오브젝트가 초기화 될 때 실행되는 callback Method \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sphere_colider_a5dca476cb100f93c40336adfdbdaa460}\label{class_sphere_colider_a5dca476cb100f93c40336adfdbdaa460}} 
+void \mbox{\hyperlink{class_sphere_colider_a5dca476cb100f93c40336adfdbdaa460}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Component가 Frame Upadte 될 때 실행되는 Callback Method. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sphere_colider_a7abd8ccfff1d3d4137c3429594978668}{is\+Collision}} (\mbox{\hyperlink{class_vector2}{Vector2}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_vector2}{Vector2}} Vertex이 Box\+Colider에 포함되는지 확인 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sphere_colider_aa6bd329c4821e20e054717e600e9ce2f}{is\+Collision}} (\mbox{\hyperlink{class_box_colider}{Box\+Colider}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Box\+Colider가 Box\+Colider에 포함되는지 확인 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_sphere_colider_a3016885c385f4c6e5f2ef3f238b47ea8}{is\+Collision}} (\mbox{\hyperlink{class_sphere_colider}{Sphere\+Colider}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Sphere\+Colider이 Box\+Colider에 포함되는지 확인 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sphere_colider_acb8f554b8a7842f7800e272a043a37ed}\label{class_sphere_colider_acb8f554b8a7842f7800e272a043a37ed}} 
+void \mbox{\hyperlink{class_sphere_colider_acb8f554b8a7842f7800e272a043a37ed}{Collision}} ()
+\begin{DoxyCompactList}\small\item\em 충돌 확인 및 \mbox{\hyperlink{class_colider}{Colider}} Callback Method 실행 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sphere_colider_aacdba0658a24c96ea3f130b83f508157}\label{class_sphere_colider_aacdba0658a24c96ea3f130b83f508157}} 
+float \mbox{\hyperlink{class_sphere_colider_aacdba0658a24c96ea3f130b83f508157}{Radius}}
+\begin{DoxyCompactList}\small\item\em Sphere\+Colider의 반지름 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sphere 형태의 \mbox{\hyperlink{class_colider}{Colider}} 컴포넌트 입니다. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sphere_colider_aa6bd329c4821e20e054717e600e9ce2f}\label{class_sphere_colider_aa6bd329c4821e20e054717e600e9ce2f}} 
+\index{SphereColider@{SphereColider}!isCollision@{isCollision}}
+\index{isCollision@{isCollision}!SphereColider@{SphereColider}}
+\doxysubsubsection{\texorpdfstring{isCollision()}{isCollision()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool Sphere\+Colider\+::is\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_box_colider}{Box\+Colider}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Box\+Colider가 Box\+Colider에 포함되는지 확인 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Box\+Colider$\ast$} & \+: 대상 Box\+Colider$\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+포함되면 true, 이외에는 false 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_colider_ac4c474b4780ee6c07ccaf508e401e94b}{Colider}}.
+
+\mbox{\Hypertarget{class_sphere_colider_a3016885c385f4c6e5f2ef3f238b47ea8}\label{class_sphere_colider_a3016885c385f4c6e5f2ef3f238b47ea8}} 
+\index{SphereColider@{SphereColider}!isCollision@{isCollision}}
+\index{isCollision@{isCollision}!SphereColider@{SphereColider}}
+\doxysubsubsection{\texorpdfstring{isCollision()}{isCollision()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool Sphere\+Colider\+::is\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_sphere_colider}{Sphere\+Colider}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sphere\+Colider이 Box\+Colider에 포함되는지 확인 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Sphere\+Colider$\ast$} & \+: 대상 Sphere\+Colider$\ast$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+포함되면 true, 이외에는 false 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_colider_a798a2305727af64e790d5f70107d46d1}{Colider}}.
+
+\mbox{\Hypertarget{class_sphere_colider_a7abd8ccfff1d3d4137c3429594978668}\label{class_sphere_colider_a7abd8ccfff1d3d4137c3429594978668}} 
+\index{SphereColider@{SphereColider}!isCollision@{isCollision}}
+\index{isCollision@{isCollision}!SphereColider@{SphereColider}}
+\doxysubsubsection{\texorpdfstring{isCollision()}{isCollision()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool Sphere\+Colider\+::is\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_vector2}{Vector2}} Vertex이 Box\+Colider에 포함되는지 확인 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_vector2}{Vector2}}} & \+: Pos 확인할 점 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+포함되면 true, 이외에는 false 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_colider_a49405ed08ec421d3a0a2ad4b87fe75c3}{Colider}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Yanity/Sphere\+Colider.\+h\item 
+Yanity/Sphere\+Colider.\+cpp\end{DoxyCompactItemize}

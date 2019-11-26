@@ -3,7 +3,7 @@ cd /D %~dp0
 
 del /s /f *.ps *.dvi *.aux *.toc *.idx *.ind *.ilg *.log *.out *.brf *.blg *.bbl refman.pdf
 
-set LATEX_CMD=xelatex
+set LATEX_CMD=pdflatex
 %LATEX_CMD% refman
 echo ----
 makeindex refman.idx

@@ -1,46 +1,76 @@
-\hypertarget{class_component}{}\doxysection{Component 클래스 참조}
+\hypertarget{class_component}{}\doxysection{Component Class Reference}
 \label{class_component}\index{Component@{Component}}
-Component에 대한 상속 다이어그램 \+: \begin{figure}[H]
+
+
+Gameobject에 기능을 수행하는 단위입니다.  
+
+
+
+
+{\ttfamily \#include $<$Component.\+h$>$}
+
+Inheritance diagram for Component\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{class_component}
+\includegraphics[height=2.333333cm]{class_component}
 \end{center}
 \end{figure}
-\doxysubsection*{Public 멤버 함수}
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_component_a3c2c2240d1d54582012eb45d5e62c8b8}\label{class_component_a3c2c2240d1d54582012eb45d5e62c8b8}} 
-virtual void {\bfseries Awake} ()=0
-\item 
-\mbox{\Hypertarget{class_component_a52bfe338a161f0cdd1c1c7da21dce505}\label{class_component_a52bfe338a161f0cdd1c1c7da21dce505}} 
-virtual void {\bfseries Start} ()=0
-\item 
-\mbox{\Hypertarget{class_component_a5a924d295dc333115510e2a57cb4d1ea}\label{class_component_a5a924d295dc333115510e2a57cb4d1ea}} 
-virtual void {\bfseries On\+Enable} ()=0
-\item 
-\mbox{\Hypertarget{class_component_abda56474d6ccfbdab47cb5e0cd595c2b}\label{class_component_abda56474d6ccfbdab47cb5e0cd595c2b}} 
-virtual void {\bfseries Update} ()=0
-\item 
-\mbox{\Hypertarget{class_component_a8d36d4ac4d7146e20c0a6de4537b0662}\label{class_component_a8d36d4ac4d7146e20c0a6de4537b0662}} 
-virtual void {\bfseries Destory} ()=0
-\item 
+\mbox{\Hypertarget{class_component_a97db16de1c451add8d2886151d5f0f4a}\label{class_component_a97db16de1c451add8d2886151d5f0f4a}} 
+virtual void \mbox{\hyperlink{class_component_a97db16de1c451add8d2886151d5f0f4a}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em 오브젝트가 초기화 될 때 실행되는 callback Method \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_component_a3f57807787e0015833ccffd83fb63d14}\label{class_component_a3f57807787e0015833ccffd83fb63d14}} 
+virtual void \mbox{\hyperlink{class_component_a3f57807787e0015833ccffd83fb63d14}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Component가 시작할 때 실행되는 Callback Method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_component_a0203b02cea981c919d1196d01881e0b0}\label{class_component_a0203b02cea981c919d1196d01881e0b0}} 
+virtual void \mbox{\hyperlink{class_component_a0203b02cea981c919d1196d01881e0b0}{On\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em Component가 활성화 될 때 실행되는 Callback Method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_component_aaf2ce6dc5752072492f790ad4c7955bb}\label{class_component_aaf2ce6dc5752072492f790ad4c7955bb}} 
+virtual void \mbox{\hyperlink{class_component_aaf2ce6dc5752072492f790ad4c7955bb}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Component가 Frame Upadte 될 때 실행되는 Callback Method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_component_a23dd4a38b7b11ee333bdd8b26bdc9c48}\label{class_component_a23dd4a38b7b11ee333bdd8b26bdc9c48}} 
+virtual void \mbox{\hyperlink{class_component_a23dd4a38b7b11ee333bdd8b26bdc9c48}{Destory}} ()
+\begin{DoxyCompactList}\small\item\em Component가 제거될 때 실행되는 Callback Method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_component_abbc2bf42faeedc04041d56685e8afbc3}\label{class_component_abbc2bf42faeedc04041d56685e8afbc3}} 
+virtual void \mbox{\hyperlink{class_component_abbc2bf42faeedc04041d56685e8afbc3}{On\+Colider\+Enter}} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_colider}{Colider}} Component에 다른 Colider가 물리적인 충돌을 시작했을 때 실행되는 Callback Method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_component_aaadd6be57e953627f8be27a7665abe6b}\label{class_component_aaadd6be57e953627f8be27a7665abe6b}} 
+virtual void \mbox{\hyperlink{class_component_aaadd6be57e953627f8be27a7665abe6b}{On\+Colider\+Stay}} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_colider}{Colider}} Component에 다른 Colider가 물리적인 충돌을 진행하고 있을 때 실행되는 Callback Method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_component_a1c8fc2086fe181c87a685c315547da03}\label{class_component_a1c8fc2086fe181c87a685c315547da03}} 
+virtual void \mbox{\hyperlink{class_component_a1c8fc2086fe181c87a685c315547da03}{On\+Colider\+Exit}} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_colider}{Colider}} Component에 다른 Colider가 물리적인 충돌을 끌낼 때 실행되는 Callback Method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_component_a4377ad88e195119af262ac769ee130f0}\label{class_component_a4377ad88e195119af262ac769ee130f0}} 
+virtual void \mbox{\hyperlink{class_component_a4377ad88e195119af262ac769ee130f0}{On\+Trigger\+Enter}} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_colider}{Colider}} Component에 다른 Colider가 충돌을 시작했을 때 실행되는 Callback Method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_component_a6d2bcd686bd7d07bf4a38665fba218b0}\label{class_component_a6d2bcd686bd7d07bf4a38665fba218b0}} 
+virtual void \mbox{\hyperlink{class_component_a6d2bcd686bd7d07bf4a38665fba218b0}{On\+Trigger\+Stay}} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_colider}{Colider}} Component에 다른 Colider가 충돌을 진행하고 있을 때 실행되는 Callback Method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_component_afd5bcb9f1ba36988b5dbd795a735080e}\label{class_component_afd5bcb9f1ba36988b5dbd795a735080e}} 
+virtual void \mbox{\hyperlink{class_component_afd5bcb9f1ba36988b5dbd795a735080e}{On\+Trigger\+Exit}} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_colider}{Colider}} Component에 다른 Colider가 충돌을 끌낼 때 실행되는 Callback Method. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_component_a209c2d5fc8ac8febb50a71541889ac26}\label{class_component_a209c2d5fc8ac8febb50a71541889ac26}} 
-void {\bfseries Enable} ()
-\item 
+void \mbox{\hyperlink{class_component_a209c2d5fc8ac8febb50a71541889ac26}{Enable}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_component}{Component}} 활성화 함수 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_component_ae08cfbd407177c9560998807647843f0}\label{class_component_ae08cfbd407177c9560998807647843f0}} 
 void {\bfseries Disable} ()
 \end{DoxyCompactItemize}
-\doxysubsection*{Public 속성}
+\doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_component_a4be7636ba1ed0be9cffbe35a72f51bab}\label{class_component_a4be7636ba1ed0be9cffbe35a72f51bab}} 
-\mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$ {\bfseries gameobject}
-\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$ \mbox{\hyperlink{class_component_a4be7636ba1ed0be9cffbe35a72f51bab}{gameobject}}
+\begin{DoxyCompactList}\small\item\em Component가 연결되어있는 Gameobject. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_component_a2cab9e1c19e26718bf405321fce895b7}\label{class_component_a2cab9e1c19e26718bf405321fce895b7}} 
-bool {\bfseries is\+Enable} = true
-\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{class_component_a2cab9e1c19e26718bf405321fce895b7}{is\+Enable}} = true
+\begin{DoxyCompactList}\small\item\em Component의 활성화 여부 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\doxysubsection{Detailed Description}
+Gameobject에 기능을 수행하는 단위입니다. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
 Yanity/Component.\+h\end{DoxyCompactItemize}

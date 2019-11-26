@@ -1,56 +1,53 @@
-\hypertarget{class_game_core}{}\doxysection{Game\+Core 클래스 참조}
+\hypertarget{class_game_core}{}\doxysection{Game\+Core Class Reference}
 \label{class_game_core}\index{GameCore@{GameCore}}
-\doxysubsection*{Public 멤버 함수}
+
+
+Yanity의 생애주기를 관리하는 Core 입니다.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Core.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_game_core_a036d63a8c4cb49c19632758c624b4bd0}\label{class_game_core_a036d63a8c4cb49c19632758c624b4bd0}} 
-void {\bfseries Init} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{정적 Public 멤버 함수}
+void \mbox{\hyperlink{class_game_core_a036d63a8c4cb49c19632758c624b4bd0}{Init}} ()
+\begin{DoxyCompactList}\small\item\em Game\+Core를 초기화해줍니다. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_core_a051f07a9b888f25775a737688a592e82}\label{class_game_core_a051f07a9b888f25775a737688a592e82}} 
+void \mbox{\hyperlink{class_game_core_a051f07a9b888f25775a737688a592e82}{Run\+System}} (std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$ $>$)
+\begin{DoxyCompactList}\small\item\em Yanity 의 생애주를 실행합니다. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_core_ac318fc58a61ec4d87eea9d3481ec4490}\label{class_game_core_ac318fc58a61ec4d87eea9d3481ec4490}} 
+void \mbox{\hyperlink{class_game_core_ac318fc58a61ec4d87eea9d3481ec4490}{Run\+PhysX}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_phys_x}{PhysX}} Thread를 실행합니다. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_core_a8c84f89d63083dea4bf7631d3088896f}\label{class_game_core_a8c84f89d63083dea4bf7631d3088896f}} 
+void \mbox{\hyperlink{class_game_core_a8c84f89d63083dea4bf7631d3088896f}{Run\+Input}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_input}{Input}} Thread를 실행합니다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{class_game_core}{Game\+Core}} \& \mbox{\hyperlink{class_game_core_a17e48fbd2ef7774535a0a5cbfc9a9463}{get\+Instance}} ()
-\begin{DoxyCompactList}\small\item\em test function \end{DoxyCompactList}\end{DoxyCompactItemize}
-
-
-\doxysubsection{멤버 함수 문서화}
 \mbox{\Hypertarget{class_game_core_a17e48fbd2ef7774535a0a5cbfc9a9463}\label{class_game_core_a17e48fbd2ef7774535a0a5cbfc9a9463}} 
-\index{GameCore@{GameCore}!getInstance@{getInstance}}
-\index{getInstance@{getInstance}!GameCore@{GameCore}}
-\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_game_core}{Game\+Core}} \& Game\+Core\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+static \mbox{\hyperlink{class_game_core}{Game\+Core}} \& \mbox{\hyperlink{class_game_core_a17e48fbd2ef7774535a0a5cbfc9a9463}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Singleton Method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_core_ae2278ef02e9622fd7b6b11acfede6c54}\label{class_game_core_ae2278ef02e9622fd7b6b11acfede6c54}} 
+bool \mbox{\hyperlink{class_game_core_ae2278ef02e9622fd7b6b11acfede6c54}{is\+Active}} = false
+\begin{DoxyCompactList}\small\item\em Core 활성화 여부 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_core_a83f8a6f04ae98e1454e4dcab35084ec9}\label{class_game_core_a83f8a6f04ae98e1454e4dcab35084ec9}} 
+float \mbox{\hyperlink{class_game_core_a83f8a6f04ae98e1454e4dcab35084ec9}{Phys\+X\+\_\+update\+Ms}} = 6
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_phys_x}{PhysX}} Thread Update 주기(ms) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_core_a2c473310b9325cc468325dc81ac0b5b8}\label{class_game_core_a2c473310b9325cc468325dc81ac0b5b8}} 
+float \mbox{\hyperlink{class_game_core_a2c473310b9325cc468325dc81ac0b5b8}{Input\+\_\+update\+Ms}} = 6
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_input}{Input}} Thread Update 주기(ms) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Yanity의 생애주기를 관리하는 Core 입니다. 
 
-test function 
-
-\begin{DoxyDate}{날짜}
-2011/06/23 
-\end{DoxyDate}
-\begin{DoxyAuthor}{작성자}
-Woo\+Seung Lee (\href{mailto:fornamoo@gmail.com}{\texttt{ fornamoo@gmail.\+com}}) 
-\end{DoxyAuthor}
-
-\begin{DoxyParams}{매개변수}
-{\em a} & 정수형 변수 \\
-\hline
-{\em b} & 문자형 변수 \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{반환값}
-result는 결과 값 리턴 0은 실패 1은 성공 
-\end{DoxyReturn}
-
-\begin{DoxyExceptions}{예외}
-{\em E\+A\+C\+C\+ES} & 파일 접근 에러 \\
-\hline
-\end{DoxyExceptions}
-\begin{DoxyRemark}{Remarks}
-이 함수는 테스트용 합수입니다. 
-\end{DoxyRemark}
-
-
-이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 Yanity/Game\+Core.\+h\item 
 Yanity/Game\+Core.\+cpp\end{DoxyCompactItemize}

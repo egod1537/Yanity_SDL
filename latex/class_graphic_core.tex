@@ -1,56 +1,203 @@
-\hypertarget{class_graphic_core}{}\doxysection{Graphic\+Core 클래스 참조}
+\hypertarget{class_graphic_core}{}\doxysection{Graphic\+Core Class Reference}
 \label{class_graphic_core}\index{GraphicCore@{GraphicCore}}
-\doxysubsection*{Public 멤버 함수}
+
+
+화면에 Render, Draw를 관리하는 Core입니다.  
+
+
+
+
+{\ttfamily \#include $<$Graphic\+Core.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_graphic_core_afc75f94f3f1274585e176992c8c6f1e3}\label{class_graphic_core_afc75f94f3f1274585e176992c8c6f1e3}} 
-void {\bfseries Init} ()
+void \mbox{\hyperlink{class_graphic_core_afc75f94f3f1274585e176992c8c6f1e3}{Init}} ()
+\begin{DoxyCompactList}\small\item\em Graphic Core를 초기화합니다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphic_core_a96c7410cd40ee798ec97050a023ca53b}{Render}} ()
 \item 
-\mbox{\Hypertarget{class_graphic_core_a96c7410cd40ee798ec97050a023ca53b}\label{class_graphic_core_a96c7410cd40ee798ec97050a023ca53b}} 
-void {\bfseries Render} ()
-\item 
-\mbox{\Hypertarget{class_graphic_core_a045fd0c82cccf227593bc174e45d3bc9}\label{class_graphic_core_a045fd0c82cccf227593bc174e45d3bc9}} 
-void {\bfseries Add\+Render} (int depth, std\+::function$<$ void()$>$ callback)
-\item 
-\mbox{\Hypertarget{class_graphic_core_a71085e36d14034d3c75e0288d73a727f}\label{class_graphic_core_a71085e36d14034d3c75e0288d73a727f}} 
-void {\bfseries Draw\+Texture} (S\+D\+L\+\_\+\+Texture $\ast$\+\_\+texture, \mbox{\hyperlink{class_vector2}{Vector2}} \+\_\+pos=\mbox{\hyperlink{class_vector2}{Vector2}}(0, 0), float \+\_\+angle=0, \mbox{\hyperlink{class_vector2}{Vector2}} \+\_\+scale=\mbox{\hyperlink{class_vector2}{Vector2}}(1, 1), \mbox{\hyperlink{class_vector2}{Vector2}} \+\_\+pivot=\mbox{\hyperlink{class_vector2}{Vector2}}(0.\+5, 0.\+5))
-\item 
-\mbox{\Hypertarget{class_graphic_core_ac70e51a7a07cdbd27b14142dc06ac9e8}\label{class_graphic_core_ac70e51a7a07cdbd27b14142dc06ac9e8}} 
-void {\bfseries Draw\+Texture} (S\+D\+L\+\_\+\+Texture $\ast$, \mbox{\hyperlink{struct_transform}{Transform}})
-\item 
-\mbox{\Hypertarget{class_graphic_core_ab107a14afe3dbdd3c73c8dc80beb8c3f}\label{class_graphic_core_ab107a14afe3dbdd3c73c8dc80beb8c3f}} 
-void {\bfseries Draw\+Square} (\mbox{\hyperlink{struct_s_d_l___color}{S\+D\+L\+\_\+\+Color}}, \mbox{\hyperlink{class_vector2}{Vector2}}, \mbox{\hyperlink{class_vector2}{Vector2}})
-\item 
-\mbox{\Hypertarget{class_graphic_core_a9e536dfeef1ee2dd5bae1d9e1c629cab}\label{class_graphic_core_a9e536dfeef1ee2dd5bae1d9e1c629cab}} 
-void {\bfseries Draw\+Fill\+Square} (\mbox{\hyperlink{struct_s_d_l___color}{S\+D\+L\+\_\+\+Color}}, \mbox{\hyperlink{class_vector2}{Vector2}}, \mbox{\hyperlink{class_vector2}{Vector2}})
-\item 
-\mbox{\Hypertarget{class_graphic_core_a2f09f46509760c465a6947f6770b179a}\label{class_graphic_core_a2f09f46509760c465a6947f6770b179a}} 
-S\+D\+L\+\_\+\+Texture $\ast$ {\bfseries Load\+Texture} (std\+::string)
-\end{DoxyCompactItemize}
-\doxysubsection*{정적 Public 멤버 함수}
+void \mbox{\hyperlink{class_graphic_core_a045fd0c82cccf227593bc174e45d3bc9}{Add\+Render}} (int depth, std\+::function$<$ void()$>$ callback)
+\begin{DoxyCompactList}\small\item\em Render\+Block을 추가합니다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphic_core_a71085e36d14034d3c75e0288d73a727f}{Draw\+Texture}} (S\+D\+L\+\_\+\+Texture $\ast$\+\_\+texture, \mbox{\hyperlink{class_vector2}{Vector2}} \+\_\+pos=\mbox{\hyperlink{class_vector2}{Vector2}}(0, 0), float \+\_\+angle=0, \mbox{\hyperlink{class_vector2}{Vector2}} \+\_\+scale=\mbox{\hyperlink{class_vector2}{Vector2}}(1, 1), \mbox{\hyperlink{class_vector2}{Vector2}} \+\_\+pivot=\mbox{\hyperlink{class_vector2}{Vector2}}(0.\+5, 0.\+5))
+\begin{DoxyCompactList}\small\item\em 화면에 Texture를 그려줍니다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphic_core_ac70e51a7a07cdbd27b14142dc06ac9e8}{Draw\+Texture}} (S\+D\+L\+\_\+\+Texture $\ast$, \mbox{\hyperlink{struct_transform}{Transform}})
+\begin{DoxyCompactList}\small\item\em 화면에 Tranform의 정보에 따라 Texture를 그려줍니다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphic_core_ab107a14afe3dbdd3c73c8dc80beb8c3f}{Draw\+Square}} (S\+D\+L\+\_\+\+Color, \mbox{\hyperlink{class_vector2}{Vector2}}, \mbox{\hyperlink{class_vector2}{Vector2}})
+\begin{DoxyCompactList}\small\item\em 화면에 빈 사각형을 그려줍니다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphic_core_a9e536dfeef1ee2dd5bae1d9e1c629cab}{Draw\+Fill\+Square}} (S\+D\+L\+\_\+\+Color, \mbox{\hyperlink{class_vector2}{Vector2}}, \mbox{\hyperlink{class_vector2}{Vector2}})
+\begin{DoxyCompactList}\small\item\em 화면에 꽉 찬 사각형을 그려줍니다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graphic_core_aec75569bd106f30dba0f7b4815ec0294}{Draw\+Sphere}} (S\+D\+L\+\_\+\+Color, \mbox{\hyperlink{class_vector2}{Vector2}}, float)
+\begin{DoxyCompactList}\small\item\em 화면에 원을 그려줍니다. \end{DoxyCompactList}\item 
+S\+D\+L\+\_\+\+Texture $\ast$ \mbox{\hyperlink{class_graphic_core_a2f09f46509760c465a6947f6770b179a}{Load\+Texture}} (std\+::string)
+\begin{DoxyCompactList}\small\item\em 파일에서 Texture 불러오는 함수입니다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_graphic_core_a5026ab94fef11babf848dd1660df2d4a}\label{class_graphic_core_a5026ab94fef11babf848dd1660df2d4a}} 
-static \mbox{\hyperlink{class_graphic_core}{Graphic\+Core}} \& {\bfseries get\+Instance} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{Public 속성}
+static \mbox{\hyperlink{class_graphic_core}{Graphic\+Core}} \& \mbox{\hyperlink{class_graphic_core_a5026ab94fef11babf848dd1660df2d4a}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Singleton Method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_graphic_core_aa3f259396ac20e8e66f1feede7fec94a}\label{class_graphic_core_aa3f259396ac20e8e66f1feede7fec94a}} 
-\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries Resoultion} = \mbox{\hyperlink{class_vector2}{Vector2}}(960, 540)
-\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_graphic_core_aa3f259396ac20e8e66f1feede7fec94a}{Resoultion}} = \mbox{\hyperlink{class_vector2}{Vector2}}(960, 540)
+\begin{DoxyCompactList}\small\item\em 화면의 해상도 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_graphic_core_a938bb790e8d0c2edeb4f435b084d8bbd}\label{class_graphic_core_a938bb790e8d0c2edeb4f435b084d8bbd}} 
-\mbox{\hyperlink{_s_d_l__video_8h_a55a196c7d3b8497538632c79ae1e6392}{S\+D\+L\+\_\+\+Window}} $\ast$ {\bfseries window}
-\item 
+S\+D\+L\+\_\+\+Window $\ast$ \mbox{\hyperlink{class_graphic_core_a938bb790e8d0c2edeb4f435b084d8bbd}{window}}
+\begin{DoxyCompactList}\small\item\em 현재 활성화된 창 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_graphic_core_a34673e117c329faacb826d799b14610a}\label{class_graphic_core_a34673e117c329faacb826d799b14610a}} 
-S\+D\+L\+\_\+\+Renderer $\ast$ {\bfseries renderer}
-\item 
+S\+D\+L\+\_\+\+Renderer $\ast$ \mbox{\hyperlink{class_graphic_core_a34673e117c329faacb826d799b14610a}{renderer}}
+\begin{DoxyCompactList}\small\item\em 창의 Renderer \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_graphic_core_a04eb3d815137053ac0c4c6f7db94ccbb}\label{class_graphic_core_a04eb3d815137053ac0c4c6f7db94ccbb}} 
-std\+::list$<$ \mbox{\hyperlink{struct_render_block}{Render\+Block}} $>$ {\bfseries Render\+Line}
-\end{DoxyCompactItemize}
+std\+::list$<$ \mbox{\hyperlink{struct_render_block}{Render\+Block}} $>$ \mbox{\hyperlink{class_graphic_core_a04eb3d815137053ac0c4c6f7db94ccbb}{Render\+Line}}
+\begin{DoxyCompactList}\small\item\em Render Process Block. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\doxysubsection{Detailed Description}
+화면에 Render, Draw를 관리하는 Core입니다. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graphic_core_a045fd0c82cccf227593bc174e45d3bc9}\label{class_graphic_core_a045fd0c82cccf227593bc174e45d3bc9}} 
+\index{GraphicCore@{GraphicCore}!AddRender@{AddRender}}
+\index{AddRender@{AddRender}!GraphicCore@{GraphicCore}}
+\doxysubsubsection{\texorpdfstring{AddRender()}{AddRender()}}
+{\footnotesize\ttfamily void Graphic\+Core\+::\+Add\+Render (\begin{DoxyParamCaption}\item[{int}]{depth,  }\item[{std\+::function$<$ void()$>$}]{callback }\end{DoxyParamCaption})}
+
+
+
+Render\+Block을 추가합니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & depth \+: Render 순서 \\
+\hline
+{\em function$<$void()$>$} & \+: Render 함수 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graphic_core_a9e536dfeef1ee2dd5bae1d9e1c629cab}\label{class_graphic_core_a9e536dfeef1ee2dd5bae1d9e1c629cab}} 
+\index{GraphicCore@{GraphicCore}!DrawFillSquare@{DrawFillSquare}}
+\index{DrawFillSquare@{DrawFillSquare}!GraphicCore@{GraphicCore}}
+\doxysubsubsection{\texorpdfstring{DrawFillSquare()}{DrawFillSquare()}}
+{\footnotesize\ttfamily void Graphic\+Core\+::\+Draw\+Fill\+Square (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Color}]{\+\_\+color,  }\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+pos1,  }\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+pos2 }\end{DoxyParamCaption})}
+
+
+
+화면에 꽉 찬 사각형을 그려줍니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Color} & \+: 색깔 \\
+\hline
+{\em \mbox{\hyperlink{class_vector2}{Vector2}}} & \+: 시작 좌표 \\
+\hline
+{\em \mbox{\hyperlink{class_vector2}{Vector2}}} & \+: 끝좌표 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graphic_core_aec75569bd106f30dba0f7b4815ec0294}\label{class_graphic_core_aec75569bd106f30dba0f7b4815ec0294}} 
+\index{GraphicCore@{GraphicCore}!DrawSphere@{DrawSphere}}
+\index{DrawSphere@{DrawSphere}!GraphicCore@{GraphicCore}}
+\doxysubsubsection{\texorpdfstring{DrawSphere()}{DrawSphere()}}
+{\footnotesize\ttfamily void Graphic\+Core\+::\+Draw\+Sphere (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Color}]{\+\_\+color,  }\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+pos,  }\item[{float}]{\+\_\+radius }\end{DoxyParamCaption})}
+
+
+
+화면에 원을 그려줍니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Color} & \+: 색깔 \\
+\hline
+{\em \mbox{\hyperlink{class_vector2}{Vector2}}} & \+: 원의 중심 좌표 \\
+\hline
+{\em float} & \+: 원의 반지름 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graphic_core_ab107a14afe3dbdd3c73c8dc80beb8c3f}\label{class_graphic_core_ab107a14afe3dbdd3c73c8dc80beb8c3f}} 
+\index{GraphicCore@{GraphicCore}!DrawSquare@{DrawSquare}}
+\index{DrawSquare@{DrawSquare}!GraphicCore@{GraphicCore}}
+\doxysubsubsection{\texorpdfstring{DrawSquare()}{DrawSquare()}}
+{\footnotesize\ttfamily void Graphic\+Core\+::\+Draw\+Square (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Color}]{\+\_\+color,  }\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+pos1,  }\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+pos2 }\end{DoxyParamCaption})}
+
+
+
+화면에 빈 사각형을 그려줍니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Color} & \+: 색깔 \\
+\hline
+{\em \mbox{\hyperlink{class_vector2}{Vector2}}} & \+: 시작 좌표 \\
+\hline
+{\em \mbox{\hyperlink{class_vector2}{Vector2}}} & \+: 끝좌표 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graphic_core_ac70e51a7a07cdbd27b14142dc06ac9e8}\label{class_graphic_core_ac70e51a7a07cdbd27b14142dc06ac9e8}} 
+\index{GraphicCore@{GraphicCore}!DrawTexture@{DrawTexture}}
+\index{DrawTexture@{DrawTexture}!GraphicCore@{GraphicCore}}
+\doxysubsubsection{\texorpdfstring{DrawTexture()}{DrawTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Graphic\+Core\+::\+Draw\+Texture (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Texture $\ast$}]{\+\_\+texture,  }\item[{\mbox{\hyperlink{struct_transform}{Transform}}}]{transform }\end{DoxyParamCaption})}
+
+
+
+화면에 Tranform의 정보에 따라 Texture를 그려줍니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Texture$\ast$} & \+: 그릴 Texture \\
+\hline
+{\em \mbox{\hyperlink{struct_transform}{Transform}}} & \+: 위치, 각도, 크기 정보 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graphic_core_a71085e36d14034d3c75e0288d73a727f}\label{class_graphic_core_a71085e36d14034d3c75e0288d73a727f}} 
+\index{GraphicCore@{GraphicCore}!DrawTexture@{DrawTexture}}
+\index{DrawTexture@{DrawTexture}!GraphicCore@{GraphicCore}}
+\doxysubsubsection{\texorpdfstring{DrawTexture()}{DrawTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Graphic\+Core\+::\+Draw\+Texture (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Texture $\ast$}]{\+\_\+texture,  }\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+pos = {\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}}(0,~0)},  }\item[{float}]{\+\_\+angle = {\ttfamily 0},  }\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+scale = {\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}}(1,~1)},  }\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+pivot = {\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}}(0.5,~0.5)} }\end{DoxyParamCaption})}
+
+
+
+화면에 Texture를 그려줍니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+D\+L\+\_\+\+Texture$\ast$} & \+\_\+texture \+: 그릴 Texture \\
+\hline
+{\em \mbox{\hyperlink{class_vector2}{Vector2}}} & \+\_\+pos \+: 위치 $\vert$ 기본값\+: Vector(0, 0) \\
+\hline
+{\em float} & \+\_\+angle \+: 각도 $\vert$ 기본값\+: 0 \\
+\hline
+{\em \mbox{\hyperlink{class_vector2}{Vector2}}} & \+\_\+scale \+: 크기 $\vert$ 기본값\+: \mbox{\hyperlink{class_vector2}{Vector2(1, 1)}} \\
+\hline
+{\em \mbox{\hyperlink{class_vector2}{Vector2}}} & \+\_\+pivot \+: 이미지의 중심 $\vert$ 기본값\+: \mbox{\hyperlink{class_vector2}{Vector2}}(0.\+5, 0.\+5) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_graphic_core_a2f09f46509760c465a6947f6770b179a}\label{class_graphic_core_a2f09f46509760c465a6947f6770b179a}} 
+\index{GraphicCore@{GraphicCore}!LoadTexture@{LoadTexture}}
+\index{LoadTexture@{LoadTexture}!GraphicCore@{GraphicCore}}
+\doxysubsubsection{\texorpdfstring{LoadTexture()}{LoadTexture()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Texture $\ast$ Graphic\+Core\+::\+Load\+Texture (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+파일에서 Texture 불러오는 함수입니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \+: Texture의 경로 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]지원되는 파일 형식 .bmp .png \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_graphic_core_a96c7410cd40ee798ec97050a023ca53b}\label{class_graphic_core_a96c7410cd40ee798ec97050a023ca53b}} 
+\index{GraphicCore@{GraphicCore}!Render@{Render}}
+\index{Render@{Render}!GraphicCore@{GraphicCore}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Graphic\+Core\+::\+Render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Render를 실행합니다. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 Yanity/Graphic\+Core.\+h\item 
 Yanity/Graphic\+Core.\+cpp\end{DoxyCompactItemize}
