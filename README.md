@@ -8,5 +8,5 @@
 <h1> 버전 </h1>
  <p> beta-0.0.1a </p>
 
-<p> Yanity Document (Doxygen) https://yanity.kro.kr </p>
+<p> Yanity Document (Doxygen) http://yanity.kro.kr </p>
 
