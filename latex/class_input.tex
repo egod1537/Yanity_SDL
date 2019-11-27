@@ -1,29 +1,151 @@
 \hypertarget{class_input}{}\doxysection{Input Class Reference}
 \label{class_input}\index{Input@{Input}}
+
+
+Input에 관한 클래스 입니다.  
+
+
+
+
+{\ttfamily \#include $<$Input.\+h$>$}
+
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_input_af82b8f279d9441168da08d79f6b534e2}\label{class_input_af82b8f279d9441168da08d79f6b534e2}} 
-static void {\bfseries Handler} ()
-\item 
+static void \mbox{\hyperlink{class_input_af82b8f279d9441168da08d79f6b534e2}{Handler}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_input}{Input}} Event를 실시간으로 감시합니다 \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_input_ad929ed54ee8180699b8b375a6a0b5fb9}{get\+Key\+Down}} (int)
+\begin{DoxyCompactList}\small\item\em Keyboard가 눌려있는지 확인합니다. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_input_a7dfa689933f76943d92f80e7c7ffd6d0}{get\+Mouse\+Left\+Click\+Down}} ()
+\begin{DoxyCompactList}\small\item\em 마우스 왼클릭을 눌렀는 지 확인합니다. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_input_ae2cce29d949c4a153a0953d20886a029}{get\+Mouse\+Left\+Click}} ()
+\begin{DoxyCompactList}\small\item\em 마우스 왼클릭을 눌르고 있는 지 확인합니다. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_input_a197e705e8e4b73bf5ed7df267706fab0}{get\+Mouse\+Left\+Click\+Up}} ()
+\begin{DoxyCompactList}\small\item\em 마우스 왼클릭을 떼었는 지 확인합니다. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_input_a31d365ec20f650b3f0501b8e7213e5f1}{get\+Mouse\+Right\+Click\+Down}} ()
+\begin{DoxyCompactList}\small\item\em 마우스 우클릭을 눌렀는 지 확인합니다. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_input_a4952674dfc81898f6501814e526a2d29}{get\+Mouse\+Right\+Click}} ()
+\begin{DoxyCompactList}\small\item\em 마우스 우클릭을 눌르고 있는 지 확인합니다. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_input_a10c1b4f1a276c45fe28ceafb1a4185e6}{get\+Mouse\+Right\+Click\+Up}} ()
+\begin{DoxyCompactList}\small\item\em 마우스 우클릭을 떼었는 지 확인합니다. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_input_ada65d73a18226652a1b8330addf35e8a}{get\+Mouse\+Position}} ()
+\begin{DoxyCompactList}\small\item\em 현재 마우스의 위치를 가져옵니다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Input에 관한 클래스 입니다. 
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_input_ad929ed54ee8180699b8b375a6a0b5fb9}\label{class_input_ad929ed54ee8180699b8b375a6a0b5fb9}} 
-static bool {\bfseries get\+Key\+Down} (int)
-\item 
+\index{Input@{Input}!getKeyDown@{getKeyDown}}
+\index{getKeyDown@{getKeyDown}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{getKeyDown()}{getKeyDown()}}
+{\footnotesize\ttfamily bool Input\+::get\+Key\+Down (\begin{DoxyParamCaption}\item[{int}]{\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Keyboard가 눌려있는지 확인합니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & \+: 확인하고 싶은 키를 S\+D\+L\+\_\+\+S\+C\+A\+N\+C\+O\+DE 형식 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 눌리고 있다 $\vert$ false 눌리지 않고 있다. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_input_ae2cce29d949c4a153a0953d20886a029}\label{class_input_ae2cce29d949c4a153a0953d20886a029}} 
+\index{Input@{Input}!getMouseLeftClick@{getMouseLeftClick}}
+\index{getMouseLeftClick@{getMouseLeftClick}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{getMouseLeftClick()}{getMouseLeftClick()}}
+{\footnotesize\ttfamily bool Input\+::get\+Mouse\+Left\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+마우스 왼클릭을 눌르고 있는 지 확인합니다. 
+
+\begin{DoxyReturn}{Returns}
+true \+: 누르고 있다 $\vert$ false \+: 누르고 있지 않다. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_input_a7dfa689933f76943d92f80e7c7ffd6d0}\label{class_input_a7dfa689933f76943d92f80e7c7ffd6d0}} 
-static bool {\bfseries get\+Mouse\+Left\+Click\+Down} ()
-\item 
+\index{Input@{Input}!getMouseLeftClickDown@{getMouseLeftClickDown}}
+\index{getMouseLeftClickDown@{getMouseLeftClickDown}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{getMouseLeftClickDown()}{getMouseLeftClickDown()}}
+{\footnotesize\ttfamily bool Input\+::get\+Mouse\+Left\+Click\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+마우스 왼클릭을 눌렀는 지 확인합니다. 
+
+\begin{DoxyReturn}{Returns}
+true \+: 눌렸다 $\vert$ false \+: 눌리지 않았다. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_input_a197e705e8e4b73bf5ed7df267706fab0}\label{class_input_a197e705e8e4b73bf5ed7df267706fab0}} 
-static bool {\bfseries get\+Mouse\+Left\+Click\+Up} ()
-\item 
-\mbox{\Hypertarget{class_input_a31d365ec20f650b3f0501b8e7213e5f1}\label{class_input_a31d365ec20f650b3f0501b8e7213e5f1}} 
-static bool {\bfseries get\+Mouse\+Right\+Click\+Down} ()
-\item 
-\mbox{\Hypertarget{class_input_a10c1b4f1a276c45fe28ceafb1a4185e6}\label{class_input_a10c1b4f1a276c45fe28ceafb1a4185e6}} 
-static bool {\bfseries get\+Mouse\+Right\+Click\+Up} ()
-\item 
+\index{Input@{Input}!getMouseLeftClickUp@{getMouseLeftClickUp}}
+\index{getMouseLeftClickUp@{getMouseLeftClickUp}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{getMouseLeftClickUp()}{getMouseLeftClickUp()}}
+{\footnotesize\ttfamily bool Input\+::get\+Mouse\+Left\+Click\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+마우스 왼클릭을 떼었는 지 확인합니다. 
+
+\begin{DoxyReturn}{Returns}
+true \+: 뗐다 $\vert$ false \+: 떼지 않았다. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_input_ada65d73a18226652a1b8330addf35e8a}\label{class_input_ada65d73a18226652a1b8330addf35e8a}} 
-static \mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries get\+Mouse\+Position} ()
-\end{DoxyCompactItemize}
+\index{Input@{Input}!getMousePosition@{getMousePosition}}
+\index{getMousePosition@{getMousePosition}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{getMousePosition()}{getMousePosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Input\+::get\+Mouse\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+현재 마우스의 위치를 가져옵니다. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_vector2}{Vector2}} \+: 현재 마우스 위치 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_input_a4952674dfc81898f6501814e526a2d29}\label{class_input_a4952674dfc81898f6501814e526a2d29}} 
+\index{Input@{Input}!getMouseRightClick@{getMouseRightClick}}
+\index{getMouseRightClick@{getMouseRightClick}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{getMouseRightClick()}{getMouseRightClick()}}
+{\footnotesize\ttfamily bool Input\+::get\+Mouse\+Right\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+마우스 우클릭을 눌르고 있는 지 확인합니다. 
+
+\begin{DoxyReturn}{Returns}
+true \+: 누르고 있다 $\vert$ false \+: 누르고 있지 않다. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_input_a31d365ec20f650b3f0501b8e7213e5f1}\label{class_input_a31d365ec20f650b3f0501b8e7213e5f1}} 
+\index{Input@{Input}!getMouseRightClickDown@{getMouseRightClickDown}}
+\index{getMouseRightClickDown@{getMouseRightClickDown}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{getMouseRightClickDown()}{getMouseRightClickDown()}}
+{\footnotesize\ttfamily bool Input\+::get\+Mouse\+Right\+Click\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+마우스 우클릭을 눌렀는 지 확인합니다. 
+
+\begin{DoxyReturn}{Returns}
+true \+: 눌렸다 $\vert$ false \+: 눌리지 않았다. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_input_a10c1b4f1a276c45fe28ceafb1a4185e6}\label{class_input_a10c1b4f1a276c45fe28ceafb1a4185e6}} 
+\index{Input@{Input}!getMouseRightClickUp@{getMouseRightClickUp}}
+\index{getMouseRightClickUp@{getMouseRightClickUp}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{getMouseRightClickUp()}{getMouseRightClickUp()}}
+{\footnotesize\ttfamily bool Input\+::get\+Mouse\+Right\+Click\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+마우스 우클릭을 떼었는 지 확인합니다. 
+
+\begin{DoxyReturn}{Returns}
+true \+: 뗐다 $\vert$ false \+: 떼지 않았다. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

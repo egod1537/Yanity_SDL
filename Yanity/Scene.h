@@ -4,17 +4,20 @@
 
 class GameObject;
 
+///@brief Gameobject를 포괄하고 있는 화면의 class입니다.
 class Scene {
 
 public:
 
-	bool isActive = false;
+	std::string name = ""; ///< Scene의 이름
 
-	std::vector<GameObject*> listGameObject;
+	bool isActive = false; ///< 활성화 여부
 
-	void Enable();
-	void Disable();
+	std::vector<GameObject*> listGameObject; ///< GameobjectList입니다.
 
-	void AddGameObject(GameObject* gameobject);
+	void Enable(); ///< 활성화
+	void Disable(); /// 비활성화
+
+	void AddGameObject(GameObject* gameobject); /// GameObject 추가하기
 
 };

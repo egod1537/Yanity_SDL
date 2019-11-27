@@ -63,9 +63,6 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="temp.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="GraphicCore.cpp">
       <Filter>소스 파일\Core</Filter>
     </ClCompile>
@@ -116,6 +113,12 @@
     </ClCompile>
     <ClCompile Include="Button.cpp">
       <Filter>소스 파일\Component\SystemComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>소스 파일\Component\SystemComponent</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneMananger.cpp">
+      <Filter>소스 파일\Engine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +199,15 @@
     </ClInclude>
     <ClInclude Include="Button.h">
       <Filter>헤더 파일\Component\SystemComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>헤더 파일\Component\SystemComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="han2unicode.h">
+      <Filter>헤더 파일\lib</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>헤더 파일\Engine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

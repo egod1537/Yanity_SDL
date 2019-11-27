@@ -73,28 +73,18 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;SDL_stdafx.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_color.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_color.html">Color</a> {</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">static</span> SDL_Color getColor(<span class="keywordtype">int</span> r, <span class="keywordtype">int</span> g, <span class="keywordtype">int</span> b, <span class="keywordtype">int</span> a = 255) {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        SDL_Color _color;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_color.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_color.html">Color</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_color.html#a3c3395faf729333848b59307ce5a99d3">   10</a></span>&#160;    <span class="keyword">static</span> SDL_Color <a class="code" href="class_color.html#a3c3395faf729333848b59307ce5a99d3">GREEN</a>() { <span class="keywordflow">return</span> { 0, 128, 0 }; } </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_color.html#a289da735b11724547d3293f088537a76">   11</a></span>&#160;    <span class="keyword">static</span> SDL_Color <a class="code" href="class_color.html#a289da735b11724547d3293f088537a76">WHITE</a>() { <span class="keywordflow">return</span> {255, 255, 255}; } </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        _color.r = r;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        _color.g = g;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        _color.b = b;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        _color.a = a;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">return</span> _color;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">static</span> SDL_Color GREEN() { <span class="keywordflow">return</span> getColor(0, 128, 0); }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_color_html"><div class="ttname"><a href="class_color.html">Color</a></div><div class="ttdef"><b>Definition:</b> Color.h:5</div></div>
+<div class="ttc" id="aclass_color_html"><div class="ttname"><a href="class_color.html">Color</a></div><div class="ttdoc">SDL_Color 상수 값을 저장하는 class 입니다.</div><div class="ttdef"><b>Definition:</b> Color.h:6</div></div>
+<div class="ttc" id="aclass_color_html_a3c3395faf729333848b59307ce5a99d3"><div class="ttname"><a href="class_color.html#a3c3395faf729333848b59307ce5a99d3">Color::GREEN</a></div><div class="ttdeci">static SDL_Color GREEN()</div><div class="ttdoc">초록색</div><div class="ttdef"><b>Definition:</b> Color.h:10</div></div>
+<div class="ttc" id="aclass_color_html_a289da735b11724547d3293f088537a76"><div class="ttname"><a href="class_color.html#a289da735b11724547d3293f088537a76">Color::WHITE</a></div><div class="ttdeci">static SDL_Color WHITE()</div><div class="ttdoc">빨강색</div><div class="ttdef"><b>Definition:</b> Color.h:11</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

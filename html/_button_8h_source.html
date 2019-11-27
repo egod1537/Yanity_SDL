@@ -72,22 +72,30 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;Component.h&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;lib_stdafx.h&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="class_button.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_button.html">Button</a> : <span class="keyword">public</span> <a class="code" href="class_component.html">Component</a>{</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_o_event.html">OEvent&lt;&gt;</a> OnClick;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_button.html#ac8483ba97daf06584361b2e4bdee8749">Start</a>();</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_button.html#a23e8bc9ad05142244ea4e79a406a6c9c">Update</a>();</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;};</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_button.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_button.html">Button</a> : <span class="keyword">public</span> <a class="code" href="class_component.html">Component</a>{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_button.html#af40951436602ca874e5a7bc90774a71b">    9</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_button.html#af40951436602ca874e5a7bc90774a71b">isPressed</a> = <span class="keyword">false</span>; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_button.html#ac910e79837a781478e2bbd737e21a6bc">   11</a></span>&#160;    <a class="code" href="class_o_event.html">OEvent&lt;&gt;</a> <a class="code" href="class_button.html#aca94ecf8909a36f70da0689a33fab251">OnClickDown</a>, </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;             <a class="code" href="class_button.html#ac910e79837a781478e2bbd737e21a6bc">OnPressed</a>,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;             <a class="code" href="class_button.html#ab590ee336cb8a7742222f26ad2a642f4">OnClickUp</a>; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_button.html#ac8483ba97daf06584361b2e4bdee8749">Start</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_button.html#a23e8bc9ad05142244ea4e79a406a6c9c">Update</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdoc">Gameobject에 기능을 수행하는 단위입니다.</div><div class="ttdef"><b>Definition:</b> Component.h:10</div></div>
-<div class="ttc" id="aclass_button_html"><div class="ttname"><a href="class_button.html">Button</a></div><div class="ttdef"><b>Definition:</b> Button.h:4</div></div>
-<div class="ttc" id="aclass_o_event_html"><div class="ttname"><a href="class_o_event.html">OEvent</a></div><div class="ttdef"><b>Definition:</b> OEvent.h:5</div></div>
+<div class="ttc" id="aclass_button_html_ab590ee336cb8a7742222f26ad2a642f4"><div class="ttname"><a href="class_button.html#ab590ee336cb8a7742222f26ad2a642f4">Button::OnClickUp</a></div><div class="ttdeci">OEvent OnClickUp</div><div class="ttdoc">버튼이 떼졌을 때 발생되는 Delegate Event</div><div class="ttdef"><b>Definition:</b> Button.h:11</div></div>
+<div class="ttc" id="aclass_button_html_af40951436602ca874e5a7bc90774a71b"><div class="ttname"><a href="class_button.html#af40951436602ca874e5a7bc90774a71b">Button::isPressed</a></div><div class="ttdeci">bool isPressed</div><div class="ttdoc">버튼의 현재 상태</div><div class="ttdef"><b>Definition:</b> Button.h:9</div></div>
+<div class="ttc" id="aclass_button_html"><div class="ttname"><a href="class_button.html">Button</a></div><div class="ttdoc">버튼 클래스입니다.</div><div class="ttdef"><b>Definition:</b> Button.h:5</div></div>
+<div class="ttc" id="aclass_button_html_ac910e79837a781478e2bbd737e21a6bc"><div class="ttname"><a href="class_button.html#ac910e79837a781478e2bbd737e21a6bc">Button::OnPressed</a></div><div class="ttdeci">OEvent OnPressed</div><div class="ttdoc">버튼이 눌리고 있을 때 발생되는 Delegate Event</div><div class="ttdef"><b>Definition:</b> Button.h:11</div></div>
+<div class="ttc" id="aclass_o_event_html"><div class="ttname"><a href="class_o_event.html">OEvent</a></div><div class="ttdoc">Observer Pattern을 일반화하여 Delegate Event class 이다.</div><div class="ttdef"><b>Definition:</b> OEvent.h:7</div></div>
 <div class="ttc" id="aclass_button_html_ac8483ba97daf06584361b2e4bdee8749"><div class="ttname"><a href="class_button.html#ac8483ba97daf06584361b2e4bdee8749">Button::Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">Component가 시작할 때 실행되는 Callback Method.</div><div class="ttdef"><b>Definition:</b> Button.cpp:9</div></div>
-<div class="ttc" id="aclass_button_html_a23e8bc9ad05142244ea4e79a406a6c9c"><div class="ttname"><a href="class_button.html#a23e8bc9ad05142244ea4e79a406a6c9c">Button::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">Component가 Frame Upadte 될 때 실행되는 Callback Method.</div><div class="ttdef"><b>Definition:</b> Button.cpp:15</div></div>
+<div class="ttc" id="aclass_button_html_a23e8bc9ad05142244ea4e79a406a6c9c"><div class="ttname"><a href="class_button.html#a23e8bc9ad05142244ea4e79a406a6c9c">Button::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">Component가 Frame Upadte 될 때 실행되는 Callback Method</div><div class="ttdef"><b>Definition:</b> Button.cpp:15</div></div>
+<div class="ttc" id="aclass_button_html_aca94ecf8909a36f70da0689a33fab251"><div class="ttname"><a href="class_button.html#aca94ecf8909a36f70da0689a33fab251">Button::OnClickDown</a></div><div class="ttdeci">OEvent OnClickDown</div><div class="ttdoc">버튼이 눌려졌을 때 발생되는 Delegate Event</div><div class="ttdef"><b>Definition:</b> Button.h:11</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

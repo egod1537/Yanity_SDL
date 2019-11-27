@@ -20,8 +20,8 @@ public:
 	virtual void Awake() {} ///< 오브젝트가 초기화 될 때 실행되는 callback Method
 	virtual void Start() {} ///< Component가 시작할 때 실행되는 Callback Method
 	virtual void OnEnable() {} ///< Component가 활성화 될 때 실행되는 Callback Method
-	virtual void Update() {} ///< Component가 Frame Upadte 될 때 실행되는 Callback Method
-	virtual void Destory() {} ///< Component가 제거될 때 실행되는 Callback Method
+	virtual void Update() {} ///< Component가 Frame Upadte 될 때 실행되는 Callback Method	
+	virtual void OnDestroy() {}///@brief Component가 제거될 때 실행되는 Callback Method
 
 	virtual void OnColiderEnter(Colider*) {} ///< Colider Component에 다른 Colider가 물리적인 충돌을 시작했을 때 실행되는 Callback Method
 	virtual void OnColiderStay(Colider*) {} ///< Colider Component에 다른 Colider가 물리적인 충돌을 진행하고 있을 때 실행되는 Callback Method

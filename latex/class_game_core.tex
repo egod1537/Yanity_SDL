@@ -17,7 +17,7 @@ void \mbox{\hyperlink{class_game_core_a036d63a8c4cb49c19632758c624b4bd0}{Init}} 
 \begin{DoxyCompactList}\small\item\em Game\+Core를 초기화해줍니다. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_game_core_a051f07a9b888f25775a737688a592e82}\label{class_game_core_a051f07a9b888f25775a737688a592e82}} 
 void \mbox{\hyperlink{class_game_core_a051f07a9b888f25775a737688a592e82}{Run\+System}} (std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$ $>$)
-\begin{DoxyCompactList}\small\item\em Yanity 의 생애주를 실행합니다. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Yanity 의 생애주를 실행합니다.\+W. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_game_core_ac318fc58a61ec4d87eea9d3481ec4490}\label{class_game_core_ac318fc58a61ec4d87eea9d3481ec4490}} 
 void \mbox{\hyperlink{class_game_core_ac318fc58a61ec4d87eea9d3481ec4490}{Run\+PhysX}} ()
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_phys_x}{PhysX}} Thread를 실행합니다. \end{DoxyCompactList}\item 
@@ -33,15 +33,21 @@ static \mbox{\hyperlink{class_game_core}{Game\+Core}} \& \mbox{\hyperlink{class_
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{class_game_core_ab1da28dc71b68d31aac4134e4be37477}\label{class_game_core_ab1da28dc71b68d31aac4134e4be37477}} 
+bool {\bfseries Power} = true
+\item 
 \mbox{\Hypertarget{class_game_core_ae2278ef02e9622fd7b6b11acfede6c54}\label{class_game_core_ae2278ef02e9622fd7b6b11acfede6c54}} 
-bool \mbox{\hyperlink{class_game_core_ae2278ef02e9622fd7b6b11acfede6c54}{is\+Active}} = false
+bool \mbox{\hyperlink{class_game_core_ae2278ef02e9622fd7b6b11acfede6c54}{is\+Active}} = true
 \begin{DoxyCompactList}\small\item\em Core 활성화 여부 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_game_core_a83f8a6f04ae98e1454e4dcab35084ec9}\label{class_game_core_a83f8a6f04ae98e1454e4dcab35084ec9}} 
 float \mbox{\hyperlink{class_game_core_a83f8a6f04ae98e1454e4dcab35084ec9}{Phys\+X\+\_\+update\+Ms}} = 6
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_phys_x}{PhysX}} Thread Update 주기(ms) \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_game_core_a2c473310b9325cc468325dc81ac0b5b8}\label{class_game_core_a2c473310b9325cc468325dc81ac0b5b8}} 
-float \mbox{\hyperlink{class_game_core_a2c473310b9325cc468325dc81ac0b5b8}{Input\+\_\+update\+Ms}} = 6
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_input}{Input}} Thread Update 주기(ms) \end{DoxyCompactList}\end{DoxyCompactItemize}
+float \mbox{\hyperlink{class_game_core_a2c473310b9325cc468325dc81ac0b5b8}{Input\+\_\+update\+Ms}} = 1
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_input}{Input}} Thread Update 주기(ms) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_core_a03bc4cf461a91979350adedae37dfdaf}\label{class_game_core_a03bc4cf461a91979350adedae37dfdaf}} 
+std\+::list$<$ \mbox{\hyperlink{class_scene}{Scene}} $\ast$ $>$ \mbox{\hyperlink{class_game_core_a03bc4cf461a91979350adedae37dfdaf}{list\+\_\+\+Scene}}
+\begin{DoxyCompactList}\small\item\em Scene\+List입니다. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

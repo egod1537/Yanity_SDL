@@ -17,8 +17,12 @@ void Button::Update() {
 	Vector2 pos = Lib::ScreenPosToViewPortPos(Input::getMousePosition());
 
 	if (boxColider->isCollision(pos)) {
+		
+		if (Input::getMouseLeftClickDown()) OnClickDown.notify();
 
-		if (Input::getMouseLeftClickUp()) std::cout << "click\n";
+		if (Input::getMouseLeftClick()) OnPressed.notify();
+
+		if (Input::getMouseLeftClickUp()) OnClickUp.notify();
 
 	}
 

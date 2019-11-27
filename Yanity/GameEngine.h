@@ -6,6 +6,7 @@
 
 #include "GameCore.h"
 #include "GraphicCore.h"
+#include "SceneManager.h"
 
 #include "GameObject.h"
 #include "Component.h"

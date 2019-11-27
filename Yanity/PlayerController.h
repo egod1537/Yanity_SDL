@@ -6,6 +6,8 @@ class PlayerController : public Component{
 
 public:
 
+	GameObject* gq;
+
 	void Update();
 
 };

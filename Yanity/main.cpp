@@ -1,6 +1,10 @@
 ///@mainpage Yanity Document Page
 ///@author wethinknewrise
 ///@date 2019-11-27
+///@todo
+/// - Gameobject 부모 자식 관계 만들기
+/// - PhysX 보충
+/// - doTween Component 제작
 
 #include "GameEngine.h"
 
@@ -8,9 +12,37 @@ int main(int argc, char* args[]) {
 
 	GameCore::getInstance().Init();
 
-	Scene *scene1 = new Scene();
+	Scene *scene1 = new Scene(), *scene2 = new Scene();
+
+	scene1->name = "scene1"; scene2->name = "scene2";
 
 	GameObject::Builder gBuilder;
+
+	#pragma region Sword
+
+	GameObject sword = gBuilder
+		.Init()
+		.SetName("Sword1")
+		.SetPosition(Vector2(-150, 0))
+		.Build();
+
+	SpriteRenderer sword_s = SpriteRenderer("sword.png");
+
+	BoxColider bc3 = BoxColider();
+
+	Rigidbody rig3 = Rigidbody();
+
+	Button btn = Button();
+
+	sword.AddComponent(&sword_s);
+	sword.AddComponent(&btn);
+	sword.AddComponent(&bc3);
+	sword.AddComponent(&rig3);
+
+	bc3.Scale = Vector2(50, 50);
+	bc3.DebugMode = true;
+
+	#pragma endregion
 
 	#pragma region go1
 
@@ -20,24 +52,24 @@ int main(int argc, char* args[]) {
 		.SetScale(Vector2(3, 3))
 		.Build();
 
-	SpriteRenderer *sr1 = new SpriteRenderer("Player.png");
+	SpriteRenderer sr1 = SpriteRenderer("Player.png");
 
-	PlayerController *pc = new PlayerController();
+	PlayerController pc = PlayerController();
 
-	BoxColider *bc1 = new BoxColider();
+	BoxColider bc1 = BoxColider();
 
-	Rigidbody *rg1 = new Rigidbody();
+	Rigidbody rg1 = Rigidbody();
 
-	TestColiderCheck *tcc = new TestColiderCheck();
+	TestColiderCheck tcc = TestColiderCheck();
 
-	go1.AddComponent(rg1);
-	go1.AddComponent(sr1);
-	go1.AddComponent(pc);
-	go1.AddComponent(bc1);
-	go1.AddComponent(tcc);
+	go1.AddComponent(&rg1);
+	go1.AddComponent(&sr1);
+	go1.AddComponent(&pc);
+	go1.AddComponent(&bc1);
+	go1.AddComponent(&tcc);
 
-	bc1->Scale = Vector2(50, 50);
-	bc1->DebugMode = true;
+	bc1.Scale = Vector2(50, 50);
+	bc1.DebugMode = true;
 
 	#pragma endregion
 
@@ -50,46 +82,24 @@ int main(int argc, char* args[]) {
 		.SetScale(Vector2(3, 3))
 		.Build();
 
-	SpriteRenderer *sr2 = new SpriteRenderer("Player.png");
+	SpriteRenderer sr2 = SpriteRenderer("Player.png");
 
-	BoxColider *bc2 = new BoxColider();
+	BoxColider bc2 = BoxColider();
 
-	Rigidbody *rg2 = new Rigidbody();
+	Rigidbody rg2 = Rigidbody();
 
-	TestColiderCheck *tcc1 = new TestColiderCheck();
+	TestColiderCheck tcc1 = TestColiderCheck();
 
-	go2.AddComponent(sr2);
-	go2.AddComponent(bc2);
-	go2.AddComponent(rg2);
+	PlayerController pc2 = PlayerController();
 
-	bc2->Scale = Vector2(50, 50);
-	bc2->DebugMode = true;
+	go2.AddComponent(&sr2);
+	go2.AddComponent(&bc2);
+	go2.AddComponent(&rg2);
+	go2.AddComponent(&pc2);
+	go2.AddComponent(&tcc1);
 
-	#pragma endregion
-
-	#pragma region Sword
-
-	GameObject sword = gBuilder
-		.Init()
-		.SetName("Sword1")
-		.SetPosition(Vector2(-150, 0))
-		.Build();
-
-	SpriteRenderer *sword_s = new SpriteRenderer("sword.png");
-
-	BoxColider *bc3 = new BoxColider();
-
-	Rigidbody *rig3 = new Rigidbody();
-
-	Button *btn = new Button();
-
-	sword.AddComponent(sword_s);
-	sword.AddComponent(btn);
-	sword.AddComponent(bc3);
-	sword.AddComponent(rig3);
-
-	bc3->Scale = Vector2(50, 50);
-	bc3->DebugMode = true;
+	bc2.Scale = Vector2(50, 50);
+	bc2.DebugMode = true;
 
 	#pragma endregion
 
@@ -101,31 +111,53 @@ int main(int argc, char* args[]) {
 		.SetPosition(Vector2(-150, 100))
 		.Build();
 
-	SpriteRenderer *sword_s2 = new SpriteRenderer("sword.png");
+	SpriteRenderer sword_s2 = SpriteRenderer("sword.png");
 
-	BoxColider *bc4 = new BoxColider();
+	BoxColider bc4 = BoxColider();
 
-	Rigidbody *rig4 = new Rigidbody();
+	Rigidbody rig4 = Rigidbody();
 
-	Button *btn3 = new Button();
+	Button btn3 = Button();
 
-	sword1.AddComponent(sword_s2);
-	sword1.AddComponent(btn3);
-	sword1.AddComponent(bc4);
-	sword1.AddComponent(rig4);
+	sword1.AddComponent(&sword_s2);
+	sword1.AddComponent(&btn3);
+	sword1.AddComponent(&bc4);
+	sword1.AddComponent(&rig4);
 
-	bc4->Scale = Vector2(50, 50);
-	bc4->DebugMode = true;
+	bc4.Scale = Vector2(50, 50);
+	bc4.DebugMode = true;
+
+	#pragma endregion
+
+	#pragma region Label
+
+	GameObject t = gBuilder
+		.Init()
+		.SetPosition(Vector2(0, 0))
+		.Build();
+
+	Text text = Text("default.ttf", "dw");
+
+	text.Size = 10;
+	text.setText("fqqdwqd");
+
+	t.AddComponent(&text);
 
 	#pragma endregion
 
 	scene1->AddGameObject(&go1);
-
 	scene1->AddGameObject(&sword1);
-	scene1->AddGameObject(&sword);
-	scene1->AddGameObject(&go2);
 
-	scene1->Enable();
+	scene2->AddGameObject(&go2);
+	scene2->AddGameObject(&sword);
+	scene2->AddGameObject(&t);
+
+	GameCore::getInstance().list_Scene.push_back(scene1);
+	GameCore::getInstance().list_Scene.push_back(scene2);
+
+	SceneManager::LoadScene("scene1");
+
+	while (GameCore::getInstance().Power)
 
 	SDL_Quit();
 

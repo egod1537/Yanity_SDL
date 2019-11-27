@@ -74,26 +74,39 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;SDL_stdafx.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Vector2.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_input.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_input.html">Input</a> {</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_input.html">Input</a>() {}</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> Handler();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> getKeyDown(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> getMouseLeftClickDown();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> getMouseLeftClickUp();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> getMouseRightClickDown();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> getMouseRightClickUp();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_vector2.html">Vector2</a> getMousePosition();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_input.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_input.html">Input</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_input.html">Input</a>() {}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_input.html#af82b8f279d9441168da08d79f6b534e2">Handler</a>(); </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_input.html#ad929ed54ee8180699b8b375a6a0b5fb9">getKeyDown</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_input.html#a7dfa689933f76943d92f80e7c7ffd6d0">getMouseLeftClickDown</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_input.html#ae2cce29d949c4a153a0953d20886a029">getMouseLeftClick</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_input.html#a197e705e8e4b73bf5ed7df267706fab0">getMouseLeftClickUp</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_input.html#a31d365ec20f650b3f0501b8e7213e5f1">getMouseRightClickDown</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_input.html#a4952674dfc81898f6501814e526a2d29">getMouseRightClick</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_input.html#a10c1b4f1a276c45fe28ceafb1a4185e6">getMouseRightClickUp</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_vector2.html">Vector2</a> <a class="code" href="class_input.html#ada65d73a18226652a1b8330addf35e8a">getMousePosition</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_input_html"><div class="ttname"><a href="class_input.html">Input</a></div><div class="ttdef"><b>Definition:</b> Input.h:6</div></div>
-<div class="ttc" id="aclass_vector2_html"><div class="ttname"><a href="class_vector2.html">Vector2</a></div><div class="ttdef"><b>Definition:</b> Vector2.h:6</div></div>
+<div class="ttc" id="aclass_input_html_ae2cce29d949c4a153a0953d20886a029"><div class="ttname"><a href="class_input.html#ae2cce29d949c4a153a0953d20886a029">Input::getMouseLeftClick</a></div><div class="ttdeci">static bool getMouseLeftClick()</div><div class="ttdoc">마우스 왼클릭을 눌르고 있는 지 확인합니다.</div><div class="ttdef"><b>Definition:</b> Input.cpp:34</div></div>
+<div class="ttc" id="aclass_input_html_a197e705e8e4b73bf5ed7df267706fab0"><div class="ttname"><a href="class_input.html#a197e705e8e4b73bf5ed7df267706fab0">Input::getMouseLeftClickUp</a></div><div class="ttdeci">static bool getMouseLeftClickUp()</div><div class="ttdoc">마우스 왼클릭을 떼었는 지 확인합니다.</div><div class="ttdef"><b>Definition:</b> Input.cpp:40</div></div>
+<div class="ttc" id="aclass_input_html_a7dfa689933f76943d92f80e7c7ffd6d0"><div class="ttname"><a href="class_input.html#a7dfa689933f76943d92f80e7c7ffd6d0">Input::getMouseLeftClickDown</a></div><div class="ttdeci">static bool getMouseLeftClickDown()</div><div class="ttdoc">마우스 왼클릭을 눌렀는 지 확인합니다.</div><div class="ttdef"><b>Definition:</b> Input.cpp:28</div></div>
+<div class="ttc" id="aclass_input_html_af82b8f279d9441168da08d79f6b534e2"><div class="ttname"><a href="class_input.html#af82b8f279d9441168da08d79f6b534e2">Input::Handler</a></div><div class="ttdeci">static void Handler()</div><div class="ttdoc">Input Event를 실시간으로 감시합니다</div><div class="ttdef"><b>Definition:</b> Input.cpp:11</div></div>
+<div class="ttc" id="aclass_input_html_a4952674dfc81898f6501814e526a2d29"><div class="ttname"><a href="class_input.html#a4952674dfc81898f6501814e526a2d29">Input::getMouseRightClick</a></div><div class="ttdeci">static bool getMouseRightClick()</div><div class="ttdoc">마우스 우클릭을 눌르고 있는 지 확인합니다.</div><div class="ttdef"><b>Definition:</b> Input.cpp:53</div></div>
+<div class="ttc" id="aclass_input_html_ad929ed54ee8180699b8b375a6a0b5fb9"><div class="ttname"><a href="class_input.html#ad929ed54ee8180699b8b375a6a0b5fb9">Input::getKeyDown</a></div><div class="ttdeci">static bool getKeyDown(int)</div><div class="ttdoc">Keyboard가 눌려있는지 확인합니다.</div><div class="ttdef"><b>Definition:</b> Input.cpp:20</div></div>
+<div class="ttc" id="aclass_input_html_ada65d73a18226652a1b8330addf35e8a"><div class="ttname"><a href="class_input.html#ada65d73a18226652a1b8330addf35e8a">Input::getMousePosition</a></div><div class="ttdeci">static Vector2 getMousePosition()</div><div class="ttdoc">현재 마우스의 위치를 가져옵니다.</div><div class="ttdef"><b>Definition:</b> Input.cpp:65</div></div>
+<div class="ttc" id="aclass_input_html"><div class="ttname"><a href="class_input.html">Input</a></div><div class="ttdoc">Input에 관한 클래스 입니다.</div><div class="ttdef"><b>Definition:</b> Input.h:7</div></div>
+<div class="ttc" id="aclass_input_html_a31d365ec20f650b3f0501b8e7213e5f1"><div class="ttname"><a href="class_input.html#a31d365ec20f650b3f0501b8e7213e5f1">Input::getMouseRightClickDown</a></div><div class="ttdeci">static bool getMouseRightClickDown()</div><div class="ttdoc">마우스 우클릭을 눌렀는 지 확인합니다.</div><div class="ttdef"><b>Definition:</b> Input.cpp:47</div></div>
+<div class="ttc" id="aclass_input_html_a10c1b4f1a276c45fe28ceafb1a4185e6"><div class="ttname"><a href="class_input.html#a10c1b4f1a276c45fe28ceafb1a4185e6">Input::getMouseRightClickUp</a></div><div class="ttdeci">static bool getMouseRightClickUp()</div><div class="ttdoc">마우스 우클릭을 떼었는 지 확인합니다.</div><div class="ttdef"><b>Definition:</b> Input.cpp:59</div></div>
+<div class="ttc" id="aclass_vector2_html"><div class="ttname"><a href="class_vector2.html">Vector2</a></div><div class="ttdoc">Vector2를 표현하는 class입니다.</div><div class="ttdef"><b>Definition:</b> Vector2.h:7</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

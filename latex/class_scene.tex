@@ -1,27 +1,42 @@
 \hypertarget{class_scene}{}\doxysection{Scene Class Reference}
 \label{class_scene}\index{Scene@{Scene}}
+
+
+Gameobject를 포괄하고 있는 화면의 class입니다.  
+
+
+
+
+{\ttfamily \#include $<$Scene.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_scene_a3120aba8b23db1180f32112635ca7b42}\label{class_scene_a3120aba8b23db1180f32112635ca7b42}} 
-void {\bfseries Enable} ()
-\item 
+void \mbox{\hyperlink{class_scene_a3120aba8b23db1180f32112635ca7b42}{Enable}} ()
+\begin{DoxyCompactList}\small\item\em 활성화 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_scene_a31b1f5dd764bfdede3df7945531bf1a8}\label{class_scene_a31b1f5dd764bfdede3df7945531bf1a8}} 
 void {\bfseries Disable} ()
 \item 
 \mbox{\Hypertarget{class_scene_aa5edf1f044245c80b0bb87f9215274c6}\label{class_scene_aa5edf1f044245c80b0bb87f9215274c6}} 
-void {\bfseries Add\+Game\+Object} (\mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$gameobject)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_scene_aa5edf1f044245c80b0bb87f9215274c6}{Add\+Game\+Object}} (\mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$gameobject)
+\begin{DoxyCompactList}\small\item\em 비활성화 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{class_scene_a44b2d6bffa153dda02f026f8533ceb08}\label{class_scene_a44b2d6bffa153dda02f026f8533ceb08}} 
+std\+::string \mbox{\hyperlink{class_scene_a44b2d6bffa153dda02f026f8533ceb08}{name}} = \char`\"{}\char`\"{}
+\begin{DoxyCompactList}\small\item\em Scene의 이름 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_scene_add51b4f6f34a03f666bc4a0c99b6d1e3}\label{class_scene_add51b4f6f34a03f666bc4a0c99b6d1e3}} 
-bool {\bfseries is\+Active} = false
-\item 
+bool \mbox{\hyperlink{class_scene_add51b4f6f34a03f666bc4a0c99b6d1e3}{is\+Active}} = false
+\begin{DoxyCompactList}\small\item\em 활성화 여부 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_scene_afaa227c2c4793ce5083d508e6310e2b2}\label{class_scene_afaa227c2c4793ce5083d508e6310e2b2}} 
-std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$ $>$ {\bfseries list\+Game\+Object}
-\end{DoxyCompactItemize}
+std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$ $>$ \mbox{\hyperlink{class_scene_afaa227c2c4793ce5083d508e6310e2b2}{list\+Game\+Object}}
+\begin{DoxyCompactList}\small\item\em Gameobject\+List입니다. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Gameobject를 포괄하고 있는 화면의 class입니다. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

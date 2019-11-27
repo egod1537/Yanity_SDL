@@ -75,23 +75,30 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">class </span><a class="code" href="class_game_object.html">GameObject</a>;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_scene.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_scene.html">Scene</a> {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">bool</span> isActive = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    std::vector&lt;GameObject*&gt; listGameObject;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> Enable();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> Disable();</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_scene.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_scene.html">Scene</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_scene.html#a44b2d6bffa153dda02f026f8533ceb08">   12</a></span>&#160;    std::string <a class="code" href="class_scene.html#a44b2d6bffa153dda02f026f8533ceb08">name</a> = <span class="stringliteral">&quot;&quot;</span>; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_scene.html#add51b4f6f34a03f666bc4a0c99b6d1e3">   14</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_scene.html#add51b4f6f34a03f666bc4a0c99b6d1e3">isActive</a> = <span class="keyword">false</span>; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_scene.html#afaa227c2c4793ce5083d508e6310e2b2">   16</a></span>&#160;    std::vector&lt;GameObject*&gt; <a class="code" href="class_scene.html#afaa227c2c4793ce5083d508e6310e2b2">listGameObject</a>; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> AddGameObject(<a class="code" href="class_game_object.html">GameObject</a>* gameobject);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_scene.html#a3120aba8b23db1180f32112635ca7b42">Enable</a>(); </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> Disable(); </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_scene.html#aa5edf1f044245c80b0bb87f9215274c6">AddGameObject</a>(<a class="code" href="class_game_object.html">GameObject</a>* gameobject); </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdef"><b>Definition:</b> Scene.h:7</div></div>
-<div class="ttc" id="aclass_game_object_html"><div class="ttname"><a href="class_game_object.html">GameObject</a></div><div class="ttdef"><b>Definition:</b> GameObject.h:8</div></div>
+<div class="ttc" id="aclass_scene_html_a44b2d6bffa153dda02f026f8533ceb08"><div class="ttname"><a href="class_scene.html#a44b2d6bffa153dda02f026f8533ceb08">Scene::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Scene의 이름</div><div class="ttdef"><b>Definition:</b> Scene.h:12</div></div>
+<div class="ttc" id="aclass_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdoc">Gameobject를 포괄하고 있는 화면의 class입니다.</div><div class="ttdef"><b>Definition:</b> Scene.h:8</div></div>
+<div class="ttc" id="aclass_scene_html_add51b4f6f34a03f666bc4a0c99b6d1e3"><div class="ttname"><a href="class_scene.html#add51b4f6f34a03f666bc4a0c99b6d1e3">Scene::isActive</a></div><div class="ttdeci">bool isActive</div><div class="ttdoc">활성화 여부</div><div class="ttdef"><b>Definition:</b> Scene.h:14</div></div>
+<div class="ttc" id="aclass_scene_html_afaa227c2c4793ce5083d508e6310e2b2"><div class="ttname"><a href="class_scene.html#afaa227c2c4793ce5083d508e6310e2b2">Scene::listGameObject</a></div><div class="ttdeci">std::vector&lt; GameObject * &gt; listGameObject</div><div class="ttdoc">GameobjectList입니다.</div><div class="ttdef"><b>Definition:</b> Scene.h:16</div></div>
+<div class="ttc" id="aclass_scene_html_aa5edf1f044245c80b0bb87f9215274c6"><div class="ttname"><a href="class_scene.html#aa5edf1f044245c80b0bb87f9215274c6">Scene::AddGameObject</a></div><div class="ttdeci">void AddGameObject(GameObject *gameobject)</div><div class="ttdoc">비활성화</div><div class="ttdef"><b>Definition:</b> Scene.cpp:32</div></div>
+<div class="ttc" id="aclass_scene_html_a3120aba8b23db1180f32112635ca7b42"><div class="ttname"><a href="class_scene.html#a3120aba8b23db1180f32112635ca7b42">Scene::Enable</a></div><div class="ttdeci">void Enable()</div><div class="ttdoc">활성화</div><div class="ttdef"><b>Definition:</b> Scene.cpp:10</div></div>
+<div class="ttc" id="aclass_game_object_html"><div class="ttname"><a href="class_game_object.html">GameObject</a></div><div class="ttdoc">Transform, Component를 가지고 있는 Object입니다.</div><div class="ttdef"><b>Definition:</b> GameObject.h:9</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

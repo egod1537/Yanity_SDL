@@ -87,12 +87,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a045fd0c82cccf227593bc174e45d3bc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic_core.html#a045fd0c82cccf227593bc174e45d3bc9">AddRender</a> (int depth, std::function&lt; void()&gt; callback)</td></tr>
 <tr class="memdesc:a045fd0c82cccf227593bc174e45d3bc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">RenderBlock을 추가합니다.  <a href="class_graphic_core.html#a045fd0c82cccf227593bc174e45d3bc9">More...</a><br /></td></tr>
 <tr class="separator:a045fd0c82cccf227593bc174e45d3bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f52862029d01d3e332af0ed0db15c7d"><td class="memItemLeft" align="right" valign="top"><a id="a4f52862029d01d3e332af0ed0db15c7d"></a>
+SDL_Texture &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>toTexture</b> (SDL_Surface *)</td></tr>
+<tr class="separator:a4f52862029d01d3e332af0ed0db15c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71085e36d14034d3c75e0288d73a727f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic_core.html#a71085e36d14034d3c75e0288d73a727f">DrawTexture</a> (SDL_Texture *_texture, <a class="el" href="class_vector2.html">Vector2</a> _pos=<a class="el" href="class_vector2.html">Vector2</a>(0, 0), float _angle=0, <a class="el" href="class_vector2.html">Vector2</a> _scale=<a class="el" href="class_vector2.html">Vector2</a>(1, 1), <a class="el" href="class_vector2.html">Vector2</a> _pivot=<a class="el" href="class_vector2.html">Vector2</a>(0.5, 0.5))</td></tr>
 <tr class="memdesc:a71085e36d14034d3c75e0288d73a727f"><td class="mdescLeft">&#160;</td><td class="mdescRight">화면에 Texture를 그려줍니다.  <a href="class_graphic_core.html#a71085e36d14034d3c75e0288d73a727f">More...</a><br /></td></tr>
 <tr class="separator:a71085e36d14034d3c75e0288d73a727f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac70e51a7a07cdbd27b14142dc06ac9e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic_core.html#ac70e51a7a07cdbd27b14142dc06ac9e8">DrawTexture</a> (SDL_Texture *, <a class="el" href="struct_transform.html">Transform</a>)</td></tr>
-<tr class="memdesc:ac70e51a7a07cdbd27b14142dc06ac9e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">화면에 Tranform의 정보에 따라 Texture를 그려줍니다.  <a href="class_graphic_core.html#ac70e51a7a07cdbd27b14142dc06ac9e8">More...</a><br /></td></tr>
-<tr class="separator:ac70e51a7a07cdbd27b14142dc06ac9e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a123bbebaadaca905a237a02ca779c316"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic_core.html#a123bbebaadaca905a237a02ca779c316">DrawTexture</a> (SDL_Texture *, <a class="el" href="struct_transform.html">Transform</a> *)</td></tr>
+<tr class="memdesc:a123bbebaadaca905a237a02ca779c316"><td class="mdescLeft">&#160;</td><td class="mdescRight">화면에 Tranform의 정보에 따라 Texture를 그려줍니다.  <a href="class_graphic_core.html#a123bbebaadaca905a237a02ca779c316">More...</a><br /></td></tr>
+<tr class="separator:a123bbebaadaca905a237a02ca779c316"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab107a14afe3dbdd3c73c8dc80beb8c3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graphic_core.html#ab107a14afe3dbdd3c73c8dc80beb8c3f">DrawSquare</a> (SDL_Color, <a class="el" href="class_vector2.html">Vector2</a>, <a class="el" href="class_vector2.html">Vector2</a>)</td></tr>
 <tr class="memdesc:ab107a14afe3dbdd3c73c8dc80beb8c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">화면에 빈 사각형을 그려줍니다.  <a href="class_graphic_core.html#ab107a14afe3dbdd3c73c8dc80beb8c3f">More...</a><br /></td></tr>
 <tr class="separator:ab107a14afe3dbdd3c73c8dc80beb8c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,8 +211,8 @@ std::list&lt; <a class="el" href="struct_render_block.html">RenderBlock</a> &gt;
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">SDL_Color</td><td>: 색깔 </td></tr>
-    <tr><td class="paramname"><a class="el" href="class_vector2.html">Vector2</a></td><td>: 시작 좌표 </td></tr>
-    <tr><td class="paramname"><a class="el" href="class_vector2.html">Vector2</a></td><td>: 끝좌표 </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_vector2.html" title="Vector2를 표현하는 class입니다.">Vector2</a></td><td>: 시작 좌표 </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_vector2.html" title="Vector2를 표현하는 class입니다.">Vector2</a></td><td>: 끝좌표 </td></tr>
   </table>
   </dd>
 </dl>
@@ -252,7 +255,7 @@ std::list&lt; <a class="el" href="struct_render_block.html">RenderBlock</a> &gt;
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">SDL_Color</td><td>: 색깔 </td></tr>
-    <tr><td class="paramname"><a class="el" href="class_vector2.html">Vector2</a></td><td>: 원의 중심 좌표 </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_vector2.html" title="Vector2를 표현하는 class입니다.">Vector2</a></td><td>: 원의 중심 좌표 </td></tr>
     <tr><td class="paramname">float</td><td>: 원의 반지름 </td></tr>
   </table>
   </dd>
@@ -296,16 +299,16 @@ std::list&lt; <a class="el" href="struct_render_block.html">RenderBlock</a> &gt;
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">SDL_Color</td><td>: 색깔 </td></tr>
-    <tr><td class="paramname"><a class="el" href="class_vector2.html">Vector2</a></td><td>: 시작 좌표 </td></tr>
-    <tr><td class="paramname"><a class="el" href="class_vector2.html">Vector2</a></td><td>: 끝좌표 </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_vector2.html" title="Vector2를 표현하는 class입니다.">Vector2</a></td><td>: 시작 좌표 </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_vector2.html" title="Vector2를 표현하는 class입니다.">Vector2</a></td><td>: 끝좌표 </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="ac70e51a7a07cdbd27b14142dc06ac9e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac70e51a7a07cdbd27b14142dc06ac9e8">&#9670;&nbsp;</a></span>DrawTexture() <span class="overload">[1/2]</span></h2>
+<a id="a123bbebaadaca905a237a02ca779c316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a123bbebaadaca905a237a02ca779c316">&#9670;&nbsp;</a></span>DrawTexture() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -319,7 +322,7 @@ std::list&lt; <a class="el" href="struct_render_block.html">RenderBlock</a> &gt;
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_transform.html">Transform</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_transform.html">Transform</a> *&#160;</td>
           <td class="paramname"><em>transform</em>&#160;</td>
         </tr>
         <tr>
@@ -389,10 +392,10 @@ std::list&lt; <a class="el" href="struct_render_block.html">RenderBlock</a> &gt;
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">SDL_Texture*</td><td>_texture : 그릴 Texture </td></tr>
-    <tr><td class="paramname"><a class="el" href="class_vector2.html">Vector2</a></td><td>_pos : 위치 | 기본값: Vector(0, 0) </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_vector2.html" title="Vector2를 표현하는 class입니다.">Vector2</a></td><td>_pos : 위치 | 기본값: Vector(0, 0) </td></tr>
     <tr><td class="paramname">float</td><td>_angle : 각도 | 기본값: 0 </td></tr>
-    <tr><td class="paramname"><a class="el" href="class_vector2.html">Vector2</a></td><td>_scale : 크기 | 기본값: <a class="el" href="class_vector2.html">Vector2(1, 1)</a> </td></tr>
-    <tr><td class="paramname"><a class="el" href="class_vector2.html">Vector2</a></td><td>_pivot : 이미지의 중심 | 기본값: <a class="el" href="class_vector2.html">Vector2</a>(0.5, 0.5) </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_vector2.html" title="Vector2를 표현하는 class입니다.">Vector2</a></td><td>_scale : 크기 | 기본값: <a class="el" href="class_vector2.html" title="Vector2를 표현하는 class입니다.">Vector2(1, 1)</a> </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_vector2.html" title="Vector2를 표현하는 class입니다.">Vector2</a></td><td>_pivot : 이미지의 중심 | 기본값: <a class="el" href="class_vector2.html" title="Vector2를 표현하는 class입니다.">Vector2</a>(0.5, 0.5) </td></tr>
   </table>
   </dd>
 </dl>

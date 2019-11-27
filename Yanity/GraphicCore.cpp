@@ -54,6 +54,8 @@ void GraphicCore::AddRender(int depth, std::function<void()> callback)
 
 }
 
+SDL_Texture& GraphicCore::toTexture(SDL_Surface* _surface) { return *SDL_CreateTextureFromSurface(renderer, _surface); }
+
 void GraphicCore::DrawTexture(
 	SDL_Texture* _texture, Vector2 _pos,
 	float _angle, Vector2 _scale, Vector2 _pivot) {
@@ -77,9 +79,10 @@ void GraphicCore::DrawTexture(
 
 }
 void GraphicCore::DrawTexture(
-	SDL_Texture* _texture, Transform transform) {
+	SDL_Texture* _texture, Transform* transform) {
 
-	DrawTexture(_texture, Lib::ViewPortPosToScreenPos(transform.Position), transform.Rotation, transform.Scale);
+	DrawTexture(_texture, Lib::ViewPortPosToScreenPos(
+		transform->Position), transform->Rotation, transform->Scale);
 
 }
 

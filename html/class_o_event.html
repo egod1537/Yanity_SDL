@@ -69,25 +69,116 @@ $(function() {
 <div class="title">OEvent&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Observer Pattern을 일반화하여 Delegate Event class 이다.  
+ <a href="class_o_event.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_o_event_8h_source.html">OEvent.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6d17adf32a9b7528965672f7c70a5ce7"><td class="memItemLeft" align="right" valign="top"><a id="a6d17adf32a9b7528965672f7c70a5ce7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>notify</b> (T... args...)</td></tr>
+<tr class="memitem:a6d17adf32a9b7528965672f7c70a5ce7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_event.html#a6d17adf32a9b7528965672f7c70a5ce7">notify</a> (T... args...)</td></tr>
+<tr class="memdesc:a6d17adf32a9b7528965672f7c70a5ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">등록된 함수를 모두 호출합니다.  <a href="class_o_event.html#a6d17adf32a9b7528965672f7c70a5ce7">More...</a><br /></td></tr>
 <tr class="separator:a6d17adf32a9b7528965672f7c70a5ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0d8a12abad9af61f6bf5191912cef2d"><td class="memItemLeft" align="right" valign="top"><a id="af0d8a12abad9af61f6bf5191912cef2d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addEvent</b> (std::function&lt; void(T...)&gt; callback)</td></tr>
+<tr class="memitem:af0d8a12abad9af61f6bf5191912cef2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_event.html#af0d8a12abad9af61f6bf5191912cef2d">addEvent</a> (std::function&lt; void(T...)&gt; callback)</td></tr>
+<tr class="memdesc:af0d8a12abad9af61f6bf5191912cef2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">함수를 이벤트에 등록시킵니다.  <a href="class_o_event.html#af0d8a12abad9af61f6bf5191912cef2d">More...</a><br /></td></tr>
 <tr class="separator:af0d8a12abad9af61f6bf5191912cef2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36a1dfc2975767d0d2f2b295def735ea"><td class="memItemLeft" align="right" valign="top"><a id="a36a1dfc2975767d0d2f2b295def735ea"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>deleteAllEvent</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_event.html#a36a1dfc2975767d0d2f2b295def735ea">deleteAllEvent</a> ()</td></tr>
+<tr class="memdesc:a36a1dfc2975767d0d2f2b295def735ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">등록된 함수를 모두 제거합니다. <br /></td></tr>
 <tr class="separator:a36a1dfc2975767d0d2f2b295def735ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ab09a14343491724cbf4d340ee693ee5f"><td class="memItemLeft" align="right" valign="top"><a id="ab09a14343491724cbf4d340ee693ee5f"></a>
-std::list&lt; std::function&lt; void(T...)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>EventList</b></td></tr>
-<tr class="separator:ab09a14343491724cbf4d340ee693ee5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3933e1f823e4835a6b01cc6abc34f2a8"><td class="memItemLeft" align="right" valign="top"><a id="a3933e1f823e4835a6b01cc6abc34f2a8"></a>
+std::vector&lt; std::function&lt; void(T...)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_event.html#a3933e1f823e4835a6b01cc6abc34f2a8">EventList</a></td></tr>
+<tr class="memdesc:a3933e1f823e4835a6b01cc6abc34f2a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">이벤트 때 작동할 함수 <br /></td></tr>
+<tr class="separator:a3933e1f823e4835a6b01cc6abc34f2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename... T&gt;<br />
+class OEvent&lt; T &gt;</h3>
+
+<p>Observer Pattern을 일반화하여 Delegate Event class 이다. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">T</td><td>: 이벤트 발생시 함수들에게 전달할 인수 </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af0d8a12abad9af61f6bf5191912cef2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0d8a12abad9af61f6bf5191912cef2d">&#9670;&nbsp;</a></span>addEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_o_event.html">OEvent</a>&lt; T &gt;::addEvent </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(T...)&gt;&#160;</td>
+          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>함수를 이벤트에 등록시킵니다. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">function&lt;void(T...)&gt;</td><td>: 등록할 함수 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6d17adf32a9b7528965672f7c70a5ce7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d17adf32a9b7528965672f7c70a5ce7">&#9670;&nbsp;</a></span>notify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_o_event.html">OEvent</a>&lt; T &gt;::notify </td>
+          <td>(</td>
+          <td class="paramtype">T...&#160;</td>
+          <td class="paramname"><em>args...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>등록된 함수를 모두 호출합니다. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">T</td><td>args : 호출할 함수의 인자 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Yanity/<a class="el" href="_o_event_8h_source.html">OEvent.h</a></li>
 </ul>

@@ -78,23 +78,26 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">class </span><a class="code" href="class_box_colider.html">BoxColider</a>;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">class </span><a class="code" href="class_sphere_colider.html">SphereColider</a>;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_phys_x.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_phys_x.html">PhysX</a> {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_phys_x.html">PhysX</a>() {}</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    std::vector&lt;Colider*&gt; Coliders;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_phys_x.html">PhysX</a>&amp; getInstance();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> Run();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_phys_x.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_phys_x.html">PhysX</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_phys_x.html">PhysX</a>() {}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_phys_x.html#a34fc8566009d4b42737ddf681f8d21dc">   17</a></span>&#160;    std::vector&lt;Colider*&gt; <a class="code" href="class_phys_x.html#a34fc8566009d4b42737ddf681f8d21dc">Coliders</a>; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_phys_x.html">PhysX</a>&amp; <a class="code" href="class_phys_x.html#a76fde2baed669ead3ebe8da8e8214914">getInstance</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_phys_x.html#a5955bc8ebe210ade061ba0d92828cf6a">Run</a>(); </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_phys_x_html_a76fde2baed669ead3ebe8da8e8214914"><div class="ttname"><a href="class_phys_x.html#a76fde2baed669ead3ebe8da8e8214914">PhysX::getInstance</a></div><div class="ttdeci">static PhysX &amp; getInstance()</div><div class="ttdoc">Singleton Method.</div><div class="ttdef"><b>Definition:</b> PhysX.cpp:11</div></div>
 <div class="ttc" id="aclass_box_colider_html"><div class="ttname"><a href="class_box_colider.html">BoxColider</a></div><div class="ttdoc">Box 형태의 Colider 컴포넌트 입니다.</div><div class="ttdef"><b>Definition:</b> BoxColider.h:6</div></div>
 <div class="ttc" id="aclass_colider_html"><div class="ttname"><a href="class_colider.html">Colider</a></div><div class="ttdoc">충돌을 감지하는 범위를 설정해주는 컴포넌트 입니다,</div><div class="ttdef"><b>Definition:</b> Colider.h:13</div></div>
-<div class="ttc" id="aclass_phys_x_html"><div class="ttname"><a href="class_phys_x.html">PhysX</a></div><div class="ttdef"><b>Definition:</b> PhysX.h:10</div></div>
+<div class="ttc" id="aclass_phys_x_html"><div class="ttname"><a href="class_phys_x.html">PhysX</a></div><div class="ttdoc">물리 관련 시스템 처리 class 입니다.</div><div class="ttdef"><b>Definition:</b> PhysX.h:11</div></div>
+<div class="ttc" id="aclass_phys_x_html_a34fc8566009d4b42737ddf681f8d21dc"><div class="ttname"><a href="class_phys_x.html#a34fc8566009d4b42737ddf681f8d21dc">PhysX::Coliders</a></div><div class="ttdeci">std::vector&lt; Colider * &gt; Coliders</div><div class="ttdoc">ColiderList 입니다.</div><div class="ttdef"><b>Definition:</b> PhysX.h:17</div></div>
+<div class="ttc" id="aclass_phys_x_html_a5955bc8ebe210ade061ba0d92828cf6a"><div class="ttname"><a href="class_phys_x.html#a5955bc8ebe210ade061ba0d92828cf6a">PhysX::Run</a></div><div class="ttdeci">void Run()</div><div class="ttdoc">PhysX 작동</div><div class="ttdef"><b>Definition:</b> PhysX.cpp:19</div></div>
 <div class="ttc" id="aclass_sphere_colider_html"><div class="ttname"><a href="class_sphere_colider.html">SphereColider</a></div><div class="ttdoc">Sphere 형태의 Colider 컴포넌트 입니다.</div><div class="ttdef"><b>Definition:</b> SphereColider.h:6</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

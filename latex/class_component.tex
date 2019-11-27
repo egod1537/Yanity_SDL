@@ -12,7 +12,7 @@ Gameobject에 기능을 수행하는 단위입니다.
 Inheritance diagram for Component\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.333333cm]{class_component}
+\includegraphics[height=2.000000cm]{class_component}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Member Functions}
@@ -29,13 +29,13 @@ virtual void \mbox{\hyperlink{class_component_a0203b02cea981c919d1196d01881e0b0}
 \begin{DoxyCompactList}\small\item\em Component가 활성화 될 때 실행되는 Callback Method. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_component_aaf2ce6dc5752072492f790ad4c7955bb}\label{class_component_aaf2ce6dc5752072492f790ad4c7955bb}} 
 virtual void \mbox{\hyperlink{class_component_aaf2ce6dc5752072492f790ad4c7955bb}{Update}} ()
-\begin{DoxyCompactList}\small\item\em Component가 Frame Upadte 될 때 실행되는 Callback Method. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_component_a23dd4a38b7b11ee333bdd8b26bdc9c48}\label{class_component_a23dd4a38b7b11ee333bdd8b26bdc9c48}} 
-virtual void \mbox{\hyperlink{class_component_a23dd4a38b7b11ee333bdd8b26bdc9c48}{Destory}} ()
-\begin{DoxyCompactList}\small\item\em Component가 제거될 때 실행되는 Callback Method. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_component_abbc2bf42faeedc04041d56685e8afbc3}\label{class_component_abbc2bf42faeedc04041d56685e8afbc3}} 
+\begin{DoxyCompactList}\small\item\em Component가 Frame Upadte 될 때 실행되는 Callback Method ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_component_a22f2e8fae0024c1f000c08e82188b72c}\label{class_component_a22f2e8fae0024c1f000c08e82188b72c}} 
+virtual void {\bfseries On\+Destroy} ()
+\item 
 virtual void \mbox{\hyperlink{class_component_abbc2bf42faeedc04041d56685e8afbc3}{On\+Colider\+Enter}} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_colider}{Colider}} Component에 다른 Colider가 물리적인 충돌을 시작했을 때 실행되는 Callback Method. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Component가 제거될 때 실행되는 Callback Method. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_component_aaadd6be57e953627f8be27a7665abe6b}\label{class_component_aaadd6be57e953627f8be27a7665abe6b}} 
 virtual void \mbox{\hyperlink{class_component_aaadd6be57e953627f8be27a7665abe6b}{On\+Colider\+Stay}} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_colider}{Colider}} Component에 다른 Colider가 물리적인 충돌을 진행하고 있을 때 실행되는 Callback Method. \end{DoxyCompactList}\item 
@@ -70,6 +70,23 @@ bool \mbox{\hyperlink{class_component_a2cab9e1c19e26718bf405321fce895b7}{is\+Ena
 
 \doxysubsection{Detailed Description}
 Gameobject에 기능을 수행하는 단위입니다. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_component_abbc2bf42faeedc04041d56685e8afbc3}\label{class_component_abbc2bf42faeedc04041d56685e8afbc3}} 
+\index{Component@{Component}!OnColiderEnter@{OnColiderEnter}}
+\index{OnColiderEnter@{OnColiderEnter}!Component@{Component}}
+\doxysubsubsection{\texorpdfstring{OnColiderEnter()}{OnColiderEnter()}}
+{\footnotesize\ttfamily virtual void Component\+::\+On\+Colider\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_colider}{Colider}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Component가 제거될 때 실행되는 Callback Method. 
+
+\mbox{\hyperlink{class_colider}{Colider}} Component에 다른 Colider가 물리적인 충돌을 시작했을 때 실행되는 Callback Method 
+
+Reimplemented in \mbox{\hyperlink{class_test_colider_check_a48e9f042b4f9e3bc8de76795ac2cf692}{Test\+Colider\+Check}}.
+
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

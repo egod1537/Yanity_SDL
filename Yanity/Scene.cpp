@@ -17,6 +17,7 @@ void Scene::Enable() {
 void Scene::Disable() {
 
 	isActive = false;
+	GameCore::getInstance().isActive = false;
 
 	Lib::Lib_ItrVector<GameObject*>(
 		listGameObject,

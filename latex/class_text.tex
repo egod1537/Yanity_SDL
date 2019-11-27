@@ -1,0 +1,131 @@
+\hypertarget{class_text}{}\doxysection{Text Class Reference}
+\label{class_text}\index{Text@{Text}}
+
+
+화면에 Text를 출력해주는 Component입니다. Font를 받아와 Texture로 변환한 다음 Image 형태로 출력합니다.  
+
+
+
+
+{\ttfamily \#include $<$Text.\+h$>$}
+
+Inheritance diagram for Text\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_text}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_text_a8605088b7b33c63413b6ea3e6a64674f}{Text}} (std\+::string \+\_\+path, std\+::string \+\_\+text)
+\begin{DoxyCompactList}\small\item\em Text의 생성자입니다. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_text_a298eaa66820fe7a00a5560bec596b8fa}\label{class_text_a298eaa66820fe7a00a5560bec596b8fa}} 
+void \mbox{\hyperlink{class_text_a298eaa66820fe7a00a5560bec596b8fa}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em 오브젝트가 초기화 될 때 실행되는 callback Method \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_text_aad77df36624a2c55dc5810033d7d1fe3}\label{class_text_aad77df36624a2c55dc5810033d7d1fe3}} 
+void \mbox{\hyperlink{class_text_aad77df36624a2c55dc5810033d7d1fe3}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Component가 Frame Upadte 될 때 실행되는 Callback Method ~\newline
+ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_text_a419fd1df507205ba05b2d33d865b4cbb}{Change\+Font}} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Font를 바꾸어 주는 함수입니다. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_text_a41bde5662e0e3a023166e5b134488bc2}{get\+Text}} ()
+\begin{DoxyCompactList}\small\item\em 현재 출력하고 있는 Text를 가져옵니다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_text_a908f92399a5c581cc4d485f591a61eda}{set\+Text}} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Text를 설정합니다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_text_ae23ac53acb57e760b91c81d8c4aec8c7}\label{class_text_ae23ac53acb57e760b91c81d8c4aec8c7}} 
+T\+T\+F\+\_\+\+Font $\ast$ \mbox{\hyperlink{class_text_ae23ac53acb57e760b91c81d8c4aec8c7}{font}}
+\begin{DoxyCompactList}\small\item\em Font. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_text_aea2a82ef1d8b4d448b6b3e524bce2cc2}\label{class_text_aea2a82ef1d8b4d448b6b3e524bce2cc2}} 
+S\+D\+L\+\_\+\+Texture $\ast$ \mbox{\hyperlink{class_text_aea2a82ef1d8b4d448b6b3e524bce2cc2}{texture}}
+\begin{DoxyCompactList}\small\item\em Font Texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_text_aeadf8f14902430d70e7419d0ae4e53e7}\label{class_text_aeadf8f14902430d70e7419d0ae4e53e7}} 
+S\+D\+L\+\_\+\+Color \mbox{\hyperlink{class_text_aeadf8f14902430d70e7419d0ae4e53e7}{Color\+Tint}}
+\begin{DoxyCompactList}\small\item\em Font \mbox{\hyperlink{class_color}{Color}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_text_a4f0f71a53b76b12b9bca9a3c253a8024}\label{class_text_a4f0f71a53b76b12b9bca9a3c253a8024}} 
+int \mbox{\hyperlink{class_text_a4f0f71a53b76b12b9bca9a3c253a8024}{Depth}}
+\begin{DoxyCompactList}\small\item\em $<$ Font Render 순서입니다. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_text_a15b8264f0df892ec2b1858f2ad704a72}\label{class_text_a15b8264f0df892ec2b1858f2ad704a72}} 
+int \mbox{\hyperlink{class_text_a15b8264f0df892ec2b1858f2ad704a72}{Size}}
+\begin{DoxyCompactList}\small\item\em Font의 크기 입니다. 10이 기준이며 한글자당 1.\+8x2의 크기를 갖습니다. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_text_abc64ad8019d8534ef3614ef25c5ad629}\label{class_text_abc64ad8019d8534ef3614ef25c5ad629}} 
+unsigned short \mbox{\hyperlink{class_text_abc64ad8019d8534ef3614ef25c5ad629}{unicode}} \mbox{[}128\mbox{]}
+\begin{DoxyCompactList}\small\item\em Text를 unicode화 시킨 변수 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+화면에 Text를 출력해주는 Component입니다. Font를 받아와 Texture로 변환한 다음 Image 형태로 출력합니다. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_text_a8605088b7b33c63413b6ea3e6a64674f}\label{class_text_a8605088b7b33c63413b6ea3e6a64674f}} 
+\index{Text@{Text}!Text@{Text}}
+\index{Text@{Text}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{Text()}{Text()}}
+{\footnotesize\ttfamily Text\+::\+Text (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+path,  }\item[{std\+::string}]{\+\_\+text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Text의 생성자입니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \+\_\+path \+: Font File의 경로 입니다. \\
+\hline
+{\em string} & \+\_\+text \+: 적을 글자 입니다. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_text_a419fd1df507205ba05b2d33d865b4cbb}\label{class_text_a419fd1df507205ba05b2d33d865b4cbb}} 
+\index{Text@{Text}!ChangeFont@{ChangeFont}}
+\index{ChangeFont@{ChangeFont}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{ChangeFont()}{ChangeFont()}}
+{\footnotesize\ttfamily void Text\+::\+Change\+Font (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Font를 바꾸어 주는 함수입니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \+: Font File의 경로 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_text_a41bde5662e0e3a023166e5b134488bc2}\label{class_text_a41bde5662e0e3a023166e5b134488bc2}} 
+\index{Text@{Text}!getText@{getText}}
+\index{getText@{getText}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{getText()}{getText()}}
+{\footnotesize\ttfamily std\+::string Text\+::get\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+현재 출력하고 있는 Text를 가져옵니다. 
+
+\begin{DoxyReturn}{Returns}
+string \+: \mbox{\hyperlink{class_text}{Text}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_text_a908f92399a5c581cc4d485f591a61eda}\label{class_text_a908f92399a5c581cc4d485f591a61eda}} 
+\index{Text@{Text}!setText@{setText}}
+\index{setText@{setText}!Text@{Text}}
+\doxysubsubsection{\texorpdfstring{setText()}{setText()}}
+{\footnotesize\ttfamily void Text\+::set\+Text (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Text를 설정합니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \+: 설정할 string \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Yanity/Text.\+h\item 
+Yanity/Text.\+cpp\end{DoxyCompactItemize}

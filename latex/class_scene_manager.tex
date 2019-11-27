@@ -1,0 +1,63 @@
+\hypertarget{class_scene_manager}{}\doxysection{Scene\+Manager Class Reference}
+\label{class_scene_manager}\index{SceneManager@{SceneManager}}
+
+
+Scene의 활성화, 비활성화를 담당하는 class입니다.  
+
+
+
+
+{\ttfamily \#include $<$Scene\+Manager.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_scene_manager_a4879835b9f005153290046d29a074f82}{Load\+Scene}} (std\+::string)
+\begin{DoxyCompactList}\small\item\em 특정 Scene을 활성화시킵니다. 다른 Scene들은 비활성화가 됩니다. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_scene}{Scene}} $\ast$ \mbox{\hyperlink{class_scene_manager_ab3394ca4fc5bad367b15c6441e8d46dd}{Find\+Scene}} (std\+::string)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_scene}{Scene}} Name으로 Scene을 가져옵니다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Scene의 활성화, 비활성화를 담당하는 class입니다. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_manager_ab3394ca4fc5bad367b15c6441e8d46dd}\label{class_scene_manager_ab3394ca4fc5bad367b15c6441e8d46dd}} 
+\index{SceneManager@{SceneManager}!FindScene@{FindScene}}
+\index{FindScene@{FindScene}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{FindScene()}{FindScene()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scene}{Scene}} $\ast$ Scene\+Manager\+::\+Find\+Scene (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\mbox{\hyperlink{class_scene}{Scene}} Name으로 Scene을 가져옵니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \+: \mbox{\hyperlink{class_scene}{Scene}} Name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Scene을 반환하고 없는 경우 nullptr를 반환합니다. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scene_manager_a4879835b9f005153290046d29a074f82}\label{class_scene_manager_a4879835b9f005153290046d29a074f82}} 
+\index{SceneManager@{SceneManager}!LoadScene@{LoadScene}}
+\index{LoadScene@{LoadScene}!SceneManager@{SceneManager}}
+\doxysubsubsection{\texorpdfstring{LoadScene()}{LoadScene()}}
+{\footnotesize\ttfamily void Scene\+Manager\+::\+Load\+Scene (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+특정 Scene을 활성화시킵니다. 다른 Scene들은 비활성화가 됩니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & \+: \mbox{\hyperlink{class_scene}{Scene}} Name \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Yanity/Scene\+Manager.\+h\item 
+Yanity/Scene\+Mananger.\+cpp\end{DoxyCompactItemize}

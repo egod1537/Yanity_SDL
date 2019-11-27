@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['moveposition_120',['MovePosition',['../class_rigidbody.html#a1852da49abe111a1da9d1365ed971f8c',1,'Rigidbody']]]
+  ['init_220',['Init',['../class_game_core.html#a036d63a8c4cb49c19632758c624b4bd0',1,'GameCore::Init()'],['../class_graphic_core.html#afc75f94f3f1274585e176992c8c6f1e3',1,'GraphicCore::Init()']]],
+  ['iscollision_221',['isCollision',['../class_box_colider.html#a3dd951e0ae6f4f5e7527d4d3e76b428f',1,'BoxColider::isCollision(Vector2)'],['../class_box_colider.html#ab435bb31fab432fa80a4dbebd55560dd',1,'BoxColider::isCollision(BoxColider *)'],['../class_box_colider.html#aed04bddfcd0c8b90201d577d9082fd01',1,'BoxColider::isCollision(SphereColider *)'],['../class_colider.html#a49405ed08ec421d3a0a2ad4b87fe75c3',1,'Colider::isCollision(Vector2)'],['../class_colider.html#ac4c474b4780ee6c07ccaf508e401e94b',1,'Colider::isCollision(BoxColider *)'],['../class_colider.html#a798a2305727af64e790d5f70107d46d1',1,'Colider::isCollision(SphereColider *)'],['../class_sphere_colider.html#a7abd8ccfff1d3d4137c3429594978668',1,'SphereColider::isCollision(Vector2)'],['../class_sphere_colider.html#aa6bd329c4821e20e054717e600e9ce2f',1,'SphereColider::isCollision(BoxColider *)'],['../class_sphere_colider.html#a3016885c385f4c6e5f2ef3f238b47ea8',1,'SphereColider::isCollision(SphereColider *)']]]
 ];

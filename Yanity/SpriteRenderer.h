@@ -21,8 +21,7 @@ public:
 	SpriteRenderer(std::string _img_path) : 
 		Pivot{Vector2(0.5, 0.5)}, img_path {_img_path},
 		Depth { 0 }
-		{
-
+	{
 		ColorTint.r = ColorTint.g = ColorTint.b = ColorTint.a = 255;
 
 		_texture = GraphicCore::getInstance().LoadTexture("img/" + img_path);
@@ -32,7 +31,6 @@ public:
 		SDL_QueryTexture(_texture, NULL, NULL, &src.w, &src.h);
 
 		Size = Vector2(src.w, src.h);
-
 	}
 
 	void Update();

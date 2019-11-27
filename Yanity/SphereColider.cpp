@@ -57,8 +57,6 @@ void SphereColider::Collision() {
 
 	Rigidbody *rig;
 
-	int i = 0;
-
 	Lib::Lib_ItrVector<Colider*>(
 		ph.Coliders,
 		[&](Colider* other) {

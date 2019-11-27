@@ -1,13 +1,20 @@
 var searchData=
 [
-  ['scale_63',['Scale',['../class_box_colider.html#a0bc954dabe18f3e5ea85c1632b280f8b',1,'BoxColider::Scale()'],['../struct_transform.html#ac618f1bd30efc5bf71d7fd57bf319221',1,'Transform::Scale()']]],
-  ['scene_64',['Scene',['../class_scene.html',1,'']]],
-  ['setcolortint_65',['setColorTint',['../class_sprite_renderer.html#aee6eda722b0fe41e1b7c65376fb7cf7c',1,'SpriteRenderer']]],
-  ['setwindowicon_66',['SetWindowIcon',['../class_window_manager.html#a0ad7169cdb239701cc58272697e0b624',1,'WindowManager']]],
-  ['setwindowname_67',['SetWindowName',['../class_window_manager.html#ada1595236ac4d1d1302bac5681abee42',1,'WindowManager']]],
-  ['setwindowsize_68',['SetWindowSize',['../class_window_manager.html#a7d3fe456558b4efcd7946db585831c7b',1,'WindowManager']]],
-  ['size_69',['Size',['../class_sprite_renderer.html#ad8c56a7f283c5bcf4d825d5a6f52c430',1,'SpriteRenderer']]],
-  ['spherecolider_70',['SphereColider',['../class_sphere_colider.html',1,'']]],
-  ['spriterenderer_71',['SpriteRenderer',['../class_sprite_renderer.html',1,'SpriteRenderer'],['../class_sprite_renderer.html#a4b8f458c73ff1093bea4344048eb7cc1',1,'SpriteRenderer::SpriteRenderer()']]],
-  ['start_72',['Start',['../class_button.html#ac8483ba97daf06584361b2e4bdee8749',1,'Button::Start()'],['../class_component.html#a3f57807787e0015833ccffd83fb63d14',1,'Component::Start()']]]
+  ['oevent_72',['OEvent',['../class_o_event.html',1,'']]],
+  ['onclickdown_73',['OnClickDown',['../class_button.html#aca94ecf8909a36f70da0689a33fab251',1,'Button']]],
+  ['onclickup_74',['OnClickUp',['../class_button.html#ab590ee336cb8a7742222f26ad2a642f4',1,'Button']]],
+  ['oncoliderenter_75',['OnColiderEnter',['../class_component.html#abbc2bf42faeedc04041d56685e8afbc3',1,'Component::OnColiderEnter()'],['../class_test_colider_check.html#a48e9f042b4f9e3bc8de76795ac2cf692',1,'TestColiderCheck::OnColiderEnter()']]],
+  ['oncoliderexit_76',['OnColiderExit',['../class_component.html#a1c8fc2086fe181c87a685c315547da03',1,'Component::OnColiderExit()'],['../class_test_colider_check.html#a92ad89cf20415e8528bc8cf1523808a3',1,'TestColiderCheck::OnColiderExit()']]],
+  ['oncoliderstay_77',['OnColiderStay',['../class_component.html#aaadd6be57e953627f8be27a7665abe6b',1,'Component::OnColiderStay()'],['../class_test_colider_check.html#aa0a23cea9faf9273a7baed5dcbbf7846',1,'TestColiderCheck::OnColiderStay()']]],
+  ['onenable_78',['OnEnable',['../class_component.html#a0203b02cea981c919d1196d01881e0b0',1,'Component']]],
+  ['onpressed_79',['OnPressed',['../class_button.html#ac910e79837a781478e2bbd737e21a6bc',1,'Button']]],
+  ['ontriggerenter_80',['OnTriggerEnter',['../class_component.html#a4377ad88e195119af262ac769ee130f0',1,'Component::OnTriggerEnter()'],['../class_test_colider_check.html#a070812bc55edba43310702142f6fa05a',1,'TestColiderCheck::OnTriggerEnter()']]],
+  ['ontriggerexit_81',['OnTriggerExit',['../class_component.html#afd5bcb9f1ba36988b5dbd795a735080e',1,'Component::OnTriggerExit()'],['../class_test_colider_check.html#a139465c40cda9d7f14e45a8f3fbdf32b',1,'TestColiderCheck::OnTriggerExit()']]],
+  ['ontriggerstay_82',['OnTriggerStay',['../class_component.html#a6d2bcd686bd7d07bf4a38665fba218b0',1,'Component::OnTriggerStay()'],['../class_test_colider_check.html#a768d3e863b670a03864e595a7f063968',1,'TestColiderCheck::OnTriggerStay()']]],
+  ['operator_2a_83',['operator*',['../class_vector2.html#aff439034560f7465557955341b0bb8ba',1,'Vector2']]],
+  ['operator_2a_3d_84',['operator*=',['../class_vector2.html#aab7aa238fe84257aaf5ad7f9909a1ec2',1,'Vector2']]],
+  ['operator_2b_85',['operator+',['../class_vector2.html#ae186466961eb757f9253a1bfc7593f8e',1,'Vector2']]],
+  ['operator_2b_3d_86',['operator+=',['../class_vector2.html#a9836682c826a0231456bc4a6d9abead9',1,'Vector2']]],
+  ['operator_2d_87',['operator-',['../class_vector2.html#a16648d0b051f679b4a52caec78c3175e',1,'Vector2']]],
+  ['operator_2d_3d_88',['operator-=',['../class_vector2.html#ab82263b9bdccd85fc28a7f4f39bc3b57',1,'Vector2']]]
 ];

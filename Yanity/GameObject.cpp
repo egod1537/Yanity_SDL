@@ -5,7 +5,6 @@
 
 void GameObject::RunAwake() 
 {
-
 	Lib::Lib_ItrVector<Component*>(
 		Components,
 		[=](Component* _comp)
@@ -42,7 +41,7 @@ void GameObject::RunDestroy()
 		Components,
 		[=](Component* _comp)
 		{
-			if (isEnable)if (_comp->isEnable)_comp->Destory();
+			if (isEnable)if (_comp->isEnable)_comp->OnDestroy();
 		});
 }
 

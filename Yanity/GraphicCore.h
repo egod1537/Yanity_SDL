@@ -39,6 +39,8 @@ public:
 	///@param function<void()> : Render 함수
 	void AddRender(int depth, std::function<void()> callback); 
 
+	SDL_Texture& toTexture(SDL_Surface*);
+
 	///@brief 화면에 Texture를 그려줍니다.
 	///@param SDL_Texture* _texture : 그릴 Texture 
 	///@param Vector2 _pos : 위치 | 기본값: Vector(0, 0)
@@ -52,7 +54,7 @@ public:
 	///@param SDL_Texture* : 그릴 Texture
 	///@param Transform : 위치, 각도, 크기 정보
 	void DrawTexture(
-		SDL_Texture*, Transform);
+		SDL_Texture*, Transform*);
 	
 	///@brief 화면에 빈 사각형을 그려줍니다.
 	///@param SDL_Color : 색깔

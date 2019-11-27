@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['window_166',['window',['../class_graphic_core.html#a938bb790e8d0c2edeb4f435b084d8bbd',1,'GraphicCore']]]
+  ['name_300',['Name',['../class_game_object.html#a3e3a27a4cf69093b5f76afe70f0fe288',1,'GameObject::Name()'],['../class_scene.html#a44b2d6bffa153dda02f026f8533ceb08',1,'Scene::name()']]]
 ];

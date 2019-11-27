@@ -1,23 +1,78 @@
 \hypertarget{class_o_event}{}\doxysection{O\+Event$<$ T $>$ Class Template Reference}
 \label{class_o_event}\index{OEvent$<$ T $>$@{OEvent$<$ T $>$}}
+
+
+Observer Pattern을 일반화하여 Delegate Event class 이다.  
+
+
+
+
+{\ttfamily \#include $<$O\+Event.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_o_event_a6d17adf32a9b7528965672f7c70a5ce7}\label{class_o_event_a6d17adf32a9b7528965672f7c70a5ce7}} 
-void {\bfseries notify} (T... args...)
-\item 
-\mbox{\Hypertarget{class_o_event_af0d8a12abad9af61f6bf5191912cef2d}\label{class_o_event_af0d8a12abad9af61f6bf5191912cef2d}} 
-void {\bfseries add\+Event} (std\+::function$<$ void(T...)$>$ callback)
-\item 
+void \mbox{\hyperlink{class_o_event_a6d17adf32a9b7528965672f7c70a5ce7}{notify}} (T... args...)
+\begin{DoxyCompactList}\small\item\em 등록된 함수를 모두 호출합니다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_event_af0d8a12abad9af61f6bf5191912cef2d}{add\+Event}} (std\+::function$<$ void(T...)$>$ callback)
+\begin{DoxyCompactList}\small\item\em 함수를 이벤트에 등록시킵니다. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_o_event_a36a1dfc2975767d0d2f2b295def735ea}\label{class_o_event_a36a1dfc2975767d0d2f2b295def735ea}} 
-void {\bfseries delete\+All\+Event} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_o_event_a36a1dfc2975767d0d2f2b295def735ea}{delete\+All\+Event}} ()
+\begin{DoxyCompactList}\small\item\em 등록된 함수를 모두 제거합니다. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_o_event_ab09a14343491724cbf4d340ee693ee5f}\label{class_o_event_ab09a14343491724cbf4d340ee693ee5f}} 
-std\+::list$<$ std\+::function$<$ void(T...)$>$ $>$ {\bfseries Event\+List}
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{class_o_event_a3933e1f823e4835a6b01cc6abc34f2a8}\label{class_o_event_a3933e1f823e4835a6b01cc6abc34f2a8}} 
+std\+::vector$<$ std\+::function$<$ void(T...)$>$ $>$ \mbox{\hyperlink{class_o_event_a3933e1f823e4835a6b01cc6abc34f2a8}{Event\+List}}
+\begin{DoxyCompactList}\small\item\em 이벤트 때 작동할 함수 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename... T$>$\newline
+class O\+Event$<$ T $>$}
+
+Observer Pattern을 일반화하여 Delegate Event class 이다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & \+: 이벤트 발생시 함수들에게 전달할 인수 \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_event_af0d8a12abad9af61f6bf5191912cef2d}\label{class_o_event_af0d8a12abad9af61f6bf5191912cef2d}} 
+\index{OEvent$<$ T $>$@{OEvent$<$ T $>$}!addEvent@{addEvent}}
+\index{addEvent@{addEvent}!OEvent$<$ T $>$@{OEvent$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{addEvent()}{addEvent()}}
+{\footnotesize\ttfamily template$<$typename... T$>$ \\
+void \mbox{\hyperlink{class_o_event}{O\+Event}}$<$ T $>$\+::add\+Event (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(T...)$>$}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+함수를 이벤트에 등록시킵니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em function$<$void(\+T...)$>$} & \+: 등록할 함수 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_o_event_a6d17adf32a9b7528965672f7c70a5ce7}\label{class_o_event_a6d17adf32a9b7528965672f7c70a5ce7}} 
+\index{OEvent$<$ T $>$@{OEvent$<$ T $>$}!notify@{notify}}
+\index{notify@{notify}!OEvent$<$ T $>$@{OEvent$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily template$<$typename... T$>$ \\
+void \mbox{\hyperlink{class_o_event}{O\+Event}}$<$ T $>$\+::notify (\begin{DoxyParamCaption}\item[{T...}]{args... }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+등록된 함수를 모두 호출합니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & args \+: 호출할 함수의 인자 \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

@@ -147,10 +147,11 @@
     <ClCompile Include="PlayerController.cpp" />
     <ClCompile Include="Rigidbody.cpp" />
     <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SceneMananger.cpp" />
     <ClCompile Include="SphereColider.cpp" />
     <ClCompile Include="SpriteRenderer.cpp" />
-    <ClCompile Include="temp.cpp" />
     <ClCompile Include="TestColiderCheck.cpp" />
+    <ClCompile Include="Text.cpp" />
     <ClCompile Include="Vector2.cpp" />
     <ClCompile Include="WindowManager.cpp" />
   </ItemGroup>
@@ -165,6 +166,7 @@
     <ClInclude Include="GameEngine.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GraphicCore.h" />
+    <ClInclude Include="han2unicode.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="Lib.h" />
     <ClInclude Include="lib_stdafx.h" />
@@ -173,11 +175,13 @@
     <ClInclude Include="PlayerController.h" />
     <ClInclude Include="Rigidbody.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SDL_stdafx.h" />
     <ClInclude Include="SphereColider.h" />
     <ClInclude Include="SpriteRenderer.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="TestColiderCheck.h" />
+    <ClInclude Include="Text.h" />
     <ClInclude Include="Transform.h" />
     <ClInclude Include="Vector2.h" />
     <ClInclude Include="WindowManager.h" />

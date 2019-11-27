@@ -10,3 +10,4 @@
 
 #include "TestColiderCheck.h"
 #include "Button.h"
+#include "Text.h"

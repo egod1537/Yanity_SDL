@@ -1,115 +1,381 @@
 \hypertarget{class_game_object}{}\doxysection{Game\+Object Class Reference}
 \label{class_game_object}\index{GameObject@{GameObject}}
+
+
+\mbox{\hyperlink{struct_transform}{Transform}}, Component를 가지고 있는 Object입니다.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Object.\+h$>$}
+
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{class_game_object_1_1_builder}{Builder}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gameobject의 \mbox{\hyperlink{class_game_object_1_1_builder}{Builder}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}\label{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}} 
+\mbox{\hyperlink{class_game_object_a0348e3ee2e83d56eafca7a3547f432c4}{Game\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Gameobject의 생성자 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_game_object_a5547a5e16dc964d4005c88810012aa83}\label{class_game_object_a5547a5e16dc964d4005c88810012aa83}} 
-{\bfseries Game\+Object} (\mbox{\hyperlink{class_game_object_1_1_builder}{Builder}} \+\_\+builder)
-\item 
+\mbox{\hyperlink{class_game_object_a5547a5e16dc964d4005c88810012aa83}{Game\+Object}} (\mbox{\hyperlink{class_game_object_1_1_builder}{Builder}} \+\_\+builder)
+\begin{DoxyCompactList}\small\item\em Gameobject \mbox{\hyperlink{class_game_object_1_1_builder}{Builder}} class 생성자 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_game_object_a65772ac5dba150fe4f5f254eae6b7454}\label{class_game_object_a65772ac5dba150fe4f5f254eae6b7454}} 
-void {\bfseries Run\+Awake} ()
-\item 
+void \mbox{\hyperlink{class_game_object_a65772ac5dba150fe4f5f254eae6b7454}{Run\+Awake}} ()
+\begin{DoxyCompactList}\small\item\em Component의 Awake 실행합니다. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_game_object_ac0a6e3cfaa0933b7dbc3251400123041}\label{class_game_object_ac0a6e3cfaa0933b7dbc3251400123041}} 
-void {\bfseries Run\+Start} ()
-\item 
+void \mbox{\hyperlink{class_game_object_ac0a6e3cfaa0933b7dbc3251400123041}{Run\+Start}} ()
+\begin{DoxyCompactList}\small\item\em Component의 Start 실행합니다. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_game_object_a55f1d0554a46b3df15ee0a3bfaa24548}\label{class_game_object_a55f1d0554a46b3df15ee0a3bfaa24548}} 
-void {\bfseries Run\+Update} ()
-\item 
+void \mbox{\hyperlink{class_game_object_a55f1d0554a46b3df15ee0a3bfaa24548}{Run\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Component의 Upadte 실행합니다. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_game_object_a82f93de898e22230ee0cd76687553a45}\label{class_game_object_a82f93de898e22230ee0cd76687553a45}} 
-void {\bfseries Run\+Destroy} ()
-\item 
+void \mbox{\hyperlink{class_game_object_a82f93de898e22230ee0cd76687553a45}{Run\+Destroy}} ()
+\begin{DoxyCompactList}\small\item\em Component의 Destory 실행합니다. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_game_object_a5f02658d9977fba0e95422b85e39b067}\label{class_game_object_a5f02658d9977fba0e95422b85e39b067}} 
-void {\bfseries Run\+On\+Enable} ()
+void \mbox{\hyperlink{class_game_object_a5f02658d9977fba0e95422b85e39b067}{Run\+On\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em Component의 On\+Enable 실행합니다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a3119a4212bae52f408503ddd46dd2926}{Run\+On\+Colider\+Enter}} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
 \item 
-\mbox{\Hypertarget{class_game_object_a3119a4212bae52f408503ddd46dd2926}\label{class_game_object_a3119a4212bae52f408503ddd46dd2926}} 
-void {\bfseries Run\+On\+Colider\+Enter} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
+void \mbox{\hyperlink{class_game_object_a7553c792047cd39a71036353f557a1b7}{Run\+On\+Colider\+Stay}} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
 \item 
-\mbox{\Hypertarget{class_game_object_a7553c792047cd39a71036353f557a1b7}\label{class_game_object_a7553c792047cd39a71036353f557a1b7}} 
-void {\bfseries Run\+On\+Colider\+Stay} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
+void \mbox{\hyperlink{class_game_object_a6c493d5309f8c33a08d24c7c999d8381}{Run\+On\+Colider\+Exit}} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
 \item 
-\mbox{\Hypertarget{class_game_object_a6c493d5309f8c33a08d24c7c999d8381}\label{class_game_object_a6c493d5309f8c33a08d24c7c999d8381}} 
-void {\bfseries Run\+On\+Colider\+Exit} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
+void \mbox{\hyperlink{class_game_object_a00292e06a91d0b88038a0e9ee5673b40}{Run\+On\+Trigger\+Enter}} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
 \item 
-\mbox{\Hypertarget{class_game_object_a00292e06a91d0b88038a0e9ee5673b40}\label{class_game_object_a00292e06a91d0b88038a0e9ee5673b40}} 
-void {\bfseries Run\+On\+Trigger\+Enter} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
+void \mbox{\hyperlink{class_game_object_a9e68babda836b27001ec7b204b5d21bf}{Run\+On\+Trigger\+Stay}} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
 \item 
-\mbox{\Hypertarget{class_game_object_a9e68babda836b27001ec7b204b5d21bf}\label{class_game_object_a9e68babda836b27001ec7b204b5d21bf}} 
-void {\bfseries Run\+On\+Trigger\+Stay} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
-\item 
-\mbox{\Hypertarget{class_game_object_ab0327ad84a8d522db700c1d5aaacc3b1}\label{class_game_object_ab0327ad84a8d522db700c1d5aaacc3b1}} 
-void {\bfseries Run\+On\+Trigger\+Exit} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
+void \mbox{\hyperlink{class_game_object_ab0327ad84a8d522db700c1d5aaacc3b1}{Run\+On\+Trigger\+Exit}} (\mbox{\hyperlink{class_colider}{Colider}} $\ast$)
 \item 
 \mbox{\Hypertarget{class_game_object_afe72426e1fb00885fc736dbae0030d81}\label{class_game_object_afe72426e1fb00885fc736dbae0030d81}} 
-void {\bfseries Enable} ()
-\item 
+void \mbox{\hyperlink{class_game_object_afe72426e1fb00885fc736dbae0030d81}{Enable}} ()
+\begin{DoxyCompactList}\small\item\em Gameobject 활성화 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_game_object_aa5832a706274937a5d0257ecf6198f3e}\label{class_game_object_aa5832a706274937a5d0257ecf6198f3e}} 
-void {\bfseries Disable} ()
-\item 
-\mbox{\Hypertarget{class_game_object_aa3e6f8f41791bec9a9869213de7da161}\label{class_game_object_aa3e6f8f41791bec9a9869213de7da161}} 
-void {\bfseries Add\+Component} (\mbox{\hyperlink{class_component}{Component}} $\ast$\+\_\+component)
-\item 
-\mbox{\Hypertarget{class_game_object_af78b088fd46057317f1aae0a5fff2ece}\label{class_game_object_af78b088fd46057317f1aae0a5fff2ece}} 
-{\footnotesize template$<$typename T $>$ }\\T {\bfseries Get\+Componenet} ()
-\item 
-\mbox{\Hypertarget{class_game_object_ad9b65fe0831fdf8c447539e60e86c875}\label{class_game_object_ad9b65fe0831fdf8c447539e60e86c875}} 
-\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries get\+Local\+Position} ()
-\item 
-\mbox{\Hypertarget{class_game_object_abb228e65e6526a0d8623c56c7f8e1d6f}\label{class_game_object_abb228e65e6526a0d8623c56c7f8e1d6f}} 
-void {\bfseries set\+Local\+Position} (\mbox{\hyperlink{class_vector2}{Vector2}})
-\item 
-\mbox{\Hypertarget{class_game_object_a5da507fb010080921e78cd6a531a52c2}\label{class_game_object_a5da507fb010080921e78cd6a531a52c2}} 
-float {\bfseries get\+Local\+Rotation} ()
-\item 
-\mbox{\Hypertarget{class_game_object_ad98fabb4f644e19fa0cbcc38d1fbe647}\label{class_game_object_ad98fabb4f644e19fa0cbcc38d1fbe647}} 
-void {\bfseries set\+Local\+Rotation} (float)
-\item 
-\mbox{\Hypertarget{class_game_object_a793abf30f8036fbfff7b7211566c8b89}\label{class_game_object_a793abf30f8036fbfff7b7211566c8b89}} 
-\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries get\+Local\+Scale} ()
-\item 
-\mbox{\Hypertarget{class_game_object_add0dbcfb3840d2d58328e606ec090b49}\label{class_game_object_add0dbcfb3840d2d58328e606ec090b49}} 
-void {\bfseries set\+Local\+Scale} (\mbox{\hyperlink{class_vector2}{Vector2}})
-\item 
-\mbox{\Hypertarget{class_game_object_a8f579dedcf9539924c65131b31687757}\label{class_game_object_a8f579dedcf9539924c65131b31687757}} 
-\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries get\+Position} ()
-\item 
-\mbox{\Hypertarget{class_game_object_aef36adda1c0aee190b35bb1d37778a79}\label{class_game_object_aef36adda1c0aee190b35bb1d37778a79}} 
-void {\bfseries set\+Position} (\mbox{\hyperlink{class_vector2}{Vector2}})
-\item 
-\mbox{\Hypertarget{class_game_object_a475fb0bf4b62321c40d0a94c8c7c4f74}\label{class_game_object_a475fb0bf4b62321c40d0a94c8c7c4f74}} 
-float {\bfseries get\+Rotation} ()
-\item 
-\mbox{\Hypertarget{class_game_object_a9b8a3958c7a317ce532efe13aa2bc5bd}\label{class_game_object_a9b8a3958c7a317ce532efe13aa2bc5bd}} 
-void {\bfseries set\+Rotation} (float)
-\item 
-\mbox{\Hypertarget{class_game_object_ad98b347b0815312451a7e613671778f4}\label{class_game_object_ad98b347b0815312451a7e613671778f4}} 
-\mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries get\+Scale} ()
-\item 
-\mbox{\Hypertarget{class_game_object_a424fca58902b93a66fe30ae051108583}\label{class_game_object_a424fca58902b93a66fe30ae051108583}} 
-void {\bfseries set\+Scale} (\mbox{\hyperlink{class_vector2}{Vector2}})
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_game_object_aa5832a706274937a5d0257ecf6198f3e}{Disable}} ()
+\begin{DoxyCompactList}\small\item\em Gameobject 비활성화 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_af9eceda0f9df6fc8d4c398971bbe231e}{Add\+Component}} (\mbox{\hyperlink{class_component}{Component}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Gameobject에 Component를 연결합니다. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{class_game_object_af78b088fd46057317f1aae0a5fff2ece}{Get\+Componenet}} ()
+\begin{DoxyCompactList}\small\item\em Gameobjct와 연결된 Component를 가져옵니다. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_game_object_ad9b65fe0831fdf8c447539e60e86c875}{get\+Local\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Gameobject의 고유 좌표를 가져옵니다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_abb228e65e6526a0d8623c56c7f8e1d6f}{set\+Local\+Position}} (\mbox{\hyperlink{class_vector2}{Vector2}})
+\begin{DoxyCompactList}\small\item\em Gameobject의 고유 좌표를 설정합니다. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_game_object_a5da507fb010080921e78cd6a531a52c2}{get\+Local\+Rotation}} ()
+\begin{DoxyCompactList}\small\item\em Gameobject의 고유 각도를 가져옵니다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_ad98fabb4f644e19fa0cbcc38d1fbe647}{set\+Local\+Rotation}} (float)
+\begin{DoxyCompactList}\small\item\em Gameobject의 고유 각도를 설정합니다. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_game_object_a793abf30f8036fbfff7b7211566c8b89}{get\+Local\+Scale}} ()
+\begin{DoxyCompactList}\small\item\em Gameobject의 고유 크기를 가져옵니다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_add0dbcfb3840d2d58328e606ec090b49}{set\+Local\+Scale}} (\mbox{\hyperlink{class_vector2}{Vector2}})
+\begin{DoxyCompactList}\small\item\em Gameobject의 고유 크기를 설정합니다. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_game_object_a8f579dedcf9539924c65131b31687757}{get\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Gameobject의 화면 좌표를 가져옵니다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_aef36adda1c0aee190b35bb1d37778a79}{set\+Position}} (\mbox{\hyperlink{class_vector2}{Vector2}})
+\begin{DoxyCompactList}\small\item\em Gameobject의 화면 좌표를 설정합니다. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_game_object_a475fb0bf4b62321c40d0a94c8c7c4f74}{get\+Rotation}} ()
+\begin{DoxyCompactList}\small\item\em Gameobject의 화면에서의 각도를 가져옵니다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a9b8a3958c7a317ce532efe13aa2bc5bd}{set\+Rotation}} (float)
+\begin{DoxyCompactList}\small\item\em Gameobject의 화면에서의 각도를 설정합니다. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_game_object_ad98b347b0815312451a7e613671778f4}{get\+Scale}} ()
+\begin{DoxyCompactList}\small\item\em Gameobject의 화면 크기를 가져옵니다. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a424fca58902b93a66fe30ae051108583}{set\+Scale}} (\mbox{\hyperlink{class_vector2}{Vector2}})
+\begin{DoxyCompactList}\small\item\em Gameobject의 화면 크기를 설정합니다. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_game_object_a6dce128635639c95ec25525845233234}\label{class_game_object_a6dce128635639c95ec25525845233234}} 
-bool {\bfseries is\+Enable} = true
-\item 
+bool \mbox{\hyperlink{class_game_object_a6dce128635639c95ec25525845233234}{is\+Enable}} = true
+\begin{DoxyCompactList}\small\item\em Gameobject 활성화 여부 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_game_object_a3e3a27a4cf69093b5f76afe70f0fe288}\label{class_game_object_a3e3a27a4cf69093b5f76afe70f0fe288}} 
-std\+::string {\bfseries Name}
-\item 
+std\+::string \mbox{\hyperlink{class_game_object_a3e3a27a4cf69093b5f76afe70f0fe288}{Name}}
+\begin{DoxyCompactList}\small\item\em Gameobject의 이름 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_game_object_aca9d47509902bba733b217e5e3e96977}\label{class_game_object_aca9d47509902bba733b217e5e3e96977}} 
-\mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$ {\bfseries Parent}
-\item 
+\mbox{\hyperlink{class_game_object}{Game\+Object}} $\ast$ \mbox{\hyperlink{class_game_object_aca9d47509902bba733b217e5e3e96977}{Parent}}
+\begin{DoxyCompactList}\small\item\em Gameobject의 부모 \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_game_object_ad2de7705e8d1d7b5d0014448dd13f99a}\label{class_game_object_ad2de7705e8d1d7b5d0014448dd13f99a}} 
-\mbox{\hyperlink{struct_transform}{Transform}} {\bfseries transform}
-\item 
+\mbox{\hyperlink{struct_transform}{Transform}} \mbox{\hyperlink{class_game_object_ad2de7705e8d1d7b5d0014448dd13f99a}{transform}}
+\begin{DoxyCompactList}\small\item\em Gameobject의 \mbox{\hyperlink{struct_transform}{Transform}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_game_object_acd8709fbd622afcbce942d4ebedfafde}\label{class_game_object_acd8709fbd622afcbce942d4ebedfafde}} 
-std\+::vector$<$ \mbox{\hyperlink{class_component}{Component}} $\ast$ $>$ {\bfseries Components}
-\end{DoxyCompactItemize}
+std\+::vector$<$ \mbox{\hyperlink{class_component}{Component}} $\ast$ $>$ \mbox{\hyperlink{class_game_object_acd8709fbd622afcbce942d4ebedfafde}{Components}}
+\begin{DoxyCompactList}\small\item\em Gameobect와 연결된 Components. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{struct_transform}{Transform}}, Component를 가지고 있는 Object입니다. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_object_af9eceda0f9df6fc8d4c398971bbe231e}\label{class_game_object_af9eceda0f9df6fc8d4c398971bbe231e}} 
+\index{GameObject@{GameObject}!AddComponent@{AddComponent}}
+\index{AddComponent@{AddComponent}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{AddComponent()}{AddComponent()}}
+{\footnotesize\ttfamily void Game\+Object\+::\+Add\+Component (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_component}{Component}} $\ast$}]{\+\_\+component }\end{DoxyParamCaption})}
+
+
+
+Gameobject에 Component를 연결합니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Component$\ast$} & \+: 추가할 \mbox{\hyperlink{class_component}{Component}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_af78b088fd46057317f1aae0a5fff2ece}\label{class_game_object_af78b088fd46057317f1aae0a5fff2ece}} 
+\index{GameObject@{GameObject}!GetComponenet@{GetComponenet}}
+\index{GetComponenet@{GetComponenet}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetComponenet()}{GetComponenet()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T Game\+Object\+::\+Get\+Componenet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gameobjct와 연결된 Component를 가져옵니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & \+: 가져올 Component의 타입 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T \+: 가져온 \mbox{\hyperlink{class_component}{Component}}, N\+U\+LL \+: 가져오기 실패 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_ad9b65fe0831fdf8c447539e60e86c875}\label{class_game_object_ad9b65fe0831fdf8c447539e60e86c875}} 
+\index{GameObject@{GameObject}!getLocalPosition@{getLocalPosition}}
+\index{getLocalPosition@{getLocalPosition}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{getLocalPosition()}{getLocalPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Game\+Object\+::get\+Local\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gameobject의 고유 좌표를 가져옵니다. 
+
+\begin{DoxyReturn}{Returns}
+Gameobject의 고유 좌표 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_a5da507fb010080921e78cd6a531a52c2}\label{class_game_object_a5da507fb010080921e78cd6a531a52c2}} 
+\index{GameObject@{GameObject}!getLocalRotation@{getLocalRotation}}
+\index{getLocalRotation@{getLocalRotation}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{getLocalRotation()}{getLocalRotation()}}
+{\footnotesize\ttfamily float Game\+Object\+::get\+Local\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gameobject의 고유 각도를 가져옵니다. 
+
+\begin{DoxyReturn}{Returns}
+Gameobject의 고유 각도 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_a793abf30f8036fbfff7b7211566c8b89}\label{class_game_object_a793abf30f8036fbfff7b7211566c8b89}} 
+\index{GameObject@{GameObject}!getLocalScale@{getLocalScale}}
+\index{getLocalScale@{getLocalScale}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{getLocalScale()}{getLocalScale()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Game\+Object\+::get\+Local\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gameobject의 고유 크기를 가져옵니다. 
+
+\begin{DoxyReturn}{Returns}
+Gameobject의 고유 크기 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_a8f579dedcf9539924c65131b31687757}\label{class_game_object_a8f579dedcf9539924c65131b31687757}} 
+\index{GameObject@{GameObject}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Game\+Object\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gameobject의 화면 좌표를 가져옵니다. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_vector2}{Vector2}} \+: Gameobject의 화면 좌표 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_a475fb0bf4b62321c40d0a94c8c7c4f74}\label{class_game_object_a475fb0bf4b62321c40d0a94c8c7c4f74}} 
+\index{GameObject@{GameObject}!getRotation@{getRotation}}
+\index{getRotation@{getRotation}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{getRotation()}{getRotation()}}
+{\footnotesize\ttfamily float Game\+Object\+::get\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gameobject의 화면에서의 각도를 가져옵니다. 
+
+\begin{DoxyReturn}{Returns}
+float \+: Gameobject의 화면에서의 각도 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_ad98b347b0815312451a7e613671778f4}\label{class_game_object_ad98b347b0815312451a7e613671778f4}} 
+\index{GameObject@{GameObject}!getScale@{getScale}}
+\index{getScale@{getScale}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{getScale()}{getScale()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Game\+Object\+::get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gameobject의 화면 크기를 가져옵니다. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_vector2}{Vector2}} \+: Gameobject의 화면 크기 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_object_a3119a4212bae52f408503ddd46dd2926}\label{class_game_object_a3119a4212bae52f408503ddd46dd2926}} 
+\index{GameObject@{GameObject}!RunOnColiderEnter@{RunOnColiderEnter}}
+\index{RunOnColiderEnter@{RunOnColiderEnter}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{RunOnColiderEnter()}{RunOnColiderEnter()}}
+{\footnotesize\ttfamily void Game\+Object\+::\+Run\+On\+Colider\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_colider}{Colider}} $\ast$}]{other }\end{DoxyParamCaption})}
+
+@breif Component의 On\+Colider\+Enter 실행합니다. 
+\begin{DoxyParams}{Parameters}
+{\em Colider$\ast$} & \+: 충돌한 \mbox{\hyperlink{class_colider}{Colider}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_a6c493d5309f8c33a08d24c7c999d8381}\label{class_game_object_a6c493d5309f8c33a08d24c7c999d8381}} 
+\index{GameObject@{GameObject}!RunOnColiderExit@{RunOnColiderExit}}
+\index{RunOnColiderExit@{RunOnColiderExit}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{RunOnColiderExit()}{RunOnColiderExit()}}
+{\footnotesize\ttfamily void Game\+Object\+::\+Run\+On\+Colider\+Exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_colider}{Colider}} $\ast$}]{other }\end{DoxyParamCaption})}
+
+@breif Component의 On\+Colider\+Exit 실행합니다. 
+\begin{DoxyParams}{Parameters}
+{\em Colider$\ast$} & \+: 충돌한 \mbox{\hyperlink{class_colider}{Colider}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_a7553c792047cd39a71036353f557a1b7}\label{class_game_object_a7553c792047cd39a71036353f557a1b7}} 
+\index{GameObject@{GameObject}!RunOnColiderStay@{RunOnColiderStay}}
+\index{RunOnColiderStay@{RunOnColiderStay}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{RunOnColiderStay()}{RunOnColiderStay()}}
+{\footnotesize\ttfamily void Game\+Object\+::\+Run\+On\+Colider\+Stay (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_colider}{Colider}} $\ast$}]{other }\end{DoxyParamCaption})}
+
+@breif Component의 On\+Colider\+Stay 실행합니다. 
+\begin{DoxyParams}{Parameters}
+{\em Colider$\ast$} & \+: 충돌한 \mbox{\hyperlink{class_colider}{Colider}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_a00292e06a91d0b88038a0e9ee5673b40}\label{class_game_object_a00292e06a91d0b88038a0e9ee5673b40}} 
+\index{GameObject@{GameObject}!RunOnTriggerEnter@{RunOnTriggerEnter}}
+\index{RunOnTriggerEnter@{RunOnTriggerEnter}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{RunOnTriggerEnter()}{RunOnTriggerEnter()}}
+{\footnotesize\ttfamily void Game\+Object\+::\+Run\+On\+Trigger\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_colider}{Colider}} $\ast$}]{other }\end{DoxyParamCaption})}
+
+@breif Component의 On\+Trigger\+Enter 실행합니다. 
+\begin{DoxyParams}{Parameters}
+{\em Colider$\ast$} & \+: 충돌한 \mbox{\hyperlink{class_colider}{Colider}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_ab0327ad84a8d522db700c1d5aaacc3b1}\label{class_game_object_ab0327ad84a8d522db700c1d5aaacc3b1}} 
+\index{GameObject@{GameObject}!RunOnTriggerExit@{RunOnTriggerExit}}
+\index{RunOnTriggerExit@{RunOnTriggerExit}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{RunOnTriggerExit()}{RunOnTriggerExit()}}
+{\footnotesize\ttfamily void Game\+Object\+::\+Run\+On\+Trigger\+Exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_colider}{Colider}} $\ast$}]{other }\end{DoxyParamCaption})}
+
+@breif Component의 On\+Trigger\+Exit 실행합니다. 
+\begin{DoxyParams}{Parameters}
+{\em Colider$\ast$} & \+: 충돌한 \mbox{\hyperlink{class_colider}{Colider}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_a9e68babda836b27001ec7b204b5d21bf}\label{class_game_object_a9e68babda836b27001ec7b204b5d21bf}} 
+\index{GameObject@{GameObject}!RunOnTriggerStay@{RunOnTriggerStay}}
+\index{RunOnTriggerStay@{RunOnTriggerStay}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{RunOnTriggerStay()}{RunOnTriggerStay()}}
+{\footnotesize\ttfamily void Game\+Object\+::\+Run\+On\+Trigger\+Stay (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_colider}{Colider}} $\ast$}]{other }\end{DoxyParamCaption})}
+
+@breif Component의 On\+Trigger\+Stay 실행합니다. 
+\begin{DoxyParams}{Parameters}
+{\em Colider$\ast$} & \+: 충돌한 \mbox{\hyperlink{class_colider}{Colider}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_abb228e65e6526a0d8623c56c7f8e1d6f}\label{class_game_object_abb228e65e6526a0d8623c56c7f8e1d6f}} 
+\index{GameObject@{GameObject}!setLocalPosition@{setLocalPosition}}
+\index{setLocalPosition@{setLocalPosition}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{setLocalPosition()}{setLocalPosition()}}
+{\footnotesize\ttfamily void Game\+Object\+::set\+Local\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+Gameobject의 고유 좌표를 설정합니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_vector2}{Vector2}}} & \+: 설정할 \mbox{\hyperlink{class_vector2}{Vector2}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_ad98fabb4f644e19fa0cbcc38d1fbe647}\label{class_game_object_ad98fabb4f644e19fa0cbcc38d1fbe647}} 
+\index{GameObject@{GameObject}!setLocalRotation@{setLocalRotation}}
+\index{setLocalRotation@{setLocalRotation}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{setLocalRotation()}{setLocalRotation()}}
+{\footnotesize\ttfamily void Game\+Object\+::set\+Local\+Rotation (\begin{DoxyParamCaption}\item[{float}]{\+\_\+rotate }\end{DoxyParamCaption})}
+
+
+
+Gameobject의 고유 각도를 설정합니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & \+: 설정할 각도 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_add0dbcfb3840d2d58328e606ec090b49}\label{class_game_object_add0dbcfb3840d2d58328e606ec090b49}} 
+\index{GameObject@{GameObject}!setLocalScale@{setLocalScale}}
+\index{setLocalScale@{setLocalScale}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{setLocalScale()}{setLocalScale()}}
+{\footnotesize\ttfamily void Game\+Object\+::set\+Local\+Scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+scale }\end{DoxyParamCaption})}
+
+
+
+Gameobject의 고유 크기를 설정합니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_vector2}{Vector2}}} & \+: 설정할 \mbox{\hyperlink{class_vector2}{Vector2}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_aef36adda1c0aee190b35bb1d37778a79}\label{class_game_object_aef36adda1c0aee190b35bb1d37778a79}} 
+\index{GameObject@{GameObject}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Game\+Object\+::set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+Gameobject의 화면 좌표를 설정합니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_vector2}{Vector2}}} & \+: 설정할 \mbox{\hyperlink{class_vector2}{Vector2}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_a9b8a3958c7a317ce532efe13aa2bc5bd}\label{class_game_object_a9b8a3958c7a317ce532efe13aa2bc5bd}} 
+\index{GameObject@{GameObject}!setRotation@{setRotation}}
+\index{setRotation@{setRotation}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{setRotation()}{setRotation()}}
+{\footnotesize\ttfamily void Game\+Object\+::set\+Rotation (\begin{DoxyParamCaption}\item[{float}]{\+\_\+rotate }\end{DoxyParamCaption})}
+
+
+
+Gameobject의 화면에서의 각도를 설정합니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & \+: 설정할 각도 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_object_a424fca58902b93a66fe30ae051108583}\label{class_game_object_a424fca58902b93a66fe30ae051108583}} 
+\index{GameObject@{GameObject}!setScale@{setScale}}
+\index{setScale@{setScale}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{setScale()}{setScale()}}
+{\footnotesize\ttfamily void Game\+Object\+::set\+Scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+scale }\end{DoxyParamCaption})}
+
+
+
+Gameobject의 화면 크기를 설정합니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_vector2}{Vector2}}} & \+: 설정할 \mbox{\hyperlink{class_vector2}{Vector2}} \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

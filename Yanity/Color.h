@@ -2,23 +2,12 @@
 
 #include "SDL_stdafx.h"
 
+///@brief SDL_Color 상수 값을 저장하는 class 입니다.
 class Color {
 
 public:
 
-	static SDL_Color getColor(int r, int g, int b, int a = 255) {
-
-		SDL_Color _color;
-
-		_color.r = r;
-		_color.g = g;
-		_color.b = b;
-		_color.a = a;
-
-		return _color;
-
-	}
-
-	static SDL_Color GREEN() { return getColor(0, 128, 0); }
+	static SDL_Color GREEN() { return { 0, 128, 0 }; } ///< 초록색
+	static SDL_Color WHITE() { return {255, 255, 255}; } ///< 빨강색
 
 };

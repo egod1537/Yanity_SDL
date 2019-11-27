@@ -19,6 +19,8 @@ void GameCore::Init() {
 
 	GraphicCore::getInstance().Init();
 
+	TTF_Init();
+
 }
 
 GameCore& GameCore::getInstance() {
@@ -52,6 +54,8 @@ int Thread_PhysX(void *ptr) {
 
 void GameCore::RunPhysX() {
 
+	PhysX::getInstance().Coliders.resize(0);
+
 	SDL_Thread *thread;
 
 	ThreadData *td = (ThreadData*)malloc(sizeof(ThreadData));
@@ -71,9 +75,7 @@ int Thread_Input(void *ptr) {
 
 	ThreadData *data = static_cast<ThreadData*>(ptr);
 
-	SDL_Event Event;
-
-	while (*data->active) { if (SDL_PollEvent(&Event)) Input::Handler(); SDL_Delay(*data->ms); }
+	while (*data->active) { Input::Handler(); SDL_Delay(*data->ms); }
 
 	return 0;
 
@@ -104,44 +106,25 @@ void GameCore::RunSystem(std::vector<GameObject*> _list) {
 
 	#pragma region Awake and Start
 
-	Lib::Lib_ItrVector<GameObject*>(
-		_list,
-		[](GameObject* callback)
-	{
-		callback->RunAwake();
-	}
-	);
+	RunPhysX(); RunInput();
 
-	Lib::Lib_ItrVector<GameObject*>(
-		_list,
-		[](GameObject* callback)
-	{
-		callback->RunStart();
-	}
-	);
+	for(auto callback : _list) callback->RunAwake();
+	for(auto callback : _list) callback->RunStart();
 
 	#pragma endregion
 
 	SDL_Renderer* _renderer = GraphicCore::getInstance().renderer;
 
-	RunPhysX(); RunInput();
+	SDL_Event Event;
 
 	while (isActive) {
 
 		SDL_SetRenderDrawColor(_renderer, 0, 0, 0, 0);
 		SDL_RenderClear(_renderer);
 
-		#pragma region Update
+		SDL_PollEvent(&Event);
 
-		Lib::Lib_ItrVector<GameObject*>(
-			_list,
-			[](GameObject* callback)
-		{
-			callback->RunUpdate();
-		}
-		);
-
-		#pragma endregion
+		for (auto callback : _list) callback->RunUpdate();
 
 		GraphicCore::getInstance().Render();
 

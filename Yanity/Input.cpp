@@ -4,33 +4,63 @@ SDL_Event Event;
 
 Vector2 MousePosition;
 
-const Uint8* Keystates;
-bool Left = false;
+std::map<int, bool> Mousestates, Keystates;
+
+const Uint8* Key;
 
 void Input::Handler() {
 
-	Keystates = SDL_GetKeyboardState(NULL);
+	Key = SDL_GetKeyboardState(NULL);
 
-	Left = SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(SDL_BUTTON_LEFT);
+	for (int m = 1; m <= 3; m++)
+		Mousestates[m] = (SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(m));
 
 }
 
-bool Input::getKeyDown(int _key) { return Keystates[_key]; }
+bool Input::getKeyDown(int _key) 
+{ 
 
-bool Input::getMouseLeftClickDown() {return Left;}
+	Key = SDL_GetKeyboardState(NULL);
+
+	return Key[_key];
+}
+
+bool Input::getMouseLeftClickDown() {
+
+	return (!Mousestates[SDL_BUTTON_LEFT] && (SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(SDL_BUTTON_LEFT)));
+
+}
+
+bool Input::getMouseLeftClick() {
+
+	return (Mousestates[SDL_BUTTON_LEFT] && (SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(SDL_BUTTON_LEFT)));
+
+}
 
 bool Input::getMouseLeftClickUp() 
 {
 
-	std::cout << "Left : " << Left << ", State : " << (SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(SDL_BUTTON_LEFT)) << "\n";
-
-	return (Left == true && SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(SDL_BUTTON_LEFT) == false);
+	return (Mousestates[SDL_BUTTON_LEFT] && !(SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(SDL_BUTTON_LEFT)));
 
 }
 
-bool Input::getMouseRightClickDown() { return SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(SDL_BUTTON_RIGHT); }
+bool Input::getMouseRightClickDown() { 
 
-bool Input::getMouseRightClickUp() {return false;}
+	return (!Mousestates[SDL_BUTTON_RIGHT] && (SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(SDL_BUTTON_RIGHT)));
+
+}
+
+bool Input::getMouseRightClick() {
+
+	return (Mousestates[SDL_BUTTON_RIGHT] && (SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(SDL_BUTTON_RIGHT)));
+
+}
+
+bool Input::getMouseRightClickUp() {
+
+	return (Mousestates[SDL_BUTTON_RIGHT] && !(SDL_GetMouseState(NULL, NULL) & SDL_BUTTON(SDL_BUTTON_RIGHT)));
+
+}
 
 Vector2 Input::getMousePosition() {
 

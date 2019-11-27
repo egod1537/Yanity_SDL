@@ -1,6 +1,13 @@
 #include "PlayerController.h"
+#include "Input.h"
 
 void PlayerController::Update() {
+
+	if (Input::getKeyDown(SDL_SCANCODE_TAB)) {
+
+		SceneManager::LoadScene("scene2");
+
+	}
 
 	Rigidbody *rig = gameobject->GetComponenet<Rigidbody*>();
 

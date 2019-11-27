@@ -1,20 +1,105 @@
 \hypertarget{class_lib}{}\doxysection{Lib Class Reference}
 \label{class_lib}\index{Lib@{Lib}}
+
+
+공통적으로 사용되는 기능을 가진 class 입니다.  
+
+
+
+
+{\ttfamily \#include $<$Lib.\+h$>$}
+
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+{\footnotesize template$<$typename T $>$ }\\static void \mbox{\hyperlink{class_lib_ad61691a5d7fc20457e874c1cf25b3428}{Lib\+\_\+\+Itr\+Vector}} (std\+::vector$<$ T $>$ \+\_\+vector, std\+::function$<$ void(T)$>$ callback)
+\begin{DoxyCompactList}\small\item\em vector를 순환시킵니다. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_lib_a22d1c9e85a5fa2e9309a73e78681b1c1}{View\+Port\+Pos\+To\+Screen\+Pos}} (\mbox{\hyperlink{class_vector2}{Vector2}})
+\begin{DoxyCompactList}\small\item\em 게임 좌표를 화면 좌표로 바꾸어 준다. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_vector2}{Vector2}} \mbox{\hyperlink{class_lib_a164eab30cd1be5f5173dbc086dfae929}{Screen\+Pos\+To\+View\+Port\+Pos}} (\mbox{\hyperlink{class_vector2}{Vector2}})
+\begin{DoxyCompactList}\small\item\em 화면 좌표를 게임 좌표로 바꾸어 준다. \end{DoxyCompactList}\item 
+static S\+D\+L\+\_\+\+Rect \mbox{\hyperlink{class_lib_ad0eb4605d5dac2f4f18558d5fe267a70}{Vector2\+To\+Rect}} (\mbox{\hyperlink{class_vector2}{Vector2}}, \mbox{\hyperlink{class_vector2}{Vector2}})
+\begin{DoxyCompactList}\small\item\em 두 Vector2를 S\+D\+L\+\_\+\+Rect로 변환한다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+공통적으로 사용되는 기능을 가진 class 입니다. 
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_lib_ad61691a5d7fc20457e874c1cf25b3428}\label{class_lib_ad61691a5d7fc20457e874c1cf25b3428}} 
-{\footnotesize template$<$typename T $>$ }\\static void {\bfseries Lib\+\_\+\+Itr\+Vector} (std\+::vector$<$ T $>$ \+\_\+vector, std\+::function$<$ void(T)$>$ callback)
-\item 
-\mbox{\Hypertarget{class_lib_a22d1c9e85a5fa2e9309a73e78681b1c1}\label{class_lib_a22d1c9e85a5fa2e9309a73e78681b1c1}} 
-static \mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries View\+Port\+Pos\+To\+Screen\+Pos} (\mbox{\hyperlink{class_vector2}{Vector2}})
-\item 
+\index{Lib@{Lib}!Lib\_ItrVector@{Lib\_ItrVector}}
+\index{Lib\_ItrVector@{Lib\_ItrVector}!Lib@{Lib}}
+\doxysubsubsection{\texorpdfstring{Lib\_ItrVector()}{Lib\_ItrVector()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void Lib\+::\+Lib\+\_\+\+Itr\+Vector (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$}]{\+\_\+vector,  }\item[{std\+::function$<$ void(T)$>$}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+vector를 순환시킵니다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & \+: vector의 타입 \\
+\hline
+{\em vector$<$\+T$>$} & \+: 순회할 vector \\
+\hline
+{\em function$<$void(\+T)$>$} & 순회하면서 원소에 행동할 함수 \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_lib_a164eab30cd1be5f5173dbc086dfae929}\label{class_lib_a164eab30cd1be5f5173dbc086dfae929}} 
-static \mbox{\hyperlink{class_vector2}{Vector2}} {\bfseries Screen\+Pos\+To\+View\+Port\+Pos} (\mbox{\hyperlink{class_vector2}{Vector2}})
-\item 
+\index{Lib@{Lib}!ScreenPosToViewPortPos@{ScreenPosToViewPortPos}}
+\index{ScreenPosToViewPortPos@{ScreenPosToViewPortPos}!Lib@{Lib}}
+\doxysubsubsection{\texorpdfstring{ScreenPosToViewPortPos()}{ScreenPosToViewPortPos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Lib\+::\+Screen\+Pos\+To\+View\+Port\+Pos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+화면 좌표를 게임 좌표로 바꾸어 준다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_vector2}{Vector2}}} & \+: 바꿀 \mbox{\hyperlink{class_vector2}{Vector2}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector \+: 변환한 \mbox{\hyperlink{class_vector2}{Vector2}} 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_lib_ad0eb4605d5dac2f4f18558d5fe267a70}\label{class_lib_ad0eb4605d5dac2f4f18558d5fe267a70}} 
-static S\+D\+L\+\_\+\+Rect {\bfseries Vector2\+To\+Rect} (\mbox{\hyperlink{class_vector2}{Vector2}}, \mbox{\hyperlink{class_vector2}{Vector2}})
-\end{DoxyCompactItemize}
+\index{Lib@{Lib}!Vector2ToRect@{Vector2ToRect}}
+\index{Vector2ToRect@{Vector2ToRect}!Lib@{Lib}}
+\doxysubsubsection{\texorpdfstring{Vector2ToRect()}{Vector2ToRect()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Rect Lib\+::\+Vector2\+To\+Rect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+vec1,  }\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+vec2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+두 Vector2를 S\+D\+L\+\_\+\+Rect로 변환한다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_vector2}{Vector2}},\mbox{\hyperlink{class_vector2}{Vector2}}} & \+: 두 \mbox{\hyperlink{class_vector2}{Vector2}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_vector2}{Vector2}} \+: 변환한 S\+D\+L\+\_\+\+Rect 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_lib_a22d1c9e85a5fa2e9309a73e78681b1c1}\label{class_lib_a22d1c9e85a5fa2e9309a73e78681b1c1}} 
+\index{Lib@{Lib}!ViewPortPosToScreenPos@{ViewPortPosToScreenPos}}
+\index{ViewPortPosToScreenPos@{ViewPortPosToScreenPos}!Lib@{Lib}}
+\doxysubsubsection{\texorpdfstring{ViewPortPosToScreenPos()}{ViewPortPosToScreenPos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector2}{Vector2}} Lib\+::\+View\+Port\+Pos\+To\+Screen\+Pos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{\+\_\+pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+게임 좌표를 화면 좌표로 바꾸어 준다. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_vector2}{Vector2}}} & \+: 바꿀 \mbox{\hyperlink{class_vector2}{Vector2}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector \+: 변환한 \mbox{\hyperlink{class_vector2}{Vector2}} 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
