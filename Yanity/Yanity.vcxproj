@@ -23,7 +23,7 @@
     <ProjectGuid>{CAAB14F0-44D8-40FC-9D9A-4C8B74FEDA63}</ProjectGuid>
     <RootNamespace>Yanity</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
-    <ProjectName>CG++2</ProjectName>
+    <ProjectName>Yanity</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
