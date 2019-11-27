@@ -152,9 +152,6 @@ int main(int argc, char* args[]) {
 	scene2->AddGameObject(&sword);
 	scene2->AddGameObject(&t);
 
-	GameCore::getInstance().list_Scene.push_back(scene1);
-	GameCore::getInstance().list_Scene.push_back(scene2);
-
 	SceneManager::LoadScene("scene1");
 
 	while (GameCore::getInstance().Power)

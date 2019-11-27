@@ -15,6 +15,8 @@ public:
 
 	std::vector<GameObject*> listGameObject; ///< GameobjectList입니다.
 
+	Scene();
+
 	void Enable(); ///< 활성화
 	void Disable(); /// 비활성화
 

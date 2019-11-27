@@ -7,6 +7,13 @@
 #include "PhysX.h"
 #include "GameCore.h"
 
+Scene::Scene() 
+{
+
+	GameCore::getInstance().list_Scene.push_back(this);
+
+}
+
 void Scene::Enable() {
 
 	isActive = true;

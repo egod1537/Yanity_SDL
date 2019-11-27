@@ -1,4 +1,4 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 중간 디렉터리(x64\Debug\)에 다른 프로젝트(Yanity.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 중간 디렉터리(x64\Debug\)에 다른 프로젝트(CG++2.vcxproj)에서 공유하는 파일이 포함되어 있습니다.  이로 인해 잘못된 정리 및 다시 빌드 동작이 수행될 수 있습니다.
   BoxColider.cpp
   Button.cpp
   Colider.cpp
@@ -7,32 +7,27 @@
   GraphicCore.cpp
   Input.cpp
   Lib.cpp
+  main.cpp
   PhysX.cpp
   PlayerController.cpp
   Rigidbody.cpp
-  Scene.cpp
 e:\desktop\yanity\yanity\lib.cpp(19): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 e:\desktop\yanity\yanity\lib.cpp(21): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-e:\desktop\yanity\yanity\gamecore.cpp(16): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-e:\desktop\yanity\yanity\gamecore.cpp(49): warning C4244: '인수': 'float'에서 'Uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-e:\desktop\yanity\yanity\gamecore.cpp(78): warning C4244: '인수': 'float'에서 'Uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 e:\desktop\yanity\yanity\graphiccore.cpp(12): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 e:\desktop\yanity\yanity\graphiccore.cpp(36): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 e:\desktop\yanity\yanity\graphiccore.cpp(72): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 e:\desktop\yanity\yanity\graphiccore.cpp(74): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 e:\desktop\yanity\yanity\graphiccore.cpp(76): warning C4244: '=': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\desktop\yanity\yanity\gamecore.cpp(16): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\desktop\yanity\yanity\spriterenderer.h(33): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 PlayerController.cpp)
+e:\desktop\yanity\yanity\gamecore.cpp(49): warning C4244: '인수': 'float'에서 'Uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+e:\desktop\yanity\yanity\spriterenderer.h(33): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 main.cpp)
+e:\desktop\yanity\yanity\gamecore.cpp(78): warning C4244: '인수': 'float'에서 'Uint32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 e:\desktop\yanity\yanity\oevent.h(17): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 Button.cpp)
   e:\desktop\yanity\yanity\oevent.h(17): note: 클래스 템플릿 멤버 함수 'void OEvent<>::notify(...)'을(를) 컴파일하고 있습니다. (소스 파일 컴파일 중 Button.cpp)
   e:\desktop\yanity\yanity\button.cpp(21): note: 컴파일 중인 함수 템플릿 인스턴스화 'void OEvent<>::notify(...)'에 대한 참조를 확인하십시오.
   e:\desktop\yanity\yanity\button.h(11): note: 컴파일 중인 클래스 템플릿 인스턴스화 'OEvent<>'에 대한 참조를 확인하세요. (소스 파일 컴파일 중 Button.cpp)
-e:\desktop\yanity\yanity\spriterenderer.h(33): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 PlayerController.cpp)
 e:\desktop\yanity\yanity\input.cpp(71): warning C4244: '인수': 'Sint32'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-e:\desktop\yanity\yanity\gameobject.h(100): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 Rigidbody.cpp)
-  e:\desktop\yanity\yanity\rigidbody.cpp(16): note: 컴파일 중인 함수 템플릿 인스턴스화 'T *GameObject::GetComponenet<BoxColider*>(void)'에 대한 참조를 확인하십시오.
-          with
-          [
-              T=BoxColider *
-          ]
 e:\desktop\yanity\yanity\lib.h(20): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 PhysX.cpp)
   e:\desktop\yanity\yanity\physx.cpp(28): note: 컴파일 중인 함수 템플릿 인스턴스화 'void Lib::Lib_ItrVector<Colider*>(std::vector<Colider *,std::allocator<_Ty>>,std::function<void (Colider *)>)'에 대한 참조를 확인하십시오.
           with
@@ -45,14 +40,20 @@ e:\desktop\yanity\yanity\gameobject.h(100): warning C4267: '초기화 중': 'siz
           [
               T=BoxColider *
           ]
-e:\desktop\yanity\yanity\lib.h(20): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 GameObject.cpp)
-  e:\desktop\yanity\yanity\gameobject.cpp(13): note: 컴파일 중인 함수 템플릿 인스턴스화 'void Lib::Lib_ItrVector<Component*>(std::vector<Component *,std::allocator<_Ty>>,std::function<void (Component *)>)'에 대한 참조를 확인하십시오.
+e:\desktop\yanity\yanity\gameobject.h(100): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 Rigidbody.cpp)
+  e:\desktop\yanity\yanity\rigidbody.cpp(16): note: 컴파일 중인 함수 템플릿 인스턴스화 'T *GameObject::GetComponenet<BoxColider*>(void)'에 대한 참조를 확인하십시오.
           with
           [
-              _Ty=Component *
+              T=BoxColider *
           ]
 e:\desktop\yanity\yanity\gameobject.h(100): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 BoxColider.cpp)
   e:\desktop\yanity\yanity\boxcolider.cpp(48): note: 컴파일 중인 함수 템플릿 인스턴스화 'T *GameObject::GetComponenet<Rigidbody*>(void)'에 대한 참조를 확인하십시오.
+          with
+          [
+              T=Rigidbody *
+          ]
+e:\desktop\yanity\yanity\gameobject.h(100): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 PlayerController.cpp)
+  e:\desktop\yanity\yanity\playercontroller.cpp(12): note: 컴파일 중인 함수 템플릿 인스턴스화 'T *GameObject::GetComponenet<Rigidbody*>(void)'에 대한 참조를 확인하십시오.
           with
           [
               T=Rigidbody *
@@ -63,18 +64,13 @@ e:\desktop\yanity\yanity\lib.h(20): warning C4267: '초기화 중': 'size_t'에�
           [
               _Ty=Colider *
           ]
-e:\desktop\yanity\yanity\lib.h(20): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 Scene.cpp)
-  e:\desktop\yanity\yanity\scene.cpp(28): note: 컴파일 중인 함수 템플릿 인스턴스화 'void Lib::Lib_ItrVector<GameObject*>(std::vector<GameObject *,std::allocator<_Ty>>,std::function<void (GameObject *)>)'에 대한 참조를 확인하십시오.
+e:\desktop\yanity\yanity\lib.h(20): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 GameObject.cpp)
+  e:\desktop\yanity\yanity\gameobject.cpp(13): note: 컴파일 중인 함수 템플릿 인스턴스화 'void Lib::Lib_ItrVector<Component*>(std::vector<Component *,std::allocator<_Ty>>,std::function<void (Component *)>)'에 대한 참조를 확인하십시오.
           with
           [
-              _Ty=GameObject *
+              _Ty=Component *
           ]
-e:\desktop\yanity\yanity\gameobject.h(100): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 PlayerController.cpp)
-  e:\desktop\yanity\yanity\playercontroller.cpp(12): note: 컴파일 중인 함수 템플릿 인스턴스화 'T *GameObject::GetComponenet<Rigidbody*>(void)'에 대한 참조를 확인하십시오.
-          with
-          [
-              T=Rigidbody *
-          ]
+  Scene.cpp
   SceneMananger.cpp
   SphereColider.cpp
   SpriteRenderer.cpp
@@ -82,14 +78,12 @@ e:\desktop\yanity\yanity\gameobject.h(100): warning C4267: '초기화 중': 'siz
   Text.cpp
   Vector2.cpp
   WindowManager.cpp
-  main.cpp
-e:\desktop\yanity\yanity\windowmanager.cpp(17): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 e:\desktop\yanity\yanity\han2unicode.h(1142): warning C4244: 'return': 'long'에서 'unsigned short'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 Text.cpp)
-e:\desktop\yanity\yanity\spriterenderer.h(33): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 SpriteRenderer.cpp)
+e:\desktop\yanity\yanity\windowmanager.cpp(17): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 e:\desktop\yanity\yanity\text.cpp(17): warning C4244: '인수': 'int'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-e:\desktop\yanity\yanity\spriterenderer.h(33): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 TestColiderCheck.cpp)
+e:\desktop\yanity\yanity\spriterenderer.h(33): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 SpriteRenderer.cpp)
 e:\desktop\yanity\yanity\spriterenderer.cpp(37): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-e:\desktop\yanity\yanity\spriterenderer.h(33): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 main.cpp)
+e:\desktop\yanity\yanity\spriterenderer.h(33): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 TestColiderCheck.cpp)
 e:\desktop\yanity\yanity\gameobject.h(100): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 SphereColider.cpp)
   e:\desktop\yanity\yanity\spherecolider.cpp(50): note: 컴파일 중인 함수 템플릿 인스턴스화 'T *GameObject::GetComponenet<Rigidbody*>(void)'에 대한 참조를 확인하십시오.
           with
@@ -102,4 +96,10 @@ e:\desktop\yanity\yanity\lib.h(20): warning C4267: '초기화 중': 'size_t'에�
           [
               _Ty=Colider *
           ]
-  Yanity.vcxproj -> E:\Desktop\Yanity\x64\Debug\CG++2.exe
+e:\desktop\yanity\yanity\lib.h(20): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다. (소스 파일 컴파일 중 Scene.cpp)
+  e:\desktop\yanity\yanity\scene.cpp(35): note: 컴파일 중인 함수 템플릿 인스턴스화 'void Lib::Lib_ItrVector<GameObject*>(std::vector<GameObject *,std::allocator<_Ty>>,std::function<void (GameObject *)>)'에 대한 참조를 확인하십시오.
+          with
+          [
+              _Ty=GameObject *
+          ]
+  Yanity.vcxproj -> E:\Desktop\Yanity\x64\Debug\Yanity.exe
